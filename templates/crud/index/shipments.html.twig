@@ -1,0 +1,101 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entities \EasyCorp\Bundle\EasyAdminBundle\Collection\EntityDtoCollection #}
+{# @var paginator \EasyCorp\Bundle\EasyAdminBundle\Orm\EntityPaginator #}
+{% extends 'page/content.html.twig' %}
+
+{% block content_title 'shipments.shipments'|trans({}, 'EasyAdminBundle') %}
+{% set _route_select_label = route_select_label is defined ? route_select_label|trans : 'shipments.route_select'|trans({}, 'EasyAdminBundle') %}
+{% set _max_entry_date_label = max_entry_date_label is defined ? max_entry_date_label|trans : 'shipments.max_entry_date'|trans({}, 'EasyAdminBundle') %}
+{% set _lots_label = lots_label is defined ? lots_label|trans : 'shipments.lots'|trans({}, 'EasyAdminBundle') %}
+
+    
+    {% block main %}
+        <form class="calendar-container"> <div class="d-flex align-items-end justify-content-end flex-row">
+            {% if isAdmin %}            
+                <div class="d-flex align-items-baseline me-auto ps-5">
+                    <label for="form_select1" class="form-label">
+                        {{ _route_select_label }}
+                    </label>
+                    <button class="calendar-filter__button modal-index-content__body__dropDown__content__button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="calendar-filter__button--text">
+                            {{ selected }}
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        {% for val in routesArray %}
+                            {% if selected != val %}
+                                <li>
+                                    <a class="dropdown-item" href="{{ ea_url().setController('App\\Controller\\Admin\\ShipmentsCrudController').setAction('selectRoute').set('ruta',val) }}">{{ val }}</a>
+                                </li>
+                            {% endif %}
+
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+                <div class="d-flex flex-row pe-3 align-items-baseline">
+                    <div class="calendar-container__legend-marker-container--white-value"></div>
+                    <div>{{ _max_entry_date_label }}</div>
+                </div>
+
+                <div class="d-flex flex-row pe-5 align-items-baseline">
+                    <div class="calendar-container__legend-marker-container--red-value"></div>
+                    <div>{{ _lots_label }}</div>
+                </div>
+        </div>
+
+        <div class="calendar-background">
+            <div id="calendar"></div>
+            <div class="calendar-container__legend">
+                <div>
+
+                    <div class="p-3">
+                        {% for key,val in dataCalendar|sort((a, b) => a.lotNum <=> b.lotNum) %}
+                            {% if val["checkOriginal"] == true %}
+                            <div class="calendar-container__legend__values">
+                                {{ val["lotText"] }}
+                            </div>
+                            <div class="mb-2">
+                                    <div class="calendar-container__legend-marker-container--white">
+
+                                        <div class="calendar-container__legend-marker-container--white-value"></div>
+                                        <div>{{ val["maxEntryDay"] }} {{ val["maxEntryMonth"] }}</div>
+                                    </div>
+                                <div class="calendar-container__legend-marker-container--red">
+                                    <div class="calendar-container__legend-marker-container--red-value"></div>
+                                    <div>
+                                        {{ val["startDay"] }}
+                                        -
+                                        {{ val["endDay"] }}
+                                        {{ val["monthText"] }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        let calendar = null;
+
+        $(function () {
+            var currentYear = new Date().getFullYear();
+            calendar = new Calendar('#calendar', {
+                enableContextMenu: false,
+                enableRangeSelection: false,
+                dataSource: [{% for key,value in dataCalendar %}                
+                {
+                            id: {{ key }},
+                            name: "",
+                            location: "",
+                            startDate: new Date(currentYear, parseInt("{{ value["startDate"] }}".split('/')[1]) - 1, parseInt("{{ value["startDate"] }}".split('/')[0])),
+                            endDate: new Date(currentYear, parseInt("{{ value["endDate"] }}".split('/')[1]) - 1, parseInt("{{ value["endDate"] }}".split('/')[0]))
+                        }, {% endfor %}]
+            });
+        });
+    </script>
+{% endblock main %}

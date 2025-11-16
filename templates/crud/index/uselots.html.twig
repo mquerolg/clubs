@@ -1,0 +1,117 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entities \EasyCorp\Bundle\EasyAdminBundle\Collection\EntityDtoCollection #}
+{# @var paginator \EasyCorp\Bundle\EasyAdminBundle\Orm\EntityPaginator #}
+{% extends ea.templatePath('crud/index') %}
+
+{% block body_javascript %}
+     <script>
+        $('.modal-request-uselots-sended').click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+            $('#modalHeaderTitle').html('El lot ha estat enviat');
+            $('#indexModalBodyInfo').css({'display':'block', 'border': 'none', 'padding': '0px'});
+            $('#indexModalBodyInfo').html("El lot ha estat enviat correctament");
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Acceptar');
+            
+            $('#indexModal').modal('show');
+            $('#indexModalFooterSecondBtn').click(function(){
+                window.location.href = $this.attr('href');
+            })
+        });
+        $('.modal-request-uselots-received').click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+            $('#modalHeaderTitle').html('Lot rebut');
+            $('#indexModalBodyInfo').css({'display':'block', 'border': 'none', 'padding': '0px'});
+            $('#indexModalBodyInfo').html("El lot s'ha rebut correctament");
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Acceptar');
+            
+            $('#indexModal').modal('show');
+            $('#indexModalFooterSecondBtn').click(function(){
+                window.location.href = $this.attr('href');
+            })
+        });
+        $('.modal-request-uselots-return').click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+            $('#modalHeaderTitle').html('Retornar lot');
+            $('#indexModalBodyInfo').css({'display':'block'});
+            $('#indexModalBodyInfo').html("Al confirmar-ho el teu lot es retornarà en la següent tramesa.");
+            $('#indexModalBodyComments').css({'display':'block'});
+            $('#indexModalBodyCommentsTitle').html("Si has tingut alguna incidència relacionada amb aquest lot, per favor indica'ns-la a continuació.");
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Acceptar');
+            
+            $('#indexModal').modal('show');
+            $('#indexModalFooterSecondBtn').click(function(){
+                let comment = $('#IndexModalTextArea').val().trim();
+                window.location.href = $this.attr('href') + '&comment=' + comment;
+            })
+        });
+        $('.modal-request-uselots-picked').click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+             $('#modalHeaderTitle').html('Lot recollit');
+            $('#indexModalBodyInfo').css({'display':'block', 'border': 'none', 'padding': '0px'});
+            $('#indexModalBodyInfo').html("El lot ha estat recollit correctament");
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Acceptar');
+            
+            $('#indexModal').modal('show');
+            $('#indexModalFooterSecondBtn').click(function(){
+                window.location.href = $this.attr('href');
+            })
+        });
+        $('.modal-request-uselots-undo').click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+             $('#modalHeaderTitle').html('Desfer darrera acció');
+            $('#indexModalBodyInfo').css({'display':'block', 'border': 'none', 'padding': '0px'});
+            $('#indexModalBodyInfo').html("Aquest procés tornarà enrere l'estat actual del lot");
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Acceptar');
+            
+            $('#indexModal').modal('show');
+            $('#indexModalFooterSecondBtn').click(function(){
+                window.location.href = $this.attr('href');
+            })
+        });
+        $('.modal-request-uselots-returned').click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+            $('#modalHeaderTitle').html('El lot ha estat retornat');
+            $('#indexModalBodyInfo').css({'display':'block', 'border': 'none', 'padding': '0px'});
+            $('#indexModalBodyInfo').html("El lot ha estat retornat correctament");
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Acceptar');
+            
+            $('#indexModal').modal('show');
+            $('#indexModalFooterSecondBtn').click(function(){
+                window.location.href = $this.attr('href');
+            })
+        });
+        $('.modal-request-uselots-renew').click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+             $('#modalHeaderTitle').html('El lot ha estat renovat');
+            $('#indexModalBodyInfo').css({'display':'block', 'border': 'none', 'padding': '0px'});
+            $('#indexModalBodyInfo').html("El lot ha estat renovat correctament");
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Acceptar');
+            
+            $('#indexModal').modal('show');
+            $('#indexModalFooterSecondBtn').click(function(){
+                window.location.href = $this.attr('href');
+            })
+        });
+    </script>
+{% endblock body_javascript %}

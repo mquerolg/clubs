@@ -1,0 +1,25 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% use 'crud/form_theme.html.twig' %}
+
+{% block form_row_up %}
+    {% if form.vars.id in ['Libraries_active','Libraries_name','Libraries_municipality','Libraries_email','Libraries_observations'] %}
+        <div class="row col-9">
+    {% endif %}
+
+    {% if form.vars.id in ['Libraries_active','Libraries_observations'] %}
+        <div class="col-12">
+    {% elseif form.vars.id in ['Libraries_code','Libraries_localization','Libraries_useLots','Libraries_totalLots'] %}
+        <div class="col-3">
+    {% else %}
+        <div class="col-6">
+    {% endif %}
+{% endblock %}
+
+{% block form_row_down %}
+    {% if form.vars.id in ['Libraries_active','Libraries_localization','Libraries_zone','Libraries_totalLots','Libraries_observations'] %}
+            </div>
+        </div>
+    {% else %}
+        </div>
+    {% endif %}
+{% endblock %}

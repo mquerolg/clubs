@@ -1,0 +1,225 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% use 'crud/form_theme.html.twig' %}
+
+{% block form_start %}
+    {% if form.vars.errors|length > 0 and 'ea_crud' in form.vars.block_prefixes|default([]) %}
+        {{ form_errors(form, {attr: { class: 'global-invalid-feedback' }}) }}
+    {% endif %}
+
+    {{ parent() }}
+
+    <div class="form-crud-content-rows"> {# this is closed in form_end #}
+        <input type="hidden" name="referrer" value="{{ ea.request.query.get('referrer') }}">
+{% endblock form_start %}
+
+{# Rows #}
+
+{% block form_row_up %}
+    {% if form.vars.id in ["Lots_active"] %}
+        <div class="row-crud col-12">
+            <div class="form-crud-switches">
+    {% elseif form.vars.id in ["Lots_observations"] %}
+        <div class="form-crud-observations">
+    {% elseif form.vars.id in ["Lots_exemplar","Lots_warehouse"] %}
+        <div class="form-crud-columns">
+    {% elseif form.vars.id in ["Lots_copies"] %}
+        <div class="col-3">
+    {% endif %}
+
+        {% if form.vars.id in ["Lots_langCat"] %}
+            <div class="form-crud-langs">
+                <div class="form-crud-langs__label">{{ 'lots.forms.num_copies'|trans({}, 'EasyAdminBundle') }}</div>
+        {% endif %}
+{% endblock %}
+
+{% block form_row_down %}
+ {% if form.vars.id in ["Lots_langIta"] %}
+            </div>
+        {% endif %}
+
+        </div>
+
+    {% if form.vars.id in ["Lots_observations"] %}
+            </div>
+        </div>
+    {% elseif form.vars.id in ["Lots_active"] %}
+            </div>
+        </div>
+        <div class="row-crud col-9">
+    {% elseif form.vars.id in ["Lots_genre","Lots_copies","Lots_url","Lots_copies"] %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block form_row_core %}
+    {% if form.vars.id in ["Lots_langCat","Lots_langEs","Lots_langAng","Lots_langFra","Lots_langAle","Lots_langIta"] %}
+        <div class="form-crud-langs__content">
+            <div class="row-crud">
+                <div class="col-5">
+                    {{- form_label(form) -}}
+                </div>
+                <div class="form-widget col-4">
+                    {% set has_prepend_html = ea.field.prepend_html|default(null) is not null %}
+                    {% set has_append_html = ea.field.append_html|default(null) is not null %}
+                    {% set has_input_groups = has_prepend_html or has_append_html %}
+
+                    {% if has_input_groups %}<div class="input-group">{% endif %}
+                        {% if has_prepend_html %}
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">{{ ea.field.prepend_html|raw }}</span>
+                            </div>
+                        {% endif %}
+
+                        {{ form_widget(form) }}
+
+                        {% if has_append_html %}
+                            <span class="input-group-text">{{ ea.field.append_html|raw }}</span>
+                        {% endif %}
+                        {% if has_input_groups %}</div>{% endif %}
+
+                    {% set nullable_fields_fqcn = [
+                        'EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField',
+                        'EasyCorp\Bundle\EasyAdminBundle\Field\DateField',
+                        'EasyCorp\Bundle\EasyAdminBundle\Field\TimeField',
+                    ] %}
+                    {% if form.vars.ea_crud_form.ea_field.fieldFqcn|default(false) in nullable_fields_fqcn and ea.field.nullable|default(false) %}
+                        <div class="nullable-control">
+                            <label>
+                                <input type="checkbox" {% if data is null %}checked="checked"{% endif %}>
+                                {{ 'label.nullable_field'|trans({}, 'EasyAdminBundle')}}
+                            </label>
+                        </div>
+                    {% endif %}
+
+                    {% if ea.field.help ?? false %}
+                        <small class="form-help">{{ ea.field.help|raw }}</small>
+                    {% elseif form.vars.help ?? false %}
+                        <small class="form-help">{{ form.vars.help|trans(form.vars.help_translation_parameters, form.vars.translation_domain)|raw }}</small>
+                    {% endif %}
+
+                    {{- form_errors(form) -}}
+                </div>
+            </div>
+    {% elseif form.vars.id == "Lots_copies" %}
+        <div>
+            <div class="form-crud-field-textform-crud-group" {% with { attr: row_attr } %}{{ block('attributes') }}{% endwith %}>
+                {{- form_label(form) -}}
+                
+                <div class="form-widget" id="lots-multy-copies">
+
+                    {{ form_widget(form, { 'attr': {'class': 'form-crud-control'} } ) }}
+
+                    {{- form_errors(form) -}}
+                </div>
+
+                <div id="add-lots-copies">
+                    <div id="add-lots-copies-label">
+                        {{ 'lots.forms.add_copie'|trans({}, 'EasyAdminBundle') }}
+                    </div>
+                    <div id="add-lots-copies-form" style="display: none; visibility: visible;">
+                        <input id="add-lots-copies-input"type="select-multiple" autocomplete="off" size="1" tabindex="-1" class="form-crud-control form-control">
+                    </div>
+                </div>
+            </div>
+    {% else %}
+        <div>
+            <div class="form-crud-field-textform-crud-group" {% with { attr: row_attr } %}{{ block('attributes') }}{% endwith %}>
+                {{- form_label(form) -}}
+                <div class="form-widget">
+                    {% set has_prepend_html = ea.field.prepend_html|default(null) is not null %}
+                    {% set has_append_html = ea.field.append_html|default(null) is not null %}
+                    {% set has_input_groups = has_prepend_html or has_append_html %}
+
+                    {% if has_input_groups %}<div class="input-group">{% endif %}
+                        {% if has_prepend_html %}
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">{{ ea.field.prepend_html|raw }}</span>
+                            </div>
+                        {% endif %}
+                        
+                        {{ form_widget(form, { 'attr': {'class': 'form-crud-control'} } ) }}
+
+                        {% if has_append_html %}
+                            <span class="input-group-text">{{ ea.field.append_html|raw }}</span>
+                        {% endif %}
+                        {% if has_input_groups %}</div>{% endif %}
+
+                    {% set nullable_fields_fqcn = [
+                        'EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField',
+                        'EasyCorp\Bundle\EasyAdminBundle\Field\DateField',
+                        'EasyCorp\Bundle\EasyAdminBundle\Field\TimeField',
+                    ] %}
+                    {% if form.vars.ea_crud_form.ea_field.fieldFqcn|default(false) in nullable_fields_fqcn and ea.field.nullable|default(false) %}
+                        <div class="nullable-control">
+                            <label>
+                                <input type="checkbox" {% if data is null %}checked="checked"{% endif %}>
+                                {{ 'label.nullable_field'|trans({}, 'EasyAdminBundle')}}
+                            </label>
+                        </div>
+                    {% endif %}
+
+                    {% if ea.field.help ?? false %}
+                        <small class="form-help">{{ ea.field.help|raw }}</small>
+                    {% elseif form.vars.help ?? false %}
+                        <small class="form-help">{{ form.vars.help|trans(form.vars.help_translation_parameters, form.vars.translation_domain)|raw }}</small>
+                    {% endif %}
+
+                    {{- form_errors(form) -}}
+                </div>
+            </div>
+    {% endif %}
+{% endblock %}
+
+{# Copies widget #}
+
+{% block choice_widget_collapsed %}
+    {% if 'ea-autocomplete' == attr['data-ea-widget']|default(false) %}
+        {% set attr = attr|merge({
+            'data-ea-i18n-no-results-found': 'autocomplete.no-results-found'|trans({}, 'EasyAdminBundle'),
+            'data-ea-i18n-no-more-results': 'autocomplete.no-more-results'|trans({}, 'EasyAdminBundle'),
+            'data-ea-i18n-loading-more-results': 'autocomplete.loading-more-results'|trans({}, 'EasyAdminBundle'),
+        }) %}
+    {% endif %}
+
+    {% if form.vars.id == "Lots_copies" %}
+        {%- set attr = attr|merge({class: (attr.class|default('') ~ ' form-select')|trim}) -%}
+
+        <select data="test" {{ block('widget_attributes') }}{% if multiple %} multiple="multiple"{% endif %}>
+            {%- if placeholder is not none -%}
+                <option value=""{% if required and value is empty %} selected="selected"{% endif %}>{{ placeholder != '' ? (translation_domain is same as(false) ? placeholder : placeholder|trans({}, translation_domain)) }}</option>
+            {%- endif -%}
+            {%- if preferred_choices|length > 0 -%}
+                {% set options = preferred_choices %}
+                {% set render_preferred_choices = true %}
+                {{- block('choice_widget_options') -}}
+                {%- if choices|length > 0 and separator is not none -%}
+                    <option disabled="disabled">{{ separator }}</option>
+                {%- endif -%}
+            {%- endif -%}
+            {%- set options = choices -%}
+            {%- set render_preferred_choices = false -%}
+            {{- block('choice_widget_options') -}}
+        </select>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock choice_widget_collapsed %}
+
+{%- block choice_widget_options -%}
+    {% if form.vars.id == "Lots_copies" %}
+        {% for group_label, choice in options %}
+            {%- if choice is iterable -%}
+                <optgroup label="{{ choice_translation_domain is same as(false) ? group_label : group_label|trans({}, choice_translation_domain) }}">
+                    {% set options = choice %}
+                    {{- block('choice_widget_options') -}}
+                </optgroup>
+            {%- else -%}
+                {% if not render_preferred_choices|default(false) and choice is selectedchoice(value) %}
+                    <option value="{{ choice.label }}"{% if choice.attr %}{% with { attr: choice.attr } %}{{ block('attributes') }}{% endwith %}{% endif %} selected="selected">{{ choice_translation_domain is same as(false) ? choice.label : choice.label|trans(choice.labelTranslationParameters|default({}), choice_translation_domain) }}</option>
+                {% endif %}
+            {%- endif -%}
+        {% endfor %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{%- endblock choice_widget_options -%}

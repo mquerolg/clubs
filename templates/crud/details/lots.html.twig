@@ -1,0 +1,583 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
+{% extends ea.templatePath('crud/detail') %}
+
+    {% block main %}
+        <div class="detail-lot__info__date-modification"> {{ 'detail.last_updated_at'|trans({}, 'EasyAdminBundle') }}
+        {{ updated_at }}
+    </div>
+
+    {% set fields = entity.getFields %}
+    {% set dimFieldValues = fields.getByProperty('dim').getFormattedValue|split(';') %}
+
+    <div class="detail-lot">
+        <div class="detail-lot__info">
+            <div class="detail-lot__info__row">
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('bibliographic').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('bibliographic').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('signature').getLabel }}</div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('signature').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('genre').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('genre').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col detail-lot__info__col--last">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('active').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {% if fields.getByProperty('active').getValue == 1 %}
+                            {{ 'global.yes'|trans({}, 'EasyAdminBundle') }}
+                        {% else %}
+                            {{ 'global.no'|trans({}, 'EasyAdminBundle') }}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="detail-lot__info__row">
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('authorship').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('authorship').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('publication').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('publication').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('isbn').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('isbn').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col detail-lot__info__col--last">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('description').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('description').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+            </div>
+            <div class="detail-lot__info__row">
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('title').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('title').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('collection').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('collection').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('classification').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('classification').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col detail-lot__info__col--last">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('url').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {% if fields.getByProperty('url').getFormattedValue is not null %}
+                            <a href="{{ path('downloadFile', {'id': entity.getInstance.getId}) }}">
+                                {{ fields.getByProperty('url').getFormattedValue|split('_', 27)|last  }}
+                            </a>
+                        {% else %}
+                            --
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-lot__status">
+            <div class="detail-lot__status__title text-uppercase">
+                {{ 'lots.detail.state'|trans({}, 'EasyAdminBundle') }}
+            </div>
+            {% if fields.getByProperty('deletedStatus') is not null %}
+                <div class="detail-lot__status__icon">
+                    <i class="fas fa-trash"></i>
+                </div>
+                <div class="detail-lot__status__text">
+                    {{ 'lots.detail.lot_disable'|trans({}, 'EasyAdminBundle') }}
+                </div>
+            {% else %}
+                {% set statusId = fields.getByProperty('status').getValue.id %}
+
+                {% if statusId == constant('App\\Diba\\Helpers\\StateHelper::AVAILABLE') %}
+                    <div class="detail-lot__status__icon">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="detail-lot__status__text">
+                        {{ 'lots.detail.lot_disposed'|trans({}, 'EasyAdminBundle') }}
+                    </div>
+                {% elseif statusId == constant('App\\Diba\\Helpers\\StateHelper::RESERVED') %}
+                    <div class="detail-lot__status__icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="detail-lot__status__text">
+                        {{ 'lots.detail.lot_reserved'|trans({}, 'EasyAdminBundle') }}
+                    </div>
+                {% else %}
+                    {% if fields.getByProperty('reserved') %}
+                        <div class="detail-lot__status__icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="detail-lot__status__text">
+                            {{ 'lots.detail.lot_reserved'|trans({}, 'EasyAdminBundle') }}
+                        </div>
+                    {% endif %}
+                    <div class="overlapping">
+                        <span class="overlapping__btn {{ (statusId == constant('App\\Diba\\Helpers\\StateHelper::IS_RETURNED'))? 'overlapping__btn--active' }}">{{ 'lots.detail.status_is_returned'|trans({}, 'EasyAdminBundle') }}</span>
+                        <span class="overlapping__btn {{ (statusId == constant('App\\Diba\\Helpers\\StateHelper::IS_COLLECTED'))? 'overlapping__btn--active' }}">{{ 'lots.detail.status_is_collected'|trans({}, 'EasyAdminBundle') }}</span>
+                        <span class="overlapping__btn {{ (statusId == constant('App\\Diba\\Helpers\\StateHelper::IS_RETURN'))? 'overlapping__btn--active' }}">{{ 'lots.detail.status_is_return'|trans({}, 'EasyAdminBundle') }}</span>
+                        <span class="overlapping__btn {{ (statusId == constant('App\\Diba\\Helpers\\StateHelper::IN_LIBRARY'))? 'overlapping__btn--active' }}">{{ 'lots.detail.status_in_library'|trans({}, 'EasyAdminBundle') }}</span>
+                        <span class="overlapping__btn {{ (statusId == constant('App\\Diba\\Helpers\\StateHelper::IN_TRANSIT'))? 'overlapping__btn--active' }}">{{ 'lots.detail.status_in_transit'|trans({}, 'EasyAdminBundle') }}</span>
+                        <span class="overlapping__btn {{ (statusId == constant('App\\Diba\\Helpers\\StateHelper::PREPARED'))? 'overlapping__btn--active' }}">{{ 'lots.detail.status_prepared'|trans({}, 'EasyAdminBundle') }}</span>
+                        <span class="overlapping__btn {{ (statusId == constant('App\\Diba\\Helpers\\StateHelper::REQUESTED'))? 'overlapping__btn--active' }}">{{ 'lots.detail.status_requested'|trans({}, 'EasyAdminBundle') }}</span>
+                        <span class="overlapping__btn">{{ 'lots.detail.status_available'|trans({}, 'EasyAdminBundle') }}</span>
+                    </div>
+                    <div class="detail-lot">
+                        <div class="detail-lot__status__row">
+                            <div class="detail-lot__status__col">
+                                <div class="detail-lot__status__col__title text-uppercase">
+                                    {{ 'lots.detail.cdl'|trans({}, 'EasyAdminBundle') }}
+                                </div>
+                                <div class="detail-lot__status__col__content">
+                                    {{ historic.getClub.getName ?? '--' }}
+                                </div>
+                            </div>
+                            <div class="detail-lot__status__col">
+                                <div class="detail-lot__status__col__title text-uppercase">
+                                    {{ 'lots.detail.library'|trans({}, 'EasyAdminBundle') }}
+                                </div>
+                                <div class="detail-lot__status__col__content">
+                                    {{ historic.getLibrary.getName ?? '--' }}
+                                </div>
+                            </div>
+                            <div class="detail-lot__status__col">
+                                <div class="detail-lot__status__col__title text-uppercase">
+                                    {{ 'lots.detail.municipality'|trans({}, 'EasyAdminBundle') }}
+                                </div>
+                                <div class="detail-lot__status__col__content">
+                                    {{ historic.getLibrary.getMunicipality ?? '--' }}
+                                </div>
+                            </div>
+                            {% if statusId < constant('App\\Diba\\Helpers\\StateHelper::IS_RETURN') %}
+                                <div class="detail-lot__status__col">
+                                    <div class="detail-lot__status__col__title text-uppercase">
+                                        {{ 'lots.detail.requested_at'|trans({}, 'EasyAdminBundle') }}
+                                    </div>
+                                    <div class="detail-lot__status__col__content">
+                                        {{ historic.getCreatedAt.format('d/m/Y') ?? '--' }}
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if statusId < constant('App\\Diba\\Helpers\\StateHelper::IN_LIBRARY') %}
+                                <div class="detail-lot__status__col">
+                                    <div class="detail-lot__status__col__title text-uppercase">
+                                        {{ 'lots.detail.recived_aprox_at'|trans({}, 'EasyAdminBundle') }}
+                                    </div>
+                                    <div class="detail-lot__status__col__content">
+                                        {{ historic.getReceivedIn.format('d/m/Y') ?? '--' }}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="detail-lot__status__col">
+                                    <div class="detail-lot__status__col__title text-uppercase">
+                                        {{ 'lots.detail.recived_at'|trans({}, 'EasyAdminBundle') }}
+                                    </div>
+                                    <div class="detail-lot__status__col__content">
+                                        {{ historic.getReceivedAt.format('d/m/Y') ?? '--' }}
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if statusId < constant('App\\Diba\\Helpers\\StateHelper::IS_RETURN') %}
+                                <div class="detail-lot__status__col">
+                                    <div class="detail-lot__status__col__title text-uppercase">
+                                        {{ 'lots.detail.returned_aprox_at'|trans({}, 'EasyAdminBundle') }}
+                                    </div>
+                                    <div class="detail-lot__status__col__content">
+                                        {{ historic.getReturnIn.format('d/m/Y') ?? '--' }}
+                                    </div>
+                                </div>
+                            {% elseif statusId == constant('App\\Diba\\Helpers\\StateHelper::IS_RETURN') %}
+                                <div class="detail-lot__status__col">
+                                    <div class="detail-lot__status__col__title text-uppercase">
+                                        {{ 'lots.detail.returned_force_at'|trans({}, 'EasyAdminBundle') }}
+                                    </div>
+                                    <div class="detail-lot__status__col__content">
+                                        {{ historic.getReturnedIn.format('d/m/Y') ?? '--' }}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="detail-lot__status__col">
+                                    <div class="detail-lot__status__col__title text-uppercase">
+                                        {{ 'lots.detail.returned_at'|trans({}, 'EasyAdminBundle') }}
+                                    </div>
+                                    <div class="detail-lot__status__col__content">
+                                        {{ historic.getReturnedAt.format('d/m/Y') ?? '--' }}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <div class="detail-lot__info">
+            <div class="detail-lot__info__row">
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ 'lots.detail.num_lang'|trans({}, 'EasyAdminBundle') }}
+                    </div>
+                    <div class="detail-lot__info__col__content detail-lot__lang-content">
+                        {% if fields.getByProperty('langCat').getValue != 0 %}
+                            <span class="detail-lot__lang">
+                                {{ fields.getByProperty('langCat').getLabel }}
+                                {{ fields.getByProperty('langCat').getFormattedValue ?? '0' }}
+                            </span>
+                        {% endif %}
+                        {% if fields.getByProperty('langEs').getValue != 0 %}
+                            <span class="detail-lot__lang">
+                                {{ fields.getByProperty('langEs').getLabel }}
+                                {{ fields.getByProperty('langEs').getFormattedValue ?? '0' }}
+                            </span>
+                        {% endif %}
+                        {% if fields.getByProperty('langAng').getValue != 0 %}
+                            <span class="detail-lot__lang">
+                                {{ fields.getByProperty('langAng').getLabel }}
+                                {{ fields.getByProperty('langAng').getFormattedValue ?? '0' }}
+                            </span>
+                        {% endif %}
+                        {% if fields.getByProperty('langFra').getValue != 0 %}
+                            <span class="detail-lot__lang">
+                                {{ fields.getByProperty('langFra').getLabel }}
+                                {{ fields.getByProperty('langFra').getFormattedValue ?? '0' }}
+                            </span>
+                        {% endif %}
+                        {% if fields.getByProperty('langAle').getValue != 0 %}
+                            <span class="detail-lot__lang">
+                                {{ fields.getByProperty('langAle').getLabel }}
+                                {{ fields.getByProperty('langAle').getFormattedValue ?? '0' }}
+                            </span>
+                        {% endif %}
+                        {% if fields.getByProperty('langIta').getValue != 0 %}
+                            <span class="detail-lot__lang">
+                                {{ fields.getByProperty('langIta').getLabel }}
+                                {{ fields.getByProperty('langIta').getFormattedValue ?? '0' }}
+                            </span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('warehouse').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('warehouse').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('dim').getLabel }}
+                    </div>
+
+                    {% if dimFieldValues|length > 0 %}
+                        {% for dimValue in dimFieldValues %}
+                            {% if dimValue is not empty %}
+                                <div class="detail-lot__info__col__content">
+                                    {{ dimValue }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <div class="detail-lot__info__col__content">
+                            {{ dimFieldValues ?? '--' }}
+                        </div>
+                    {% endif %}
+
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('uses').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('uses').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('owner').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('owner').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+            </div>
+            <div class="detail-lot__info__row">
+                <div class="detail-lot__info__col">
+                    <div class="detail-lot__info__col__title text-uppercase">
+                        {{ fields.getByProperty('year').getLabel }}
+                    </div>
+                    <div class="detail-lot__info__col__content">
+                        {{ fields.getByProperty('year').getFormattedValue ?? '--' }}
+                    </div>
+                </div>
+                <div class="detail-lot__info__col detail-lot__info__col--obs">
+                    {% if isAdmin %}
+                        <div class="detail-lot__info__col__title text-uppercase">
+                            {{ fields.getByProperty('observations').getLabel }}
+                        </div>
+                        <div class="detail-lot__info__col__content">
+                            {% if fields.getByProperty('observations').getValue is empty %}
+                                {{ 'detail.empty_observation'|trans({}, 'EasyAdminBundle') }}
+                            {% else %}
+                                {{ fields.getByProperty('observations').getFormattedValue }}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="detail-lot__info__col"></div>
+            </div>
+        </div>
+        <div class="detail-lot__copies">
+            <div class="detail-lot__copies__title text-uppercase">
+                {{ 'lots.detail.copies_title'|trans({}, 'EasyAdminBundle') }}
+            </div>
+            <div class="detail-lot__copies__row">
+                {% for copie in fields.getByProperty('copies').getValue.getValues %}
+                    <div class="detail-lot__copies__row__padding">
+                        <div class="detail-lot__copies__row__content">
+                            {{ copie.name }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% block delete_form %}
+        {{ include('crud/includes/_delete_form.html.twig', { entity_id: entity.primaryKeyValue }, with_context = false) }}
+    {% endblock delete_form %}
+
+{% endblock %}
+
+
+{% block body_javascript %}
+    <script>
+        const api = {
+            setLot: function (id) {
+                $.ajax({
+                    url: '/api/lots/' + id + '/lot',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $('#modalIndexContentBodyInfoFieldLineContentTitle').html(data[0]['title'] || '-');
+                        $('#modalIndexContentBodyInfoFieldLineContentAuthor').html(data[0]['authorship'] || '-');
+                        $('#modalIndexContentBodyInfoFieldLineContentSignature').html(data[0]['signature'] || '-');
+                        $('#modalIndexContentBodyInfoFieldLineContentDescription').html(data[0]['description'] || '-');
+                        $('#modalIndexContentBodyInfoFieldLineContentCopies').html(data[0]['title'] || '-');
+                        $('#indexModal').modal('show');
+                    }
+                });
+            },
+            setLibraries: function () {
+                $.ajax({
+                    url: '/api/libraries',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        var optionList = document.getElementById('indexModalBodyDropDownContentFirstSelector');
+                        $('#indexModalBodyDropDownContentFirstSelector option').remove();
+                        optionList.add(new Option('...', 0));
+                        data.forEach(option => optionList.add(new Option(option.municipality + ' - ' + option.name, option.id)));
+                    }
+                });
+            },
+            setClubs: function (id) {
+                $.ajax({
+                    url: '/api/clubs/' + id + '/library',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        var optionList = document.getElementById('indexModalBodyDropDownContentSecondSelector');
+                        $('#indexModalBodyDropDownContentSecondSelector option').remove();
+                        optionList.add(new Option('...', 0));
+                        data.forEach(option => optionList.add(new Option(option.name, option.id)));
+                    }
+                });
+            },
+            setRoute: function(id) {
+                $.ajax({
+                    url: '/api/routes/'+ id +'/library',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $('#indexModalBodycolumnsLeftContent').html(data['date']);
+                        $('#indexModalBodycolumnsRightContent').html(data['lot']);
+                    }
+                });
+            }
+        }
+
+        $('.action-request').click(function (event) {
+            event.preventDefault();
+
+            var $this = $(this);
+
+            let url = $this.attr('href');
+            let url_params = new URLSearchParams(url);
+            let id = url_params.get('entityId');
+            api.setLot(id)
+
+            let library_value = $this.data('library');
+
+            $('#modalHeaderTitle').html('Demanar lot');
+            $('#indexModalBodyInfoFields').css({'display': 'block'});
+            $('#indexModalBodyDropDown').css({'display': 'block'});
+
+            if (library_value == 0) {
+                $('#indexModalBodyDropDownContentFirst').css({'display': 'block'});
+                api.setLibraries();
+                $('#indexModalBodyDropDownContentFirstSelector').on('change', function () {
+                    api.setRoute($(this).val());
+                    api.setClubs($(this).val());
+                });
+            } else {
+                api.setRoute(library_value);
+                api.setClubs(library_value);
+            }
+
+            $('#indexModalBodyDropDownContentSecond').css({'display': 'block'});
+            $('#indexModalBodycolumns').css({'display': 'flex'});
+            $('#indexModalFooter').css({'display': 'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Demanar-ho');
+            $('#indexModalFooterSecondBtn').prop('disabled', true);
+            $('#indexModalFooterSecondBtn').removeClass('modal-index-content__footer__secondary');
+            $('#indexModalFooterSecondBtn').addClass('modal-index-content__footer__secondaryDisabled');
+
+            $('#indexModalBodyDropDownContentSecondSelector').on('change', function () {
+                if ($(this).val() !== '0') {
+                    $('#indexModalFooterSecondBtn').prop('disabled', false);
+                    $('#indexModalFooterSecondBtn').removeClass('modal-index-content__footer__secondaryDisabled');
+                    $('#indexModalFooterSecondBtn').addClass('modal-index-content__footer__secondary');
+                }
+            });
+
+
+            $('#indexModalFooterSecondBtn').click(function(){
+                var library_id = $('#indexModalBodyDropDownContentFirstSelector').val();
+                var club_id = $('#indexModalBodyDropDownContentSecondSelector').val();
+                var send = $('#indexModalBodycolumnsLeftContent').html();
+                var route = $('#indexModalBodycolumnsRightContent').html();
+
+                if (send.trim() != '' && route.trim() != '') {
+                    window.location.href = $this.attr('href') + '&library=' + library_id + '&club=' + club_id + '&senddate=' + send + '&sendid=' + route;
+                }
+            })
+        });
+
+        var change = 0;
+
+        $('.action-change').click(function (event) {
+            event.preventDefault();
+
+            var $this = $(this);
+
+            let url = $this.attr('href');
+            let url_params = new URLSearchParams(url);
+            let id = url_params.get('entityId');
+
+            api.setLot(id);
+
+            let library_value = $this.data('library');
+
+            $('#modalHeaderTitle').html('Traspassar lot');
+
+            if (change == 0) {
+                $('#indexModalBodyInfoFields').prepend(`
+                    <p style="text-align:justify;text-justify:inter-word;">
+                        Aquest lot està marcat com en ús, aquesta acció tancarà la instància d'ús actual i generarà una nova instància d'ús, amb estat <b class="field-color-status field-color-status--5">Biblioteca</b>, per a la biblioteca seleccionada.
+                        Tingui en compte que una vegada generat el traspàs <b style="color:#891536">no es podrà desfer l'acció</b>.
+                    </p>
+                `);
+
+                change++;
+            }
+    
+            $('#indexModalBodyInfoFields').css({'display': 'block'});
+            $('#indexModalBodyDropDown').css({'display': 'block'});
+
+            if (library_value == 0) {
+                $('#indexModalBodyDropDownContentFirst').css({'display': 'block'});
+                api.setLibraries();
+                $('#indexModalBodyDropDownContentFirstSelector').on('change', function () {
+                    api.setClubs($(this).val());
+                });
+            } else {
+                api.setClubs(library_value);
+            }
+
+            $('#indexModalBodyDropDownContentSecond').css({'display': 'block'});
+            $('#indexModalFooter').css({'display': 'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Traspassar-ho');
+            $('#indexModalFooterSecondBtn').prop('disabled', true);
+            $('#indexModalFooterSecondBtn').removeClass('modal-index-content__footer__secondary');
+            $('#indexModalFooterSecondBtn').addClass('modal-index-content__footer__secondaryDisabled');
+
+            $('#indexModalBodyDropDownContentSecondSelector').on('change', function () {
+                if ($(this).val() !== '0') {
+                    $('#indexModalFooterSecondBtn').prop('disabled', false);
+                    $('#indexModalFooterSecondBtn').removeClass('modal-index-content__footer__secondaryDisabled');
+                    $('#indexModalFooterSecondBtn').addClass('modal-index-content__footer__secondary');
+                }
+            });
+
+            $('#indexModalFooterSecondBtn').click(function(){
+                var library_id = $('#indexModalBodyDropDownContentFirstSelector').val();
+                var club_id = $('#indexModalBodyDropDownContentSecondSelector').val();
+            
+                window.location.href = $this.attr('href') + '&library=' + library_id + '&club=' + club_id;
+            })
+        });
+    </script>
+{% endblock body_javascript %}

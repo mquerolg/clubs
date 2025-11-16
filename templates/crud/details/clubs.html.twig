@@ -1,0 +1,130 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
+{% extends ea.templatePath('crud/detail') %}
+
+{% block main %}
+    {% set fields = entity.getFields %}
+
+    <div class="detail-clubs">
+        <div class="detail-clubs__info">
+            <div class="detail-clubs__info__date-modification">
+                {{ 'detail.last_updated_at'|trans({}, 'EasyAdminBundle')}} {{ updated_at }}
+            </div>
+            <div class="detail-clubs__info__row">
+                <div>
+                    <div class="detail-clubs__info__row__title text-uppercase"> {{ fields.getByProperty('name').getLabel }} </div>
+                    <div class="detail-clubs__info__row__content"> {{ fields.getByProperty('name').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-clubs__info__row__title text-uppercase"> {{ fields.getByProperty('year').getLabel }} </div>
+                    <div class="detail-clubs__info__row__content"> {{ fields.getByProperty('year').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-clubs__info__row__title text-uppercase"> {{ fields.getByProperty('external').getLabel }} </div>
+                    <div class="detail-clubs__info__row__content">
+                        {% if fields.getByProperty('external').getValue == 1 %}
+                            {{ 'global.yes'|trans({}, 'EasyAdminBundle') }}
+                        {% else %}
+                            {{ 'global.no'|trans({}, 'EasyAdminBundle') }}
+                        {% endif %}
+                    </div> 
+                </div>
+            </div>
+            <div class="detail-clubs__info__row">
+                <div> 
+                    <div class="detail-clubs__info__row__title text-uppercase"> {{ fields.getByProperty('library').getLabel }} </div>
+                    <div class="detail-clubs__info__row__content"> {{ fields.getByProperty('library').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-clubs__info__row__title text-uppercase"> {{ fields.getByProperty('typology').getLabel }} </div>
+                    <div class="detail-clubs__info__row__content"> {{ fields.getByProperty('typology').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-clubs__info__row__title text-uppercase"> {{ fields.getByProperty('active').getLabel }} </div>
+                    <div class="detail-clubs__info__row__content">
+                        {% if fields.getByProperty('active').getValue == 1 %}
+                            {{ 'global.yes'|trans({}, 'EasyAdminBundle') }}
+                        {% else %}
+                            {{ 'global.no'|trans({}, 'EasyAdminBundle') }}
+                        {% endif %}
+                    </div> 
+                </div>
+            </div>
+            <div class="detail-clubs__info__row">
+                <div> 
+                    <div class="detail-clubs__info__row__title text-uppercase"> {{ fields.getByProperty('description').getLabel }} </div>
+                    <div class="detail-clubs__info__row__content"> {{ fields.getByProperty('description').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div>
+                </div>
+                <div> 
+                    <div class="detail-clubs__info__row__title text-uppercase"> {{ fields.getByProperty('observations').getLabel }} </div>
+                    <div class="detail-clubs__info__row__content"> {{ fields.getByProperty('observations').getFormattedValue ?? '--' }} </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-middle-title">
+        <h1 class="title">
+            {{ 'clubs.detail.historic_lots'|trans({}, 'EasyAdminBundle') }}
+        </h1>
+    </div>
+
+    <div class="content-table content-table--detail">
+        <table id="library-detail-tabla" class="table datagrid tablesorter">
+            <thead>
+                <tr>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'clubs.detail.num_picked_lot'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'clubs.detail.petition'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'clubs.detail.returnd'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'clubs.detail.authorship'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'clubs.detail.title'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'clubs.detail.cat'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'clubs.detail.es'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'clubs.detail.others'|trans({}, 'EasyAdminBundle') }}</span></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if rows|length > 0 %}
+                {% for row in rows %}
+                    <tr>
+                        <td class="text-left"> {{ row.getSendId ?? '' }} </td>
+                        <td class="text-left"> {{ (row.getCreatedAt is null) ? '' : row.getCreatedAt.format('d/m/Y') }} </td>
+                        <td class="text-left"> {{ (row.getReturnedAt is null) ? '' : row.getReturnedAt.format('d/m/Y') }} </td>
+                        <td class="text-left"> {{ row.getLot.getAuthorship }} </td>
+                        <td class="text-left"> {{ row.getLot.getTitle }} </td>
+                        <td class="text-left"> {{ row.getLot.getLangCat }} </td>
+                        <td class="text-left"> {{ row.getLot.getLangEs }} </td>
+                        <td class="text-left"> {{ row.getLot.getLangSum }} </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                {% for i in 1..2 %}
+                    <tr class="empty-row">
+                        {% for i in 1..9 %}
+                            <td ><span></span></td>
+                        {% endfor %}
+                    </tr>
+
+                    {% if 1 == loop.index %}
+                        <tr class="no-results">
+                            <td colspan="100">
+                                {{ 'datagrid.no_results'|trans(ea.i18n.translationParameters, 'EasyAdminBundle') }}
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
+    {% block delete_form %}
+        {{ include('crud/includes/_delete_form.html.twig', { entity_id: entity.primaryKeyValue }, with_context = false) }}
+    {% endblock delete_form %}
+
+{% endblock %}
+

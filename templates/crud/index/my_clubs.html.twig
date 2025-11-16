@@ -1,0 +1,452 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
+{# {% extends ea.templatePath('crud/detail') %} #}
+{% extends 'page/content.html.twig' %}
+{% block content_title 'Els meus clubs' %}
+
+    {% block main %}
+
+
+    {% set fields = entity.getFields %}
+
+    {% set fields = entity.getFields() %}
+    {% for field, value in fields %}
+        <p>{{ field }}: {{ value }}</p>
+    {% endfor %}
+
+        <div id="myclubs" class="detail-clubs"> <div class="d-flex">
+            <nav class="nav-container overflow-hidden">
+                <div class="nav nav-tabs flex-nowrap" id="nav-tab" role="tablist">
+                    {% for row in dataClubs %}
+                        {% if loop.index == 1 %}
+                            <button class="nav-link active" id="nav-{{ row.id }}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{ row.id }}" type="button" role="tab" aria-controls="nav-{{ row.id }}" aria-selected="true">
+                                <div style="">{{ row.name ?? '--' }}</div>
+                            </button>
+                        {% else %}
+                            <button class="nav-link" id="nav-{{ row.id }}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{ row.id }}" type="button" role="tab" aria-controls="nav-{{ row.id }}" aria-selected="true">
+                                <div style="">{{ row.name ?? '--' }}</div>
+                            </button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </nav>
+        {% if dataClubs|length > 5 %}
+            <div id="nav-button-back" class="nav-button-navigation">
+                <img class="img-button-nav-myclubs" src="{{ asset('/build/images/custom_images/chevron-left-solid.svg') }}">
+            </div>
+
+            <div id="nav-button-next" class="nav-button-navigation">
+                <img class="img-button-nav-myclubs" src="{{ asset('/build/images/custom_images/chevron-right-solid.svg') }}">
+            </div>
+        {% endif %}
+
+                </div>
+                <div class="detail-clubs__info detail-clubs__info--users">
+                    <div class="tab-content" id="nav-tabContent">
+                        {% for row in dataClubs %}
+                            <div class="tab-pane fade" id="nav-{{ row.id }}" role="tabpanel" aria-labelledby="nav-{{ row.id }}-tab">
+                                <div class="container-panel-data">
+
+                                    <div class="detail-clubs__info__date-modification"></div>
+                                    <div class="detail-clubs__info__row">
+                                        <div>
+
+                                            <div class="detail-clubs__info__row__title text-uppercase">
+                                                {{ 'my_clubs.name_library_club'|trans({}, 'EasyAdminBundle') }}
+                                            </div>
+                                            <div class="detail-clubs__info__row__content">
+                                                {{ row.name ?? '--' }}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="detail-clubs__info__row__title text-uppercase">
+                                                {{ 'my_clubs.entry_year'|trans({}, 'EasyAdminBundle') }}
+                                            </div>
+                                            <div class="detail-clubs__info__row__content">
+                                                {{ row.year ?? '--' }}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="detail-clubs__info__row__title text-uppercase">
+                                                {{ 'my_clubs.extern'|trans({}, 'EasyAdminBundle') }}
+                                            </div>
+                                            <div class="detail-clubs__info__row__content">
+                                                {% if row.external == 1 %}
+                                                    {{ 'global.yes'|trans({}, 'EasyAdminBundle') }}
+                                                {% else %}
+                                                    {{ 'global.no'|trans({}, 'EasyAdminBundle') }}
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-clubs__info__row">
+                                        <div>
+                                            <div class="detail-clubs__info__row__title text-uppercase">
+                                                {{ 'my_clubs.library'|trans({}, 'EasyAdminBundle') }}
+                                            </div>
+                                            <div class="detail-clubs__info__row__content">
+                                                {{ row.library ?? '--' }}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="detail-clubs__info__row__title text-uppercase">
+                                                {{ 'my_clubs.tipology'|trans({}, 'EasyAdminBundle') }}
+                                            </div>
+                                            <div class="detail-clubs__info__row__content">
+                                                {{ row.typology ?? '--' }}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="detail-clubs__info__row__title text-uppercase">
+                                                {{ 'my_clubs.status'|trans({}, 'EasyAdminBundle') }}
+                                            </div>
+                                            <div class="detail-clubs__info__row__content">
+                                                {% if row.active == 1 %}
+                                                    {{ 'global.yes'|trans({}, 'EasyAdminBundle') }}
+                                                {% else %}
+                                                    {{ 'global.no'|trans({}, 'EasyAdminBundle') }}
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-clubs__info__row">
+                                        <div>
+                                            <div class="detail-clubs__info__row__title text-uppercase">
+                                                {{ 'my_clubs.description'|trans({}, 'EasyAdminBundle') }}
+                                            </div>
+                                            <div class="detail-clubs__info__row__content">
+                                                {{ row.description ?? '--' }}
+                                            </div>
+                                        </div>
+                                        <div></div>
+                                        <div>
+                                            <div class="detail-clubs__info__row__title text-uppercase">
+                                                {{ 'my_clubs.observations'|trans({}, 'EasyAdminBundle') }}
+                                            </div>
+                                            <div class="detail-clubs__info__row__content">
+                                                {{ row.observations ?? '--' }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a class="mt-3 btn btn--add-action" href="{{ ea_url().setController('App\\Controller\\Admin\\MyClubsCrudController').setAction('edit').setEntityId(row.id) }}" data-action-name="receivedAction">
+                                        <i class="action-icon fa fa-pencil"></i>
+                                        {{ 'my_clubs.edit'|trans({}, 'EasyAdminBundle') }}</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="content-middle-title">
+                    <h1 class="title">
+                        {{ 'clubs.detail.historic_lots'|trans({}, 'EasyAdminBundle') }}
+                    </h1>
+                </div>
+
+                <div class="content-table content-table--detail">
+                    <table id="library-detail-tabla" class="table datagrid tablesorter">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase sorted" dir="">
+                                    <span>{{ 'clubs.detail.num_picked_lot'|trans({}, 'EasyAdminBundle') }}</span>
+                                </th>
+                                <th class="text-uppercase sorted" dir="">
+                                    <span>{{ 'clubs.detail.petition'|trans({}, 'EasyAdminBundle') }}</span>
+                                </th>
+                                <th class="text-uppercase sorted" dir="">
+                                    <span>{{ 'clubs.detail.returnd'|trans({}, 'EasyAdminBundle') }}</span>
+                                </th>
+                                <th class="text-uppercase sorted" dir="">
+                                    <span>{{ 'clubs.detail.authorship'|trans({}, 'EasyAdminBundle') }}</span>
+                                </th>
+                                <th class="text-uppercase sorted" dir="">
+                                    <span>{{ 'clubs.detail.title'|trans({}, 'EasyAdminBundle') }}</span>
+                                </th>
+                                <th class="text-uppercase sorted" dir="">
+                                    <span>{{ 'clubs.detail.cat'|trans({}, 'EasyAdminBundle') }}</span>
+                                </th>
+                                <th class="text-uppercase sorted" dir="">
+                                    <span>{{ 'clubs.detail.es'|trans({}, 'EasyAdminBundle') }}</span>
+                                </th>
+                                <th class="text-uppercase sorted" dir="">
+                                    <span>{{ 'clubs.detail.others'|trans({}, 'EasyAdminBundle') }}</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        {% for rowClubsHistory in dataClubs %}                 
+                        <tbody  id="history-{{rowClubsHistory.id}}" style="display:none;">
+                            {% if rowClubsHistory.dataHistory|length > 0 %}
+                                    {% for rowHistory in rowClubsHistory.dataHistory %}
+                                    <tr id="history-{{rowHistory.idClub}}">
+                                        <td class="text-left">
+                                            {{ rowHistory['sendId'] }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ (rowHistory['createdAt'] is null) ? '' : rowHistory['createdAt'].format('d/m/Y') }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ (rowHistory['returnedAt'] is null) ? '' : rowHistory['returnedAt'].format('d/m/Y') }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ rowHistory['authorship'] }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ rowHistory['title'] }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ rowHistory['langCat'] }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ rowHistory['langEs'] }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ rowHistory['langSum'] }}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                {% for i in 1..2 %}
+                                    <tr class="empty-row">
+                                        {% for i in 1..9 %}
+                                            <td>
+                                                <span></span>
+                                            </td>
+                                        {% endfor %}
+                                    </tr>
+                                    {% if 1 == loop.index %}
+                                        <tr class="no-results">
+                                            <td colspan="100">
+                                                {{ 'datagrid.no_results'|trans(ea.i18n.translationParameters, 'EasyAdminBundle') }}
+                                            </td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </tbody>
+                        {% endfor %}
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            var myTabs = document.querySelectorAll("div.nav-tabs > button");
+            var panels = document.querySelectorAll("div.tab-content > div");
+            var tablesHistoric = document.querySelectorAll("table > tbody");
+            for (var i = 0; i < tablesHistoric.length; i++) {
+                if(i == 0){
+                    tablesHistoric[i].style.display="contents";
+                }else{
+                    tablesHistoric[i].style.display="none";    
+                }                            
+            }
+            
+            var elem = "";
+            panels[0].classList.add("active");
+            myTabs[0].classList.add("active");
+            panels[0].classList.add("show");
+            if(myTabs.length>5){
+                var butt_back = document.querySelector('#nav-button-back');
+                var butt_next = document.querySelector('#nav-button-next');
+                butt_back.style.opacity = "0.4";
+                butt_back.style.cursor = "default";
+                butt_next.style.opacity = "1";
+                butt_next.style.cursor = "pointer";
+                if(myTabs.length>1){
+                    butt_back.style.opacity = "0.4";
+                    butt_back.style.cursor = "default";
+                    butt_next.style.opacity = "1";
+                    butt_next.style.cursor = "pointer";
+                }else{
+                    butt_back.style.opacity = "0.4";
+                    butt_back.style.cursor = "default";
+                    butt_next.style.opacity = "0.4";
+                    butt_next.style.cursor = "default";
+                }
+            }
+            
+            $('#nav-button-next').click(function (event) {
+
+                var endTab = 5;
+                var startTab = 4;
+                var translateNumber = 0;
+                var checkActive = false;
+                var checkActivPanels = false;
+                var checkActivHistory = false;
+
+                for (var i = 0; i < panels.length; i++) {
+                    if (panels[i].classList.contains('active') && checkActivPanels == false && (i < myTabs.length - 1)) {
+                        panels[i].classList.remove("active");
+                        panels[i].classList.remove("show");
+                        panels[i + 1].classList.add("active");
+                        panels[i + 1].classList.add("show");
+
+                        checkActivPanels = true;
+                    }
+                }
+
+                var position = "";
+                butt_next = document.querySelector('#nav-button-next');
+                butt_next.style.opacity = "1";
+                butt_next.style.cursor = "pointer";
+
+                for (var i = 0; i < myTabs.length; i++) {
+                    if (myTabs[i].classList.contains('active') && i == myTabs.length - 1) {
+                        butt_next = document.querySelector('#nav-button-next');
+                        butt_next.style.opacity = "0.4";
+                        butt_next.style.cursor = "default";
+                        elem = document.querySelector('#nav-tab');
+                    }
+
+
+                    if (myTabs[i].classList.contains('active') && checkActive == false && (i < myTabs.length - 1)) {
+                        if (i == 0) {
+                            butt_back = document.querySelector('#nav-button-back');
+                            butt_back.style.opacity = "1";
+                            butt_back.style.cursor = "pointer";
+                            elem = document.querySelector('#nav-tab');
+                        }
+                        checkActive = true;
+                        position = myTabs[i].offsetLeft;
+                        myTabs[i].classList.remove("active");
+                        myTabs[i + 1].classList.add("active");
+
+                        if (i == 0) {
+                            translateNumber = "translateX(-" + parseInt(228) + "px)";
+                        } else {
+                            position = myTabs[i + 1].offsetLeft;
+                            translateNumber = "translateX(-" + parseInt(position) + "px)";
+                        } elem.style.transform = translateNumber;
+                    }
+                    if (myTabs[i].classList.contains('active') && checkActivHistory == false ){
+                        for (var k = 0; k < tablesHistoric.length; k++) {
+                            tablesHistoric[k].style.display="contents";
+                            if(tablesHistoric[k].id.split('-')[1] != myTabs[i].id.split('-')[1]){
+                                tablesHistoric[k].style.display="none";                                            
+                            }
+                        }
+                        checkActivHistory = true;
+                    }
+
+                }
+            });
+
+            $('#nav-button-back').click(function (event) {
+
+                var endTab = 5;
+                var startTab = 4;
+                var translateNumber = 0;
+                var checkActive = false;
+                var checkActivPanels = false;
+                var checkActivHistoryBack = false;
+
+                for (var i = 0; i < myTabs.length; i++) {
+                    if (myTabs && myTabs[i].classList.contains('active') && checkActivHistoryBack == false && i !=0 ){
+                        for (var k = 0; k < tablesHistoric.length; k++) {
+                            tablesHistoric[k].style.display="none";                                            
+                        }
+                        for (var k = 0; k < tablesHistoric.length; k++) {
+                            if(tablesHistoric[k].id.split('-')[1] == myTabs[i-1].id.split('-')[1]){
+                                tablesHistoric[k].style.display="contents";
+                            }
+                        }
+                        checkActivHistoryBack = true;
+                    }
+                }
+
+                for (var i = 0; i < panels.length; i++) {
+                    if (panels[i].classList.contains('active') && checkActivPanels == false && i > 0) {
+                        panels[i].classList.remove("active");
+                        panels[i].classList.remove("show");
+                        panels[i - 1].classList.add("active");
+                        panels[i - 1].classList.add("show");
+                        checkActivPanels = true;
+                    }
+                }
+
+                var position = "";
+
+                for (var i = 0; i < myTabs.length; i++) {
+                    
+                    if (myTabs[i].classList.contains('active') && (i - 1) == 0) {
+                        butt_back = document.querySelector('#nav-button-back');
+                        butt_back.style.opacity = "0.4";
+                        butt_back.style.cursor = "default";
+                        elem = document.querySelector('#nav-tab');
+                    }
+
+                    if (myTabs[i].classList.contains('active') && checkActive == false && i > 0) {
+                        if (i > 0) {
+                            butt_next = document.querySelector('#nav-button-next');
+                            butt_next.style.opacity = "1";
+                            butt_next.style.cursor = "pointer";
+                            elem = document.querySelector('#nav-tab');
+                        }
+
+                        elem = document.querySelector('#nav-tab');
+                        checkActive = true;
+                        position = myTabs[i].offsetLeft;
+                        myTabs[i].classList.remove("active");
+                        myTabs[i - 1].classList.add("active");
+
+                        if (i == 0) {
+                            translateNumber = "translateX(-" + parseInt(228) + "px)";
+                        } else {
+                            position = myTabs[i - 1].offsetLeft;
+                            translateNumber = "translateX(-" + parseInt(position) + "px)";
+                        } 
+                        elem.style.transform = translateNumber;
+                    }
+                }
+            });
+
+            $('.nav-link').click(function (event) {
+
+                var endTab = 5;
+                var startTab = 4;
+                var translateNumber = 0;
+                var checkActive = false;
+                var checkActivPanels = false;
+                var position = "";
+
+                for (var i = 0; i < myTabs.length; i++) {
+                    if (myTabs[i].classList.contains('active') ) {
+                        if(i > 0 && (i < (myTabs.length - 1)) && myTabs.length>5){
+                                butt_back = document.querySelector('#nav-button-back');
+                                butt_back.style.opacity = "1";
+                                butt_back.style.cursor = "pointer";
+                                butt_next = document.querySelector('#nav-button-next');
+                                butt_next.style.opacity = "1";
+                                butt_next.style.cursor = "pointer";
+                        }else if(i == 0 && myTabs.length>5){
+                                butt_next = document.querySelector('#nav-button-next');
+                                butt_next.style.opacity = "1";
+                                butt_next.style.cursor = "pointer";
+                                butt_back = document.querySelector('#nav-button-back');
+                                butt_back.style.opacity = "0.4";
+                                butt_back.style.cursor = "default";
+                        }else if(i == (myTabs.length - 1) && myTabs.length>5){
+                                butt_next = document.querySelector('#nav-button-next');
+                                butt_next.style.opacity = "0.4";
+                                butt_next.style.cursor = "default";
+                                butt_back = document.querySelector('#nav-button-back');
+                                butt_back.style.opacity = "1";
+                                butt_back.style.cursor = "pointer";
+                        }
+                        for (var k = 0; k < tablesHistoric.length; k++) {
+                            tablesHistoric[k].style.display="contents";
+                            if(k != i){
+                                tablesHistoric[k].style.display="none";
+                            }
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+{% endblock %}

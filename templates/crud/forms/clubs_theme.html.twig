@@ -1,0 +1,34 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% use 'crud/form_theme.html.twig' %}
+
+{% block form_row_up %}
+    {% if form.vars.id in ['Clubs_name'] %}
+        <div class="row col-8">
+    {% elseif form.vars.id in ['Clubs_active'] %}
+        <div class="row col-4 align-self-start">
+            <div><br></div>
+    {% endif %}
+    
+    {% if form.vars.id in ['Clubs_name','Clubs_libraryMunicipality','Clubs_description','Clubs_observations','Clubs_active'] %}
+        <div class="row col-12">
+    {% endif %}
+
+    {% if form.vars.id in ['Clubs_description','Clubs_observations','Clubs_external'] %}
+        <div class="col-12">
+    {% else %}
+        <div class="col-6">
+    {% endif %}
+{% endblock %}
+
+{% block form_row_down %}
+    {% if form.vars.id in ['Clubs_year','Clubs_typology','Clubs_description','Clubs_observations','Clubs_external'] %}
+            </div>
+        </div>
+    {% else %}
+        </div>
+    {% endif %}
+
+    {% if form.vars.id in ['Clubs_observations','Clubs_external'] %}
+        </div>
+    {% endif %}
+{% endblock %}

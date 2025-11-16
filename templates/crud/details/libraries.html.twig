@@ -1,0 +1,170 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
+{% extends ea.templatePath('crud/detail') %}
+
+{% block main %}
+    {% set fields = entity.getFields %}
+
+    <div class="detail-libraries">
+        <div class="detail-libraries__info">
+            <div class="detail-libraries__info__date-modification">
+                {{ 'detail.last_updated_at'|trans({}, 'EasyAdminBundle')}} {{ updated_at }}
+            </div>
+            <div class="detail-libraries__info__row">
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('active').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content">
+                        {% if fields.getByProperty('active').getValue == 1 %}
+                            {{ 'global.yes'|trans({}, 'EasyAdminBundle') }}
+                        {% else %}
+                            {{ 'global.no'|trans({}, 'EasyAdminBundle') }}
+                        {% endif %}
+                    </div> 
+                </div>
+                <div class="detail-libraries__info__row__links"> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('clubs').getLabel }} </div>
+                    {% for club in fields.getByProperty('clubs').getValue.getValues %}
+                        <div class="detail-libraries__info__row__content"> 
+                            <a href="{{ ea_url().setController('App\\Controller\\Admin\\ClubsCrudController').setAction('detail').setEntityId(club.id) }}">
+                                {{ club.name }} 
+                            </a>
+                        </div> 
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="detail-libraries__info__row">
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('name').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('name').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('code').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('code').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('localization').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('localization').getFormattedValue ?? '--' }} </div> 
+                </div>
+            </div>
+            <div class="detail-libraries__info__row">
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('municipality').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('municipality').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('zone').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('zone').getFormattedValue ?? '--' }} </div> 
+                </div>
+            </div>
+            <div class="detail-libraries__info__row">
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('email').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('email').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('useLots').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('useLots').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('totalLots').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('totalLots').getFormattedValue ?? '--' }} </div> 
+                </div>
+            </div>
+            <div class="detail-libraries__info__row">
+                <div> 
+                    <div class="detail-libraries__info__row__title text-uppercase"> {{ fields.getByProperty('observations').getLabel }} </div>
+                    <div class="detail-libraries__info__row__content"> {{ fields.getByProperty('observations').getFormattedValue ?? '--' }} </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-middle-title">
+        <h1 class="title">
+            {{ 'libraries.detail.use_lots'|trans({}, 'EasyAdminBundle') }}
+        </h1>
+    </div>
+
+    <div class="content-table content-table--detail">
+        <table id="library-detail-tabla" class="table datagrid tablesorter">
+            <thead>
+                <tr>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.petition'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.estimate_arived'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.arrived'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.returnd_limit'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.authorship'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.title'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.cdl'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.num_ship'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.state'|trans({}, 'EasyAdminBundle') }}</span></th>
+                    <th class="text-uppercase sorted" dir=""><span>{{ 'libraries.detail.Actions'|trans({}, 'EasyAdminBundle') }}</span></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if rows|length > 0 %}
+                {% for row in rows %}
+                    <tr>
+                        <td class="text-left"> {{ (row.getCreatedAt is null) ? '' : row.getCreatedAt.format('d/m/Y') }} </td>
+                        <td class="text-left"> {{ (row.getReceivedIn is null) ? '' : row.getReceivedIn.format('d/m/Y')  }} </td>
+                        <td class="text-left"> {{ (row.getReceivedAt is null) ? '' : row.getReceivedAt.format('d/m/Y')  }} </td>
+                        <td class="text-left"> {{ (row.getReturnIn is null) ? '' : row.getReturnIn.format('d/m/Y')  }} </td>
+                        <td class="text-left"> {{ row.getLot.getAuthorship }} </td>
+                        <td class="text-left"> {{ row.getLot.getTitle }} </td>
+                        <td class="text-left"> {{ row.getClub.getName }} </td>
+                        <td class="text-left"> {{ row.getSendId ?? '' }} </td>
+                        <td class="text-left"> 
+                            <span class="field-color-status field-color-status--{{ row.getLot.getStatus.id }}"> {{ row.getLot.getStatus.getName }} </span> 
+                        </td>
+                        <td class="actions">
+                            <a class="btn-line-action" 
+                                href="{{ ea_url().setController('App\\Controller\\Admin\\LotsCrudController').setAction('detail').setEntityId(row.getLot.getId) }}"
+                                data-action-name="detail"><i class="action-icon fa fa-file-text-o"></i></a>
+                            {% if row.getLot.getStatus.getId == 4 %}
+                                <a class="btn-line-action modal-request-uselots-received" 
+                                    href="{{ ea_url().setController('App\\Controller\\Admin\\UseLotsCrudController').setAction('receivedAction').setEntityId(row.getLot.getId) }}" 
+                                    data-action-name="receivedAction"><i class="action-icon fa fa-check"></i></a>
+                            {% else %}
+                                <a class="btn-line-action btn-line-disabled" data-action-name="unreceivedAction"><i class="action-icon fa fa-check"></i></a>
+                            {% endif %}
+                            {% if row.getLot.getStatus.getId == 5 or row.getLot.getStatus.getId == 6 %}
+                                <a class="btn-line-action" 
+                                    href="{{ ea_url().setController('App\\Controller\\Admin\\UseLotsCrudController').setAction('returnAction').setEntityId(row.getLot.getId) }}" 
+                                    data-action-name="returnAction"><i class="action-icon fa fa-calendar-plus-o"></i></a>
+                            {% else %}
+                                <a class="btn-line-action btn-line-disabled" data-action-name="unreturnAction"><i class="action-icon fa fa-calendar-plus-o"></i></a>
+                            {% endif %}
+                            {% if row.getLot.getStatus.getId == 7 %}
+                                <a class="btn-line-action" 
+                                    href="{{ ea_url().setController('App\\Controller\\Admin\\UseLotsCrudController').setAction('pickedUpAction').setEntityId(row.getLot.getId) }}" 
+                                    data-action-name="pickedUpAction"><i class="action-icon fa fa-truck"></i></a>
+                            {% else %}
+                                <a class="btn-line-action btn-line-disabled" data-action-name="unpickedUpAction"><i class="action-icon fa fa-truck"></i></a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                {% for i in 1..2 %}
+                    <tr class="empty-row">
+                        {% for i in 1..11 %}
+                            <td ><span></span></td>
+                        {% endfor %}
+                    </tr>
+
+                    {% if 1 == loop.index %}
+                        <tr class="no-results">
+                            <td colspan="100">
+                                {{ 'datagrid.no_results'|trans(ea.i18n.translationParameters, 'EasyAdminBundle') }}
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
+{% endblock %}

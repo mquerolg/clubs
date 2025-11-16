@@ -1,0 +1,64 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entities \EasyCorp\Bundle\EasyAdminBundle\Collection\EntityDtoCollection #}
+{# @var paginator \EasyCorp\Bundle\EasyAdminBundle\Orm\EntityPaginator #}
+{% extends ea.templatePath('crud/index') %}
+
+{% block body_javascript %}
+     <script type="text/javascript">
+
+        $(document).ready(function() {
+            var $text = $('#indexModalBodyInputText');
+            var $switch = $('#indexModalBodySwitchAction');
+            var $send = $('#indexModalFooterSecondBtn');
+            var $modal = $('#indexModal');
+            var $title = $('#modalHeaderTitle');
+
+            $('#indexModalBodyInput').css({'display':'grid'});
+            $('#indexModalBodySwitch').css({'display':'block'});
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Guardar');
+
+            function showModal(title, href, text = '', active = false) {
+                $text.val(text);
+                $switch.prop('checked', active);
+
+                $title.html(title);
+                
+                $modal.modal('show');
+                
+                $send.click(function(){
+                    active = $switch.prop('checked') ? 1 : 0;
+                    text = $text.val();
+
+                    window.location.href = href + '&active=' + active + '&name=' + text;
+                })
+            }
+
+            $('.modal-request-genres-edit').click(function(event){
+                event.preventDefault();
+        
+                var $this = $(this);
+                
+                showModal(
+                    '{{ 'genres.modal.edit_title'|trans({}, 'EasyAdminBundle')}}',
+                    $this.attr('href'),
+                    $this.parent().parent().children('td:first').text().trim(),
+                    $this.parent().parent().children('td:nth-child(2)').text().trim() == 'No' ? false : true
+                );
+            });
+
+            $('#modal-request-genres-add').click(function(event){
+                event.preventDefault();
+
+                var $this = $(this);
+                
+                showModal(
+                    '{{ 'genres.modal.new_title'|trans({}, 'EasyAdminBundle')}}',
+                    $this.attr('href')
+                );
+            });
+
+        });
+    </script>
+{% endblock body_javascript %}

@@ -1,0 +1,65 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var action \EasyCorp\Bundle\EasyAdminBundle\Dto\ActionDto #}
+{# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
+{% if 'columnsAction' == action.name and ea.crud.getCurrentPage == "index" %}
+    <form id="select-columns" class="select-columns {{ isIncludedInDropdown|default(false) ? 'dropdown-item' }} {{ action.cssClass }}" action="{{ action.linkUrl }}" method="post"> 
+        <a onclick="showData()">
+                {%- if action.icon %}<i class="action-icon {{ action.icon }}"></i> {% endif -%}
+                {%- if action.label is not empty -%}{{ action.label }}{%- endif -%}
+        </a>
+        <div id="select-columns-dropdown" class="select-columns__modal"> 
+            {% for field in table_fields %}
+                <div>
+                    <label>{% if field.getLabel is empty %}{{ field.getProperty|trans }}{% else %}{{ field.getLabel|trans }}{% endif %}</label>
+                    <input id="{{ field.getProperty }}" value="{{ field.getProperty }}" name="columns[]" type="checkbox" {% if field.isDisplayedOn('index') %} checked {% endif %}>
+                </div>
+            {% endfor %}
+            <input class="select-columns__confirm-button" type="submit" value="{{ 'filter.button.apply'|trans(ea.i18n.translationParameters, 'EasyAdminBundle') }}">
+        </div>
+    </form>
+    <script>
+        function showData() {
+            var visibilitySelector = $('#select-columns-dropdown');
+
+            if (visibilitySelector.css('display') == 'none') {
+                visibilitySelector.css({'display':'block'});    
+            } else {
+                visibilitySelector.css({'display':'none'});    
+            }
+        }; 
+    </script>
+{% elseif '#' == action.linkUrl %}
+    {% if action.getType == "entity" and ea.crud.getCurrentPage == "index" %}
+        <a data-bs-toggle="tooltip" title="{%- if action.label is not empty -%}{{ action.label }}{%- endif -%}" class="{{ isIncludedInDropdown|default(false) ? 'dropdown-item' }} {{ action.cssClass }}"
+    {% else %}
+        <a class="{{ isIncludedInDropdown|default(false) ? 'dropdown-item' }} {{ action.cssClass }}"
+    {% endif %}
+    {% for name, value in action.htmlAttributes %}{{ name }}="{{ value|e('html_attr') }}" {% endfor %}>
+        {%- if action.icon %}<i class="action-icon {{ action.icon }}"></i> {% endif -%}
+        {% if action.getType == "global" or ea.crud.getCurrentPage != "index" %}
+            {%- if action.label is not empty -%}{{ action.label }}{%- endif -%}
+        {% endif %}
+    </a>
+{% elseif 'a' == action.htmlElement %}
+    {% if action.getType == "entity" and ea.crud.getCurrentPage == "index" %}
+        <a data-bs-toggle="tooltip" title="{%- if action.label is not empty -%}{{ action.label }}{%- endif -%}" class="{{ isIncludedInDropdown|default(false) ? 'dropdown-item' }} {{ action.cssClass }}"
+    {% else %}
+        <a class="{{ isIncludedInDropdown|default(false) ? 'dropdown-item' }} {{ action.cssClass }}"
+    {% endif %}
+    href="{{ action.linkUrl }}"
+    {% for name, value in action.htmlAttributes %}{{ name }}="{{ value|e('html_attr') }}" {% endfor %}>
+        {%- if action.icon %}<i class="action-icon {{ action.icon }}"></i> {% endif -%}
+        {% if action.getType == "global" or ea.crud.getCurrentPage != "index" %}
+            {%- if action.label is not empty -%}{{ action.label }}{%- endif -%}
+        {% endif %}
+    </a>
+{% elseif 'button' == action.htmlElement %}
+    <button class="{{ action.cssClass }}" {% for name, value in action.htmlAttributes %}{{ name }}="{{ value|e('html_attr') }}" {% endfor %}>
+        <span class="btn-label">
+            {%- if action.icon %}<i class="action-icon {{ action.icon }}"></i> {% endif -%}
+            {% if action.getType == "global" or ea.crud.getCurrentPage != "index" %}
+                {%- if action.label is not empty -%}{{ action.label }}{%- endif -%}
+            {% endif %}
+        </span>
+    </button>
+{% endif %}

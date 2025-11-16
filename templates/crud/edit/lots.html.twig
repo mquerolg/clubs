@@ -1,0 +1,54 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entities \EasyCorp\Bundle\EasyAdminBundle\Collection\EntityDtoCollection #}
+{# @var paginator \EasyCorp\Bundle\EasyAdminBundle\Orm\EntityPaginator #}
+{% extends ea.templatePath('crud/edit') %}
+{% set template_form_theme = "crud/forms/lots_theme.html.twig" %}
+
+{% block body_javascript %}
+     <script type="text/javascript">
+        $('#lots-multy-copies .form-select').removeClass('form-select');
+        $('#add-lots-copies-input').keydown(function(e){
+            if(e.keyCode == 13){
+                e.preventDefault();
+
+                var new_copy = $(this).val();
+
+                if(new_copy) {
+                    $('#Lots_copies').append($('<option>', {
+                        value: new_copy,
+                        text: new_copy,
+                        selected: true
+                    }));
+
+                    $('#Lots_copies-ts-control').append(
+                        '<div data-value="' + new_copy +'" class="item" data-ts-item="">' + new_copy + '<a href="#" data-value="' + new_copy +'" class="remove remove-copies-value">×</a></div>'
+                    );
+                }
+
+                $('.ts-wrapper').removeClass('has-items').addClass('has-items');
+
+                $('.remove-copies-value').on('click', function(){
+                    e.preventDefault();
+                    let $this = $(this);
+                    let value = $this.data('value');
+
+                    $this.parent().remove();
+                    $('#Lots_copies option[value=' + value + ']').prop("selected", false);
+                });
+
+                $(this).val('');                
+            }
+        });
+
+        $('#add-lots-copies-label').on('click', function(e){
+            $('#add-lots-copies-form').toggle();
+        });
+    
+        $(document).ready(function() {
+            $('#lots-multy-copies .ts-control').on('click', function(e){
+                $('#add-lots-copies-form').show();
+            });
+           $('#lots-multy-copies .ts-dropdown').remove();
+        });
+    </script>
+{% endblock body_javascript %}

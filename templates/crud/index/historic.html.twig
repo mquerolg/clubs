@@ -1,0 +1,24 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entities \EasyCorp\Bundle\EasyAdminBundle\Collection\EntityDtoCollection #}
+{# @var paginator \EasyCorp\Bundle\EasyAdminBundle\Orm\EntityPaginator #}
+{% extends ea.templatePath('crud/index') %}
+
+{% block body_javascript %}
+     <script>
+        $('.modal-request-historic-hide').click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+            $('#modalHeaderTitle').html('Eliminar entrada');
+            $('#indexModalBodyInfo').css({'display':'block', 'border': 'none', 'padding': '0px'});
+            $('#indexModalBodyInfo').html("Aquesta acció eliminarà aquesta entrada del llistat d'històric i de les seves exportacions.");
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Acceptar');
+            
+            $('#indexModal').modal('show');
+            $('#indexModalFooterSecondBtn').click(function(){
+                window.location.href = $this.attr('href');
+            })
+        });
+    </script>
+{% endblock body_javascript %}

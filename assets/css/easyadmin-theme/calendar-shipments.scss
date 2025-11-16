@@ -1,0 +1,79 @@
+.calendar{
+    &-background {
+        margin-top: 25px;
+        display: flex;
+    }
+    &-filter{
+        &__button{
+            width: 161px!important;
+            margin-left: 22px;
+            border-radius: 9px;
+            border: 1px solid #C6C6C6;
+            height: 30px;
+            background: white;
+            &--text{
+                margin-right:50px;
+            }
+        }
+    }    
+    &-container {
+        margin-bottom: 10px!important;
+        background-color: var(--content-detail-bg-color)!important;
+        border-radius: var(--border-radius-detail)!important;
+        padding: 24px 22px 45px 0px!important;
+        flex-direction: column;  
+        display: flex;
+        &__legend {
+            min-width: 175px;
+            padding: 0px;
+            background: #FAFAFA;
+            border-radius: 8px;
+            max-height: 655px;
+            overflow-y: auto;
+            &__values {
+                color: var(--table-title-color);
+                font-weight: 600;
+                font-size: 16px;
+            }
+            &-marker{
+                &-container--white {
+                    display: flex;
+                    display: flex;
+                    align-items: center;
+                    padding-top: 5px;
+                    padding-bottom: 5px;                
+                    &-value {
+                        background:white;
+                        border: var(--table-title-color) solid 2px;
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 12px;
+                        margin-right: 5px;
+                    }
+                }
+                &-container--red {
+                    display: flex;
+                    display: flex;
+                    align-items: center;                    
+                    padding-bottom: 5px;                    
+                    &-value {
+                        background: var(--table-title-color);
+                        background: var(--table-title-color);
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 12px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.day-content{
+
+  cursor: default!important; 
+}
+
+
+                                                                                                            

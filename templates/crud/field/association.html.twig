@@ -1,0 +1,16 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var field \EasyCorp\Bundle\EasyAdminBundle\Dto\FieldDto #}
+{# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
+{% if 'toMany' == field.customOptions.get('associationType') %}
+    {{ field.value.first }}
+{% else %}
+    {% if ea.crud.currentAction == 'index' and field.getProperty('propertyName') == "status" %}
+        {% if field.value.getStatus is defined %}
+            <span class="field-color-status field-color-status--{{ field.value.getStatus.getId }}"> {{ field.value.getStatus.getName }} </span>
+        {% else %}
+            <span class="field-color-status field-color-status--{{ field.value.id }}"> {{ field.formattedValue }} </span> 
+        {% endif %}
+    {% else %}
+        <span title="{{ field.formattedValue }}"> {{ field.formattedValue }} </span> 
+    {% endif %}
+{% endif %}

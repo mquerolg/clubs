@@ -1,0 +1,126 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# This template checks for 'ea' variable existence because it can
+   be used in a EasyAdmin Dashboard controller, where 'ea' is defined
+   or from any other Symfony controller, where 'ea' is not defined #}
+{% extends ea is defined ? ea.templatePath('layout') : 'page/login_minimal.html.twig' %}
+{% trans_default_domain ea is defined ? ea.i18n.translationDomain : (translation_domain is defined ? translation_domain ?? 'messages') %}
+
+{% block body_class 'page-login' %}
+{% block page_title %}{{ page_title is defined ? page_title|raw : (ea is defined ? ea.dashboardTitle|raw : '') }}{% endblock %}
+
+{% block wrapper_wrapper %}
+    {% set page_title = block('page_title') %}
+    {% set _username_label = username_label is defined ? username_label|trans : 'login_page.username'|trans({}, 'EasyAdminBundle') %}
+    {% set _password_label = password_label is defined ? password_label|trans : 'login_page.password'|trans({}, 'EasyAdminBundle') %}
+    {% set _forgot_password_label = forgot_password_label is defined ? forgot_password_label|trans : 'login_page.forgot_password'|trans({}, 'EasyAdminBundle') %}
+    {% set _remember_me_label = remember_me_label is defined ? remember_me_label|trans : 'login_page.remember_me'|trans({}, 'EasyAdminBundle') %}
+    {% set _sign_in_label = sign_in_label is defined ? sign_in_label|trans : 'login_page.sign_in'|trans({}, 'EasyAdminBundle') %}
+
+    {% include 'flash_messages.html.twig' %}
+
+    <div class="login-wrapper">
+        <header class="main-header">
+            <div id="header-logo">
+                {% block header_logo %}
+                    {% if page_title %}
+                        {% if ea is defined %}
+                            <a class="logo {{ page_title|length > 14 ? 'logo-long' }}" title="{{ page_title|striptags }}" href="{{ path(ea.dashboardRouteName) }}">
+                                {{ page_title|raw }}
+                            </a>
+                        {% else %}
+                            <div class="logo {{ page_title|length > 14 ? 'logo-long' }}">
+                                {{ page_title|raw }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endblock header_logo %}
+            </div>
+        </header>
+        <section class="content">
+
+            {% if error|default(false) %}
+                <div class="w-100 alert alert-danger rounded mb-3">
+                    <i class="fas fa-times-circle mr-1"></i>
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                </div>
+            {% endif %}
+            <form action="{{ path('login') }}" method="POST">
+
+            {# <form action="{{ path('login') }}" method="POST"> #}
+
+                <div class="form-group">
+                    <label class="form-control-label required" for="user">{{ _username_label }}</label>
+                    <div class="form-widget">
+                        <input type="text" id="user" name="{{ username_parameter|default('user') }}" class="form-control" value="{{ last_username|default('') }}" required autofocus autocomplete="user">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label required" for="pass">{{ _password_label }}</label>
+                    <div class="form-widget">
+                        <input type="password" id="pass" name="{{ password_parameter|default('pass') }}" class="form-control" required autocomplete="current-password">
+                    </div>
+                </div>
+                
+                {# select user type #}
+                <div class="form-group required">
+                    <label for="form_select1"
+                        class="form-label">
+                        Tipus d'usuari
+                    </label>
+                    <select id="form_select1"
+                        name="perfil"
+                        required="required"
+                        class="form-select"
+                        aria-described-by="help-text-form_select1">
+                        <option value=""
+                        selected="selected">
+                        Selecciona una opció...
+                        </option>
+                        <option value="6754319">Perfil Administració</option>
+                        <option value="6404423">Perfil Biblioteca</option>
+                    </select>
+                </div>
+                {# end select user type #}
+                
+                {# select biblio #}
+                <div class="form-group required">
+                    <label for="form_select2"
+                        class="form-label">
+                        Biblioteca
+                    </label>
+
+                    <select id="form_select2"
+                        name="ens"
+                        required="required"
+                        class="form-select"
+                        aria-described-by="help-text-form_select2">
+                        <option value=""
+                        selected="selected">
+                        Selecciona una opció...
+                        </option>
+                        <option value="0801931307">Badalona. Clara</option>
+                        <option value="0801931425">Barcelona. Nou Barris</option>
+                        <option value="0801551131">Badalona. Sant Roc </option>
+                        <option value="0801551146">Badalona. Can Casacuberta </option>
+                        <option value="0808631035">Franqeses, Les </option>
+                        <option value="0801932562">Consorci de Biblioteques de Barcelona</option>
+                        <option value="0829811065">Vic. Joan Triadú</option>
+                        <option value="0829811075">Bibliobús. Guilleries</option>
+                        <option value="0807711028">Pare Miquel d'Esplugues</option>
+            
+                    </select>
+                </div>
+                {# end biblio #}
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="this.form.submit(); this.disabled=true;">{{ _sign_in_label }}</button>
+                </div>
+            </form>
+
+            <script type="text/javascript">
+            </script>
+        </section>
+    </div>
+{% endblock %}
+

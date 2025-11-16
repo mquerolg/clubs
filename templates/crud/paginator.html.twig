@@ -1,0 +1,114 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var paginator \EasyCorp\Bundle\EasyAdminBundle\Orm\EntityPaginator #}
+{% trans_default_domain 'EasyAdminBundle' %}
+
+<div class="list-pagination">
+    <div class="list-pagination-counter">
+        {{ 'paginator.number_size'|trans({}, 'EasyAdminBundle')}}
+        <select id="select-page-size">
+            <option value="5" {{ pageSize == 5 ? 'selected' }}>5</option>
+            <option value="10" {{ pageSize == 10 ? 'selected' }}>10</option>
+            <option value="25" {{ pageSize == 25 ? 'selected' }}>25</option>
+            <option value="50" {{ pageSize == 50 ? 'selected' }}>50</option>
+            <option value="100" {{ pageSize == 100 ? 'selected' }}>100</option>
+        </select>
+        {{ 'paginator.to'|trans({}, 'EasyAdminBundle')}}
+        {% if render_detailed_pagination is defined ? render_detailed_pagination : true %}
+            {{ 'paginator.results'|trans({'%count%': paginator.numResults|format})|raw }}
+        {% endif %}
+    </div>
+
+    <nav class="pager list-pagination-paginator {{ not paginator.hasPreviousPage ? 'first-page' }} {{ not paginator.hasNextPage ? 'last-page' }}">
+        <ul class="pagination">
+            <li class="page-item {{ not paginator.hasPreviousPage ? 'disabled' }}">
+                <a class="page-item-link" href="{{ not paginator.hasPreviousPage ? '#' : paginator.generateUrlForPage(paginator.previousPage) }}">
+                    <i class="fa fa-angle-left mx-1"></i> <span class="btn-label">{{ 'paginator.previous'|trans }}</span>
+                </a>
+            </li>
+
+            {% if render_detailed_pagination is defined ? render_detailed_pagination : true %}
+                {% for page in paginator.pageRange %}
+                    <li class="page-item {{ page == paginator.currentPage ? 'active' }} {{ page is null ? 'disabled' }}">
+                        {% if page is null %}
+                            <span class="page-item-link">&hellip;</span>
+                        {% else %}
+                            <a class="page-item-link" href="{{ paginator.generateUrlForPage(page) }}">{{ page }}</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li class="page-item active {{ paginator.currentPage is null ? 'disabled' }}">
+                    <a class="page-item-link" href="{{ paginator.generateUrlForPage(paginator.currentPage) }}">{{ paginator.currentPage }}</a>
+                </li>
+            {% endif %}
+
+            <li class="page-item {{ not paginator.hasNextPage ? 'disabled' }}">
+                <a class="page-item-link" href="{{ not paginator.hasNextPage ? '#' : paginator.generateUrlForPage(paginator.nextPage) }}">
+                    <span class="btn-label">{{ 'paginator.next'|trans }}</span> <i class="fa fa-angle-right mx-1"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<script type="text/javascript">
+    function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+        return false;
+    }
+
+    function updateURLParameter(url, param, paramVal)
+    {
+        var TheAnchor = null;
+        var newAdditionalURL = "";
+        var tempArray = url.split("?");
+        var baseURL = tempArray[0];
+        var additionalURL = tempArray[1];
+        var temp = "";
+
+        if (additionalURL) {
+            var tmpAnchor = additionalURL.split("#");
+            var TheParams = tmpAnchor[0];
+                TheAnchor = tmpAnchor[1];
+            if(TheAnchor)
+                additionalURL = TheParams;
+
+            tempArray = additionalURL.split("&");
+
+            for (var i=0; i<tempArray.length; i++) {
+                if (tempArray[i].split('=')[0] != param) {
+                    newAdditionalURL += temp + tempArray[i];
+                    temp = "&";
+                }
+            }        
+        } else {
+            var tmpAnchor = baseURL.split("#");
+            var TheParams = tmpAnchor[0];
+                TheAnchor  = tmpAnchor[1];
+
+            if(TheParams)
+                baseURL = TheParams;
+        }
+
+        if(TheAnchor)
+            paramVal += "#" + TheAnchor;
+
+        var rows_txt = temp + "" + param + "=" + paramVal;
+
+        return baseURL + "?" + newAdditionalURL + rows_txt;
+    }
+
+    $('#select-page-size').on('change', function() {
+        window.location.href = updateURLParameter(window.location.href, 'pagesize', $(this).val());
+    });
+</script>

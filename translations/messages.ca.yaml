@@ -1,0 +1,141 @@
+Active: Actiu
+Authorship: Autoria
+Bibliographic: Bibliogràfic
+Borrowed: Demanats
+Classification: Classificació
+Closed At: Tancat el 
+Club: Club de lectura
+Clubs: Clubs
+ClubsLotsReport: Informes (Clubs/Lots)
+ClubsReport: Informes (Clubs)
+Code: Codi
+Collection: Col·lecció
+Copies: Exemplars
+Created At: Petició
+Created: Creats
+CreatedAt: Petició
+Deleted Status: Estat
+Description: Descripció física
+Dim: Codi caixa DIM
+Discharged: Eliminats
+Editar: Editar
+Email: Correu
+Exemplar: Exemplar
+External: Extern
+File: Copies
+Genre: Gènere
+Genres: Gèneres
+GenresReport: Informes (Gèneres)
+Historic: Històric
+HistoricReport: Informes (Històric)
+Incidences: Incidències
+Isbn: ISBN
+Lang Ale: ALE
+Lang Ang: ANG
+Lang Cat: CAT
+Lang Es: ES
+Lang Fra: FRA
+Lang Ita: ITA
+Lang Others: Altres
+Lang Sum: NºEXEM
+LangSum: Exemplars
+Langs: Idioma
+Libraries: Biblioteques
+Library Municipality: Biblioteca
+Library: Biblioteca
+Localization: Ruta
+Lots: Lots
+LotsReport: Informes (Lots)
+Municipality: Municipi
+MunicipalityReport: Informes (Municipis)
+MyClubs: Els meus clubs
+Name: Nom
+Ningú: Ningú
+Observation: Observació
+Observations: Observacions
+Owner: Propietat
+Publication: Publicació
+Received At: Arribada
+Received In: Est.Arrib.
+Report: Informes
+Returned At: Retorn
+ReturnedAt: Retorn
+Route: ruta
+Send Id: N Tramesa
+Shipments: Enviaments
+Signature: Signatura
+Status: Estat
+Title: Títol
+Total Lots: Total Lots
+Total: Total
+Typology: Tipologia
+URL: Fitxa de lectura
+Use Lots: Lots en ús
+UseLots: Lots en ús
+Uses: Usos
+Warehouse: Codi
+Year: Any
+Zone: Comarca
+Reserved: Reservat
+ZoneReport: Informes (Comarques)
+action-active: Reservar
+action-disable: Desactivar reserva
+action-picked: Recollit
+action-received: Rebut
+action-renew: Renovar
+action-request: Demanar
+action-return: Retornar
+action-returned: Retornat
+action-sended: Enviat
+action-prepared: En procés
+action-undo: Desfer últim estat
+add_club: Afegir club
+add_genere:	Afegir gènere
+add_lot: Afegir lot
+bibliographic_code: Codi Bibliogràfic
+club_description: Descripció
+club_table: CDL
+copies_from_lot: Exemplars del lot
+create_year: Any creació
+delete_club: Baixa del Club
+delete_lot: Baixa del lot
+dischargedAction: Mostrar lots donats de baixa
+edit: Editar
+entry_year: Any entrada
+excel_export: Exportar excel
+historic_index_title: Històric
+incidence_club: Club de lectura
+incidence_detail: Detall de la incidència
+incidence_petition: Data petició
+incidence_return: Data retorn
+incidence_text: Detall de la incidència
+library_name: Nom biblioteca
+library_name_index: biblioteca
+lot_title_detail: Detall de lot
+menu_clubs: Clubs
+menu_genres: Gèneres
+menu_historic: Històric
+menu_incidences: Incidències
+menu_libraries: Biblioteques
+menu_lots: Lots
+menu_myclubs: Els meus clubs
+menu_mylots: Els meus lots
+menu_report: Informes
+menu_trameses: Trameses
+menu_uselots: Lots en ús
+mi_clubs: Els meus lots
+my_clubs: Els meus clubs
+name_genre: Nom Gènere
+name_library_club: Nom club de lectura
+new_club: Nou Club
+owner_filter: Prop
+owner_table: PROP
+read_clubs: Clubs de lectura
+report_crud_title: Informes
+returned_lot: Retornar lot
+sign: Sign
+table_clubs: Club de lectura
+update_date: Actualitzar dades
+use_lots: Lots en ús
+warehaouse_code: Codi ubicació Magatzem
+year_table: Any

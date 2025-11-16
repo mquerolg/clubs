@@ -1,0 +1,138 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entities \EasyCorp\Bundle\EasyAdminBundle\Collection\EntityDtoCollection #}
+{# @var paginator \EasyCorp\Bundle\EasyAdminBundle\Orm\EntityPaginator #}
+{% extends ea.templatePath('crud/index') %}
+
+{% block body_javascript %}
+     <script>
+        const api = {
+            setLot: function(id) {
+                $.ajax({
+                    url: '/api/lots/'+ id +'/lot',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $('#modalIndexContentBodyInfoFieldLineContentTitle').html(data[0]['title'] || '-');
+                        $('#modalIndexContentBodyInfoFieldLineContentAuthor').html(data[0]['authorship'] || '-');
+                        $('#modalIndexContentBodyInfoFieldLineContentSignature').html(data[0]['signature'] || '-');
+                        $('#modalIndexContentBodyInfoFieldLineContentDescription').html(data[0]['description'] || '-');
+                        $('#modalIndexContentBodyInfoFieldLineContentCopies').html(data[0]['title'] || '-');
+                        $('#indexModal').modal('show');
+                    }
+                });
+            },
+            setLibraries: function() {
+                $.ajax({
+                    url: '/api/libraries',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        var optionList = document.getElementById('indexModalBodyDropDownContentFirstSelector');
+                        $('#indexModalBodyDropDownContentFirstSelector option').remove();
+                        optionList.add( new Option('...', 0) );
+                        data.forEach(option =>
+                            optionList.add(
+                                new Option(option.municipality + ' - ' + option.name, option.id)
+                            )
+                        );
+                    }
+                });
+            },
+            setRoute: function(id) {
+                $.ajax({
+                    url: '/api/routes/'+ id +'/library',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $('#indexModalBodycolumnsLeftContent').html(data['date']);
+                        $('#indexModalBodycolumnsRightContent').html(data['lot']);
+                    }
+                });
+            },
+            setClubs: function(id) {
+                $.ajax({
+                    url: '/api/clubs/'+ id +'/library',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        var optionList = document.getElementById('indexModalBodyDropDownContentSecondSelector');
+                        $('#indexModalBodyDropDownContentSecondSelector option').remove();
+                        optionList.add( new Option('...', 0) );
+                        data.forEach(option =>
+                            optionList.add(
+                                new Option(option.name, option.id)
+                            )
+                        );
+                    }
+                }); 
+            }
+        }
+
+        $('.action-request').click(function(event){
+            event.preventDefault();
+
+            var $this = $(this);
+
+            let url = $this.attr('href');
+            let url_params = new URLSearchParams(url);
+            let id = url_params.get('entityId');
+        
+            api.setLot(id);
+
+            let library_value = $this.data('library');
+
+            $('#modalHeaderTitle').html('Demanar lot');
+            $('#indexModalBodyInfoFields').css({'display':'block'});
+            $('#indexModalBodyDropDown').css({'display':'block'});
+
+            if (library_value == 0) {
+                $('#indexModalBodyDropDownContentFirst').css({'display':'block'});
+                api.setLibraries();
+                $('#indexModalBodyDropDownContentFirstSelector').on('change', function(){
+                    api.setRoute($(this).val());
+                    api.setClubs($(this).val());
+                });
+            } else {
+                api.setRoute(library_value);
+                api.setClubs(library_value);
+            }
+
+            $('#indexModalBodyDropDownContentSecond').css({'display':'block'});
+            $('#indexModalBodycolumns').css({'display':'flex'});
+            $('#indexModalFooter').css({'display':'flex'});
+            $('#indexModalFooterFirstBtn').html('Cancel·lar');
+            $('#indexModalFooterSecondBtn').html('Demanar-ho');
+            $('#indexModalFooterSecondBtn').prop('disabled', true);
+            $('#indexModalFooterSecondBtn').removeClass('modal-index-content__footer__secondary');
+            $('#indexModalFooterSecondBtn').addClass('modal-index-content__footer__secondaryDisabled');
+
+            $('#indexModalBodyDropDownContentFirstSelector').on('change', function(){
+                $('#indexModalFooterSecondBtn').prop('disabled', true);
+                $('#indexModalFooterSecondBtn').addClass('modal-index-content__footer__secondaryDisabled');
+                $('#indexModalFooterSecondBtn').removeClass('modal-index-content__footer__secondary');
+            });
+
+            $('#indexModalBodyDropDownContentSecondSelector').on('change', function(){
+                if ($(this).val() !== '0' &&
+                    $('#indexModalBodycolumnsLeftContent').html() != '' &&
+                    $('#indexModalBodycolumnsRightContent').html() != ''
+                ) {
+                    $('#indexModalFooterSecondBtn').prop('disabled', false);
+                    $('#indexModalFooterSecondBtn').removeClass('modal-index-content__footer__secondaryDisabled');
+                    $('#indexModalFooterSecondBtn').addClass('modal-index-content__footer__secondary');
+                } 
+            });
+
+            $('#indexModalFooterSecondBtn').click(function(){
+                var library_id = $('#indexModalBodyDropDownContentFirstSelector').val();
+                var club_id = $('#indexModalBodyDropDownContentSecondSelector').val();
+                var send = $('#indexModalBodycolumnsLeftContent').html();
+                var route = $('#indexModalBodycolumnsRightContent').html();
+
+                if (send.trim() != '' && route.trim() != '') {
+                    window.location.href = $this.attr('href') + '&library=' + library_id + '&club=' + club_id + '&senddate=' + send + '&sendid=' + route;
+                }
+            })
+        });
+    </script>
+{% endblock body_javascript %}

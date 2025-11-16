@@ -1,0 +1,97 @@
+<div class="modal fade" id="indexModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-index-content">
+            <div class="modal-index-content__header">
+                <div class="modal-index-content__header__title" id="modalHeaderTitle">Modal title</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-index-content__body" id="indexModalBody">
+                <div class="modal-index-content__body__info" id="indexModalBodyInfo">
+                    {{ 'modal.text_info'|trans(domain = 'EasyAdminBundle') }}
+                </div>
+                <div class="modal-index-content__body__switch form-switch" id="indexModalBodySwitch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="indexModalBodySwitchAction">
+                    <label class="form-check-label" for="flexSwitchCheckDefault" id="indexModalBodySwitchLabel">{{ 'modal.active'|trans(domain = 'EasyAdminBundle') }}</label>
+                </div>
+                <div class="modal-index-content__body__input" id="indexModalBodyInput">
+                    <label class="modal-index-content__body__input__label" id="indexModalBodyInputLabel">{{ 'modal.genre'|trans(domain = 'EasyAdminBundle') }}</label>
+                    <input class="modal-index-content__body__input__text" type="text" id="indexModalBodyInputText"/>
+                </div>
+                <div class="modal-index-content__body__info" id="indexModalBodyInfoFields">
+                    <div class="modal-index-content__body__info__field">
+                        <div class="modal-index-content__body__info__field__line">
+                            <div class="modal-index-content__body__info__field__line__title">
+                                {{ 'modal.title'|trans(domain = 'EasyAdminBundle') }} ·&nbsp
+                            </div>
+                            <div class="modal-index-content__body__info__field__line__content" id="modalIndexContentBodyInfoFieldLineContentTitle">
+                                Pluja d'estels
+                            </div>
+                        </div>
+                        <div class="modal-index-content__body__info__field__line">
+                            <div class="modal-index-content__body__info__field__line__title">
+                                {{ 'modal.author'|trans(domain = 'EasyAdminBundle') }} ·&nbsp
+                            </div>
+                            <div class="modal-index-content__body__info__field__line__content" id="modalIndexContentBodyInfoFieldLineContentAuthor">
+                                Aguilar, Laia
+                            </div>
+                        </div>
+                        <div class="modal-index-content__body__info__field__line">
+                            <div class="modal-index-content__body__info__field__line__title">
+                                {{ 'modal.sign'|trans(domain = 'EasyAdminBundle') }} ·&nbsp
+                            </div>
+                            <div class="modal-index-content__body__info__field__line__content" id="modalIndexContentBodyInfoFieldLineContentSignature">
+                                N Agu
+                            </div>
+                        </div>
+                        <div class="modal-index-content__body__info__field__line">
+                            <div class="modal-index-content__body__info__field__line__title">
+                                {{ 'modal.description'|trans(domain = 'EasyAdminBundle') }} ·&nbsp
+                            </div>
+                            <div class="modal-index-content__body__info__field__line__content" id="modalIndexContentBodyInfoFieldLineContentDescription">
+                                281 pàgines; 21 cm
+                            </div>
+                        </div>
+                        <div class="modal-index-content__body__info__field__line">
+                            <div class="modal-index-content__body__info__field__line__title">
+                                {{ 'modal.num'|trans(domain = 'EasyAdminBundle') }} ·&nbsp
+                            </div>
+                            <div class="modal-index-content__body__info__field__line__content" id="modalIndexContentBodyInfoFieldLineContentCopies">
+                                Català: 15 / Anglès: 15
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-index-content__body__dropDown" id="indexModalBodyDropDown">
+                    <div class="modal-index-content__body__dropDown__content" id="indexModalBodyDropDownContentFirst">
+                        <div class="modal-index-content__body__dropDown__content__title" id="indexModalBodyDropDownContentFirstTitle">  {{ 'modal.library'|trans(domain = 'EasyAdminBundle') }} </div>
+                        <select class="modal-index-content__body__dropDown__content__select" aria-label="Default select example" id="indexModalBodyDropDownContentFirstSelector">
+                        </select>
+                    </div>
+                    <div class="modal-index-content__body__dropDown__content" id="indexModalBodyDropDownContentSecond">
+                        <div class="modal-index-content__body__dropDown__content__title" id="indexModalBodyDropDownContentSecondTitle">  {{ 'modal.cdl'|trans(domain = 'EasyAdminBundle') }} </div>
+                        <select class="modal-index-content__body__dropDown__content__select" aria-label="Default select example" id="indexModalBodyDropDownContentSecondSelector">
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-index-content__body__comments" id="indexModalBodyComments">
+                    <label class="modal-index-content__body__comments__title" id="indexModalBodyCommentsTitle">   {{ 'modal.text'|trans(domain = 'EasyAdminBundle') }}  </label>
+                    <textarea class="modal-index-content__body__comments__content" id="IndexModalTextArea" rows="3"></textarea>
+                </div>
+                <div class="modal-index-content__body__columns" id="indexModalBodycolumns">
+                    <div class="modal-index-content__body__columns__left">
+                        <div class="modal-index-content__body__columns__left__title">   {{ 'modal.date'|trans(domain = 'EasyAdminBundle') }}  </div>
+                        <div class="modal-index-content__body__columns__left__content" id="indexModalBodycolumnsLeftContent"></div>
+                    </div>
+                    <div class="modal-index-content__body__columns__right">
+                        <div class="modal-index-content__body__columns__right__title">   {{ 'modal.num_lot'|trans(domain = 'EasyAdminBundle') }}  </div>
+                        <div class="modal-index-content__body__columns__right__content" id="indexModalBodycolumnsRightContent"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-index-content__footer" id="indexModalFooter">
+                <button type="button" class="modal-index-content__footer__primary" id="indexModalFooterFirstBtn" data-bs-dismiss="modal">  {{ 'modal.close'|trans(domain = 'EasyAdminBundle') }} </button>
+                <button type="button" class="modal-index-content__footer__secondary" id="indexModalFooterSecondBtn">  {{ 'modal.save'|trans(domain = 'EasyAdminBundle') }} </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+
+div#myclubs {
+    div.tab-content>.active{
+        display: flex;
+    }
+
+    .nav-container{
+        margin-bottom: -1px;
+        &div{
+            border-color: white;
+        }
+    }
+
+    .nav-tabs .nav-link{
+        min-width: 215px;
+        color: black;
+        font-size: 16px;
+        background-color: #DEE2E6;
+        border-color: #DEE2E6;    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        height: 45px;
+        border-radius: 8px 8px 0px 0px;
+        margin-right: 2px;
+        text-transform: capitalize;
+
+        &> div{
+            height: 23px;
+            overflow: hidden;
+            text-align: start;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+    }
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+        min-width: 215px;
+        color: #891536!important;
+        font-size: 16px;
+        background-color: var(--content-detail-bg-color)!important;
+        border-color: var(--content-detail-bg-color)!important;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        height: 45px;
+        border-radius: 8px 8px 0px 0px;
+        margin-right: 2px;
+        text-transform: capitalize;
+
+        &> div{
+            height: 23px;
+            overflow: hidden;
+            text-align: start;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+    }
+
+    .nav-button-navigation{
+        width: 30px;
+        color: black;
+        font-size: 16px;
+        background-color: #DEE2E6;
+        border-color: #DEE2E6;    
+        display: flex;
+        height: 45px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 18px 9px;
+        margin-left: 2px;
+        border-radius: 8px 8px 0px 0px;
+    }
+}
+.container-panel-data{
+    width: 1050px;
+}
+
+
+
+.img-button-nav-myclubs{
+    height: 23px;
+    
+}

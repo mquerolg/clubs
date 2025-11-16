@@ -1,0 +1,198 @@
+// Buttons
+// ----------------------------------------------------------------------------
+
+.btn {
+    border:1px solid var(--red-01);
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &-primary,
+    &-primary:not(:disabled):not(.disabled):not(.btn-link):hover,
+    &-primary:not(:disabled):not(.disabled):not(.btn-link):focus,
+    &-primary:not(:disabled):not(.disabled):not(.btn-link):active,
+    &-primary:not(:disabled):not(.disabled):not(.btn-link):active:focus {
+        background-color: var(--button-bg-color-add-action) !important;
+        color: var(--button-color-add-action) !important;
+    }
+
+    &-secondary,
+    &-secondary:not(:disabled):not(.disabled):not(.btn-link):hover,
+    &-secondary:not(:disabled):not(.disabled):not(.btn-link):focus,
+    &-secondary:not(:disabled):not(.disabled):not(.btn-link):active,
+    &-secondary:not(:disabled):not(.disabled):not(.btn-link):active:focus {
+        background-color: transparent !important;
+        color: var(--button-color-export-action) !important;
+    }
+
+    &--add-action,
+    &--add-action:not(:disabled):not(.disabled):not(.btn-link):hover,
+    &--add-action:not(:disabled):not(.disabled):not(.btn-link):focus,
+    &--add-action:not(:disabled):not(.disabled):not(.btn-link):active,
+    &--add-action:not(:disabled):not(.disabled):not(.btn-link):active:focus {
+        background-color: var(--button-bg-color-add-action);
+        color: var(--button-color-add-action);
+    }
+
+    &--discharged-action,
+    &--discharged-action:not(:disabled):not(.disabled):not(.btn-link):hover,
+    &--discharged-action:not(:disabled):not(.disabled):not(.btn-link):focus,
+    &--discharged-action:not(:disabled):not(.disabled):not(.btn-link):active,
+    &--discharged-action:not(:disabled):not(.disabled):not(.btn-link):active:focus {
+        & i {
+            margin-right: 3px;
+        }
+
+        border: 0px !important;
+    }
+
+    &--discharged-action-active,
+    &--discharged-action-active:not(:disabled):not(.disabled):not(.btn-link):hover,
+    &--discharged-action-active:not(:disabled):not(.disabled):not(.btn-link):focus,
+    &--discharged-action-active:not(:disabled):not(.disabled):not(.btn-link):active,
+    &--discharged-action-active:not(:disabled):not(.disabled):not(.btn-link):active:focus {
+        & i {
+            background-color: var(--button-bg-color-export-action);
+            color: var(--button-color-export-action);
+            margin-right: 3px;
+        }
+
+        border: 0px !important;
+    }
+}   
+.btn:not(:disabled):not(.disabled):not(.btn-link):hover {
+    border:1px solid var(--button-border-color-action);
+}
+.btn:not(:disabled):not(.disabled):not(.btn-link):active,
+.btn:not(:disabled):not(.disabled):not(.btn-link):focus,
+.btn:not(:disabled):not(.disabled):not(.btn-link):active:focus {
+    border:1px solid var(--button-border-color-action);
+}
+.btn-line-action {
+    color: var(--button-line-action-color);
+}
+.btn-line-action,
+.btn-line-action:not(:disabled):not(.disabled):not(.btn-link):hover,
+.btn-line-action:not(:disabled):not(.disabled):not(.btn-link):focus,
+.btn-line-action:not(:disabled):not(.disabled):not(.btn-link):active,
+.btn-line-action:not(:disabled):not(.disabled):not(.btn-link):active:focus {
+    color: var(--button-line-action-color);
+}
+
+.btn-line-disabled {
+    color: var(--button-line-disabled-color) !important;
+}
+
+.btn-secondary, .btn-secondary[disabled], .btn-secondary.disabled {
+    background-color: var(--white);
+    color: var(--button-color);
+}
+.btn-secondary:hover, .btn-secondary:not(:disabled):not(.disabled):focus, .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled):active:focus {
+    background-color: var(--white);
+    color: var(--button-hover-color);
+}
+
+.btn.btn-info, .btn-info, .btn-info:hover, .btn-info:not(:disabled):not(.disabled):focus, .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled):active:focus {
+    background-color: var(--color-info);
+    color: var(--white);
+}
+
+.btn.btn-success, .btn-success, .btn-success:hover, .btn-success:not(:disabled):not(.disabled):focus, .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled):active:focus {
+    background-color: var(--color-success);
+    color: var(--white);
+}
+
+.btn.btn-danger, .btn-danger, .btn-danger:hover, .btn-danger:not(:disabled):not(.disabled):focus, .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled):active:focus {
+    background-color: var(--color-danger);
+    color: var(--white);
+}
+
+.btn.btn-warning, .btn-warning, .btn-warning:hover, .btn-warning:not(:disabled):not(.disabled):focus, .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled):active:focus {
+    background-color: var(--color-warning);
+    color: var(--white);
+}
+
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link:active:focus {
+    background: transparent;
+    border-color: transparent;
+    color: var(--link-color);
+    box-shadow: none; // needed to make the button link look like a regular link
+}
+.btn-link:hover {
+    color: var(--link-hover-color)
+}
+.btn-link-danger, .btn-link-danger:hover, .btn-link-danger:focus, .btn-link-danger:active, .btn-link-danger:active:focus {
+    color: var(--red-600);
+}
+.btn-link-danger:hover {
+    color: var(--red-500);
+}
+
+.btn.disabled, .btn:disabled,
+.btn.disabled:hover, .btn:disabled:hover,
+.btn.disabled:focus, .btn:disabled:focus,
+.btn.disabled:active, .btn:disabled:active,
+.btn.disabled:active:focus, .btn:disabled:active:focus {
+    box-shadow: none;
+    cursor: not-allowed;
+}
+a.btn.disabled, fieldset:disabled a.btn {
+    // needed to display the 'not-allowed' cursor on disabled buttons
+    pointer-events: unset;
+}
+
+.btn > .btn-label {
+    margin: 0;
+    cursor: inherit;
+}
+.btn > i + .btn-label {
+    margin-left: 4px;
+}
+.btn > .btn-label + i {
+    margin-left: 4px;
+}
+
+.btn-group-sm > .btn, .btn-sm {
+    padding: 3px 7px;
+}
+
+#modal-apply-button {
+    margin-right: -5px !important;
+    border-radius: 4px 0px 0px 4px !important;
+}
+
+#modal-clear-button {
+    margin-left: 0px !important;
+    border-radius: 0px 4px 4px 0px !important;
+}
+
+.overlapping {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__btn {
+        margin-left: -20px;
+        display: inline-block;
+        border: 3px solid white;
+        width: 180px;
+        height: 30px;
+        border-radius: 40px;
+        background: #DEE2E6;
+        text-align: center;
+        padding-top: 5px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: #6C757D;
+
+        &--active {
+            background: #891536;
+            color: white;
+        }
+    }
+
+    :first-child {
+        margin-right: 20px !important;
+    }
+}

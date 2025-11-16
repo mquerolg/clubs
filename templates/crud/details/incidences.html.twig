@@ -1,0 +1,54 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
+{% extends ea.templatePath('crud/detail') %}
+
+{% block main %}
+    {% set fields = entity.getFields %}
+
+    <div class="detail-incidences">
+        <div class="detail-incidences__info">
+            <div class="detail-incidences__info__row">
+                <div> 
+                    <div class="detail-incidences__info__row__title text-uppercase"> {{ fields.getByProperty('authorship').getLabel }} </div>
+                    <div class="detail-incidences__info__row__content"> {{ fields.getByProperty('authorship').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-incidences__info__row__title text-uppercase"> {{ fields.getByProperty('lot').getLabel }} </div>
+                    <div class="detail-incidences__info__row__content"> {{ fields.getByProperty('lot').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-incidences__info__row__title text-uppercase"> {{ fields.getByProperty('warehouse').getLabel }} </div>
+                    <div class="detail-incidences__info__row__content"> {{ fields.getByProperty('warehouse').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-incidences__info__row__title text-uppercase fw-bold"> {{ fields.getByProperty('createdAt').getLabel }} </div>
+                    <div class="detail-incidences__info__row__content"> {{ fields.getByProperty('createdAt').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-incidences__info__row__title text-uppercase fw-bold"> {{ fields.getByProperty('returnedAt').getLabel }} </div>
+                    <div class="detail-incidences__info__row__content"> {{ fields.getByProperty('returnedAt').getFormattedValue ?? '--' }} </div> 
+                </div>
+            </div>
+            <div class="detail-incidences__info__row">
+                <div> 
+                    <div class="detail-incidences__info__row__title text-uppercase"> {{ fields.getByProperty('club').getLabel }} </div>
+                    <div class="detail-incidences__info__row__content"> {{ fields.getByProperty('club').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-incidences__info__row__title text-uppercase"> {{ fields.getByProperty('library').getLabel }} </div>
+                    <div class="detail-incidences__info__row__content"> {{ fields.getByProperty('library').getFormattedValue ?? '--' }} </div> 
+                </div>
+                <div> 
+                    <div class="detail-incidences__info__row__title text-uppercase"> {{ fields.getByProperty('municipality').getLabel }} </div>
+                    <div class="detail-incidences__info__row__content"> {{ fields.getByProperty('municipality').getFormattedValue ?? '--' }} </div> 
+                </div>
+            </div>
+            <div class="detail-incidences__info__title"> 
+                {{ fields.getByProperty('incidence').getLabel }}
+            </div>
+            <div class="detail-incidences__info__content"> 
+                {{ fields.getByProperty('incidence').getFormattedValue ?? '--' }} 
+            </div> 
+        </div>
+    </div>
+{% endblock %}

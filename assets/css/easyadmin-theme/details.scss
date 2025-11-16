@@ -1,0 +1,298 @@
+.detail-lot {
+    &__status {
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 22px;
+        }
+
+        &__col {
+            min-width: 185px;
+            width: 185px;
+
+            &__title {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 17px;
+                margin-bottom: 5px;
+                color: var(--table-detail-title);
+            }
+            &__content{
+                padding-right: 8px;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                color: var(--table-detail-content);
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &__info {
+        background-color: var(--content-detail-bg-color);
+        margin-bottom: 10px;
+        border-radius: var(--border-radius-detail);
+        padding: 24px 0px 1px 22px;
+        &__date-modification {
+            font-family: var(--detail-clubs-date-modification-font-family);
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 0;
+            margin-top: -15px;
+            margin-bottom: 9px;
+            color: var(--table-detail-title);
+        }
+
+        &__row {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        &__col {
+            min-width: 231px;
+            width: 231px;
+
+            &--last {
+                width: 431px;
+            }
+            
+            &--obs {
+                width: 693px;
+            }
+
+            &__title {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 17px;
+                margin-bottom: 5px;
+                color: var(--table-detail-title);
+            }
+            &__content{
+                padding-right: 8px;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                color: var(--table-detail-content);
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    &__status {
+        background-color: var(--content-detail-bg-color);
+        margin-bottom: 10px;
+        border-radius: var(--border-radius-detail);
+        padding: 24px 0px 26px 22px;
+        &__title {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            color: var(--table-detail-title);
+        }
+        &__icon {
+            color: var(--detail-calendar-icon-color);
+            font-size: 45px;
+            text-align: center;
+        }
+        &__text {
+            text-align: center;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 26px;
+            color: var(--table-detail-content);
+        }
+    }
+    &__copies {
+        background-color: var(--content-detail-bg-color);
+        border-radius: var(--border-radius-detail);
+        padding: 24px 0px 38px 22px;
+        &__title {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 19px;
+            color: var(--table-detail-title);
+        }
+        &__row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+
+            &__padding{
+                padding: 5px;
+            }
+            &__content{
+                padding: 0 8px;
+                border-radius: var(--border-radius-detail-lot-copies);
+                text-align: center;
+                min-width: 98px;
+                background-color: var(--details-lot-copies-value-bg-color);
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                color: var(--table-detail-content);
+            }
+        }
+    }
+
+    &__lang {
+        min-width: 49%;
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
+.detail-incidences {
+    &__info {
+        background-color: var(--content-detail-bg-color);
+        margin-bottom: 10px;
+        border-radius: var(--border-radius-detail);
+        padding: 24px 0px 1px 22px;
+        &__title {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 5px;
+            color: var(--table-detail-title);
+        }
+        &__content{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 26px;
+            color: var(--table-detail-content);
+            margin-bottom: 46px;
+        }
+        &__row {
+            display: grid;
+            grid-template-columns: 231px 231px 231px 231px 231px;
+            margin-bottom: 25px;
+            &__title {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 17px;
+                margin-bottom: 5px;
+                color: var(--table-detail-title);
+            }
+            &__content{
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                color: var(--table-detail-content);
+            }
+        }
+    }
+}
+.detail-libraries {
+    &__info {
+        background-color: var(--content-detail-bg-color);
+        margin-bottom: 10px;
+        border-radius: var(--border-radius-detail);
+        padding: 24px 0 12px 22px;
+        &__date-modification {
+            font-family: var(--detail-clubs-date-modification-font-family);
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 24px;
+            color: var(--table-detail-title);
+        }
+        &__row {
+            display: grid;
+            grid-template-columns: 384px 150px 245px 374px;
+            margin-bottom: 25px;
+            &__title {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 17px;
+                margin-bottom: 5px;
+                color: var(--table-detail-title);
+            }
+            &__content {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                color: var(--table-detail-content);
+                a, a:hover, a:active {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 21px;
+                    color: #891536;
+                    text-decoration: underline;
+                }
+            }
+            &__links {
+                position: absolute;
+                margin-left: 805px;
+                width: 320px;
+            }
+        }
+    }
+
+}
+.detail-clubs {
+    &__info {
+        background-color: var(--content-detail-bg-color);
+        margin-bottom: 10px;
+        border-radius: var(--border-radius-detail);
+        padding: 24px 0 12px 22px;
+        &--users {
+            border-top-left-radius: 0;
+        }
+        &__date-modification {
+            font-family: var(--detail-clubs-date-modification-font-family);
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 24px;
+            color: var(--table-detail-title);
+        }
+        &__row {
+            display: grid;
+            grid-template-columns: 384px 384px 384px;
+            margin-bottom: 25px;
+            &__title {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 17px;
+                margin-bottom: 5px;
+                color: var(--table-detail-title);
+            }
+            &__content{
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                color: var(--table-detail-content);
+            }
+        }
+    }
+
+}
+
+.referer-go-back {
+    padding: 0 0 15px 0;
+    margin-top: -15px;
+
+    a, a:hover {
+        font-family: var(--font-family-base);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #891536;
+
+        i {
+            font-size: 8px;
+            padding: 0 5px 0 4px;
+            -webkit-transform: scale(2.2, 0.8);
+            transform: scale(2.2, 0.8); 
+        }
+    }
+}

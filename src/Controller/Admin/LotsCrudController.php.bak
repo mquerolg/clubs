@@ -1,0 +1,472 @@
+<?php
+
+namespace App\Controller\Admin;
+
+use App\Controller\Admin\Actions\LotsActions;
+use App\Diba\Admin\Filter\LangFilter;
+use App\Diba\Admin\Filter\TextFilter;
+use App\Diba\Helpers\StateHelper as State;
+use App\Entity\Copies;
+use App\Entity\Historic;
+use App\Entity\Libraries;
+use App\Entity\Lots;
+use App\Entity\Status;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\QueryBuilder;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
+use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\HiddenField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
+use EasyCorp\Bundle\EasyAdminBundle\Filter\BooleanFilter;
+use EasyCorp\Bundle\EasyAdminBundle\Filter\EntityFilter;
+use EasyCorp\Bundle\EasyAdminBundle\Filter\NumericFilter;
+use Symfony\Component\HttpFoundation\Request;
+use App\Service\MailerService;
+
+/**
+ * LotsCrudController
+ */
+class LotsCrudController extends AdminCrudController
+{
+    use LotsActions;
+
+    /**
+     * Stores the identifiers of the items associated with a lot
+     *
+     * @var array
+     */
+    private $_copies = [];
+    
+    /**
+     * @var MailerService
+     */
+    private $mailerService;
+    
+    /**
+     * @var \Psr\Log\LoggerInterface
+     */
+    private $logger;
+
+    /*
+    |--------------------------------------------------------------------------
+    | CONSTRUCTOR
+    |--------------------------------------------------------------------------
+    */
+    public function __construct(MailerService $mailerService)
+    {
+        $this->mailerService = $mailerService;
+        $this->logger = $this->container->get('logger');
+        $this->setTemplateDetailName('crud/details/lots');
+        $this->setTemplateNewName('crud/new/lots');
+        $this->setTemplateIndexName('crud/index/lots');
+        $this->setTemplateEditName('crud/edit/lots');
+        $this->setAdminAccess(true);
+        $this->setUserAccess(true);
+        $this->setFileNameExportData('Lots');
+        $this->setDefaultSort(['entity.title' => 'ASC']);
+        $this->setSortable(true);
+        $this->setTitels([
+            'index' => 'Lots',
+            'detail' => 'lot_title_detail',
+            'edit' => 'Editar lot',
+        ]);
+    }
+    
+    /**
+     * Handle status change and send email when status changes to RESERVED
+     * 
+     * @param Lots $lot The lot being updated
+     * @param int $newStatusId The new status ID
+     * @return void
+     */
+    private function handleStatusChange(Lots $lot, int $newStatusId): void
+    {
+        $oldStatusId = $lot->getStatus()->getId();
+        
+        $this->logger->debug('Processing lot status change. Lot ID: ' . $lot->getId() . 
+            ', Title: ' . $lot->getTitle() . 
+            ', Old status: ' . $oldStatusId . 
+            ', New status: ' . $newStatusId);
+        
+        if ($oldStatusId != $newStatusId && $newStatusId == State::RESERVED) {
+            $this->logger->debug('Attempting to send reservation email for lot: ' . 
+                $lot->getId() . ' - ' . $lot->getTitle());
+            
+            try {
+                $this->mailerService->sendLotReservedEmail($lot);
+                $this->logger->debug('Email sending process completed for lot: ' . $lot->getId());
+            } catch (\Exception $e) {
+                $this->logger->error('Failed to send email for lot: ' . $lot->getId() . 
+                    ' Error: ' . $e->getMessage());
+            }
+        } else {
+            $this->logger->debug('No email sent - either status not changed or not changed to RESERVED. ' . 
+                'Current status=' . $newStatusId . ', RESERVED status=' . State::RESERVED);
+        }
+    }
+
+    public static function getEntityFqcn(): string
+    {
+        return Lots::class;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | RESPONSE
+    |--------------------------------------------------------------------------
+    */
+
+    public function configCustomResponse(QueryBuilder $response): QueryBuilder
+    {
+        if (!$this->isAdmin()) {
+            $response->andWhere('entity.active = 1');
+        }
+
+        return $response;
+    }
+
+    public function configureDetailResponseParameters(AdminContext $context, array $responseParameters): array
+    {
+        $entityInstance = $context->getEntity()->getInstance();
+
+        $queryBuilder = $this->container->get('doctrine')
+            ->getManagerForClass($this->getEntityFqcn())->createQueryBuilder()
+            ->select('entity, library, club, lot')->from(Historic::class, 'entity')
+            ->join('entity.lot', 'lot')
+            ->join('entity.library', 'library')
+            ->join('entity.club', 'club')
+            ->andWhere('entity.closedAt IS NULL')
+            ->andWhere('entity.lotId = :lotId ')
+            ->andWhere('lot.statusId > ' . State::RESERVED)
+            ->setParameter('lotId', $entityInstance->getId())
+            ->orderBy('entity.id', 'DESC')
+            ->setMaxResults(1);
+
+        $responseParameters['historic'] = current($queryBuilder->getQuery()->getResult());
+
+        return $responseParameters;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | INSTANCES
+    |--------------------------------------------------------------------------
+    */
+
+    public function configureNewInstance($entityInstance)
+    {
+        $entityInstance->setUpdatedAt(new \DateTime('now'));
+
+        $status = $this->container->get('doctrine')->getRepository(Status::class)->find(1);
+
+        $entityInstance->setStatus($status);
+
+        return $entityInstance;
+    }
+
+    public function configureAfterNewInstance(EntityManagerInterface $entityManager, $entityInstance)
+    {
+        $entityManager = $this->container->get('doctrine')->getManagerForClass(Copies::class);
+
+        foreach ($this->_copies as $copy) {
+            $copies = $this->container->get('doctrine')->getRepository(Copies::class)->findBy([
+                'name' => $copy,
+                'lotId' => $entityInstance->getId(),
+            ]);
+
+            if (!isset($copies) || empty($copies)) {
+                $copies = new Copies();
+                $copies->setLot($entityInstance);
+                $copies->setName($copy);
+
+                $entityManager->persist($copies);
+            }
+        }
+
+        $this->_copies = [];
+
+        $entityManager->flush();
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | REQUEST
+    |--------------------------------------------------------------------------
+    */
+
+    public function configureNewRequest(Request $request, AdminContext $context): array
+    {
+        $data = $request->request->all();
+
+        // Check if DIM exist and put inactive lot
+        if (!empty($data) && isset($data['Lots']) && isset($data['Lots']['active']) && isset($data['Lots']['dim']) && (empty($data['Lots']['dim']) || trim($data['Lots']['dim']) == '')) {
+            $data['Lots']['active'] = false;
+        }
+
+        if (isset($data['Lots']) && isset($data['Lots']['copies'])) {
+            $this->_copies = array_unique($data['Lots']['copies']);
+            $data['Lots']['copies'] = [];
+        }
+
+        return $data;
+    }
+
+    public function configureEditRequest(Request $request, AdminContext $context): array
+    {
+        $data = $request->request->all();
+
+        // Check if DIM exist and put inactive lot
+        if (!empty($data) && isset($data['Lots']) && isset($data['Lots']['active']) && isset($data['Lots']['dim']) && (empty($data['Lots']['dim']) || trim($data['Lots']['dim']) == '')) {
+            $data['Lots']['active'] = false;
+        }
+
+        if (isset($data['Lots']) && isset($data['Lots']['copies'])) {
+            $lot = $context->getEntity()->getInstance();
+            $entityManager = $this->container->get('doctrine')->getManagerForClass(Copies::class);
+            $new_copies = $data['Lots']['copies'];
+            $rows = $this->container->get('doctrine')->getRepository(Copies::class)->findBy(['lotId' => $lot->getId()]);
+
+            foreach ($rows as $row) {
+                if (!in_array($row->getName(), $new_copies)) {
+                    $entityManager->remove($row);
+                    $entityManager->flush();
+                }
+            }
+
+            foreach ($new_copies as $copy) {
+                $copies = $this->container->get('doctrine')->getRepository(Copies::class)->findBy([
+                    'name' => $copy,
+                    'lotId' => $lot->getId(),
+                ]);
+
+                if (isset($copies) && !empty($copies) && isset($copies[0])) {
+                    $data_copies[] = $copies[0]->getId();
+                } else {
+                    $copies = new Copies();
+                    $copies->setLot($lot);
+                    $copies->setName($copy);
+
+                    $entityManager->persist($copies);
+                    $entityManager->flush();
+
+                    $data_copies[] = $copies->getId();
+                }
+            }
+            $data['Lots']['copies'] = array_unique($data_copies) ?? [];
+        }
+
+        // Check if lot status is being changed to reserved
+        if (isset($data['Lots']) && isset($data['Lots']['status'])) {
+            $lot = $context->getEntity()->getInstance();
+            $newStatusId = $data['Lots']['status'];
+            $this->handleStatusChange($lot, $newStatusId);
+        }
+
+        return $data;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | FIELDS
+    |--------------------------------------------------------------------------
+    */
+
+    public function configureAdminIndexFields(): iterable
+    {
+        return [
+            TextField::new('authorship', 'Authorship'),
+            TextField::new('title', 'Title'),
+            AssociationField::new('genre', 'Genre'),
+            IntegerField::new('langCat', 'Lang Cat'),
+            IntegerField::new('langEs', 'Lang Es'),
+            IntegerField::new('langOthers', 'Lang Others'),
+            TextField::new('signature', 'Signature'),
+            TextField::new('warehouse', 'Warehouse'),
+            TextField::new('owner', 'owner_table'),
+            IntegerField::new('year', 'year_table'),
+            AssociationField::new('status', 'Status'),
+        ];
+    }
+
+    public function configureAdminDetailFields(): iterable
+    {
+        return [
+            TextField::new('bibliographic'),
+            TextField::new('signature'),
+            AssociationField::new('genre'),
+            BooleanField::new('active'),
+            BooleanField::new('reserved'),
+            TextField::new('authorship'),
+            TextField::new('publication'),
+            TextField::new('isbn'),
+            TextField::new('description'),
+            TextField::new('title'),
+            TextField::new('collection'),
+            TextField::new('classification'),
+            UrlField::new('url'),
+            IntegerField::new('langCat'),
+            IntegerField::new('langEs'),
+            IntegerField::new('langAng'),
+            IntegerField::new('langFra'),
+            IntegerField::new('langAle'),
+            IntegerField::new('langIta'),
+            TextField::new('warehouse', 'warehaouse_code'),
+            TextField::new('dim'),
+            IntegerField::new('uses'),
+            TextField::new('owner'),
+            IntegerField::new('year', 'entry_year'),
+            TextField::new('observations'),
+            AssociationField::new('copies'),
+            AssociationField::new('status'),
+            AssociationField::new('historic'),
+        ];
+    }
+
+    public function configureAdminNewFields(): iterable
+    {
+        return [
+            BooleanField::new('active'),
+            NumberField::new('exemplar')->setRequired(true),
+            TextField::new('readBibliographic', 'bibliographic_code')->setFormTypeOption('disabled', 'disabled'),
+            HiddenField::new('bibliographic', 'bibliographic_code'),
+            TextField::new('authorship'),
+            TextField::new('title'),
+            TextField::new('signature'),
+            TextField::new('classification'),
+            TextField::new('publication'),
+            TextField::new('collection'),
+            TextField::new('isbn'),
+            AssociationField::new('genre')->setQueryBuilder(function ($queryBuilder) {
+                return $queryBuilder->andWhere('entity.active = 1');
+            })->setRequired(true),
+            TextField::new('warehouse', 'warehaouse_code'),
+            IntegerField::new('langCat'),
+            IntegerField::new('langEs'),
+            IntegerField::new('langAng'),
+            IntegerField::new('langFra'),
+            IntegerField::new('langAle'),
+            IntegerField::new('langIta'),
+            IntegerField::new('uses')->setFormTypeOption('disabled', 'disabled'),
+            ChoiceField::new('owner')->setChoices($this->getOwners()),
+            IntegerField::new('year', 'entry_year'),
+            TextField::new('dim'),
+            TextField::new('description'),
+            ImageField::new('url')->setUploadedFileNamePattern('[ulid]_[slug].[extension]')->setUploadDir($this->getNasPath()),
+            TextareaField::new('observations'),
+            AssociationField::new('copies', 'copies_from_lot')->setQueryBuilder(function ($queryBuilder) {
+                $id = $this->getContext()->getEntity()->getInstance()->getId() ?? 0;
+
+                return $queryBuilder
+                    ->andWhere('entity.lotId = :idCopies')
+                    ->setParameter('idCopies', $id);
+            }),
+        ];
+    }
+
+    public function configureUserIndexFields(): iterable
+    {
+        return $this->configureAdminIndexFields();
+    }
+
+    public function configureUserDetailFields(): iterable
+    {
+        return $this->configureAdminDetailFields();
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | FILTERS
+    |--------------------------------------------------------------------------
+    */
+
+    public function configureFilters(Filters $filters): Filters
+    {
+        return $this->isAdmin() ?
+            $filters
+                ->add(TextFilter::new('title'))
+                ->add(TextFilter::new('authorship'))
+                ->add(EntityFilter::new('genre')->setFormTypeOption('value_type_options', ['multiple' => true]))
+                ->add(LangFilter::new('langs'))
+                ->add(NumericFilter::new('langSum'))
+                ->add(TextFilter::new('signature', 'sign'))
+                ->add(TextFilter::new('owner', 'owner_filter'))
+                ->add(TextFilter::new('warehouse'))
+                ->add(NumericFilter::new('year'))
+                ->add(EntityFilter::new('status')->setFormTypeOption('value_type_options', ['multiple' => true]))
+                ->add(BooleanFilter::new('active')->setFormTypeOption('attr', ['class' => 'custom_lot_bool']))
+        :
+            $filters
+                ->add(TextFilter::new('title'))
+                ->add(TextFilter::new('authorship'))
+                ->add(EntityFilter::new('genre')->setFormTypeOption('value_type_options', ['multiple' => true]))
+                ->add(LangFilter::new('langs'))
+                ->add(NumericFilter::new('langSum'))
+                ->add(TextFilter::new('signature', 'sign'))
+                ->add(TextFilter::new('owner', 'owner_filter'))
+                ->add(TextFilter::new('warehouse'))
+                ->add(NumericFilter::new('year'))
+                ->add(EntityFilter::new('status')->setFormTypeOption('value_type_options', ['multiple' => true]))
+        ;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Support
+    |--------------------------------------------------------------------------
+    */
+
+    protected function getOwners()
+    {
+        $ownersRepository = $this->container->get('doctrine')->getRepository(Libraries::class);
+
+        $ownersQuery = $ownersRepository->createQueryBuilder('u')
+                                        ->select('u.code')
+                                        ->distinct('u.code')
+                                        ->where('u.active = 1')
+                                        ->orderBy('u.code')
+                                        ->getQuery()->getResult();
+        $owners = [];
+        $owners['CBB'] = 'CBB';
+        $owners['PDL'] = 'PDL';
+
+        foreach ($ownersQuery as $owner) {
+            $owners[$owner['code']] = $owner['code'];
+        }
+
+        return $owners;
+    }
+
+    /**
+     * Action to set a lot as active with RESERVED status
+     * 
+     * @param AdminContext $context
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function activeAction(AdminContext $context)
+    {
+        $lot = $context->getEntity()->getInstance();
+        $entityManager = $this->container->get('doctrine')->getManager();
+        
+        // If setting to active, default status is RESERVED (2)
+        $newStatusId = State::RESERVED;
+        
+        // Update the lot's status
+        $status = $entityManager->getRepository(Status::class)->find($newStatusId);
+        $lot->setStatus($status);
+        
+        $this->handleStatusChange($lot, $newStatusId);
+        
+        $entityManager->persist($lot);
+        $entityManager->flush();
+        
+        return $this->redirect($context->getReferrer());
+    }
+}

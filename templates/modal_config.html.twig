@@ -1,0 +1,32 @@
+<div class="modal fade" id="indexModalCon" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-index-content">
+            <div class="modal-index-content__header">
+                <div class="modal-index-content__header__title" id="modalHeaderTitleCon">Modal title</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-index-content__body" id="indexModalBody">
+                <div class="modal-index-content__body__input" id="indexModalBodyInput1">
+                    <label class="modal-index-content__body__input__label" id="indexModalBodyInputLabel">{{ 'modal.date_max'|trans(domain = 'EasyAdminBundle') }}</label>
+                    <input class="modal-index-content__body__input__text" type="text" id="indexModalBodyInputText1"/>
+                </div>
+                <div class="modal-index-content__body__input" id="indexModalBodyInput2">
+                    <label class="modal-index-content__body__input__label" id="indexModalBodyInputLabel">{{ 'modal.max_library'|trans(domain = 'EasyAdminBundle') }}</label>
+                    <input class="modal-index-content__body__input__text" type="text" id="indexModalBodyInputText2"/>
+                </div>
+                <div class="modal-index-content__body__input" id="indexModalBodyInput3">
+                    <label class="modal-index-content__body__input__label" id="indexModalBodyInputLabel">{{ 'modal.max_bus'|trans(domain = 'EasyAdminBundle') }}</label>
+                    <input class="modal-index-content__body__input__text" type="text" id="indexModalBodyInputText3"/>
+                </div>
+                <div class="modal-index-content__body__input" id="indexModalBodyInput4">
+                    <label class="modal-index-content__body__input__label" id="indexModalBodyInputLabel">{{ 'modal.max_library_lf'|trans(domain = 'EasyAdminBundle') }}</label>
+                    <input class="modal-index-content__body__input__text" type="text" id="indexModalBodyInputText4"/>
+                </div>
+            </div>
+            <div class="modal-index-content__footer" id="indexModalFooterCon">
+                <button type="button" class="modal-index-content__footer__primary" id="indexModalFooterFirstBtnCon" data-bs-dismiss="modal">{{ 'modal.close'|trans(domain = 'EasyAdminBundle') }}</button>
+                <button type="button" class="modal-index-content__footer__secondary" id="indexModalFooterSecondBtnCon">{{ 'modal.save'|trans(domain = 'EasyAdminBundle') }}</button>
+            </div>
+        </div>
+    </div>
+</div>
