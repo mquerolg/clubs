@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#"
+     xml:base="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:tfg="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#"
+     xmlns:schema="https://schema.org/">
+    
+    <owl:Ontology rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg"/>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Biblioteca">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Library"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Club">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Lot"/>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Tramesa"/>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.org/Person"/>
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#pertanyABiblioteca">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Club"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Biblioteca"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#usaLot">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Club"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Lot"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#esManifestacioDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Lot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.org/author">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#teGenere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#titol">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#isbn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#estatLot">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Lot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#nom_club">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Club"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#nom_biblioteca">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Biblioteca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#autor_quim_monzo">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdfs:label>Quim Monzó</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#genere_conte">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="ca">Conte</skos:prefLabel>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#obra_el_perque">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra"/>
+        <tfg:titol>El perquè de tot plegat</tfg:titol>
+        <tfg:isbn>9788477273059</tfg:isbn>
+        <schema:author rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#autor_quim_monzo"/>
+        <tfg:teGenere rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#genere_conte"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#biblioteca_roca_umbert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Biblioteca"/>
+        <tfg:nom_biblioteca>Biblioteca Roca Umbert</tfg:nom_biblioteca>
+        <schema:addressLocality>Granollers</schema:addressLocality>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#club_roca_umbert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Club"/>
+        <tfg:nom_club>Club de Lectura Roca Umbert</tfg:nom_club>
+        <tfg:pertanyABiblioteca rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#biblioteca_roca_umbert"/>
+        <tfg:usaLot rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#lot1"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#lot1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Lot"/>
+        <tfg:esManifestacioDe rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#obra_el_perque"/>
+        <tfg:estatLot>En ús</tfg:estatLot>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#autor_george_orwell">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdfs:label>George Orwell</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#autor_eva_baltasar">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdfs:label>Eva Baltasar</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#genere_novel_la">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="ca">Novel·la</skos:prefLabel>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#genere_distopia">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="ca">Distòpia</skos:prefLabel>
+        <skos:broader rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#genere_novel_la"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#obra_1984">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra"/>
+        <tfg:titol>1984</tfg:titol>
+        <tfg:isbn>9780141036144</tfg:isbn>
+        <schema:author rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#autor_george_orwell"/>
+        <tfg:teGenere rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#genere_distopia"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#obra_permafrost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Obra"/>
+        <tfg:titol>Permafrost</tfg:titol>
+        <tfg:isbn>9788416605231</tfg:isbn>
+        <schema:author rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#autor_eva_baltasar"/>
+        <tfg:teGenere rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#genere_novel_la"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#biblioteca_tecla_sala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Biblioteca"/>
+        <tfg:nom_biblioteca>Biblioteca Tecla Sala</tfg:nom_biblioteca>
+        <schema:addressLocality>L'Hospitalet de Llobregat</schema:addressLocality>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#biblioteca_gabriel_ferrater">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Biblioteca"/>
+        <tfg:nom_biblioteca>Biblioteca Gabriel Ferrater</tfg:nom_biblioteca>
+        <schema:addressLocality>Sant Cugat del Vallès</schema:addressLocality>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#club_ciencia_ficcio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Club"/>
+        <tfg:nom_club>Club de Ciència Ficció i Distòpia</tfg:nom_club>
+        <tfg:pertanyABiblioteca rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#biblioteca_tecla_sala"/>
+        <tfg:usaLot rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#lot2"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#club_veus_de_dones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Club"/>
+        <tfg:nom_club>Club Veus de Dones</tfg:nom_club>
+        <tfg:pertanyABiblioteca rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#biblioteca_gabriel_ferrater"/>
+        <tfg:usaLot rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#lot3"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#lot2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Lot"/>
+        <tfg:esManifestacioDe rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#obra_1984"/>
+        <tfg:estatLot>En ús</tfg:estatLot>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#lot3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Lot"/>
+        <tfg:esManifestacioDe rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#obra_permafrost"/>
+        <tfg:estatLot>En trànsit</tfg:estatLot>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#lot4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#Lot"/>
+        <tfg:esManifestacioDe rdf:resource="http://www.semanticweb.org/querolgm/ontologies/2026/0/tfg#obra_permafrost"/>
+        <tfg:estatLot>Disponible</tfg:estatLot>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
