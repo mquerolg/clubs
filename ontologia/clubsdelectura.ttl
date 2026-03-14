@@ -18707,11 +18707,11 @@ schema:Review rdfs:subClassOf [
 @prefix schema1: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-
 ex:book1 a schema1:Book ;
     schema1:author ex:author1 ;
     schema1:authorName "Andrew Dowling" ;
     schema1:datePublished "2022-08-19" ;
+    schema1:description "Catalonia: A New History revises many traditional and romantic conceptions in the historiography of a small nation. This book engages with the scholarship of the past decade and separates nationalist myth-history from real historical processes. It is thus able to provide the reader with an analytical account, situating each historical period within its temporal context. Catalonia emerges as a territory where complex social forces interact, where revolts and rebellions are frequent. This is a contested terrain where political ideologies have sought to impose their interpretation of Catalan reality. This book situates Catalonia within the wider currents of European and Spanish history, from pre-history to the contemporary independence movement, and makes an important contribution to our understanding of nation-making." ;
     schema1:genre "History" ;
     schema1:isbn "9781000641608" ;
     schema1:name "Catalonia: A New History" .
@@ -18720,13 +18720,14 @@ ex:book10 a schema1:Book ;
     schema1:author ex:author9 ;
     schema1:authorName "John Payne" ;
     schema1:datePublished "2009" ;
+    schema1:description "This is a comprehensive view of Catalan history and culture from its classical and medieval origins right up until 2004. Payne's personal tone brings alive highlights of Catalan history and leading personalities of its cultural life." ;
     schema1:genre "History" ;
     schema1:name "Catalonia" .
 
 ex:book100 a schema1:Book ;
-    schema1:datePublished "1980" ;
-    schema1:genre "Catalogs, Union" ;
-    schema1:name "National Union Catalog" .
+    schema1:datePublished "1992" ;
+    schema1:genre "Periodicals" ;
+    schema1:name "British Humanities Index" .
 
 ex:book101 a schema1:Book ;
     schema1:datePublished "1903" ;
@@ -18734,23 +18735,25 @@ ex:book101 a schema1:Book ;
     schema1:name "The Athenaeum" .
 
 ex:book102 a schema1:Book ;
-    schema1:author ex:author62 ;
+    schema1:author ex:author64 ;
     schema1:authorName "Sir Norman Lockyer" ;
     schema1:datePublished "1927" ;
     schema1:genre "Electronic journals" ;
     schema1:name "Nature" .
 
 ex:book103 a schema1:Book ;
-    schema1:author ex:author63 ;
+    schema1:author ex:author65 ;
     schema1:authorName "Philadelphia Museum of Art" ;
     schema1:datePublished "1926" ;
+    schema1:description "Some vols. include the museum's Annual report." ;
     schema1:genre "Art" ;
     schema1:name "Philadelphia Museum of Art Bulletin" .
 
 ex:book104 a schema1:Book ;
-    schema1:author ex:author63 ;
+    schema1:author ex:author65 ;
     schema1:authorName "Philadelphia Museum of Art" ;
     schema1:datePublished "1924" ;
+    schema1:description "Some vols. include the museum's Annual report." ;
     schema1:genre "Art" ;
     schema1:name "Bulletin of the Pennsylvania Museum" .
 
@@ -18765,20 +18768,21 @@ ex:book106 a schema1:Book ;
     schema1:name "The Encyclopædia Britannica" .
 
 ex:book107 a schema1:Book ;
-    schema1:author ex:author64 ;
+    schema1:author ex:author66 ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "2024-10-24" ;
+    schema1:description "Step into the heart of revolutionary Spain with George Orwell's powerful account, Homage to Catalonia. In this poignant narrative, Orwell recounts his firsthand experiences fighting in the Spanish Civil War, offering a vivid and deeply personal perspective on the political and social upheaval of the time. Orwell’s writing brings to life the intense struggles, challenges, and betrayals he witnessed as he joined the militia in Catalonia. With sharp clarity, he paints a stark picture of the ideological divides that tore the country apart, and the complexities of war that blurred the lines between friend and foe.But here's the twist that will captivate you: What does Orwell’s experience reveal about the nature of truth, power, and the human spirit during times of war? Can we learn from the past to avoid repeating its mistakes? This extraordinary memoir offers a rare look into the realities of war, filled with unflinching honesty and a deep sense of humanism. Through Orwell’s eyes, the reader gains an intimate understanding of the personal costs of conflict and the difficult choices soldiers had to make. Are you ready to witness the raw, unfiltered truths of war as seen through the eyes of one of history's most influential writers?Dare to immerse yourself in the brutal honesty of Homage to Catalonia and experience a unique chapter of history that continues to resonate today. Purchase it now, and begin your journey through Orwell’s compelling narrative of war, ideology, and survival." ;
     schema1:genre "Biography & Autobiography" ;
     schema1:name "Homage to Catalonia" .
 
 ex:book108 a schema1:Book ;
-    schema1:author ex:author65 ;
+    schema1:author ex:author67 ;
     schema1:authorName "G. Maranon" ;
     schema1:datePublished "1954" ;
     schema1:name "A History of Aragon and Catalonia" .
 
 ex:book109 a schema1:Book ;
-    schema1:author ex:author66 ;
+    schema1:author ex:author68 ;
     schema1:authorName "Edmund Dene Morel" ;
     schema1:datePublished "1923" ;
     schema1:genre "Europe" ;
@@ -18786,21 +18790,22 @@ ex:book109 a schema1:Book ;
 
 ex:book11 a schema1:Book ;
     schema1:author ex:author10 ;
-    schema1:authorName "A. Smith" ;
-    schema1:datePublished "2014-03-26" ;
+    schema1:authorName "Chris Bambery" ;
+    schema1:datePublished "2020-04-24" ;
+    schema1:description "2017 saw Catalonia come under the world's spotlight as it again fought for independence and the preservation and protection of its unique Catalan culture. Answering the questions and complications behind the fight for Catalonian Independence, Catalonia Reborn is a detailed guide to the region's political, historical and cultural issues. For the layman as well as the expert, it takes the reader through the rich history of Catalonia – its language, culture and political background – to the present day, covering defining eras of the region from Franco's dictatorship to the 2017 independence referendum and elections." ;
     schema1:genre "History" ;
-    schema1:isbn "9781137354495" ;
-    schema1:name "The Origins of Catalan Nationalism, 1770-1898" .
+    schema1:isbn "9781912387410" ;
+    schema1:name "Catalonia Reborn" .
 
 ex:book110 a schema1:Book ;
-    schema1:author ex:author67 ;
+    schema1:author ex:author69 ;
     schema1:authorName "James Louis Garvin" ;
     schema1:datePublished "1929" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Encyclopedia Britannica" .
 
 ex:book111 a schema1:Book ;
-    schema1:author ex:author68 ;
+    schema1:author ex:author70 ;
     schema1:authorName "Robert Edward Dell" ;
     schema1:datePublished "1928" ;
     schema1:genre "Art" ;
@@ -18811,66 +18816,72 @@ ex:book112 a schema1:Book ;
     schema1:name "The Furniture Manufacturers' Blue Book" .
 
 ex:book113 a schema1:Book ;
-    schema1:author ex:author69 ;
+    schema1:author ex:author71 ;
     schema1:authorName "H. Rosi Song" ;
     schema1:datePublished "2019-07-24" ;
+    schema1:description "Widely associated with avant-garde gastronomy and lavish food markets, Barcelona has become a top destination for gourmands and chefs around the world, especially after the spectacular rise of chef Ferran Adrià of the famed elBulli, soon to be reborn as elBulli1846. Barcelona is a city that attracts millions of visitors in search of art and culinary experiences while cookery apprentices from around the world arrive looking to perfect their skills and expand their gastronomic horizon. The city offers an unequaled combination of restaurants, chefs, restauranteurs, media and local government initiatives to help those who arrive seeking an extraordinary culinary experience. But how has the city established itself as a global culinary referent while becoming synonymous with cutting-edge cuisine? This book narrates Barcelona’s urban and culinary development from the Middle Ages to the present, tracing the origins and the growth of the culinary prestige of this part of Catalonia. Barcelona has been a cosmopolitan center since the 1700s because of its location and busy port. The city has always been well supplied with food, and its residents built a strong culinary tradition enlivened by its contact with other cuisines and novel products afforded by its geographic location and the people who migrated to the area. With literature, painting, music and architecture, cooking has been a crucial activity in creating and maintaining a Catalan identity. Past, present and future visitors of the city will find a fascinating history of the unforgettable culinary importance of one of the most popular cities of Spain." ;
     schema1:genre "Cooking" ;
     schema1:isbn "9781538107843" ;
     schema1:name "A Taste of Barcelona" .
 
 ex:book114 a schema1:Book ;
-    schema1:author ex:author70 ;
+    schema1:author ex:author72 ;
     schema1:authorName "J. H. Elliott" ;
     schema1:datePublished "2018-08-21" ;
+    schema1:description "A landmark account that reveals the long history behind the current Catalan and Scottish independence movements A distinguished historian of Spain and Europe provides an enlightening account of the development of nationalist and separatist movements in contemporary Catalonia and Scotland. This first sustained comparative study uncovers the similarities and the contrasts between the Scottish and Catalan experiences across a five-hundred-year period, beginning with the royal marriages that brought about union with their more powerful neighbors, England and Castile respectively, and following the story through the centuries from the end of the Middle Ages until today’s dramatic events. J. H. Elliott examines the political, economic, social, cultural, and emotional factors that divide Scots and Catalans from the larger nations to which their fortunes were joined. He offers new insights into the highly topical subject of the character and development of European nationalism, the nature of separatism, and the sense of grievance underlying the secessionist aspirations that led to the Scottish referendum of 2014, the illegal Catalan referendum of October 2017, and the resulting proclamation of an independent Catalan republic." ;
     schema1:genre "History" ;
     schema1:isbn "9780300240719" ;
     schema1:name "Scots and Catalans" .
 
 ex:book115 a schema1:Book ;
-    schema1:author ex:author71 ;
+    schema1:author ex:author73 ;
     schema1:authorName "Flocel Sabat" ;
     schema1:datePublished "2015-09-29" ;
+    schema1:description "The book derives from an European Science Foundation project about the cohesion of European regions developed between 2010 and 2013. Flocel Sabate led into this framework a team of fourteen scholars looking for the reason of the cohesion and permanence of Catalonia from Middle Ages to current days. This collective book arrives at an updated explanation, far from neoromantic visions and attentive to social vectors, such as socioeconomical convergence, external and internal perception, social representation, institutional development, creation of a justificative discourse and influence of the law, the language, the art and other cultural items." ;
     schema1:isbn "9783034320108" ;
     schema1:name "Historical Analysis of the Catalan Identity" .
 
 ex:book116 a schema1:Book ;
-    schema1:author ex:author72 ;
+    schema1:author ex:author74 ;
     schema1:authorName "College Art Association of America. Committee on Books for the College Art Library" ;
     schema1:datePublished "1929" ;
     schema1:genre "Academic libraries" ;
     schema1:name "List of Books for a College Art Library" .
 
 ex:book117 a schema1:Book ;
-    schema1:author ex:author73 ;
+    schema1:author ex:author75 ;
     schema1:authorName "Arthur Terry" ;
     schema1:datePublished "1972" ;
+    schema1:description "In writing this brief history of Catalan literature, I have tried to bear in mind the needs of the non-specialist reader with some knowledge of Spanish who wishes to know more about an important but, on the whole, neglected area of Peninsular culture. Where English readers are concerned, the task, unfortunately, is long overdue: in a recent and otherwise excellent literary encyclopedia, the whole of Catalan literature is allotted the same amount of space as Jean-Paul Sartre, and this seems characteristic of a situation which few specialists as yet have tried to alter. The chief barrier, of course, is linguistic: yet it is not difficult to acquire at least a reading knowledge of Catalan, and for reasons which are given in Chapter 1, the older literature is relatively accessible to a modern reader compared, say, with that of France or Spain. This accessibility gives an impression of coherence to the entire range of Catalan literature which is reinforced to a great extent by social and historical tendencies. Roughly speaking, Catalan literature follows a recognizable European pattern, with one notable exception: the fact that its course is interrupted for something like three centuries by what is usually known as the period of \"Decadence\" (see Chapter 2). To see why this should be so demands an awareness of certain historical facts, and these in turn point to the close interpenetration of literature and society which is evident in most phases of Catalan culture. Both the 19th-century revival and the more conscious programs of noucentisme in the 20th are attempts to create a new national identity, a task which has lost none of its urgency in the years since the Spanish Civil War. - Preface." ;
     schema1:genre "Catalan literature" ;
     schema1:isbn "9780510322991" ;
     schema1:name "Catalan Literature" .
 
 ex:book118 a schema1:Book ;
-    schema1:author ex:author74 ;
+    schema1:author ex:author76 ;
     schema1:authorName "Josep R. Llobera" ;
     schema1:datePublished "2004" ;
+    schema1:description "What we are experiencing is an increasing autonomy of ethnonations, i.e. nations without a state, in the wake of a weakening of the multinational states and the transfer of their sovereignty upwards, in the case of Europe to the federation of the European Union, and downwards to the \"ethnonations\".\"--Jacket." ;
     schema1:genre "History" ;
     schema1:isbn "9781571816122" ;
     schema1:name "Foundations of National Identity" .
 
 ex:book119 a schema1:Book ;
-    schema1:author ex:author75 ;
+    schema1:author ex:author77 ;
     schema1:authorName "Stephen Jacobson" ;
     schema1:datePublished "2009-09-15" ;
+    schema1:description "Offering a window into the history of the modern legal profession in Western Europe, Stephen Jacobson presents a history of lawyers in the most industrialized city on the Mediterranean. Far from being mere curators of static law, Barcelona's lawyers were at the center of social conflict and political and economic change, mediating between state, family, and society. Beginning with the resurrection of a decadent bar during the Enlightenment, Jacobson traces the historical evolution of lawyers throughout the long nineteenth century. Among the issues he explores are the attributes of the modern legal profession, how lawyers engaged with the Enlightenment, how they molded events in the Age of Revolution and helped consolidate a liberal constitutional order, why a liberal profession became conservative and corporatist, and how lawyers promoted fin-de-siecle nationalism. From the vantage point of a city with a distinguished legal tradition, Catalonia's Advocates provides fresh insight into European social and legal history; the origins of liberal professionalism; education, training, and the practice of law in the nineteenth century; the expansion of continental bureaucracies; and the corporatist aspects of modern nationalism." ;
     schema1:genre "Law" ;
     schema1:isbn "9780807899175" ;
     schema1:name "Catalonia's Advocates" .
 
 ex:book12 a schema1:Book ;
     schema1:author ex:author11 ;
-    schema1:authorName "Chris Bambery" ;
-    schema1:datePublished "2020-04-24" ;
-    schema1:genre "History" ;
-    schema1:isbn "9781912387410" ;
-    schema1:name "Catalonia Reborn" .
+    schema1:authorName "Charles River Editors" ;
+    schema1:datePublished "2019-12-25" ;
+    schema1:description "*Includes pictures *Includes a bibliography for further reading Set in the northeastern corner of Spain and nestled next to France is the autonomous region of Catalonia. The name Catalonia is thought to mean the Land of Castellans (castlan means the governor of a castle), while another version of the story suggests that the name actually comes from Gothalanda, or Land of the Goths, who occupied it in the 5th century. More than seeing themselves as Spaniards, Catalonian people see themselves as Catalan first and foremost, and they all are natively fluent in the language, Catalan. This fiercely guarded sense of identity no doubt comes from having been squeezed between the two major empires of France and Spain, as well as having been at the crossroads of those two powers' violent struggles for centuries. Shaped like an uneven triangle, Catalonia is comprised of four provinces that occupy an area of 12,390 square miles: Girona, Barcelona, Tarragona and Lleida. Catalonia also has a variety of different kinds of communities surrounding it, as its northern neighbors include the powerful country of France and the tiny nation of Andorra. To the south it has the autonomous community of Valencia, to the west is the autonomous community of Aragon, and on the east, it borders the Mediterranean Sea. Furthermore, there are natural boundaries that serve to divide Catalonia from its neighbors, namely the Pyrenees mountains, which separate it from France, and the pre-Pyrenees and the Ebro River basin, which mark its border with Aragon. It is home to several main rivers, including the Ter, Llobregat, and the Ebro, all of which end in the Mediterranean Sea. Due to the considerable topographical diversity found in Catalonia, each of the four provinces are quite distinctive in their landscape and, therefore, in their economy. Three of the provinces (all but Lleida) have access to the Mediterranean Sea, and in contrast to the three other provinces that share a piece of the coastline, the inland Lleida province is found to the north of the Catalanides and is a high tableland. The Catalanides, a low-lying mountain range, divides the coastal plain from the Ebro river basin, a natural division between the towns of the coast that historically tended to be more industrial, as opposed to the settlements of the hinterlands that tended to be more predominantly agricultural. The main agricultural outputs of Catalonia were the foods associated with a Mediterranean diet, including wine, almonds, olives and olive oil, along with rice, potatoes and corn, many of which were actually brought there by ancient Greek settlers. In addition to these foodstuffs, there is a modest tradition of raising cows, sheep, and pigs, but only a third of Catalonia is currently dedicated to agricultural production. The most significant part of Catalonia, in terms of population density, is found in the towns on the Catalan coast, whereas the hinterland is rather sparsely populated. Over the course of the 20th century, Barcelona and its closely surrounding towns continued to attract more and more residents, further increasing this disparity. After a tumultuous history during which it bounced back and forth in terms of its political status and relationship to Spain's central government, Catalonia was granted its autonomy on December 18, 1979. In 2006, it came close to acquiring its total independence, but that status is still being hotly contested. For now, it is still formally part of the country of Spain, but it is governed by an executive council that is headed by a president. The executive branch of the government is called the Generalitat, and it also has a parliament with one chamber. It is currently home to an estimated 7.5 million people, many of whom continue pushing for the region's total independence from Spain." ;
+    schema1:isbn "9781650814872" ;
+    schema1:name "Catalonia" .
 
 ex:book120 a schema1:Book ;
     schema1:datePublished "1987" ;
@@ -18878,380 +18889,418 @@ ex:book120 a schema1:Book ;
     schema1:name "Social Sciences Index" .
 
 ex:book121 a schema1:Book ;
+    schema1:datePublished "2017-09-25" ;
+    schema1:description "The Crown of Aragon. A Singular Mediterranean Empire recovers the history of an empire which was of great importance in the late medieval Mediterranean, but which has since been relegated almost to oblivion by the course of history. The Crown of Aragon was a Mediterranean crossroads: between west and east for the economy, and between north and south for culture and religion, drawing in many different peoples, covering Iberia to Greece. A new vision of the Crown of Aragon as a framework of overlapping identities facilitates its historiographical recovery, showcased in the chapters of this volume which analyse the economy, institutions, social evolution, political strategy and cultural expression in literature and art of the Crown of Aragon. Contributors are David Abulafia, Lola Badia, Xavier Barral-i-Altet, Pere Benito, Maria Bonet, Jesús Brufal, Alessandra Cioppi, Damien Coulon, Luciano Gallinari, Isabel Grifoll, Adam J. Kosto, Esther Martí-Setañés, Sebastiana Nocco, Antoni Riera, Flocel Sabaté and Antoni Simon." ;
+    schema1:genre "History" ;
+    schema1:isbn "9789004349612" ;
+    schema1:name "The Crown of Aragon" .
+
+ex:book122 a schema1:Book ;
     schema1:datePublished "1911" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Encyclopaedia Britannica: Shu to Tom" .
 
-ex:book122 a schema1:Book ;
+ex:book123 a schema1:Book ;
     schema1:datePublished "1919" ;
     schema1:name "The Spectator" .
 
-ex:book123 a schema1:Book ;
+ex:book124 a schema1:Book ;
     schema1:datePublished "1911" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Encyclopædia Britannica: Shuvalov-Subliminal Self" .
 
-ex:book124 a schema1:Book ;
-    schema1:author ex:author76 ;
+ex:book125 a schema1:Book ;
+    schema1:author ex:author78 ;
     schema1:authorName "Catalunya. Parlament" ;
     schema1:datePublished "2004" ;
     schema1:isbn "9788439366560" ;
     schema1:name "The Parliament of Catalonia" .
 
-ex:book125 a schema1:Book ;
+ex:book126 a schema1:Book ;
     schema1:datePublished "1928" ;
     schema1:name "The Saturday Review of Politics, Literature, Science and Art" .
 
-ex:book126 a schema1:Book ;
+ex:book127 a schema1:Book ;
     schema1:datePublished "1928" ;
     schema1:genre "Literary and political reviews" ;
     schema1:name "The Saturday Review of Politics, Literature, Science, Art, and Finance" .
 
-ex:book127 a schema1:Book ;
+ex:book128 a schema1:Book ;
     schema1:aggregateRating ex:rating3 ;
-    schema1:author ex:author77 ;
+    schema1:author ex:author79 ;
     schema1:authorName "Thomas N. Bisson" ;
     schema1:datePublished "1998" ;
+    schema1:description "Peasants of remote history rarely speak to us in their own voices, but Thomas Bisson's engagement with the records of several hundred twelfth-century rural Catalonians enables us to hear these voices. Bisson describes these peasants socially and culturally, showing how their experience figured in a wider crisis of power during the twelfth century." ;
     schema1:genre "History" ;
     schema1:isbn "9780674895287" ;
     schema1:name "Tormented Voices" .
 
-ex:book128 a schema1:Book ;
-    schema1:author ex:author78 ;
+ex:book129 a schema1:Book ;
+    schema1:author ex:author80 ;
     schema1:authorName "Rhiannon McGlade" ;
     schema1:datePublished "2016-02-15" ;
+    schema1:description "First ever English language book on 20th century cartooning and humour production in Catalonia Offers both broad history as well as close analysis of cartoon examples of the time Engages with academic debates on the power of humour, humour and identity and applies them to the Catalan context Offers contextualisation of the Catalan cartooning tradition within a broader socio-political context of Catalonia and Spain" ;
     schema1:genre "Art" ;
     schema1:isbn "9781783168057" ;
     schema1:name "Catalan Cartoons" .
 
-ex:book129 a schema1:Book ;
-    schema1:author ex:author79 ;
+ex:book13 a schema1:Book ;
+    schema1:author ex:author12 ;
+    schema1:authorName "A. Smith" ;
+    schema1:datePublished "2014-03-26" ;
+    schema1:description "This book looks at the reasons behind the emergence of a Catalan nationalist movement from the late 1880s, one of the most important developments that took place in nineteenth-century Spain, with the 'Catalan question' thereafter never far from the centre of the Spanish political stage." ;
+    schema1:genre "History" ;
+    schema1:isbn "9781137354495" ;
+    schema1:name "The Origins of Catalan Nationalism, 1770-1898" .
+
+ex:book130 a schema1:Book ;
+    schema1:author ex:author81 ;
     schema1:authorName "Arnau Gonzàlez i Vilalta" ;
     schema1:datePublished "2020" ;
+    schema1:description "But Catalan politics blew in quite another way, later reacting to Soviet dis-interest and British indecisiveness, amongst a host of other pressures. Placing Catalonia and the Catalan nationalist movement in the foreground of contemporary Spanish discourse reveals why present internal complexities require a historical dimension that takes into account early twentieth-century pan-European/ pan-international movements that supported or decried secession, albeit for widely differing nationalist motives. Not least were the perceived and feared reactions of minority populations, and the potential strategic geographic/diplomatic consequences for European leaders. In a way, the unfolding of antagonisms on the international and European scene led to the internal Spanish conflict. ." ;
     schema1:genre "Catalonia (Spain)" ;
     schema1:isbn "9781789760323" ;
     schema1:name "The Illusion of Statehood" .
 
-ex:book13 a schema1:Book ;
-    schema1:author ex:author12 ;
-    schema1:authorName "Charles River Editors" ;
-    schema1:datePublished "2019-12-25" ;
-    schema1:isbn "9781650814872" ;
-    schema1:name "Catalonia" .
-
-ex:book130 a schema1:Book ;
-    schema1:author ex:author80 ;
+ex:book131 a schema1:Book ;
+    schema1:author ex:author82 ;
     schema1:authorName "DK Travel" ;
     schema1:datePublished "2026-02-05" ;
+    schema1:description "Make your trip to Barcelona and Catalonia extraordinary Sunbathing on the beaches of the Costa Brava. Soaking up world-class art at the Museu Nacional d'Art de Catalunya. A road trip through picturesque Catalan villages. There are so many reasons to visit Barcelona and Catalonia. Whatever your dream trip involves, this DK travel guide is the perfect companion. Our updated guide brings Barcelona and Catalonia to life, transporting you there like no other travel guide does with expert-led insights, trusted travel advice, detailed breakdowns of all the must-see sights, photographs on practically every page, and our hand-drawn illustrations, which take you inside the region’s buildings and neighbourhoods. You'll discover: - our pick of Barcelona and Catalonia’s must-sees and top experiences - beautiful photography and detailed illustrations, taking you to the heart of Barcelona and Catalonia - the best spots to eat, drink, shop and stay - detailed maps and walks which make navigating the region easy - easy-to-follow itineraries - expert advice: get ready, get around and stay safe - colour-coded chapters to each part of Barcelona and Catalonia - a lightweight format, so you can take it with you wherever you go Want the best of Barcelona and Catalonia in your pocket? Try Top 10 Barcelona." ;
     schema1:genre "Travel" ;
     schema1:isbn "9780241811856" ;
     schema1:name "DK Barcelona and Catalonia" .
 
-ex:book131 a schema1:Book ;
-    schema1:author ex:author81 ;
+ex:book132 a schema1:Book ;
+    schema1:author ex:author83 ;
     schema1:authorName "Juan Díez Medrano" ;
     schema1:datePublished "1995" ;
+    schema1:description "Nationalist movements in both the Basque Country and Catalonia are embedded in the context of Spanish rule, but they differ profoundly in their goals, strategies, constituencies, and success in marshaling public support. In a pathbreaking work of historical sociology, Juan Diez Medrano examines these differences for the first time. He provides not only a rich political history of the two cases but also a new explanation for why some nationalist movements adopt separatism or violence. Diez Medrano compares the formation of cultural identity in Catalonia and the Basque Country in an investigation that starts in the seventeenth century. For each region, he looks at patterns of industrialization, the establishment of nationalist parties before the Civil War, levels of nationalist activity under Franco, and conditions in democratic Spain today. The author considers conflicts within the populations that Basque and Catalan nationalist movements have claimed to represent, as well as conflicts between the state and nationalist organizations. The \"nations\" for whom these movements aim to speak, he shows, are in fact deeply divided. He attributes the divergent developments of Basque and Catalan nationalisms to the different relationships between the Madrid government and the leading social group in each region." ;
     schema1:genre "History" ;
     schema1:name "Divided Nations" .
 
-ex:book132 a schema1:Book ;
-    schema1:author ex:author82 ;
+ex:book133 a schema1:Book ;
+    schema1:author ex:author84 ;
     schema1:authorName "Emily Jenkins" ;
     schema1:datePublished "2024-07-29" ;
+    schema1:description "On 23 March 1981, Jordi Pujol, President of the Catalan regional government, gave a speech about an art exhibition, Catalunya Avui. Embracing the artistic wealth of Catalonia, Pujol reminded the audience that when they hear of Tàpies, Miró, Dalí, and even Picasso they ought to remember their Catalan heritage. Pujol's inclusion of Antoni Tàpies (1923-2012) in this company shows the mark Tàpies had already made as a celebrated artist. In a very different Presidential address, as Artur Mas spoke to the press about the 2014 independence referendum, Tàpies's enormous painting Les quatre cròniques (1990) loomed in the background - an image that took on new meanings under very different sociopolitical circumstances. In this fascinating and thought-provoking investigation, Emily Jenkins explores both Tàpies's extraordinary style and his journey through Catalonia's turbulent modern history. Despite his complex relationship with the Spanish state, and having shown bold acts of political protest through his art, Tàpies has been fêted as one of Spain's most successful modern artists. With support from both local and regional governments, the artist opened a museum dedicated to his work in Barcelona in 1990, helping to establish Tàpies as a major visual artist in a resurgent Catalonia. Emily Jenkins studied art history at Rhodes College and history at Universidad de Santiago de Compostela. She is now an independent scholar in Cantabria." ;
     schema1:genre "Art" ;
     schema1:isbn "9781781884225" ;
     schema1:name "The Visualization of a Nation" .
 
-ex:book133 a schema1:Book ;
-    schema1:author ex:author83 ;
+ex:book134 a schema1:Book ;
+    schema1:author ex:author85 ;
     schema1:authorName "T.N. Bisson" ;
     schema1:datePublished "1986" ;
     schema1:genre "Aragon (Spain) - History" ;
     schema1:isbn "9781280806384" ;
     schema1:name "The Medieval Crown of Aragon" .
 
-ex:book134 a schema1:Book ;
-    schema1:author ex:author77 ;
+ex:book135 a schema1:Book ;
+    schema1:author ex:author79 ;
     schema1:authorName "Thomas N. Bisson" ;
     schema1:datePublished "1986" ;
+    schema1:description "This work surveys the history of a great Mediterranean federation whose homelands were Catalonia and Aragon. It incorporates the results of recent research into the archives of Catalonia, Aragon Valencia, Majorca, and other Mediterranean lands." ;
     schema1:genre "Aragon (Spain)" ;
     schema1:isbn "9780191675294" ;
     schema1:name "The Medieval Crown of Aragon" .
 
-ex:book135 a schema1:Book ;
-    schema1:author ex:author84 ;
+ex:book136 a schema1:Book ;
+    schema1:author ex:author86 ;
     schema1:authorName "Eric Arthur Blair" ;
     schema1:datePublished "2022-08-16" ;
+    schema1:description "In \"Homage to Catalonia,\" Eric Arthur Blair, better known by his pen name George Orwell, presents a compelling firsthand account of his experiences during the Spanish Civil War. Through a blend of personal narrative and political commentary, Orwell expertly captures the tumultuous atmosphere of the time, delving into the complexities of class struggle and the clash of ideologies, particularly in Catalonia. His prose is marked by both clarity and emotional weight, reflective of the author's commitment to truth and a rejection of totalitarianism. The book stands as a poignant testament not only to the horrors of war but also to the disillusionment with revolutionary movements that Orwell would continue to explore in later works. Orwell's own experiences as a combatant in the Spanish Civil War significantly influenced his perspective and writings. Born into a middle-class family in India and having served as a colonial police officer in Burma, his grasp of imperialism and oppression shaped his political sensibilities. The ideological confusion he witnessed in Spain, particularly the betrayal of socialist principles, ignited his fervent advocacy for democratic socialism and his critique of totalitarian regimes. \"Homage to Catalonia\" is essential reading for anyone interested in the intersection of history and literature, as well as the ideological battles that characterize the 20th century. Orwell's insights resonate with contemporary political discourse, making this book a vital exploration of idealism versus reality, thus inviting readers to reflect on the enduring relevance of his observations. In this enriched edition, we have carefully created added value for your reading experience: - A succinct Introduction situates the work's timeless appeal and themes. - The Synopsis outlines the central plot, highlighting key developments without spoiling critical twists. - A detailed Historical Context immerses you in the era's events and influences that shaped the writing. - An Author Biography reveals milestones in the author's life, illuminating the personal insights behind the text. - A thorough Analysis dissects symbols, motifs, and character arcs to unearth underlying meanings. - Reflection questions prompt you to engage personally with the work's messages, connecting them to modern life. - Hand‐picked Memorable Quotes shine a spotlight on moments of literary brilliance. - Interactive footnotes clarify unusual references, historical allusions, and archaic phrases for an effortless, more informed read." ;
     schema1:genre "Political Science" ;
     schema1:name "Homage to Catalonia" .
 
-ex:book136 a schema1:Book ;
-    schema1:author ex:author85 ;
+ex:book137 a schema1:Book ;
+    schema1:author ex:author87 ;
     schema1:authorName "Angel Smith" ;
     schema1:datePublished "2014-03-26" ;
+    schema1:description "Beginning with an analysis of Catalonia's integration within the Spanish nation-building project between from 1770, and following the growing tensions between both the Spanish state and its allies and Catalan social, cultural and political elites, this book focuses on the reasons behind the rise of Catalan nationalism in the late nineteenth century. The events culminated in the late 1880s when a political and cultural movement emerged which affirmed that Catalonia was a separate nation and that it should therefore gave a high degree of political autonomy from Spain. This represented one of the most important developments of Spanish nineteenth century history, with the 'Catalan question' thereafter never far from the centre of the Spanish political stage. Smith also sets Catalonia within a broader European context, arguing that the study of the rise of Catalan nationalism has lessons for our overall understanding of regional and national identities. The Catalan case shows that rather than constituting two separate poles that never touch, there can be a considerable degree of ambiguity and overlap between these identities." ;
     schema1:genre "History" ;
     schema1:isbn "9781137354488" ;
     schema1:name "The Origins of Catalan Nationalism, 1770-1898" .
 
-ex:book137 a schema1:Book ;
-    schema1:author ex:author10 ;
+ex:book138 a schema1:Book ;
+    schema1:author ex:author12 ;
     schema1:authorName "A. Smith" ;
     schema1:datePublished "2014-01-01" ;
+    schema1:description "This book looks at the reasons behind the emergence of a Catalan nationalist movement from the late 1880s, one of the most important developments that took place in nineteenth-century Spain, with the 'Catalan question' thereafter never far from the centre of the Spanish political stage." ;
     schema1:genre "History" ;
     schema1:isbn "9781349469970" ;
     schema1:name "The Origins of Catalan Nationalism, 1770-1898" .
 
-ex:book138 a schema1:Book ;
-    schema1:author ex:author86 ;
+ex:book139 a schema1:Book ;
+    schema1:author ex:author88 ;
     schema1:authorName "Mandie Iveson" ;
     schema1:datePublished "2019" ;
+    schema1:description "\"This book examines language, nation and identity from a gendered perspective and investigates to what extent women use Catalan in their everyday social practices to construct gendered and national identities. Drawing on a unique body of oral history interviews, the focus of the study is three female 'generations', covering 50 years of historical change from the 1960s to the present. 'What the Women Have to Say' analyses the preservation of the Catalan language during Franco's regime; how the emergence of a feminist movement and discourse, and changing patterns of migration, have transformed the relationship between gender and national identity in Catalonia; and the role that Catalan plays today in defining women's identities and as a nation-building tool. Additional analysis of a corpus of social media data explores the online Catalan discourses of nationalism and its gendered dimensions. A central interpretative tool is the concept of intersectionality, emphasising gender's inter-connectedness with categories of class and ethnicity. An intergenerational approach, and a focus on the local using a case study of a Catalan village outside the region's capital, opens new perspectives on the Catalan issue. By bringing together approaches from sociocultural linguistics and oral history, 'What the Women Have to Say' provides important linkages between the economic, political and social circumstances pertaining today as they impact on the issue of nationalism in particular and in the wider discourses of nationalism, identity and migration in twenty-first century Europe\"--" ;
     schema1:genre "History" ;
     schema1:isbn "9781845199234" ;
     schema1:name "Language Attitudes, National Identity and Migration in Catalonia" .
-
-ex:book139 a schema1:Book ;
-    schema1:datePublished "2016-10-11" ;
-    schema1:genre "History" ;
-    schema1:isbn "9781333919511" ;
-    schema1:name "The Deplorable History of the Catalans, From Their First Engaging in the War, to the Time of Their Reduction" .
 
 ex:book14 a schema1:Book ;
     schema1:aggregateRating ex:rating2 ;
     schema1:author ex:author1 ;
     schema1:authorName "Andrew Dowling" ;
     schema1:datePublished "2013" ;
+    schema1:description "This book examines the transformation of the Catalan nation in socio-economic, political and historical terms, and offers an innovative interpretation of the determinants of its nationalist mobilisation. With Franco's and Spanish nationalism's victory in 1939, and the consolidation of a long-lasting dictatorship, it appeared certain that the Catalan national movement would be crushed. Yet, this did not happen and Catalan nationalism and identity re-emerged at the end of Franco's dictatorship in 1975 more firmly rooted than before. The core of this book traces the Francoist repression and the nationalist response to it, demonstrating how new political actors reconfigured Catalan nationalism over the course of the Franco regime (1939--1975). Post-Franco, Catalan cultural and political identity was consolidated and Catalonia became the most successful state-less nationalism in western Europe. The 21st century has been marked by an ever-growing independence movement, culminating in the vast demonstration in the city of Barcelona in July 2010. Andrew Dowling provides multi-faceted viewpoints in historic perspective, and reflects on possible steps and outcomes for this new pro-independence turn in Catalan nationalism. This study will appeal not only to students of Spain but also to those interested in nationalism as a separate issue of enquiry. The themes treated in the book -- Franco's Spain, nationalism, anarchism, Catholicism, communism and the Catalan role in Spain's transition to democracy -- make this work an essential point of reference for students and researchers in Hispanic studies, modern European history and political science. Published in association with the Catalan Observatory, London School of Economics." ;
     schema1:genre "History" ;
     schema1:isbn "9781845195304" ;
     schema1:name "Catalonia Since the Spanish Civil War" .
 
 ex:book140 a schema1:Book ;
-    schema1:author ex:author87 ;
-    schema1:authorName "Flocel Sabaté" ;
-    schema1:datePublished "2015" ;
-    schema1:genre "Foreign Language Study" ;
-    schema1:isbn "9783035108309" ;
-    schema1:name "Catalonia and Portugal" .
+    schema1:datePublished "2016-10-11" ;
+    schema1:description "Excerpt from The Deplorable History of the Catalans, From Their First Engaging in the War, to the Time of Their Reduction: With the Motives, Declarations, and Engagements on Which They First Took Arms; The Letters Treaties, &C. Relating Thereto Here cannot be a more proper Treatife in Na. Ture for the Geniut of a Nation famed for L I B E RT Y nor hat a more memorable In/lance e'z/er happen'd of the glonom [land made in Defence of it the Conqueror: themfelve: may perhaps be the firfl that repent the dear Experience of it, and m'thgreater Rea/3n, them even thofe who were the Author: of thezr Ruin, who fir drew them tnto a War, and after aban. Doned them to the Mercy of an enraged Prmee, who]? Per/3n and Iutere/l they had always oppofid, and from whom not the lea/l gltmpfe of Mercy could be hoped. Such an Example of a erting L I B E RT Y may be dangerous in Arbitrary Countrie:, by in/pmng the Dt re ed tofeeh Redre/t by Anne, rather than (we under the perpetual Slavery of Terannical Prmc. About the Publisher Forgotten Books publishes hundreds of thousands of rare and classic books. Find more at www.forgottenbooks.com This book is a reproduction of an important historical work. Forgotten Books uses state-of-the-art technology to digitally reconstruct the work, preserving the original format whilst repairing imperfections present in the aged copy. In rare cases, an imperfection in the original, such as a blemish or missing page, may be replicated in our edition. We do, however, repair the vast majority of imperfections successfully; any imperfections that remain are intentionally left to preserve the state of such historical works.\"" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781333919511" ;
+    schema1:name "The Deplorable History of the Catalans, From Their First Engaging in the War, to the Time of Their Reduction" .
 
 ex:book141 a schema1:Book ;
-    schema1:author ex:author88 ;
-    schema1:authorName "Archibald Ross Lewis" ;
-    schema1:datePublished "1984" ;
-    schema1:genre "History" ;
-    schema1:name "Medieval Society in Southern France and Catalonia" .
-
-ex:book142 a schema1:Book ;
     schema1:author ex:author89 ;
     schema1:authorName "Yairen Jerez Columbié" ;
     schema1:datePublished "2021-04-26" ;
+    schema1:description "This book examines the cultural production of Catalan intellectuals in Cuba through a reading of texts and journeys that show the contrapuntal relationship between transcultural identities and narratives of nationhood. Both the concept of transculturation and its instrumentalization to tame conflict within nationalist projects are problematic. By uncovering and examining the contradictions between the fluid character of identities in the Cuban context of the first half of the twentieth century and nationalist discourses, within both the Catalanist community of Havana and Cuban society, this book joins wider debates about identities." ;
     schema1:genre "History" ;
     schema1:isbn "9783030730406" ;
     schema1:name "Essays on Transculturation and Catalan-Cuban Intellectual History" .
 
-ex:book143 a schema1:Book ;
+ex:book142 a schema1:Book ;
     schema1:author ex:author90 ;
     schema1:authorName "Daniele Conversi" ;
     schema1:datePublished "2000" ;
+    schema1:description "A comprehensive introduction to Basque and Catalan nationalism" ;
     schema1:genre "Basques" ;
     schema1:isbn "9780874173628" ;
     schema1:name "The Basques, the Catalans, and Spain" .
 
-ex:book144 a schema1:Book ;
+ex:book143 a schema1:Book ;
     schema1:author ex:author91 ;
     schema1:authorName "Juan Perucho" ;
     schema1:datePublished "1988" ;
     schema1:genre "Fiction" ;
     schema1:name "Natural History" .
 
-ex:book145 a schema1:Book ;
+ex:book144 a schema1:Book ;
     schema1:author ex:author92 ;
     schema1:authorName "Francisco J. Romero Salvadó" ;
     schema1:datePublished "2013-03-14" ;
+    schema1:description "The tragedy that devastated Spain for 33 months from July 1936 to April 1939, was, first and foremost, a brutal fratricidal conflict, the product of the fatal clash between diametrically opposed views of Spain and an attempt to settle crucial issues which had divided Spaniards for generations: agrarian reform, recognition of the identity of the historical regions (Catalonia, the Basque Country), and the roles of the Catholic Church and the armed forces in a modern state. Being a war between Spaniards, it was particularly brutal, but it was also part of the broader move toward war in Europe and thus sucked in many “volunteers” from abroad. And it left a deep imprint since General Francisco Franco remained at the helm of the country until his death in 1975. The Historical Dictionary of the Spanish Civil war covers the history of the war, first through a long chronology, which highlights the major steps from the incubation to the conclusion. The overall situation is summed up in the introduction. Then the dictionary section fleshes it out, with over 600 entries on persons, places, events, institutions, battles, and campaigns. More reading can be found in an extensive bibliography. This book is an excellent access point for students, researchers, and anyone wanting to know more about the Spanish Civil War." ;
     schema1:genre "History" ;
     schema1:isbn "9798765185261" ;
     schema1:name "Historical Dictionary of the Spanish Civil War" .
 
-ex:book146 a schema1:Book ;
+ex:book145 a schema1:Book ;
     schema1:author ex:author93 ;
     schema1:authorName "Pierre Vilar" ;
     schema1:datePublished "2018-09-25" ;
+    schema1:description "En esta obra histórica monumental el profesor Pierre Vilar sitúa en una nueva perspectiva el pasado de Cataluña en relación con el de los restantes pueblos peninsulares, y nos explica el complejo proceso que hizo surgir el «hecho diferencial» y, con él, el «problema catalán» en la España contemporánea. Este primer volumen parte de un exhaustivo análisis histórico comparado que nos conduce hasta los resultados de la guerra de Sucesión, pasando por la expansión catalana del siglo XVIII y los efectos de las transformaciones internas —crecimiento demográfico, aumento de la producción agrícola y los intercambios, ascenso de los ingresos procedente de la tierra —que dicha expansión trajo consigo; cuestiones que enlazan ambos volúmenes de la obra." ;
     schema1:genre "History" ;
     schema1:isbn "9788491990406" ;
     schema1:name "Cataluña en la España moderna, vol. 1" .
 
-ex:book147 a schema1:Book ;
-    schema1:author ex:author64 ;
+ex:book146 a schema1:Book ;
+    schema1:author ex:author66 ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "2025-07-07" ;
+    schema1:description "Hommage à la Catalogne de George Orwell est un récit captivant et personnel de son expérience dans la guerre civile espagnole - une exploration profonde de la guerre, de l'idéalisme et de la désillusion. En 1936, Orwell se rend en Espagne pour rejoindre la lutte contre les forces fascistes de Franco. Ce qu'il découvre est à la fois inspirant et chaotique: une résistance passionnée, une guerre de tranchées brutale, et une gauche divisée par des querelles politiques internes. Avec une honnêteté sans concession et un sens aigu du détail, Orwell relate le courage des soldats ordinaires, la confusion des allégeances changeantes et la trahison des idéaux révolutionnaires. À la fois mémoire personnelle et critique politique, Hommage à la Catalogne est un témoignage puissant de l'engagement d'Orwell pour la vérité et la justice. Il reste l'un des récits les plus saisissants et lucides jamais écrits sur la guerre moderne et les idéologies politiques." ;
     schema1:genre "Fiction" ;
     schema1:isbn "9789371827287" ;
     schema1:name "Hommage à la Catalogne French Translation of Homage to Catalonia" .
 
-ex:book148 a schema1:Book ;
-    schema1:author ex:author64 ;
+ex:book147 a schema1:Book ;
+    schema1:author ex:author66 ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "2021-12-07" ;
+    schema1:description "Edición definitiva avalada por The Orwell Estate. Sin duda uno de los libros más importantes del siglo XX. Una obra clave sobre la guerra civil española por uno de los principales escritores de la época y testigo del episodio. Admirado por autores de toda época y condición, desde Connolly o Trilling hasta Javier Cercas, Antony Beevor o Mario Vargas Llosa, Homenaje a Cataluña es un poderoso manifiesto del hombre contra las abstracciones que acaban conduciendo inevitablemente al terror. Es también un texto clave sobre la guerra de España, un testimonio sin par que recoge la experiencia personal de George Orwell. El autor británico llegó en diciembre de 1936 a una Barcelona en plena efervescencia revolucionaria, pero en menos de un año tuvo que huir de la implacable maquinaria soviética por haber formado parte de las milicias del POUM. La honestidad y el coraje con el que Orwell narra lo que vivió le convierten en el escritor moral por excelencia. La presente edición, avalada por The Orwell Foundation, sigue fielmente el texto definitivo de las obras completas del autor, fijado por el profesor Peter Davison. Incluye, además, un prólogo del profesor y ensayista Miquel Berga, que reconstruye con maestría la historia editorial del libro. Miguel Temprano García firma la estupenda traducción, publicada por primera vez en 2011. ENGLISH DESCRIPTION This edition follows the definitive text endorsed by The Orwell Foundation. Without a doubt one of the most important books of the 20th century. Homage to Catalonia is a fundamental work and one of the most famous accounts of the Spanish Civil War by one of the leading writers of the time, and witness to the events. Admired by authors of every age and background, from Connolly and Trilling, to Javier Cercas, Antony Beevor, and Mario Vargas Llosa, Homage to Catalonia is a powerful manifesto from man against ideas and notions that inevitably lead to terror. It is also an important text about the Spanish Civil War, an unparalleled testimony that collects George Orwell’s personal experiences fighting for the POUM militia of the Republican army. The British author arrived in Barcelona at its full revolutionary effervescence in December 1936, but in less than a year he had to leave the POUM militia. The honesty and courage with which Orwell narrates what he experienced make him the epitome of moral writers by excellence. This edition, endorsed by The Orwell Foundation, faithfully follows the definitive text of the author’s complete works, put together by Professor Peter Davison. It also includes a prologue by professor and essayist Miquel Berga, who masterfully reconstructs the book’s editorial history. Miguel Temprano García authored the wonderful Spanish translation, first published in 2011." ;
     schema1:genre "History" ;
     schema1:isbn "9788499890876" ;
     schema1:name "Homenaje a Cataluña (edición definitiva avalada por The Orwell Estate) / Homage to Catalonia. (Definitive text endorsed by The Orwell Foundation)" .
 
-ex:book149 a schema1:Book ;
-    schema1:author ex:author64 ;
+ex:book148 a schema1:Book ;
+    schema1:author ex:author66 ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "2000" ;
     schema1:isbn "9788434412002" ;
     schema1:name "Homenatge a Catalunya" .
 
-ex:book15 a schema1:Book ;
-    schema1:author ex:author13 ;
-    schema1:authorName "Simon Harris" ;
-    schema1:datePublished "2014-10-24" ;
-    schema1:genre "Catalans" ;
-    schema1:isbn "9781502512307" ;
-    schema1:name "Catalonia Is Not Spain" .
-
-ex:book150 a schema1:Book ;
-    schema1:author ex:author64 ;
+ex:book149 a schema1:Book ;
+    schema1:author ex:author66 ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "1970" ;
     schema1:genre "Spain" ;
     schema1:name "Homenaje a Cataluña" .
 
-ex:book151 a schema1:Book ;
-    schema1:author ex:author64 ;
-    schema1:authorName "George Orwell" ;
-    schema1:datePublished "2013-01-15" ;
-    schema1:genre "Biography & Autobiography" ;
-    schema1:isbn "9780141393025" ;
-    schema1:name "Penguin Classics Homage To Catalonia" .
-
-ex:book152 a schema1:Book ;
-    schema1:author ex:author94 ;
-    schema1:authorName "Antoni Dalmau i Ribalta" ;
-    schema1:datePublished "2015-09-23" ;
-    schema1:genre "History" ;
-    schema1:isbn "9788466420112" ;
-    schema1:name "Pecats capitals de la història de Catalunya. Luxúria" .
-
-ex:book153 a schema1:Book ;
-    schema1:author ex:author94 ;
-    schema1:authorName "Antoni Dalmau i Ribalta" ;
-    schema1:datePublished "2015-11-11" ;
-    schema1:genre "History" ;
-    schema1:isbn "9788466420129" ;
-    schema1:name "Pecats capitals de la història de Catalunya. Avarícia" .
-
-ex:book154 a schema1:Book ;
-    schema1:author ex:author95 ;
-    schema1:authorName "J. Friend" ;
-    schema1:datePublished "2012-05-15" ;
-    schema1:genre "Political Science" ;
-    schema1:isbn "9781137008206" ;
-    schema1:name "Stateless Nations" .
-
-ex:book155 a schema1:Book ;
-    schema1:author ex:author64 ;
-    schema1:authorName "George Orwell" ;
-    schema1:datePublished "2021-12-04" ;
-    schema1:isbn "9798778727489" ;
-    schema1:name "Homage to Catalonia (1938) (Annotated)" .
-
-ex:book156 a schema1:Book ;
-    schema1:author ex:author64 ;
-    schema1:authorName "George Orwell" ;
-    schema1:datePublished "2020-11-24" ;
-    schema1:genre "Literary Collections" ;
-    schema1:isbn "9780241418017" ;
-    schema1:name "Orwell in Spain" .
-
-ex:book157 a schema1:Book ;
-    schema1:author ex:author96 ;
-    schema1:authorName "Emmanuel Dalle Mulle" ;
-    schema1:datePublished "2018" ;
-    schema1:genre "Catalonia (Spain)" ;
-    schema1:isbn "9781138066885" ;
-    schema1:name "The Nationalism of the Rich" .
-
-ex:book158 a schema1:Book ;
-    schema1:author ex:author97 ;
-    schema1:authorName "Enric Bou" ;
-    schema1:datePublished "2017-07-24" ;
-    schema1:genre "Literary Criticism" ;
-    schema1:isbn "9781786945990" ;
-    schema1:name "The Barcelona Reader" .
-
-ex:book159 a schema1:Book ;
-    schema1:author ex:author98 ;
-    schema1:authorName "Silvia Bermúdez" ;
-    schema1:datePublished "2018-01-01" ;
-    schema1:genre "History" ;
-    schema1:isbn "9781487520083" ;
-    schema1:name "A New History of Iberian Feminisms" .
-
-ex:book16 a schema1:Book ;
-    schema1:author ex:author14 ;
-    schema1:authorName "Robin Maria DeLugan" ;
-    schema1:datePublished "2020-11-29" ;
-    schema1:genre "Education" ;
-    schema1:isbn "9781000291988" ;
-    schema1:name "Remembering Violence" .
-
-ex:book160 a schema1:Book ;
-    schema1:author ex:author99 ;
-    schema1:authorName "Peter Seidler" ;
-    schema1:datePublished "2013" ;
-    schema1:genre "Business & Economics" ;
-    schema1:isbn "9783848274420" ;
-    schema1:name "How Business Started" .
-
-ex:book17 a schema1:Book ;
-    schema1:author ex:author15 ;
+ex:book15 a schema1:Book ;
+    schema1:author ex:author13 ;
     schema1:authorName "Àngel Casals" ;
     schema1:datePublished "2019-12-05" ;
+    schema1:description "The present book is a complex approach to the elements that built the history of Catalonia. This collective book analyze differents aspects, such as: cultural history, the History of Law, the Political history or the History of the State, from the Midlle Ages to the Modern and Contemporary history." ;
     schema1:genre "Catalonia (Spain)" ;
     schema1:isbn "9783034338110" ;
     schema1:name "The Catalan Nation and Identity Throughout History" .
 
-ex:book18 a schema1:Book ;
-    schema1:author ex:author16 ;
-    schema1:authorName "William Francis Patrick Napier" ;
-    schema1:datePublished "1878" ;
-    schema1:genre "Peninsular War, 1807-1814" ;
-    schema1:name "History of the War in the Peninsula and in the South of France, from the Year 1807 to the Year 1814: 1812-1814" .
+ex:book150 a schema1:Book ;
+    schema1:author ex:author66 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2013-01-15" ;
+    schema1:description "'An unrivalled picture of the rumours, suspicions and treachery of civil war' Antony Beevor Every line of serious work that I have written since 1936 has been written, directly or indirectly, against totalitarianism and for democratic Socialism as I understand it'. Thus wrote Orwell following his experiences as a militiaman in the Spanish Civil War, chronicled in Homage to Catalonia. Here he brings to bear all the force of his humanity, passion and clarity, describing with bitter intensity the bright hopes and cynical betrayals of that chaotic episode: the revolutionary euphoria of Barcelona, the courage of ordinary Spanish men and women he fought alongside, the terror and confusion of the front, his near-fatal bullet wound and the vicious treachery of his supposed allies. A firsthand account of the brutal conditions of the Spanish Civil War, George Orwell's Homage to Catalonia includes an introduction by Julian Symons." ;
+    schema1:genre "Biography & Autobiography" ;
+    schema1:isbn "9780141393025" ;
+    schema1:name "Penguin Classics Homage To Catalonia" .
 
-ex:book19 a schema1:Book ;
-    schema1:author ex:author17 ;
-    schema1:authorName "Richard Ford" ;
-    schema1:datePublished "1878" ;
-    schema1:genre "Spain" ;
-    schema1:name "A Handbook for Travellers in Spain" .
+ex:book151 a schema1:Book ;
+    schema1:author ex:author94 ;
+    schema1:authorName "Antoni Dalmau i Ribalta" ;
+    schema1:datePublished "2015-09-23" ;
+    schema1:description "La Història de Catalunya a través dels seus pecats capitals Pecats capitals de la Història de Catalunya és una col·lecció dedicada a narrar episodis de la història recent del nostre país a partir de les set faltes considerades tradicionalment com les més greus per l'Església catòlica: luxúria, gola, avarícia, peresa, ira, enveja i supèrbia. En aquest primer volum, Antoni Dalmau recorre a fets històrics marcats pel pecat de la luxúria a través de conductes íntimes de personatges rellevants de la nostra Història, l'explicació d'espais públics o publicacions escrites vinculades o les vies de repressió oficials que han posat fre o han reprimit la pràctica del sexe de maneres diverses." ;
+    schema1:genre "History" ;
+    schema1:isbn "9788466420112" ;
+    schema1:name "Pecats capitals de la història de Catalunya. Luxúria" .
 
-ex:book2 a schema1:Book ;
-    schema1:aggregateRating ex:rating1 ;
-    schema1:author ex:author2 ;
-    schema1:authorName "Gabriel Tortella" ;
-    schema1:datePublished "2017-08-22" ;
+ex:book152 a schema1:Book ;
+    schema1:author ex:author94 ;
+    schema1:authorName "Antoni Dalmau i Ribalta" ;
+    schema1:datePublished "2015-11-11" ;
+    schema1:description "La Història de Catalunya a través dels seus pecats capitals. Volum de la col·lecció PECATS CAPITALS DE LA HISTÒRIA DE CATALUNYA que, en el marc dels segles XIX i XX, recull anècdotes i dades curioses de la Història de Catalunya al voltant del pecat de l'avarícia. Els fets històrics explicats giren al voltant de la possessió de riqueses, robatoris, corrupció i xantatge econòmic, com les figures dels bandolers més famosos del segle XIX, la compra de vots durant la Restauració o la fortuna dels germans Muñoz a Barcelona. Dirigit a un públic generalista, escrit amb un to divulgatiu i amè, el llibre és obra d'Antoni Dalmau, escriptor i historiador amb una ferma trajectòria literària." ;
+    schema1:genre "History" ;
+    schema1:isbn "9788466420129" ;
+    schema1:name "Pecats capitals de la història de Catalunya. Avarícia" .
+
+ex:book153 a schema1:Book ;
+    schema1:author ex:author95 ;
+    schema1:authorName "J. Friend" ;
+    schema1:datePublished "2012-05-15" ;
+    schema1:description "Why are regional nationalisms threatening the old nations? This book explores examples such as why Scotland might become independent, why Wales wants more autonomy, and why Catalonia emphasizes its distinctive language and institutions but does not want separation from Spain. Stateless Nations explores the historical roots of modern nationalisms." ;
+    schema1:genre "Political Science" ;
+    schema1:isbn "9781137008206" ;
+    schema1:name "Stateless Nations" .
+
+ex:book154 a schema1:Book ;
+    schema1:author ex:author66 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2021-12-04" ;
+    schema1:description "Homage to Catalonia is George Orwell's personal account of his experiences and observations fighting for the POUM militia of the Republican army during the Spanish Civil War. The war was one of the defining events of his political outlook and a significant part of what led him to write in 1946, \"Every line of serious work that I have written since 1936 has been written, directly or indirectly, against totalitarianism and for Democratic Socialism, as I understand it.\"" ;
+    schema1:isbn "9798778727489" ;
+    schema1:name "Homage to Catalonia (1938) (Annotated)" .
+
+ex:book155 a schema1:Book ;
+    schema1:author ex:author66 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2020-11-24" ;
+    schema1:description "Including Homage to Catalonia 'Spain not only defined Orwell as an individual, it also gave him his first glimpse of totalitarianism' D. J. Taylor, Guardian George Orwell's experience of the Spanish Civil War had a transformative effect on his life and work. This volume brings together his complete writings on the war, including Homage to Catalonia, his searing memoir of fighting in the conflict and the bitter betrayal that followed. The powerful journalism, essays, letters and pamphlets also collected here show his resolution to tell the truth about what happened amid a 'crop of lies' from both the Communist Party and the British press, while in 'Looking Back on the Spanish War' he remembers the heroism and decency of the ordinary people he encountered. Edited by Peter Davison with an Introduction by Christopher Hitchens" ;
+    schema1:genre "Literary Collections" ;
+    schema1:isbn "9780241418017" ;
+    schema1:name "Orwell in Spain" .
+
+ex:book156 a schema1:Book ;
+    schema1:author ex:author96 ;
+    schema1:authorName "Emmanuel Dalle Mulle" ;
+    schema1:datePublished "2018" ;
+    schema1:description "Based on rigorous analysis of the propaganda of five Western European separatist parties, this book provides in-depth examination of the 'nationalism of the rich', defined as a type of nationalist discourse that seeks to end the economic 'exploitation' suffered by a group of people represented as a wealthy nation and supposedly carried out by the populations of poorer regions and/or by inefficient state administrations. The book argues that the nationalism of the rich can be seen as a rhetorical strategy portraying independent statehood as a solution to the dilemma between solidarity and efficiency arisen in Western Europe since the end of the Glorious Thirties." ;
+    schema1:genre "Catalonia (Spain)" ;
+    schema1:isbn "9781138066885" ;
+    schema1:name "The Nationalism of the Rich" .
+
+ex:book157 a schema1:Book ;
+    schema1:author ex:author97 ;
+    schema1:authorName "Enric Bou" ;
+    schema1:datePublished "2017-07-24" ;
+    schema1:description "The first comprehensive Reader to accompany the remarkable city of Barcelona" ;
+    schema1:genre "Literary Criticism" ;
+    schema1:isbn "9781786945990" ;
+    schema1:name "The Barcelona Reader" .
+
+ex:book158 a schema1:Book ;
+    schema1:author ex:author98 ;
+    schema1:authorName "Silvia Bermúdez" ;
+    schema1:datePublished "2018-01-01" ;
+    schema1:description "A New History of Iberian Feminisms is both a chronological history and an analytical discussion of feminist thought in the Iberian Peninsula, including Portugal, and the territories of Spain - the Basque Provinces, Catalonia, and Galicia - from the eighteenth century to the present day. The Iberian Peninsula encompasses a dynamic and fraught history of feminism that had to contend with entrenched tradition and a dominant Catholic Church. Editors Silvia Bermúdez and Roberta Johnson and their contributors reveal the long and historical struggles of women living within various parts of the Iberian Peninsula to achieve full citizenship. A New History of Iberian Feminisms comprises a great deal of new scholarship, including nineteenth-century essays written by women on the topic of equality. By addressing these lost texts of feminist thought, Bermúdez, Johnson, and their contributors reveal that female equality, considered a dormant topic in the early nineteenth century, was very much part of the political conversation, and helped to launch the new feminist wave in the second half of the century." ;
+    schema1:genre "History" ;
+    schema1:isbn "9781487520083" ;
+    schema1:name "A New History of Iberian Feminisms" .
+
+ex:book159 a schema1:Book ;
+    schema1:author ex:author99 ;
+    schema1:authorName "Peter Seidler" ;
+    schema1:datePublished "2013" ;
+    schema1:description "The three essays are the result of my research into the origins of economic thought and entrepreneurship. In undertaking this work, I found out more about the role economic action - in which I have taken an active part since fifty -years - plays in determining the prosperity of a society. I was moved by four questions, in particular: - Why is property a necessity? - Skills and emancipation of individuals - Behaviour and organisation of groups - How can socialism work? Action should be influenced by ethical foundations of economics und business. Important principles include responsibility, efficiency and subsidiarity. Coupled with the principle of freedom and the pursuit of technical progress, their implementation can lead a competing community to great prosperity, which then helps to solve the social problem of underprivileged minorities through self-help. The book begins by investigating the spiritual and economic conditions that paved the way for the industrial revolution in the High Middle Ages. The next section demonstrates that no wealth can be achieved without legal certainty. This is followed by an account of the agricultural region of Catalonia at the Mediterranean foot of the Pyrenees, which opened up to the world around the year 1000 and proceeded to gain a modest degree of prosperity. An economy that spanned Christianity and Islam shows signs of globalisation." ;
     schema1:genre "Business & Economics" ;
-    schema1:isbn "9783319549514" ;
-    schema1:name "Catalonia in Spain" .
+    schema1:isbn "9783848274420" ;
+    schema1:name "How Business Started" .
 
-ex:book20 a schema1:Book ;
-    schema1:author ex:author18 ;
+ex:book16 a schema1:Book ;
+    schema1:author ex:author14 ;
     schema1:authorName "F. X. Hernández" ;
     schema1:datePublished "2014-10" ;
     schema1:genre "History" ;
     schema1:isbn "9788423207992" ;
     schema1:name "The history of Catalonia" .
 
+ex:book160 a schema1:Book ;
+    schema1:author ex:author100 ;
+    schema1:authorName "Josep Sarrión i Gualda" ;
+    schema1:datePublished "1991" ;
+    schema1:description "Aquest estudi té per finalitat posar en relleu una sèrie de documents que permet en reconstruir, en determinats aspectes, la història de Catalunya a través de la seva Diputació Provincial durant la vigència de la Constitució de Cadis. Examin a, per tant, el període anterior a la divisió territorial en províncies, en el q ual Catalunya era representada per una sola diputació provincial." ;
+    schema1:genre "History" ;
+    schema1:name "La Diputació provincial de Catalunya sota la Constitució de Cadis" .
+
+ex:book17 a schema1:Book ;
+    schema1:author ex:author9 ;
+    schema1:authorName "John Payne" ;
+    schema1:datePublished "2016" ;
+    schema1:description "The current claims for independence in Catalonia raise new questions about how Catalan-speaking people view their own past and future. The book covers the Catalan-speaking areas of Roussillon (in France) and in Spain the autonomous regions of the Valencian Community, Catalonia and the Balearic Islands. Topics covered include the Mediterranean Sea, population movements, revolt and revolution, the continuing impact of the Spanish Civil War, the Catalan language and popular culture." ;
+    schema1:genre "Catalans" ;
+    schema1:isbn "9781910170243" ;
+    schema1:name "Catalans and Others" .
+
+ex:book18 a schema1:Book ;
+    schema1:author ex:author15 ;
+    schema1:authorName "Simon Harris" ;
+    schema1:datePublished "2014-10-24" ;
+    schema1:description "How much does the world know about Catalonia and its role as a great medieval empire and one of Europe's first nation states? In Catalonia Is Not Spain: A Historical Perspective author Simon Harris takes the reader through 1,000 years of Catalan history focusing on the Principality's often difficult relationship with Castile-dominated Spain. This insightful and balanced history gives an insider's background to the current political situation and why Catalonia is currently deciding whether or not it wants to be independent from Spain." ;
+    schema1:genre "Catalans" ;
+    schema1:isbn "9781502512307" ;
+    schema1:name "Catalonia Is Not Spain" .
+
+ex:book19 a schema1:Book ;
+    schema1:author ex:author16 ;
+    schema1:authorName "Josep M. Muñoz" ;
+    schema1:datePublished "2006" ;
+    schema1:isbn "9788439371427" ;
+    schema1:name "Catalonia, a European History" .
+
+ex:book2 a schema1:Book ;
+    schema1:aggregateRating ex:rating1 ;
+    schema1:author ex:author2 ;
+    schema1:authorName "Gabriel Tortella" ;
+    schema1:datePublished "2017-08-22" ;
+    schema1:description "This book explores the complex history of Catalonia in relation to Spain from an economic and political perspective. It begins in the Middle Ages and ends in the present day, analysing the intricate political problems of modern day Catalonia within a context of European integration and nationalism." ;
+    schema1:genre "Business & Economics" ;
+    schema1:isbn "9783319549514" ;
+    schema1:name "Catalonia in Spain" .
+
+ex:book20 a schema1:Book ;
+    schema1:author ex:author17 ;
+    schema1:authorName "Robin Maria DeLugan" ;
+    schema1:datePublished "2020-11-29" ;
+    schema1:description "This volume examines the ways in which the violent legacies of the twentieth century continue to affect the concept of the nation. Through a study of three societies’ commemoration of notorious episodes of 1930s state violence, the author considers the manner in which attention to the state violence authoritarianism, and exclusions of the last century have resulted in challenges to dominant conceptions of the nation. Based on extensive ethnographic research in El Salvador, Spain, and the Dominican Republic, Remembering Violence focuses on new public sites of memory, such as museum exhibitions, monuments, and commemorations – powerful loci for representing ideas about the nation – and explores the responses of various actors – civil society, government, and diasporic citizens – as well as those of UN and other international agencies invested in new nation-building goals. With attention to the ways in which memory practices explain ongoing national exclusions and contemporary efforts to contest them, this book will appeal to scholars across the social sciences and humanities with interests in public memory and commemoration." ;
+    schema1:genre "Education" ;
+    schema1:isbn "9781000291988" ;
+    schema1:name "Remembering Violence" .
+
 ex:book21 a schema1:Book ;
-    schema1:author ex:author19 ;
+    schema1:author ex:author18 ;
     schema1:authorName "Michael A. Vargas" ;
     schema1:datePublished "2018-04-23" ;
+    schema1:description "This is a book about how Catalans use their past, real and imagined, in the construction of their present and future. Michael A. Vargas inventories the significant people, signal events, and familiar icons that constitute the Catalan collective memory, from Wilfred the Hairy and Sant Jordi to the mountain monastery of Montserrat, red peasant caps, and human towers in town squares. He then considers how that inventory is employed to posit a brilliant political heritage at the forefront of modern European democracy—and for some, to build a powerful independence movement. As the future of Catalonia remains fraught, this book offers a lively and engaging exploration of how we draw upon history to confront contemporary challenges." ;
     schema1:genre "History" ;
     schema1:isbn "9783319767444" ;
     schema1:name "Constructing Catalan Identity" .
 
 ex:book22 a schema1:Book ;
-    schema1:author ex:author20 ;
+    schema1:author ex:author19 ;
     schema1:authorName "Club separista Català, New York" ;
     schema1:datePublished "1927" ;
     schema1:genre "Catalan problem" ;
@@ -19263,14 +19312,14 @@ ex:book23 a schema1:Book ;
     schema1:name "The New Encyclopædia Britannica: Macropædia" .
 
 ex:book24 a schema1:Book ;
-    schema1:author ex:author21 ;
+    schema1:author ex:author20 ;
     schema1:authorName "Sir William Francis Patrick Napier" ;
     schema1:datePublished "1882" ;
     schema1:genre "Peninsular War, 1807-1814" ;
     schema1:name "1810-1812" .
 
 ex:book25 a schema1:Book ;
-    schema1:author ex:author22 ;
+    schema1:author ex:author21 ;
     schema1:authorName "James L. Whitney" ;
     schema1:datePublished "1879" ;
     schema1:name "Catalogue of the Spanish library and of the Portuguese books bequeathed by George Tiknor to the Boston Public Library" .
@@ -19286,16 +19335,17 @@ ex:book27 a schema1:Book ;
     schema1:name "Catalònia Culture" .
 
 ex:book28 a schema1:Book ;
-    schema1:author ex:author23 ;
+    schema1:author ex:author22 ;
     schema1:authorName "University of California (System). Institute of Library Research" ;
     schema1:datePublished "1972" ;
     schema1:genre "Library catalogs" ;
     schema1:name "University of California Union Catalog of Monographs Cataloged by the Nine Campuses from 1963 Through 1967: Subjects" .
 
 ex:book29 a schema1:Book ;
-    schema1:datePublished "2006" ;
-    schema1:genre "Catalans" ;
-    schema1:name "Catalan Review" .
+    schema1:author ex:author23 ;
+    schema1:authorName "H. J. Chaytor" ;
+    schema1:datePublished "1987" ;
+    schema1:name "A History of Aragon and Catalonia" .
 
 ex:book3 a schema1:Book ;
     schema1:author ex:author3 ;
@@ -19305,61 +19355,78 @@ ex:book3 a schema1:Book ;
     schema1:name "A History of Aragon and Catalonia" .
 
 ex:book30 a schema1:Book ;
+    schema1:datePublished "2006" ;
+    schema1:genre "Catalans" ;
+    schema1:name "Catalan Review" .
+
+ex:book31 a schema1:Book ;
     schema1:datePublished "1923" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Americana" .
 
-ex:book31 a schema1:Book ;
+ex:book32 a schema1:Book ;
     schema1:datePublished "1901" ;
     schema1:genre "English literature" ;
     schema1:name "Literature" .
 
-ex:book32 a schema1:Book ;
+ex:book33 a schema1:Book ;
     schema1:author ex:author24 ;
     schema1:authorName "Kenneth McRoberts" ;
     schema1:datePublished "2001" ;
+    schema1:description "Catalonia presents an interesting instance of what are termed minority nations, and has long exercised leadership within the Spanish economy. It offers important insights for many of the key political and social issues currently under debate." ;
     schema1:genre "History" ;
     schema1:name "Catalonia" .
 
-ex:book33 a schema1:Book ;
+ex:book34 a schema1:Book ;
     schema1:author ex:author25 ;
     schema1:authorName "Víctor Alba" ;
     schema1:datePublished "1975" ;
     schema1:genre "History" ;
     schema1:name "Catalonia" .
 
-ex:book34 a schema1:Book ;
+ex:book35 a schema1:Book ;
     schema1:datePublished "1911" ;
     schema1:genre "History, Modern" ;
     schema1:name "The Cambridge Modern History" .
 
-ex:book35 a schema1:Book ;
+ex:book36 a schema1:Book ;
     schema1:author ex:author26 ;
     schema1:authorName "Josep Maria Puigjaner" ;
     schema1:datePublished "1989" ;
+    schema1:description "Presentación de una panorámica global de Cataluña en tres tiempos: pasado, prese nte y futuro. El pasado describe la identidaddel país tomando como eje la lengua , la cultura, la ciencia y el catalanismo histórico. El presente examina institu ciones, el perfil económico y las coordenadas culturales. El futuro sitúa el pun to de mira en el nuevo horizonte de la Europa comunitaria. Libro útil para tener una serie de datos esenciales en la identidad del país." ;
     schema1:genre "History" ;
     schema1:name "Catalonia" .
 
-ex:book36 a schema1:Book ;
+ex:book37 a schema1:Book ;
     schema1:author ex:author27 ;
     schema1:authorName "Library of Congress" ;
     schema1:datePublished "1977" ;
     schema1:genre "Library catalogs" ;
     schema1:name "Subject Catalog, 1977" .
 
-ex:book37 a schema1:Book ;
+ex:book38 a schema1:Book ;
     schema1:datePublished "1931" ;
+    schema1:description "Vols. 1-4 include material to June 1, 1929." ;
     schema1:genre "Periodicals" ;
     schema1:name "A London Bibliography of the Social Sciences" .
 
-ex:book38 a schema1:Book ;
+ex:book39 a schema1:Book ;
     schema1:author ex:author28 ;
     schema1:authorName "Kenneth Medhurst" ;
     schema1:datePublished "1977" ;
     schema1:genre "Basques" ;
     schema1:name "The Basques and Catalans" .
 
-ex:book39 a schema1:Book ;
+ex:book4 a schema1:Book ;
+    schema1:author ex:author4 ;
+    schema1:authorName "Cortijo Ocaña, Antonio" ;
+    schema1:datePublished "2020-10-16" ;
+    schema1:description "Recent political developments in Spain regarding Catalonia have prompted scholars from several disciplines to research the singularity of this region and of the territories of the old Crown of Aragon. Against the backdrop of the pro-independence movement, those in favor and against have insisted on the particularity or commonality of Catalonia and the Països Catalans (Catalan-speaking areas) within the Spanish State. From the Catalan point of view, their singularity is not sufficiently recognized, and respect for their institutions and their autonomy is at stake to the point that many prefer to secede from Spain. Singularity or its absence play a relevant role in the construction of identity, which seems to be key in understanding many Catalans' attitudes towards the central government, a fluid concept that allows for a variety of interpretations. History of Catalonia and Its Implications for Contemporary Nationalism and Cultural Conflict is a critical reference book that centers around the topic of Catalan cultural and linguistic identity. With input from renowned scholars in several fields, the chapters explore the issue of Catalan identity from a variety of perspectives. While highlighting the legal and historical component to identity and also sociolinguistics and political linguistics, this book is ideally intended for scholars in the fields of Hispanic studies, history, linguistics, political science, and literary studies as well as practitioners, stakeholders, researchers, academicians, and students interested in contemporary politics and the political developments in Spain regarding Catalonia." ;
+    schema1:genre "History" ;
+    schema1:isbn "9781799866169" ;
+    schema1:name "History of Catalonia and Its Implications for Contemporary Nationalism and Cultural Conflict" .
+
+ex:book40 a schema1:Book ;
     schema1:author ex:author29 ;
     schema1:authorName "Mauricio Wiesenthal" ;
     schema1:datePublished "1979" ;
@@ -19367,289 +19434,291 @@ ex:book39 a schema1:Book ;
     schema1:isbn "9780517300336" ;
     schema1:name "Spain Today" .
 
-ex:book4 a schema1:Book ;
-    schema1:author ex:author4 ;
-    schema1:authorName "Cortijo Ocaña, Antonio" ;
-    schema1:datePublished "2020-10-16" ;
-    schema1:genre "History" ;
-    schema1:isbn "9781799866169" ;
-    schema1:name "History of Catalonia and Its Implications for Contemporary Nationalism and Cultural Conflict" .
-
-ex:book40 a schema1:Book ;
-    schema1:author ex:author30 ;
-    schema1:authorName "H. J. Chaytor" ;
-    schema1:datePublished "1987" ;
-    schema1:name "A History of Aragon and Catalonia" .
-
 ex:book41 a schema1:Book ;
+    schema1:author ex:author30 ;
+    schema1:authorName "Charles Oman" ;
+    schema1:datePublished "1930" ;
+    schema1:genre "Peninsular War, 1807-1814" ;
+    schema1:name "A History of the Peninsular War" .
+
+ex:book42 a schema1:Book ;
+    schema1:author ex:author31 ;
+    schema1:authorName "Raymond Carr" ;
+    schema1:datePublished "1980" ;
+    schema1:description "Geschiedenis van Spanje, van de septemberrevolutie in 1868 - heden" ;
+    schema1:genre "History" ;
+    schema1:name "Modern Spain, 1875-1980" .
+
+ex:book43 a schema1:Book ;
     schema1:datePublished "1952" ;
     schema1:genre "Catalans" ;
     schema1:name "Memorandum on the Anti-Catalan Policy of General Franco's Government" .
 
-ex:book42 a schema1:Book ;
-    schema1:author ex:author31 ;
+ex:book44 a schema1:Book ;
+    schema1:author ex:author32 ;
     schema1:authorName "Chandler Rathfon Post" ;
     schema1:datePublished "1930" ;
     schema1:genre "Painting, Spanish" ;
     schema1:name "A History of Spanish Painting: pt.1. [Pre-Romanesque style] pt.2. The Romanesque style" .
 
-ex:book43 a schema1:Book ;
-    schema1:author ex:author32 ;
+ex:book45 a schema1:Book ;
+    schema1:author ex:author33 ;
     schema1:authorName "Mandell Creighton" ;
     schema1:datePublished "1928" ;
     schema1:genre "Electronic journals" ;
     schema1:name "The English Historical Review" .
 
-ex:book44 a schema1:Book ;
+ex:book46 a schema1:Book ;
     schema1:datePublished "2006" ;
     schema1:genre "Information science" ;
     schema1:name "Library & Information Science Abstracts" .
 
-ex:book45 a schema1:Book ;
+ex:book47 a schema1:Book ;
     schema1:datePublished "1963" ;
     schema1:name "The Oxford Magazine" .
 
-ex:book46 a schema1:Book ;
-    schema1:author ex:author33 ;
+ex:book48 a schema1:Book ;
+    schema1:author ex:author34 ;
     schema1:authorName "Arthur James Wells" ;
     schema1:datePublished "1994" ;
     schema1:genre "Bibliography, National" ;
     schema1:name "The British National Bibliography" .
 
-ex:book47 a schema1:Book ;
-    schema1:author ex:author34 ;
+ex:book49 a schema1:Book ;
+    schema1:author ex:author35 ;
     schema1:authorName "Unesco" ;
     schema1:datePublished "1986" ;
     schema1:genre "International Youth Year, 1985" ;
     schema1:name "World Congress on Youth, Barcelona, Spain, 8-15 July 1985" .
 
-ex:book48 a schema1:Book ;
-    schema1:author ex:author35 ;
-    schema1:authorName "Salvador de Madariaga" ;
-    schema1:datePublished "1942" ;
-    schema1:genre "Spain" ;
-    schema1:name "Spain" .
-
-ex:book49 a schema1:Book ;
-    schema1:author ex:author35 ;
-    schema1:authorName "Salvador de Madariaga" ;
-    schema1:datePublished "1930" ;
-    schema1:genre "Spain" ;
-    schema1:name "Spain by S. de Madariaga" .
-
 ex:book5 a schema1:Book ;
     schema1:author ex:author5 ;
     schema1:authorName "Jaume Sobrequés i Callicó" ;
     schema1:datePublished "2007" ;
+    schema1:description "This is an ideal introduction to the whole history of Catalonia from the remotest times until the present. It is a rigorous and accessible vision aimed at everyone, which can be read quickly and easily. The book brings the Catalan past to all Catalans and to foreigners who, when they visit Catalonia, want a general understanding of what this country has been over its thousands of years of existence. This short history seeks to set out the formation of a nation with its own state, which played a key role in Europe for centuries. It also explains how this state was attacked for two centuries until its destruction on 11 September 1714 and the subsequent struggle by Catalans to be reborn from their ashes and recover their place in history." ;
     schema1:genre "History" ;
     schema1:isbn "9788485031863" ;
     schema1:name "History of Catalonia" .
 
 ex:book50 a schema1:Book ;
+    schema1:author ex:author36 ;
+    schema1:authorName "Salvador de Madariaga" ;
+    schema1:datePublished "1942" ;
+    schema1:genre "Spain" ;
+    schema1:name "Spain" .
+
+ex:book51 a schema1:Book ;
     schema1:author ex:author27 ;
     schema1:authorName "Library of Congress" ;
     schema1:datePublished "1978" ;
     schema1:genre "Library catalogs" ;
     schema1:name "Subject Catalog, 1978" .
 
-ex:book51 a schema1:Book ;
-    schema1:author ex:author36 ;
-    schema1:authorName "Graham J. Shields" ;
-    schema1:datePublished "1994" ;
-    schema1:genre "History" ;
-    schema1:name "Spain" .
-
 ex:book52 a schema1:Book ;
-    schema1:datePublished "1920" ;
-    schema1:genre "France" ;
-    schema1:name "France" .
-
-ex:book53 a schema1:Book ;
-    schema1:author ex:author37 ;
-    schema1:authorName "Michelin Tyre Company, ltd. Tourist Service" ;
-    schema1:datePublished "1982" ;
-    schema1:genre "Spain" ;
-    schema1:name "Spain" .
-
-ex:book54 a schema1:Book ;
-    schema1:author ex:author38 ;
-    schema1:authorName "John Emerich Edward Dalberg Acton Baron Acton" ;
-    schema1:datePublished "1906" ;
-    schema1:genre "Asia" ;
-    schema1:name "The Cambridge Modern History" .
-
-ex:book55 a schema1:Book ;
-    schema1:datePublished "1929" ;
-    schema1:genre "Art" ;
-    schema1:name "Parnassus" .
-
-ex:book56 a schema1:Book ;
-    schema1:author ex:author39 ;
-    schema1:authorName "Charles George Herbermann" ;
-    schema1:datePublished "1913" ;
-    schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The Catholic Encyclopedia" .
-
-ex:book57 a schema1:Book ;
-    schema1:author ex:author40 ;
-    schema1:authorName "Milton Mariano Azevedo" ;
-    schema1:datePublished "1991" ;
-    schema1:genre "History" ;
-    schema1:name "Contemporary Catalonia in Spain and Europe" .
-
-ex:book58 a schema1:Book ;
-    schema1:author ex:author41 ;
-    schema1:authorName "David J. George" ;
-    schema1:datePublished "1996" ;
-    schema1:genre "Literary Criticism" ;
-    schema1:name "Contemporary Catalan Theatre" .
-
-ex:book59 a schema1:Book ;
-    schema1:datePublished "1967" ;
-    schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "Chamber's Encyclopaedia" .
-
-ex:book6 a schema1:Book ;
-    schema1:author ex:author6 ;
-    schema1:authorName "Michael Eaude" ;
-    schema1:datePublished "2011-10-12" ;
-    schema1:genre "Travel" ;
-    schema1:isbn "9781908493255" ;
-    schema1:name "Catalonia - A Cultural History" .
-
-ex:book60 a schema1:Book ;
-    schema1:datePublished "1973" ;
-    schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "Chambers's Encyclopaedia" .
-
-ex:book61 a schema1:Book ;
-    schema1:author ex:author42 ;
-    schema1:authorName "Henry Smith Williams" ;
-    schema1:datePublished "1926" ;
-    schema1:genre "World history" ;
-    schema1:name "The Historians' History of the World: These eventful years (part II)" .
-
-ex:book62 a schema1:Book ;
-    schema1:datePublished "1977" ;
-    schema1:genre "United States" ;
-    schema1:name "Inquiry" .
-
-ex:book63 a schema1:Book ;
-    schema1:author ex:author43 ;
-    schema1:authorName "James W. Cortada" ;
-    schema1:datePublished "1982-12-20" ;
-    schema1:genre "History" ;
-    schema1:name "Historical Dictionary of the Spanish Civil War, 1936-1939" .
-
-ex:book64 a schema1:Book ;
-    schema1:author ex:author44 ;
-    schema1:authorName "A. Hoyt Hobbs" ;
-    schema1:datePublished "1996" ;
-    schema1:genre "Travel" ;
-    schema1:isbn "9781569521274" ;
-    schema1:name "Fielding's Spain" .
-
-ex:book65 a schema1:Book ;
-    schema1:author ex:author44 ;
-    schema1:authorName "A. Hoyt Hobbs" ;
-    schema1:datePublished "1994-02-01" ;
-    schema1:genre "Travel" ;
-    schema1:isbn "9781569520215" ;
-    schema1:name "Spain & Portugal, 1994" .
-
-ex:book66 a schema1:Book ;
-    schema1:author ex:author45 ;
-    schema1:authorName "Sílvia Planas i Marcé" ;
-    schema1:datePublished "2009" ;
-    schema1:genre "History" ;
-    schema1:name "A History of Jewish Catalonia" .
-
-ex:book67 a schema1:Book ;
-    schema1:datePublished "1967" ;
-    schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "Chambers's Encyclopedia" .
-
-ex:book68 a schema1:Book ;
-    schema1:datePublished "1992" ;
-    schema1:genre "Biography" ;
-    schema1:name "Who's who in Spain" .
-
-ex:book69 a schema1:Book ;
-    schema1:author ex:author46 ;
-    schema1:authorName "Amparo Tuson" ;
-    schema1:datePublished "1985" ;
-    schema1:name "Language, Community and School in Barcelona" .
-
-ex:book7 a schema1:Book ;
-    schema1:author ex:author6 ;
-    schema1:authorName "Michael Eaude" ;
-    schema1:datePublished "2022-09-20" ;
-    schema1:genre "Political Science" ;
-    schema1:isbn "9781786808592" ;
-    schema1:name "A People's History of Catalonia" .
-
-ex:book70 a schema1:Book ;
-    schema1:author ex:author47 ;
-    schema1:authorName "New York Public Library. Research Libraries" ;
-    schema1:datePublished "1979" ;
-    schema1:genre "Library catalogs" ;
-    schema1:name "Dictionary Catalog of the Research Libraries of the New York Public Library, 1911-1971" .
-
-ex:book71 a schema1:Book ;
-    schema1:author ex:author48 ;
-    schema1:authorName "Merton W. Stancliff" ;
-    schema1:datePublished "1980" ;
-    schema1:genre "Andorra" ;
-    schema1:name "Cultural and Ecological Aspects of Marriage, Succession, and Migration in a Peasant Community in the Catalan Pyrenees" .
-
-ex:book72 a schema1:Book ;
-    schema1:datePublished "1705" ;
-    schema1:genre "Barcelona (Spain)" ;
-    schema1:name "A Geographical and Historical Account of the Principality of Catalonia, and Earldom of Barcelona" .
-
-ex:book73 a schema1:Book ;
-    schema1:author ex:author35 ;
+    schema1:author ex:author36 ;
     schema1:authorName "Salvador de Madariaga" ;
     schema1:datePublished "1930" ;
     schema1:genre "Spain" ;
     schema1:name "Spain by S. de Madariaga" .
 
-ex:book74 a schema1:Book ;
-    schema1:author ex:author49 ;
+ex:book53 a schema1:Book ;
+    schema1:author ex:author37 ;
+    schema1:authorName "Graham J. Shields" ;
+    schema1:datePublished "1994" ;
+    schema1:description "Annotation. In less than 20 years, Spain has emerged from repression and dictatorship to become a largely stable and sophisticated modern industrial economy. This reference provides annotated entries on works dealing with the history, geography, economy, politics, people, culture, customs, religion, and social organization of this fascinating country. Also addressed are current living conditions, including housing, education, the media, the arts, and industry. Annotation copyright by Book News, Inc., Portland, OR." ;
+    schema1:genre "History" ;
+    schema1:name "Spain" .
+
+ex:book54 a schema1:Book ;
+    schema1:datePublished "1920" ;
+    schema1:genre "France" ;
+    schema1:name "France" .
+
+ex:book55 a schema1:Book ;
+    schema1:author ex:author38 ;
+    schema1:authorName "Michelin Tyre Company, ltd. Tourist Service" ;
+    schema1:datePublished "1982" ;
+    schema1:genre "Spain" ;
+    schema1:name "Spain" .
+
+ex:book56 a schema1:Book ;
+    schema1:author ex:author39 ;
+    schema1:authorName "John Emerich Edward Dalberg Acton Baron Acton" ;
+    schema1:datePublished "1906" ;
+    schema1:genre "Asia" ;
+    schema1:name "The Cambridge Modern History" .
+
+ex:book57 a schema1:Book ;
+    schema1:author ex:author40 ;
+    schema1:authorName "Charles George Herbermann" ;
+    schema1:datePublished "1913" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Catholic Encyclopedia" .
+
+ex:book58 a schema1:Book ;
+    schema1:datePublished "1929" ;
+    schema1:genre "Art" ;
+    schema1:name "Parnassus" .
+
+ex:book59 a schema1:Book ;
+    schema1:author ex:author41 ;
+    schema1:authorName "Milton Mariano Azevedo" ;
+    schema1:datePublished "1991" ;
+    schema1:description "Papers presented at the Symposium held by the Gaspar de Portolà Catalonian Studies Program of International and Area Studies at the University of California, Berkeley, on 24-25 February 1989." ;
+    schema1:genre "History" ;
+    schema1:name "Contemporary Catalonia in Spain and Europe" .
+
+ex:book6 a schema1:Book ;
+    schema1:author ex:author6 ;
+    schema1:authorName "Michael Eaude" ;
+    schema1:datePublished "2011-10-12" ;
+    schema1:description "Squeezed between more powerful France and Spain, Catalonia has endured a violent history. Its medieval empire that conquered Naples, Sicily and Athens was crushed by Spain. Its geography, with the Pyrenees falling sharply to the rugged Costa Brava, is tormented, too. Michael Eaude traces this history and its monuments: Roman Tarragona, celebrated by the poet Martial; Greek Empuries, lost for centuries beneath the sands; medieval Romanesque architecture in the Vall de Boi churches (a World Heritage Site) and Poblet and Santes Creus monasteries. He tells the stories of several of Catalonia's great figures: Abbot Oliva, who brought Moorish learning to Europe, the ruthless mercenary, Roger de Flor, and Verdaguer, handsome poet-priest. Catalonia is famous today for its twentieth-century art. This book focuses on the revolutionary Art Nouveau buildings (including the Sagrada Familia) of Antoni Gaudi. It also explores the region's artistic legacy: the young Picasso painting Barcelona's vibrant slums; Salvador Dali, inspired by the twisted rocks of Cap de Creus to paint his landscapes of the human mind; and Joan Miro, discovering the colours of the red earth at Montroig." ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9781908493255" ;
+    schema1:name "Catalonia - A Cultural History" .
+
+ex:book60 a schema1:Book ;
+    schema1:author ex:author42 ;
+    schema1:authorName "David J. George" ;
+    schema1:datePublished "1996" ;
+    schema1:genre "Literary Criticism" ;
+    schema1:name "Contemporary Catalan Theatre" .
+
+ex:book61 a schema1:Book ;
+    schema1:author ex:author43 ;
+    schema1:authorName "Henry Smith Williams" ;
+    schema1:datePublished "1926" ;
+    schema1:genre "World history" ;
+    schema1:name "The Historians' History of the World" .
+
+ex:book62 a schema1:Book ;
+    schema1:author ex:author44 ;
+    schema1:authorName "Salvador Espriu" ;
+    schema1:datePublished "1977" ;
+    schema1:name "La Pell de Brau" .
+
+ex:book63 a schema1:Book ;
+    schema1:author ex:author43 ;
+    schema1:authorName "Henry Smith Williams" ;
+    schema1:datePublished "1926" ;
+    schema1:genre "World history" ;
+    schema1:name "The Historians' History of the World: These eventful years (part II)" .
+
+ex:book64 a schema1:Book ;
+    schema1:datePublished "1977" ;
+    schema1:genre "United States" ;
+    schema1:name "Inquiry" .
+
+ex:book65 a schema1:Book ;
+    schema1:author ex:author45 ;
+    schema1:authorName "James W. Cortada" ;
+    schema1:datePublished "1982-12-20" ;
+    schema1:description "\"A valuable contribution to the literature on the Spanish civil war. . . . Eminently suitable for academic and large public libraries.\" Reference Books Bulletin" ;
+    schema1:genre "History" ;
+    schema1:name "Historical Dictionary of the Spanish Civil War, 1936-1939" .
+
+ex:book66 a schema1:Book ;
+    schema1:author ex:author46 ;
+    schema1:authorName "A. Hoyt Hobbs" ;
+    schema1:datePublished "1994-02-01" ;
+    schema1:description "Surveys local culture, recommends hotels and restaurants, and provides detailed tours of each region" ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9781569520215" ;
+    schema1:name "Spain & Portugal, 1994" .
+
+ex:book67 a schema1:Book ;
+    schema1:author ex:author46 ;
+    schema1:authorName "A. Hoyt Hobbs" ;
+    schema1:datePublished "1996" ;
+    schema1:description "Newly updated and in an easy-to-pack size, this in-depth guide captures the rich heritage, allure and flavor of Spain like no other guidebook on the market. Written by a renowned husband-and-wife travel-writing team, it offers the perfect balance of education and entertainment. The guide gives insights into the Spanish people, directions to must-see attractions, and in-depth reviews of over 1300 accommodations, restaurants and attractions. Photos and maps." ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9781569521274" ;
+    schema1:name "Fielding's Spain" .
+
+ex:book68 a schema1:Book ;
+    schema1:datePublished "1705" ;
+    schema1:genre "Barcelona (Spain)" ;
+    schema1:name "A Geographical and Historical Account of the Principality of Catalonia, and Earldom of Barcelona" .
+
+ex:book69 a schema1:Book ;
+    schema1:author ex:author47 ;
+    schema1:authorName "Sílvia Planas i Marcé" ;
+    schema1:datePublished "2009" ;
+    schema1:genre "History" ;
+    schema1:name "A History of Jewish Catalonia" .
+
+ex:book7 a schema1:Book ;
+    schema1:author ex:author6 ;
+    schema1:authorName "Michael Eaude" ;
+    schema1:datePublished "2022-09-20" ;
+    schema1:description "At every home game of FC Barcelona, at 17 minutes and 14 seconds of play, the 100,000-capacity Camp Nou stadium is filled by the roar of “IN-DE-PEN-DÈN-CI-A!” Time stops for a second. History lives in the present... Catalonia's national consciousness has deep roots. There are countries twice the size with histories half as interesting. A People's History of Catalonia tells that history, from below, in all its richness and complexity. The region's struggle for independence has, for centuries, been violently resisted, the Catalan language suppressed and its leaders jailed. But the fight of an oppressed nation for its sovereignty has often dovetailed with that of a militant working class for social justice. From the peasant revolts of the 15th century and the siege of Barcelona in 1714, to defeat in the Spanish Civil War, and the slow re-emergence of the workers' movement and anti-Francoist resistance in the years that followed, Michael Eaude tells a compelling story whose ending has yet to be written." ;
+    schema1:genre "Political Science" ;
+    schema1:isbn "9781786808592" ;
+    schema1:name "A People's History of Catalonia" .
+
+ex:book70 a schema1:Book ;
+    schema1:datePublished "1967" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "Chambers's Encyclopedia" .
+
+ex:book71 a schema1:Book ;
+    schema1:author ex:author48 ;
     schema1:authorName "VÃ-Ctor 1824-1901 Balaguer" ;
     schema1:datePublished "2025-05-22" ;
+    schema1:description "Historia de Cataluña, Volumen 10 by VÃ-ctor Balaguer, presents a detailed historical narrative focused on the region of Catalonia in Spain. Written in Spanish and originally published in 1885, this volume contributes to a broader understanding of Catalonia's past. Balaguer's work provides insights into the historical, cultural, and political developments of this important region. It is an invaluable resource for historians and anyone interested in the rich history of Spain and Catalonia. This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant." ;
     schema1:genre "History" ;
     schema1:isbn "9781025174037" ;
     schema1:name "Historia de Cataluña" .
 
+ex:book72 a schema1:Book ;
+    schema1:datePublished "1992" ;
+    schema1:genre "Biography" ;
+    schema1:name "Who's who in Spain" .
+
+ex:book73 a schema1:Book ;
+    schema1:author ex:author49 ;
+    schema1:authorName "Amparo Tuson" ;
+    schema1:datePublished "1985" ;
+    schema1:name "Language, Community and School in Barcelona" .
+
+ex:book74 a schema1:Book ;
+    schema1:author ex:author50 ;
+    schema1:authorName "New York Public Library. Research Libraries" ;
+    schema1:datePublished "1979" ;
+    schema1:genre "Library catalogs" ;
+    schema1:name "Dictionary Catalog of the Research Libraries of the New York Public Library, 1911-1971" .
+
 ex:book75 a schema1:Book ;
+    schema1:author ex:author51 ;
+    schema1:authorName "Merton W. Stancliff" ;
+    schema1:datePublished "1980" ;
+    schema1:genre "Andorra" ;
+    schema1:name "Cultural and Ecological Aspects of Marriage, Succession, and Migration in a Peasant Community in the Catalan Pyrenees" .
+
+ex:book76 a schema1:Book ;
     schema1:datePublished "1908" ;
     schema1:name "Catholic Encyclopedia" .
 
-ex:book76 a schema1:Book ;
-    schema1:author ex:author50 ;
+ex:book77 a schema1:Book ;
+    schema1:author ex:author52 ;
     schema1:authorName "Dana Facaros" ;
     schema1:datePublished "2005" ;
+    schema1:description "This guide explores the distinctive culture of each region and listing the best places to eat, drink, and stay. It is revised to include the very hottest things to see and do, from touring the Guggenheim Museum in Bilbao to finding Flamenco bars in Madrid that only the locals know about." ;
     schema1:genre "Travel" ;
     schema1:isbn "9781860111891" ;
     schema1:name "Spain" .
 
-ex:book77 a schema1:Book ;
-    schema1:author ex:author51 ;
+ex:book78 a schema1:Book ;
+    schema1:author ex:author53 ;
     schema1:authorName "Herbert Lionel Matthews" ;
     schema1:datePublished "1961" ;
     schema1:genre "Spain" ;
     schema1:name "The yoke and the arrows" .
 
-ex:book78 a schema1:Book ;
+ex:book79 a schema1:Book ;
     schema1:datePublished "1980" ;
     schema1:genre "Spain" ;
     schema1:name "Spanish Economic News Service" .
-
-ex:book79 a schema1:Book ;
-    schema1:datePublished "1990" ;
-    schema1:genre "Humanities" ;
-    schema1:name "Humanities Index" .
 
 ex:book8 a schema1:Book ;
     schema1:author ex:author7 ;
@@ -19659,66 +19728,69 @@ ex:book8 a schema1:Book ;
     schema1:name "The Generalitat in the History of Catalonia" .
 
 ex:book80 a schema1:Book ;
-    schema1:datePublished "2002" ;
-    schema1:genre "Language Arts & Disciplines" ;
-    schema1:name "The Best Books for Academic Libraries: World history" .
+    schema1:datePublished "1990" ;
+    schema1:genre "Humanities" ;
+    schema1:name "Humanities Index" .
 
 ex:book81 a schema1:Book ;
-    schema1:author ex:author52 ;
+    schema1:author ex:author54 ;
+    schema1:authorName "Hoyt A Hobbs" ;
+    schema1:datePublished "1992-03" ;
+    schema1:description "Offers background information on the history and culture of Spain and Portugal, recommends hotels and restaurants in all price ranges, and provides detailed tours of each region." ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9780688075781" ;
+    schema1:name "Fielding's Spain and Portugal 1992" .
+
+ex:book82 a schema1:Book ;
+    schema1:author ex:author55 ;
     schema1:authorName "Frank Moore Colby" ;
     schema1:datePublished "1922" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The New International Encyclopædia" .
 
-ex:book82 a schema1:Book ;
-    schema1:author ex:author53 ;
+ex:book83 a schema1:Book ;
+    schema1:author ex:author56 ;
     schema1:authorName "Josephus Nelson Larned" ;
     schema1:datePublished "1924" ;
     schema1:genre "History" ;
     schema1:name "The New Larned History for Ready Reference, Reading and Research" .
 
-ex:book83 a schema1:Book ;
-    schema1:author ex:author54 ;
+ex:book84 a schema1:Book ;
+    schema1:author ex:author57 ;
     schema1:authorName "Engineering Societies Library" ;
     schema1:datePublished "1963" ;
     schema1:genre "Catalogs, CLassified (Universal decimal)" ;
     schema1:name "Classed Subject Catalog. Index" .
 
-ex:book84 a schema1:Book ;
+ex:book85 a schema1:Book ;
     schema1:datePublished "1894" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Encyclopaedia Britannica" .
 
-ex:book85 a schema1:Book ;
+ex:book86 a schema1:Book ;
     schema1:datePublished "1995" ;
     schema1:genre "Law" ;
     schema1:name "Law Books Published" .
 
-ex:book86 a schema1:Book ;
-    schema1:author ex:author55 ;
+ex:book87 a schema1:Book ;
+    schema1:author ex:author30 ;
     schema1:authorName "Charles Oman" ;
     schema1:datePublished "1930" ;
     schema1:genre "Peninsular War, 1807-1814" ;
     schema1:name "A History of the Peninsular War: 1807-1809. From the Treaty of Fontainebleau to the battle of Corunna" .
 
-ex:book87 a schema1:Book ;
+ex:book88 a schema1:Book ;
     schema1:datePublished "1952" ;
+    schema1:description "An author and subject index to publications in fields of anthropology, archaeology and classical studies, economics, folklore, geography, history, language and literature, music, philosophy, political science, religion and theology, sociology and theatre arts." ;
     schema1:genre "Humanities" ;
     schema1:name "International Index to Periodicals" .
 
-ex:book88 a schema1:Book ;
-    schema1:author ex:author56 ;
+ex:book89 a schema1:Book ;
+    schema1:author ex:author58 ;
     schema1:authorName "Hispanic Society of America. Library" ;
     schema1:datePublished "1962" ;
     schema1:genre "Civilization, Hispanic" ;
     schema1:name "Catalogue of the Library" .
-
-ex:book89 a schema1:Book ;
-    schema1:author ex:author57 ;
-    schema1:authorName "Daniel Coit Gilman" ;
-    schema1:datePublished "1911" ;
-    schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The New International Encyclopædia" .
 
 ex:book9 a schema1:Book ;
     schema1:author ex:author8 ;
@@ -19728,105 +19800,112 @@ ex:book9 a schema1:Book ;
     schema1:name "The History of Catalonia" .
 
 ex:book90 a schema1:Book ;
-    schema1:author ex:author58 ;
+    schema1:author ex:author59 ;
+    schema1:authorName "Daniel Coit Gilman" ;
+    schema1:datePublished "1911" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The New International Encyclopædia" .
+
+ex:book91 a schema1:Book ;
+    schema1:author ex:author60 ;
     schema1:authorName "Thomas Spencer Baynes" ;
     schema1:datePublished "1887" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Encyclopædia Britannica" .
 
-ex:book91 a schema1:Book ;
+ex:book92 a schema1:Book ;
     schema1:datePublished "1892" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "Encyclopaedia Britannica" .
 
-ex:book92 a schema1:Book ;
+ex:book93 a schema1:Book ;
     schema1:datePublished "1907" ;
     schema1:genre "Art" ;
     schema1:name "The Burlington Magazine for Connoisseurs" .
 
-ex:book93 a schema1:Book ;
+ex:book94 a schema1:Book ;
     schema1:datePublished "1910" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Encyclopædia Britannica: Calhoun-Chatelaine" .
 
-ex:book94 a schema1:Book ;
+ex:book95 a schema1:Book ;
     schema1:datePublished "1910" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Encyclopedia Britannica" .
 
-ex:book95 a schema1:Book ;
+ex:book96 a schema1:Book ;
     schema1:datePublished "1984" ;
     schema1:genre "Animals" ;
     schema1:name "The Zoological Record" .
 
-ex:book96 a schema1:Book ;
-    schema1:author ex:author59 ;
+ex:book97 a schema1:Book ;
+    schema1:author ex:author61 ;
     schema1:authorName "Hugh Chrisholm" ;
     schema1:datePublished "1911" ;
     schema1:genre "Encyclopedias and dictionaries" ;
     schema1:name "The Encyclopaedia Britannica" .
 
-ex:book97 a schema1:Book ;
-    schema1:author ex:author60 ;
+ex:book98 a schema1:Book ;
+    schema1:author ex:author62 ;
     schema1:authorName "Freedom Press" ;
     schema1:datePublished "1990" ;
+    schema1:description "This volume contains a selection of original documents from the period 1936-39. These include first hand accounts of the constructive aspects of the revolution - the collectives in town and country, in industry, in public services and in agriculture; reports on meetings and demonstrations in favour of the Spanish workers' struggle; verbatim reports of speeches made by the CNT-FAI 'luminaries' justifying their compromises in accepting government posts; appreciative statements by non-anarchists on the positive contribution by the Spanish comrades in the armed struggle as well as in creating a new society." ;
     schema1:genre "History" ;
     schema1:name "Spain, 1936-1939" .
 
-ex:book98 a schema1:Book ;
-    schema1:author ex:author61 ;
+ex:book99 a schema1:Book ;
+    schema1:author ex:author63 ;
     schema1:authorName "Langenscheidt Publishers" ;
     schema1:datePublished "1999-12" ;
+    schema1:description "Wouldn't it be wonderful to see the sights with your own local host to give you a native's point of view? Insight's Pocket Guides deliver this personal service with a sleek, portable guide that gives you the inside scoop. It's not just what you see, it's the sense of what you're seeing.Filled with practical tips, full and half-day itineraries, and loads of personal recommendations, these indispensable guides are ideal for travelers with limited time to spare. Many Pocket Guides come complete with a pull-out map, making your travel so much simpler." ;
     schema1:genre "Travel" ;
     schema1:isbn "9780887294952" ;
     schema1:name "Insight Compact Guide Costa Brava" .
 
-ex:book99 a schema1:Book ;
-    schema1:datePublished "1992" ;
-    schema1:genre "Periodicals" ;
-    schema1:name "British Humanities Index" .
-
-ex:author11 a schema1:Person ;
+ex:author10 a schema1:Person ;
     schema1:name "Chris Bambery" .
 
-ex:author12 a schema1:Person ;
+ex:author100 a schema1:Person ;
+    schema1:name "Josep Sarrión i Gualda" .
+
+ex:author11 a schema1:Person ;
     schema1:name "Charles River Editors" .
 
 ex:author13 a schema1:Person ;
-    schema1:name "Simon Harris" .
-
-ex:author14 a schema1:Person ;
-    schema1:name "Robin Maria DeLugan" .
-
-ex:author15 a schema1:Person ;
     schema1:name "Àngel Casals" .
 
-ex:author16 a schema1:Person ;
-    schema1:name "William Francis Patrick Napier" .
-
-ex:author17 a schema1:Person ;
-    schema1:name "Richard Ford" .
-
-ex:author18 a schema1:Person ;
+ex:author14 a schema1:Person ;
     schema1:name "F. X. Hernández" .
 
-ex:author19 a schema1:Person ;
+ex:author15 a schema1:Person ;
+    schema1:name "Simon Harris" .
+
+ex:author16 a schema1:Person ;
+    schema1:name "Josep M. Muñoz" .
+
+ex:author17 a schema1:Person ;
+    schema1:name "Robin Maria DeLugan" .
+
+ex:author18 a schema1:Person ;
     schema1:name "Michael A. Vargas" .
+
+ex:author19 a schema1:Person ;
+    schema1:name "Club separista Català, New York" .
 
 ex:author2 a schema1:Person ;
     schema1:name "Gabriel Tortella" .
 
 ex:author20 a schema1:Person ;
-    schema1:name "Club separista Català, New York" .
-
-ex:author21 a schema1:Person ;
     schema1:name "Sir William Francis Patrick Napier" .
 
-ex:author22 a schema1:Person ;
+ex:author21 a schema1:Person ;
     schema1:name "James L. Whitney" .
 
-ex:author23 a schema1:Person ;
+ex:author22 a schema1:Person ;
     schema1:name "University of California (System). Institute of Library Research" .
+
+ex:author23 a schema1:Person ;
+    schema1:name "H. J. Chaytor" .
 
 ex:author24 a schema1:Person ;
     schema1:name "Kenneth McRoberts" .
@@ -19846,185 +19925,176 @@ ex:author29 a schema1:Person ;
 ex:author3 a schema1:Person ;
     schema1:name "Henry John Chaytor" .
 
-ex:author30 a schema1:Person ;
-    schema1:name "H. J. Chaytor" .
-
 ex:author31 a schema1:Person ;
-    schema1:name "Chandler Rathfon Post" .
+    schema1:name "Raymond Carr" .
 
 ex:author32 a schema1:Person ;
-    schema1:name "Mandell Creighton" .
+    schema1:name "Chandler Rathfon Post" .
 
 ex:author33 a schema1:Person ;
-    schema1:name "Arthur James Wells" .
+    schema1:name "Mandell Creighton" .
 
 ex:author34 a schema1:Person ;
+    schema1:name "Arthur James Wells" .
+
+ex:author35 a schema1:Person ;
     schema1:name "Unesco" .
 
-ex:author36 a schema1:Person ;
+ex:author37 a schema1:Person ;
     schema1:name "Graham J. Shields" .
 
-ex:author37 a schema1:Person ;
+ex:author38 a schema1:Person ;
     schema1:name "Michelin Tyre Company, ltd. Tourist Service" .
 
-ex:author38 a schema1:Person ;
-    schema1:name "John Emerich Edward Dalberg Acton Baron Acton" .
-
 ex:author39 a schema1:Person ;
-    schema1:name "Charles George Herbermann" .
+    schema1:name "John Emerich Edward Dalberg Acton Baron Acton" .
 
 ex:author4 a schema1:Person ;
     schema1:name "Cortijo Ocaña, Antonio" .
 
 ex:author40 a schema1:Person ;
-    schema1:name "Milton Mariano Azevedo" .
+    schema1:name "Charles George Herbermann" .
 
 ex:author41 a schema1:Person ;
-    schema1:name "David J. George" .
+    schema1:name "Milton Mariano Azevedo" .
 
 ex:author42 a schema1:Person ;
-    schema1:name "Henry Smith Williams" .
+    schema1:name "David J. George" .
 
-ex:author43 a schema1:Person ;
-    schema1:name "James W. Cortada" .
+ex:author44 a schema1:Person ;
+    schema1:name "Salvador Espriu" .
 
 ex:author45 a schema1:Person ;
-    schema1:name "Sílvia Planas i Marcé" .
-
-ex:author46 a schema1:Person ;
-    schema1:name "Amparo Tuson" .
+    schema1:name "James W. Cortada" .
 
 ex:author47 a schema1:Person ;
-    schema1:name "New York Public Library. Research Libraries" .
+    schema1:name "Sílvia Planas i Marcé" .
 
 ex:author48 a schema1:Person ;
-    schema1:name "Merton W. Stancliff" .
+    schema1:name "VÃ-Ctor 1824-1901 Balaguer" .
 
 ex:author49 a schema1:Person ;
-    schema1:name "VÃ-Ctor 1824-1901 Balaguer" .
+    schema1:name "Amparo Tuson" .
 
 ex:author5 a schema1:Person ;
     schema1:name "Jaume Sobrequés i Callicó" .
 
 ex:author50 a schema1:Person ;
-    schema1:name "Dana Facaros" .
+    schema1:name "New York Public Library. Research Libraries" .
 
 ex:author51 a schema1:Person ;
-    schema1:name "Herbert Lionel Matthews" .
+    schema1:name "Merton W. Stancliff" .
 
 ex:author52 a schema1:Person ;
-    schema1:name "Frank Moore Colby" .
+    schema1:name "Dana Facaros" .
 
 ex:author53 a schema1:Person ;
-    schema1:name "Josephus Nelson Larned" .
+    schema1:name "Herbert Lionel Matthews" .
 
 ex:author54 a schema1:Person ;
-    schema1:name "Engineering Societies Library" .
+    schema1:name "Hoyt A Hobbs" .
 
 ex:author55 a schema1:Person ;
-    schema1:name "Charles Oman" .
+    schema1:name "Frank Moore Colby" .
 
 ex:author56 a schema1:Person ;
-    schema1:name "Hispanic Society of America. Library" .
+    schema1:name "Josephus Nelson Larned" .
 
 ex:author57 a schema1:Person ;
-    schema1:name "Daniel Coit Gilman" .
+    schema1:name "Engineering Societies Library" .
 
 ex:author58 a schema1:Person ;
-    schema1:name "Thomas Spencer Baynes" .
+    schema1:name "Hispanic Society of America. Library" .
 
 ex:author59 a schema1:Person ;
-    schema1:name "Hugh Chrisholm" .
+    schema1:name "Daniel Coit Gilman" .
 
 ex:author60 a schema1:Person ;
-    schema1:name "Freedom Press" .
+    schema1:name "Thomas Spencer Baynes" .
 
 ex:author61 a schema1:Person ;
-    schema1:name "Langenscheidt Publishers" .
+    schema1:name "Hugh Chrisholm" .
 
 ex:author62 a schema1:Person ;
+    schema1:name "Freedom Press" .
+
+ex:author63 a schema1:Person ;
+    schema1:name "Langenscheidt Publishers" .
+
+ex:author64 a schema1:Person ;
     schema1:name "Sir Norman Lockyer" .
 
-ex:author65 a schema1:Person ;
+ex:author67 a schema1:Person ;
     schema1:name "G. Maranon" .
 
-ex:author66 a schema1:Person ;
+ex:author68 a schema1:Person ;
     schema1:name "Edmund Dene Morel" .
 
-ex:author67 a schema1:Person ;
-    schema1:name "James Louis Garvin" .
-
-ex:author68 a schema1:Person ;
-    schema1:name "Robert Edward Dell" .
-
 ex:author69 a schema1:Person ;
-    schema1:name "H. Rosi Song" .
+    schema1:name "James Louis Garvin" .
 
 ex:author7 a schema1:Person ;
     schema1:name "Oriol Vergés" .
 
 ex:author70 a schema1:Person ;
-    schema1:name "J. H. Elliott" .
+    schema1:name "Robert Edward Dell" .
 
 ex:author71 a schema1:Person ;
-    schema1:name "Flocel Sabat" .
+    schema1:name "H. Rosi Song" .
 
 ex:author72 a schema1:Person ;
-    schema1:name "College Art Association of America. Committee on Books for the College Art Library" .
+    schema1:name "J. H. Elliott" .
 
 ex:author73 a schema1:Person ;
-    schema1:name "Arthur Terry" .
+    schema1:name "Flocel Sabat" .
 
 ex:author74 a schema1:Person ;
-    schema1:name "Josep R. Llobera" .
+    schema1:name "College Art Association of America. Committee on Books for the College Art Library" .
 
 ex:author75 a schema1:Person ;
-    schema1:name "Stephen Jacobson" .
+    schema1:name "Arthur Terry" .
 
 ex:author76 a schema1:Person ;
-    schema1:name "Catalunya. Parlament" .
+    schema1:name "Josep R. Llobera" .
+
+ex:author77 a schema1:Person ;
+    schema1:name "Stephen Jacobson" .
 
 ex:author78 a schema1:Person ;
-    schema1:name "Rhiannon McGlade" .
-
-ex:author79 a schema1:Person ;
-    schema1:name "Arnau Gonzàlez i Vilalta" .
+    schema1:name "Catalunya. Parlament" .
 
 ex:author8 a schema1:Person ;
     schema1:name "Agustí Alcoberro" .
 
 ex:author80 a schema1:Person ;
-    schema1:name "DK Travel" .
+    schema1:name "Rhiannon McGlade" .
 
 ex:author81 a schema1:Person ;
-    schema1:name "Juan Díez Medrano" .
+    schema1:name "Arnau Gonzàlez i Vilalta" .
 
 ex:author82 a schema1:Person ;
-    schema1:name "Emily Jenkins" .
+    schema1:name "DK Travel" .
 
 ex:author83 a schema1:Person ;
-    schema1:name "T.N. Bisson" .
+    schema1:name "Juan Díez Medrano" .
 
 ex:author84 a schema1:Person ;
-    schema1:name "Eric Arthur Blair" .
+    schema1:name "Emily Jenkins" .
 
 ex:author85 a schema1:Person ;
-    schema1:name "Angel Smith" .
+    schema1:name "T.N. Bisson" .
 
 ex:author86 a schema1:Person ;
-    schema1:name "Mandie Iveson" .
+    schema1:name "Eric Arthur Blair" .
 
 ex:author87 a schema1:Person ;
-    schema1:name "Flocel Sabaté" .
+    schema1:name "Angel Smith" .
 
 ex:author88 a schema1:Person ;
-    schema1:name "Archibald Ross Lewis" .
+    schema1:name "Mandie Iveson" .
 
 ex:author89 a schema1:Person ;
     schema1:name "Yairen Jerez Columbié" .
-
-ex:author9 a schema1:Person ;
-    schema1:name "John Payne" .
 
 ex:author90 a schema1:Person ;
     schema1:name "Daniele Conversi" .
@@ -20065,30 +20135,40 @@ ex:rating3 a schema1:AggregateRating ;
 ex:author1 a schema1:Person ;
     schema1:name "Andrew Dowling" .
 
-ex:author10 a schema1:Person ;
+ex:author12 a schema1:Person ;
     schema1:name "A. Smith" .
 
 ex:author27 a schema1:Person ;
     schema1:name "Library of Congress" .
 
-ex:author44 a schema1:Person ;
+ex:author30 a schema1:Person ;
+    schema1:name "Charles Oman" .
+
+ex:author36 a schema1:Person ;
+    schema1:name "Salvador de Madariaga" .
+
+ex:author43 a schema1:Person ;
+    schema1:name "Henry Smith Williams" .
+
+ex:author46 a schema1:Person ;
     schema1:name "A. Hoyt Hobbs" .
 
 ex:author6 a schema1:Person ;
     schema1:name "Michael Eaude" .
 
-ex:author63 a schema1:Person ;
+ex:author65 a schema1:Person ;
     schema1:name "Philadelphia Museum of Art" .
 
-ex:author77 a schema1:Person ;
+ex:author79 a schema1:Person ;
     schema1:name "Thomas N. Bisson" .
+
+ex:author9 a schema1:Person ;
+    schema1:name "John Payne" .
 
 ex:author94 a schema1:Person ;
     schema1:name "Antoni Dalmau i Ribalta" .
 
-ex:author35 a schema1:Person ;
-    schema1:name "Salvador de Madariaga" .
-
-ex:author64 a schema1:Person ;
+ex:author66 a schema1:Person ;
     schema1:name "George Orwell" .
+
 

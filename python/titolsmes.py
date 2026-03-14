@@ -59,6 +59,12 @@ for start_index in range(0, MAX_TOTAL_RESULTS, PAGE_SIZE):
         g.add((book_uri, RDF.type, SCHEMA.Book))
         g.add((book_uri, SCHEMA.name, Literal(title)))
 
+
+        # Descripció del llibre
+        description = volume.get("description")
+        if description:
+            g.add((book_uri, SCHEMA.description, Literal(description)))
+
         # Autor (només primer autor)
         authors = volume.get("authors", [])
         if authors:

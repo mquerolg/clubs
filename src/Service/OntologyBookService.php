@@ -74,7 +74,25 @@ class OntologyBookService
                 $book->setGenre(trim($genreMatch[1]));
             }
             
-            // Only add book if it has at least a title
+            // Extract rating from AnnotationAssertion with schema1:aggregateRating
+            $pattern = '/<AnnotationAssertion>\s*<AnnotationProperty abbreviatedIRI="schema1:aggregateRating"\/>\s*<AbbreviatedIRI>' . preg_quote($bookId, '/') . '<\/AbbreviatedIRI>\s*<AbbreviatedIRI>(ex:rating\d+)<\/AbbreviatedIRI>\s*<\/AnnotationAssertion>/s';
+            if (preg_match($pattern, $content, $ratingMatch)) {
+                $ratingId = $ratingMatch[1];
+                // Now extract the ratingValue for this rating
+                $valuePattern = '/<AnnotationAssertion>\s*<AnnotationProperty abbreviatedIRI="schema1:ratingValue"\/>\s*<AbbreviatedIRI>' . preg_quote($ratingId, '/') . '<\/AbbreviatedIRI>\s*<Literal[^>]*>(\d+)<\/Literal>\s*<\/AnnotationAssertion>/s';
+                if (preg_match($valuePattern, $content, $valueMatch)) {
+                    $book->setRating((int)$valueMatch[1]);
+                }
+            }
+            
+            // Extract description from AnnotationAssertion with schema1:description
+            $pattern = '/<AnnotationAssertion>\s*<AnnotationProperty abbreviatedIRI="schema1:description"\/>\s*<AbbreviatedIRI>' . preg_quote($bookId, '/') . '<\/AbbreviatedIRI>\s*<Literal>([^<]+)<\/Literal>\s*<\/AnnotationAssertion>/s';
+            if (preg_match($pattern, $content, $descriptionMatch)) {
+                // Decode HTML entities that might be present in the description
+                $description = html_entity_decode(trim($descriptionMatch[1]), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                $book->setDescription($description);
+            }
+                        // Only add book if it has at least a title
             if ($book->getTitle()) {
                 $this->books[$bookId] = $book;
             }

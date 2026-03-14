@@ -59,10 +59,11 @@
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
-                                        <th style="width: 40%;">Títol</th>
-                                        <th style="width: 25%;">Autor</th>
-                                        <th style="width: 20%;">Gènere</th>
+                                        <th style="width: 35%;">Títol</th>
+                                        <th style="width: 22%;">Autor</th>
+                                        <th style="width: 18%;">Gènere</th>
                                         <th style="width: 10%;">Data</th>
+                                        <th style="width: 10%;" class="text-center">Valoració</th>
                                         <th style="width: 5%;" class="text-center">Accions</th>
                                     </tr>
                                 </thead>
@@ -73,6 +74,18 @@
                                             <td>{{ book.authorName }}</td>
                                             <td><span class="badge badge-secondary">{{ book.genre }}</span></td>
                                             <td>{{ book.datePublished }}</td>
+                                            <td class="text-center">
+                                                {% if book.rating %}
+                                                    <span class="badge badge-warning">
+                                                        {% for i in 1..book.rating %}
+                                                            <i class="fa fa-star"></i>
+                                                        {% endfor %}
+                                                        {{ book.rating }}/5
+                                                    </span>
+                                                {% else %}
+                                                    <span class="text-muted">-</span>
+                                                {% endif %}
+                                            </td>
                                             <td class="text-center">
                                                 <a href="{{ path('admin_ontology_books_detail', {bookId: book.id}) }}" 
                                                    class="btn btn-sm btn-info"

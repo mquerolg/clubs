@@ -58,9 +58,36 @@
                                         <span class="text-muted">No disponible</span>
                                     {% endif %}
                                 </dd>
+
+                                <dt class="col-sm-4">Valoració:</dt>
+                                <dd class="col-sm-8">
+                                    {% if book.rating %}
+                                        <span class="badge badge-warning">
+                                            {% for i in 1..book.rating %}
+                                                <i class="fa fa-star"></i>
+                                            {% endfor %}
+                                            {{ book.rating }}/5
+                                        </span>
+                                    {% else %}
+                                        <span class="text-muted">No disponible</span>
+                                    {% endif %}
+                                </dd>
                             </dl>
                         </div>
                     </div>
+
+                    {% if book.description %}
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h5><i class="fa fa-align-left"></i> Descripció</h5>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="text-justify">{{ book.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

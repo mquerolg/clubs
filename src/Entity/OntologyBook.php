@@ -13,6 +13,8 @@ class OntologyBook
     private ?string $authorName = null;
     private ?string $genre = null;
     private ?string $datePublished = null;
+    private ?int $rating = null;
+    private ?string $description = null;
 
     public function __construct()
     {
@@ -70,6 +72,28 @@ class OntologyBook
     public function setDatePublished(?string $datePublished): self
     {
         $this->datePublished = $datePublished;
+        return $this;
+    }
+
+    public function getRating(): ?int
+    {
+        return $this->rating;
+    }
+
+    public function setRating(?int $rating): self
+    {
+        $this->rating = $rating;
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
         return $this;
     }
 
