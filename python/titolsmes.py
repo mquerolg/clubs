@@ -5,8 +5,8 @@ from rdflib.namespace import RDF
 # -----------------------------
 # CONFIGURACIÓ
 # -----------------------------
-QUERY = "a"
-MAX_TOTAL_RESULTS = 1000  # nombre total de llibres que vols obtenir
+QUERY = "History of Catalonia"  # consulta de cerca per Google Books API
+MAX_TOTAL_RESULTS = 2000  # nombre total de llibres que vols obtenir
 PAGE_SIZE = 40           # màxim per sol·licitud de Google Books API
 OUTPUT_FILE = r"C:\clubs\books_instances.ttl"
 

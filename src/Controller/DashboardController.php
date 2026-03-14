@@ -71,12 +71,14 @@ class DashboardController extends AbstractDashboardController
             yield MenuItem::linkToCrud('menu_genres', null, Genres::class);
             yield MenuItem::linkToCrud('menu_trameses', null, Shipments::class);
             yield MenuItem::linkToCrud('menu_report', null, HistoricReport::class);
+            yield MenuItem::linkToRoute('Llibres Ontologia', 'fa fa-book', 'admin_ontology_books_index');
         } else {
             yield MenuItem::linkToCrud('menu_lots', null, Lots::class);
             yield MenuItem::linkToCrud('menu_mylots', null, UseLots::class);
             yield MenuItem::linkToCrud('menu_myclubs', null, MyClubs::class);
             yield MenuItem::linkToCrud('menu_historic', null, Historic::class);
             yield MenuItem::linkToCrud('menu_trameses', null, Shipments::class);
+            yield MenuItem::linkToRoute('Llibres Ontologia', 'fa fa-book', 'admin_ontology_books_index');
         }
     }
 }

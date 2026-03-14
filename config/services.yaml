@@ -45,3 +45,7 @@ services:
             $em: '@doctrine.orm.entity_manager'
         tags:
             - { name: doctrine.event_listener, event: postConnect }
+
+    App\Service\OntologyBookService:
+        arguments:
+            $projectDir: '%kernel.project_dir%'

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
+    <title>{% block title %}Llibres Ontologia - Clubs de Lectura{% endblock %}</title>
+
+    <link href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+    <script src="{{ asset('build/app.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body class="ea">
+    <div class="wrapper">
+        <div class="content-wrapper" style="margin-left: 0; padding: 20px;">
+            <section class="content">
+                {% block flash_messages %}
+                    {% for label, messages in app.flashes %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ label }} alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endblock %}
+
+                <div class="container-fluid">
+                    {% block main %}{% endblock %}
+                </div>
+            </section>
+        </div>
+    </div>
+
+    {% block body_javascript %}{% endblock %}
+</body>
+</html>

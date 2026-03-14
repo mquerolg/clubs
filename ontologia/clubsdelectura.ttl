@@ -18702,1441 +18702,1393 @@ schema:Review rdfs:subClassOf [
     owl:allValuesFrom schema:Book
 ] .
 
+
 @prefix ex: <http://example.org/> .
 @prefix schema1: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+
 ex:book1 a schema1:Book ;
     schema1:author ex:author1 ;
-    schema1:authorName "CEADUC" ;
-    schema1:datePublished "2019-08-19" ;
-    schema1:genre "Antiques & Collectibles" ;
-    schema1:name "Revista Estudios Paraguayos 1990 a 1995 - N°1 y 2 - Vol. XVIII" .
+    schema1:authorName "Andrew Dowling" ;
+    schema1:datePublished "2022-08-19" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781000641608" ;
+    schema1:name "Catalonia: A New History" .
 
 ex:book10 a schema1:Book ;
-    schema1:author ex:author10 ;
-    schema1:authorName "Henry Edward Manning" ;
-    schema1:datePublished "1873" ;
-    schema1:name "The Sacred Heart: a Correspondence Between ... Archbishop Manning, D.D., and the Rev. A. Nicholson, LL.D., as it Appeared in the “Guardian” Newspaper, Sept. 17th. With Notes for English Readers ... Second Edition" .
+    schema1:author ex:author9 ;
+    schema1:authorName "John Payne" ;
+    schema1:datePublished "2009" ;
+    schema1:genre "History" ;
+    schema1:name "Catalonia" .
 
 ex:book100 a schema1:Book ;
-    schema1:author ex:author78 ;
-    schema1:authorName "Rocío Patricia Rojo Gutiérrez" ;
-    schema1:datePublished "2010" ;
-    schema1:name "Diferenciación de células madre mesenquimales de rata a cardiomiocitos" .
+    schema1:datePublished "1980" ;
+    schema1:genre "Catalogs, Union" ;
+    schema1:name "National Union Catalog" .
 
 ex:book101 a schema1:Book ;
-    schema1:datePublished "unknown" ;
-    schema1:genre "Literary Criticism" ;
-    schema1:isbn "9788428549387" ;
-    schema1:name "¿A que no te atreves?" .
+    schema1:datePublished "1903" ;
+    schema1:genre "Arts" ;
+    schema1:name "The Athenaeum" .
 
 ex:book102 a schema1:Book ;
-    schema1:author ex:author79 ;
-    schema1:authorName "Guillermo Guastavino Gallent" ;
-    schema1:datePublished "1939" ;
-    schema1:genre "British" ;
-    schema1:name "Un folleto inglés del siglo XVII referente a Tánger" .
+    schema1:author ex:author62 ;
+    schema1:authorName "Sir Norman Lockyer" ;
+    schema1:datePublished "1927" ;
+    schema1:genre "Electronic journals" ;
+    schema1:name "Nature" .
 
 ex:book103 a schema1:Book ;
-    schema1:author ex:author80 ;
-    schema1:authorName "Agustín Breu Rodríguez" ;
-    schema1:datePublished "1968" ;
-    schema1:name "Carta, 1968 jul. 20, [s.l.], de Agustín Breu Rodríguez a Ángel María de Lera" .
+    schema1:author ex:author63 ;
+    schema1:authorName "Philadelphia Museum of Art" ;
+    schema1:datePublished "1926" ;
+    schema1:genre "Art" ;
+    schema1:name "Philadelphia Museum of Art Bulletin" .
 
 ex:book104 a schema1:Book ;
-    schema1:author ex:author81 ;
-    schema1:authorName "Antonio Caballero Martínez" ;
-    schema1:datePublished "1982" ;
-    schema1:isbn "9788470231780" ;
-    schema1:name "Soluciones a los tests de geografía universal" .
+    schema1:author ex:author63 ;
+    schema1:authorName "Philadelphia Museum of Art" ;
+    schema1:datePublished "1924" ;
+    schema1:genre "Art" ;
+    schema1:name "Bulletin of the Pennsylvania Museum" .
 
 ex:book105 a schema1:Book ;
-    schema1:author ex:author82 ;
-    schema1:authorName "Wenceslao Fernández Flórez" ;
-    schema1:datePublished "1941" ;
-    schema1:name "Los que no fuimos a la guerra" .
+    schema1:datePublished "1927" ;
+    schema1:genre "Art" ;
+    schema1:name "Bulletin of the Pennsylvania Museum" .
 
 ex:book106 a schema1:Book ;
-    schema1:datePublished "1812" ;
-    schema1:name "Seguidillas a los verdaderos papamoscas afrancesados" .
+    schema1:datePublished "1911" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopædia Britannica" .
 
 ex:book107 a schema1:Book ;
-    schema1:author ex:author83 ;
-    schema1:authorName "Ramon Sarrià" ;
-    schema1:datePublished "1849" ;
-    schema1:name "Certificado de tasación de una hacienda de Lorca perteneciente a Andrés Fernández Valera" .
+    schema1:author ex:author64 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2024-10-24" ;
+    schema1:genre "Biography & Autobiography" ;
+    schema1:name "Homage to Catalonia" .
 
 ex:book108 a schema1:Book ;
-    schema1:author ex:author84 ;
-    schema1:authorName "A. Gilbert" ;
-    schema1:datePublished "1925" ;
-    schema1:name "Formulario práctico de terapéutica y farmacología" .
+    schema1:author ex:author65 ;
+    schema1:authorName "G. Maranon" ;
+    schema1:datePublished "1954" ;
+    schema1:name "A History of Aragon and Catalonia" .
 
 ex:book109 a schema1:Book ;
-    schema1:author ex:author85 ;
-    schema1:authorName "Joaquín Portillo" ;
-    schema1:datePublished "1874" ;
-    schema1:name "Cartas a D. Bruno Pérez sobre el Monasterio de Ntra. Sra. de la Defensión que escribió Don Joaquín Portillo" .
+    schema1:author ex:author66 ;
+    schema1:authorName "Edmund Dene Morel" ;
+    schema1:datePublished "1923" ;
+    schema1:genre "Europe" ;
+    schema1:name "Foreign Affairs" .
 
 ex:book11 a schema1:Book ;
-    schema1:author ex:author11 ;
-    schema1:authorName "James Beal" ;
-    schema1:datePublished "1876" ;
-    schema1:name "Free Trade in Land ... With a reprint of the ... pamphlet published by the Anti-Corn-Law League “The Constituional right to a revision of the Land Tax” ... Second edition" .
+    schema1:author ex:author10 ;
+    schema1:authorName "A. Smith" ;
+    schema1:datePublished "2014-03-26" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781137354495" ;
+    schema1:name "The Origins of Catalan Nationalism, 1770-1898" .
 
 ex:book110 a schema1:Book ;
-    schema1:author ex:author86 ;
-    schema1:authorName "Ludwig von Mises" ;
-    schema1:datePublished "2007" ;
-    schema1:genre "Business & Economics" ;
-    schema1:isbn "9788472094420" ;
-    schema1:name "Liberalismo" .
+    schema1:author ex:author67 ;
+    schema1:authorName "James Louis Garvin" ;
+    schema1:datePublished "1929" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopedia Britannica" .
 
 ex:book111 a schema1:Book ;
-    schema1:author ex:author87 ;
-    schema1:authorName "Luis A. Urgellés Lorié" ;
-    schema1:datePublished "1994" ;
-    schema1:isbn "9789589548523" ;
-    schema1:name "La acupuntura, teorías, puntos y prácticas" .
+    schema1:author ex:author68 ;
+    schema1:authorName "Robert Edward Dell" ;
+    schema1:datePublished "1928" ;
+    schema1:genre "Art" ;
+    schema1:name "The Burlington Magazine" .
 
 ex:book112 a schema1:Book ;
-    schema1:author ex:author88 ;
-    schema1:authorName "Asociación de la Prensa de Zaragoza" ;
-    schema1:datePublished "1937" ;
-    schema1:name "Recuerdo de unos actos de homenaje a las Fuerzas de Tierra, Mar y Aire y a las Provincias de la España de Franco, organizadas por la Asociación de la Prensa de Zaragoza, y que tuvieron lugar los días 14 y 15 de octubre de 1937" .
+    schema1:datePublished "1926" ;
+    schema1:name "The Furniture Manufacturers' Blue Book" .
 
 ex:book113 a schema1:Book ;
-    schema1:author ex:author89 ;
-    schema1:authorName "Pedro Garcia Rosado" ;
-    schema1:datePublished "2012" ;
-    schema1:genre "Fiction" ;
-    schema1:isbn "9788425347986" ;
-    schema1:name "Robo a un banquero" .
+    schema1:author ex:author69 ;
+    schema1:authorName "H. Rosi Song" ;
+    schema1:datePublished "2019-07-24" ;
+    schema1:genre "Cooking" ;
+    schema1:isbn "9781538107843" ;
+    schema1:name "A Taste of Barcelona" .
 
 ex:book114 a schema1:Book ;
-    schema1:author ex:author90 ;
-    schema1:authorName "Ricardo Puente y Brañas" ;
-    schema1:datePublished "1872" ;
-    schema1:name "De España al infierno" .
+    schema1:author ex:author70 ;
+    schema1:authorName "J. H. Elliott" ;
+    schema1:datePublished "2018-08-21" ;
+    schema1:genre "History" ;
+    schema1:isbn "9780300240719" ;
+    schema1:name "Scots and Catalans" .
 
 ex:book115 a schema1:Book ;
-    schema1:author ex:author91 ;
-    schema1:authorName "Fita-Rada y Delgado" ;
-    schema1:datePublished "unknown" ;
-    schema1:name "Excursion arqueologica a Ucles, Sahelices y Cabeza del Griego, verificada en septiembre de 1888" .
+    schema1:author ex:author71 ;
+    schema1:authorName "Flocel Sabat" ;
+    schema1:datePublished "2015-09-29" ;
+    schema1:isbn "9783034320108" ;
+    schema1:name "Historical Analysis of the Catalan Identity" .
 
 ex:book116 a schema1:Book ;
-    schema1:author ex:author88 ;
-    schema1:authorName "Asociación de la Prensa de Zaragoza" ;
-    schema1:datePublished "2002" ;
-    schema1:genre "Beauty culture" ;
-    schema1:name "Recuerdo de unos actos de homenaje a las Fuerzas de Tierra, Mar y Aire y a las Provincias de la España de Franco, y organizados por la Asociación de la Prensa de Zaragoza, y que tuvieron lugar los días 14 y 15 octubre de 1937" .
+    schema1:author ex:author72 ;
+    schema1:authorName "College Art Association of America. Committee on Books for the College Art Library" ;
+    schema1:datePublished "1929" ;
+    schema1:genre "Academic libraries" ;
+    schema1:name "List of Books for a College Art Library" .
 
 ex:book117 a schema1:Book ;
-    schema1:author ex:author92 ;
-    schema1:authorName "Rosa Navarro Durán" ;
-    schema1:datePublished "2009" ;
-    schema1:genre "Juvenile Fiction" ;
-    schema1:isbn "9788423694143" ;
-    schema1:name "La eneida" .
+    schema1:author ex:author73 ;
+    schema1:authorName "Arthur Terry" ;
+    schema1:datePublished "1972" ;
+    schema1:genre "Catalan literature" ;
+    schema1:isbn "9780510322991" ;
+    schema1:name "Catalan Literature" .
 
 ex:book118 a schema1:Book ;
-    schema1:datePublished "2019" ;
-    schema1:isbn "9788494928376" ;
-    schema1:name "Música, 6 Educación Primaria" .
+    schema1:author ex:author74 ;
+    schema1:authorName "Josep R. Llobera" ;
+    schema1:datePublished "2004" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781571816122" ;
+    schema1:name "Foundations of National Identity" .
 
 ex:book119 a schema1:Book ;
-    schema1:author ex:author93 ;
-    schema1:authorName "Carlos Luna" ;
-    schema1:datePublished "2006-12" ;
-    schema1:genre "Painting, Cuban" ;
-    schema1:isbn "9780979175305" ;
-    schema1:name "Carlos Luna" .
+    schema1:author ex:author75 ;
+    schema1:authorName "Stephen Jacobson" ;
+    schema1:datePublished "2009-09-15" ;
+    schema1:genre "Law" ;
+    schema1:isbn "9780807899175" ;
+    schema1:name "Catalonia's Advocates" .
 
 ex:book12 a schema1:Book ;
-    schema1:author ex:author12 ;
-    schema1:authorName "CANTAB." ;
-    schema1:datePublished "1873" ;
-    schema1:name "Jesus versus Christianity. By a Cantab" .
+    schema1:author ex:author11 ;
+    schema1:authorName "Chris Bambery" ;
+    schema1:datePublished "2020-04-24" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781912387410" ;
+    schema1:name "Catalonia Reborn" .
 
 ex:book120 a schema1:Book ;
-    schema1:author ex:author94 ;
-    schema1:authorName "Biblioteca del Poder Legislativo (Uruguay)" ;
-    schema1:datePublished "1952" ;
-    schema1:name "Saluda , 1952, s. l. , a Francisco Ferrándiz Alborz" .
+    schema1:datePublished "1987" ;
+    schema1:genre "Periodicals" ;
+    schema1:name "Social Sciences Index" .
 
 ex:book121 a schema1:Book ;
-    schema1:author ex:author95 ;
-    schema1:authorName "Gerard Casademont Filella" ;
-    schema1:datePublished "2014" ;
-    schema1:name "Estudi d'implantació d'una planta d'energia solar per a ús privat" .
+    schema1:datePublished "1911" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopaedia Britannica: Shu to Tom" .
 
 ex:book122 a schema1:Book ;
-    schema1:datePublished "unknown" ;
-    schema1:name "Carta de donación de Velascus Ennego y su mujer Amadonna a San Isidoro de la iglesia de Nuestra Señora de la Vega de Salamanca con sus pertenencias" .
+    schema1:datePublished "1919" ;
+    schema1:name "The Spectator" .
 
 ex:book123 a schema1:Book ;
-    schema1:author ex:author96 ;
-    schema1:authorName "Universitat d'Alacant" ;
-    schema1:datePublished "1981*" ;
-    schema1:name "La estructura socioprofesional de la población de Elda a finales del antiguo régimen" .
+    schema1:datePublished "1911" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopædia Britannica: Shuvalov-Subliminal Self" .
 
 ex:book124 a schema1:Book ;
-    schema1:author ex:author97 ;
-    schema1:authorName "Marina A. Zenkova" ;
-    schema1:datePublished "2012-10-04" ;
-    schema1:genre "Science" ;
-    schema1:isbn "9783642621390" ;
-    schema1:name "Artificial Nucleases" .
+    schema1:author ex:author76 ;
+    schema1:authorName "Catalunya. Parlament" ;
+    schema1:datePublished "2004" ;
+    schema1:isbn "9788439366560" ;
+    schema1:name "The Parliament of Catalonia" .
 
 ex:book125 a schema1:Book ;
-    schema1:author ex:author98 ;
-    schema1:authorName "Mar Cruz Piñol" ;
-    schema1:datePublished "2001" ;
-    schema1:name "El Español a través de internet" .
+    schema1:datePublished "1928" ;
+    schema1:name "The Saturday Review of Politics, Literature, Science and Art" .
 
 ex:book126 a schema1:Book ;
-    schema1:author ex:author99 ;
-    schema1:authorName "Cesar Aller" ;
-    schema1:datePublished "1967" ;
-    schema1:name "A 5 amigos" .
+    schema1:datePublished "1928" ;
+    schema1:genre "Literary and political reviews" ;
+    schema1:name "The Saturday Review of Politics, Literature, Science, Art, and Finance" .
 
 ex:book127 a schema1:Book ;
-    schema1:author ex:author100 ;
-    schema1:authorName "Antonio de Leiva" ;
-    schema1:datePublished "1512" ;
-    schema1:name "Cartas de Antonio de Leyva a diversos destinatarios" .
+    schema1:aggregateRating ex:rating3 ;
+    schema1:author ex:author77 ;
+    schema1:authorName "Thomas N. Bisson" ;
+    schema1:datePublished "1998" ;
+    schema1:genre "History" ;
+    schema1:isbn "9780674895287" ;
+    schema1:name "Tormented Voices" .
 
 ex:book128 a schema1:Book ;
-    schema1:author ex:author101 ;
-    schema1:authorName "Roger Green" ;
-    schema1:datePublished "2007-01-31" ;
-    schema1:isbn "9789583017155" ;
-    schema1:name "El Manual de I Ching" .
+    schema1:author ex:author78 ;
+    schema1:authorName "Rhiannon McGlade" ;
+    schema1:datePublished "2016-02-15" ;
+    schema1:genre "Art" ;
+    schema1:isbn "9781783168057" ;
+    schema1:name "Catalan Cartoons" .
 
 ex:book129 a schema1:Book ;
-    schema1:author ex:author102 ;
-    schema1:authorName "María del Carmen Polo Abad" ;
-    schema1:datePublished "1996" ;
-    schema1:name "Los temas transversales a través de la educación musical: Infantil, Primaria y Secundaria" .
+    schema1:author ex:author79 ;
+    schema1:authorName "Arnau Gonzàlez i Vilalta" ;
+    schema1:datePublished "2020" ;
+    schema1:genre "Catalonia (Spain)" ;
+    schema1:isbn "9781789760323" ;
+    schema1:name "The Illusion of Statehood" .
 
 ex:book13 a schema1:Book ;
-    schema1:author ex:author13 ;
-    schema1:authorName "James Dickerson DAVIES" ;
-    schema1:datePublished "1871" ;
-    schema1:name "Morning and Evening Sacrifice: a handbook for domestic worship" .
+    schema1:author ex:author12 ;
+    schema1:authorName "Charles River Editors" ;
+    schema1:datePublished "2019-12-25" ;
+    schema1:isbn "9781650814872" ;
+    schema1:name "Catalonia" .
 
 ex:book130 a schema1:Book ;
-    schema1:author ex:author103 ;
-    schema1:authorName "Juan de Mena" ;
-    schema1:datePublished "1499" ;
-    schema1:name "Coronación a don Iñigo López de Mendoza, Marqués de Santillana, con la glosa" .
+    schema1:author ex:author80 ;
+    schema1:authorName "DK Travel" ;
+    schema1:datePublished "2026-02-05" ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9780241811856" ;
+    schema1:name "DK Barcelona and Catalonia" .
 
 ex:book131 a schema1:Book ;
-    schema1:author ex:author104 ;
-    schema1:authorName "Presbyterian Church in the U S a (Old S" ;
-    schema1:datePublished "2016-09-10" ;
+    schema1:author ex:author81 ;
+    schema1:authorName "Juan Díez Medrano" ;
+    schema1:datePublished "1995" ;
     schema1:genre "History" ;
-    schema1:isbn "9781360674520" ;
-    schema1:name "BK OF PUBLIC PRAYER" .
+    schema1:name "Divided Nations" .
 
 ex:book132 a schema1:Book ;
-    schema1:author ex:author105 ;
-    schema1:authorName "A Mabel (Blackman) Mrs Fitch" ;
-    schema1:datePublished "2016-05-04" ;
-    schema1:isbn "9781355355762" ;
-    schema1:name "Madaline" .
+    schema1:author ex:author82 ;
+    schema1:authorName "Emily Jenkins" ;
+    schema1:datePublished "2024-07-29" ;
+    schema1:genre "Art" ;
+    schema1:isbn "9781781884225" ;
+    schema1:name "The Visualization of a Nation" .
 
 ex:book133 a schema1:Book ;
-    schema1:author ex:author106 ;
-    schema1:authorName "Universidad de Navarra. Instituto de Historia de la Iglesia" ;
-    schema1:datePublished "2002" ;
-    schema1:name "Algunas cuestiones en torno a la historia antigua de la Iglesia romana" .
+    schema1:author ex:author83 ;
+    schema1:authorName "T.N. Bisson" ;
+    schema1:datePublished "1986" ;
+    schema1:genre "Aragon (Spain) - History" ;
+    schema1:isbn "9781280806384" ;
+    schema1:name "The Medieval Crown of Aragon" .
 
 ex:book134 a schema1:Book ;
-    schema1:author ex:author107 ;
-    schema1:authorName "Alfonso X (Rey de Castilla.)" ;
-    schema1:datePublished "unknown" ;
-    schema1:name "Alfonso X ordena que se tengan las heredades donadas a la abadía de Santillana en el fuero que tienen los de la Rua de Santillana" .
+    schema1:author ex:author77 ;
+    schema1:authorName "Thomas N. Bisson" ;
+    schema1:datePublished "1986" ;
+    schema1:genre "Aragon (Spain)" ;
+    schema1:isbn "9780191675294" ;
+    schema1:name "The Medieval Crown of Aragon" .
 
 ex:book135 a schema1:Book ;
-    schema1:author ex:author108 ;
-    schema1:authorName "Benjamin A. Olken" ;
-    schema1:datePublished "2012" ;
-    schema1:genre "Economics" ;
-    schema1:name "Should Aid Reward Performance?" .
+    schema1:author ex:author84 ;
+    schema1:authorName "Eric Arthur Blair" ;
+    schema1:datePublished "2022-08-16" ;
+    schema1:genre "Political Science" ;
+    schema1:name "Homage to Catalonia" .
 
 ex:book136 a schema1:Book ;
-    schema1:author ex:author109 ;
-    schema1:authorName "Joan Boadas Elvira" ;
-    schema1:datePublished "1974" ;
-    schema1:name "Algebra moderna a través de los problemas" .
+    schema1:author ex:author85 ;
+    schema1:authorName "Angel Smith" ;
+    schema1:datePublished "2014-03-26" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781137354488" ;
+    schema1:name "The Origins of Catalan Nationalism, 1770-1898" .
 
 ex:book137 a schema1:Book ;
-    schema1:author ex:author110 ;
-    schema1:authorName "Universidad de Málaga Facultad de Derecho Biblioteca" ;
-    schema1:datePublished "1990" ;
-    schema1:name "Repertorio de libros antiguos ... obras publicadas con anterioridad a 1801 que están en la Facultad de Derecho de la Universidad de Málaga ..." .
+    schema1:author ex:author10 ;
+    schema1:authorName "A. Smith" ;
+    schema1:datePublished "2014-01-01" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781349469970" ;
+    schema1:name "The Origins of Catalan Nationalism, 1770-1898" .
 
 ex:book138 a schema1:Book ;
-    schema1:author ex:author111 ;
-    schema1:authorName "SHANA. GRANDERSON A. LADY" ;
-    schema1:datePublished "2022-11-02" ;
-    schema1:genre "Fiction" ;
-    schema1:isbn "9798361736904" ;
-    schema1:name "Separated at Birth" .
+    schema1:author ex:author86 ;
+    schema1:authorName "Mandie Iveson" ;
+    schema1:datePublished "2019" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781845199234" ;
+    schema1:name "Language Attitudes, National Identity and Migration in Catalonia" .
 
 ex:book139 a schema1:Book ;
-    schema1:author ex:author112 ;
-    schema1:authorName "Amitrajeet A. Batabyal" ;
-    schema1:datePublished "2009" ;
-    schema1:name "A Probabilistic Analysis of Guided Tours for Tourists During the Slack Season" .
+    schema1:datePublished "2016-10-11" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781333919511" ;
+    schema1:name "The Deplorable History of the Catalans, From Their First Engaging in the War, to the Time of Their Reduction" .
 
 ex:book14 a schema1:Book ;
-    schema1:author ex:author14 ;
-    schema1:authorName "Robert ROBERTS (Christadelphian.)" ;
-    schema1:datePublished "1875" ;
-    schema1:name "Man mortal: being a reply to Mr. F. W. Grant's “Life and Immortality,” etc" .
+    schema1:aggregateRating ex:rating2 ;
+    schema1:author ex:author1 ;
+    schema1:authorName "Andrew Dowling" ;
+    schema1:datePublished "2013" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781845195304" ;
+    schema1:name "Catalonia Since the Spanish Civil War" .
 
 ex:book140 a schema1:Book ;
-    schema1:author ex:author113 ;
-    schema1:authorName "María Fernández" ;
-    schema1:datePublished "1667" ;
-    schema1:name "Declaracion de las reglas que pertenecen a los cinco libros de la institucion de la Gramatica, conforme al Arte de Antonio de Nebrija" .
+    schema1:author ex:author87 ;
+    schema1:authorName "Flocel Sabaté" ;
+    schema1:datePublished "2015" ;
+    schema1:genre "Foreign Language Study" ;
+    schema1:isbn "9783035108309" ;
+    schema1:name "Catalonia and Portugal" .
 
 ex:book141 a schema1:Book ;
-    schema1:author ex:author114 ;
-    schema1:authorName "Manuel Dreke Liñero" ;
-    schema1:datePublished "1970" ;
-    schema1:name "Carta a Juan Marinello relacionada con la creación de un Museo en Las Villas, para lo que le piden su colaboración" .
+    schema1:author ex:author88 ;
+    schema1:authorName "Archibald Ross Lewis" ;
+    schema1:datePublished "1984" ;
+    schema1:genre "History" ;
+    schema1:name "Medieval Society in Southern France and Catalonia" .
 
 ex:book142 a schema1:Book ;
-    schema1:author ex:author115 ;
-    schema1:authorName "Sophie Labelle" ;
-    schema1:datePublished "2019" ;
-    schema1:genre "Teenagers" ;
-    schema1:isbn "9788472909410" ;
-    schema1:name "No nos van a invisibilizar" .
+    schema1:author ex:author89 ;
+    schema1:authorName "Yairen Jerez Columbié" ;
+    schema1:datePublished "2021-04-26" ;
+    schema1:genre "History" ;
+    schema1:isbn "9783030730406" ;
+    schema1:name "Essays on Transculturation and Catalan-Cuban Intellectual History" .
 
 ex:book143 a schema1:Book ;
-    schema1:author ex:author116 ;
-    schema1:authorName "AL Language Cafe" ;
-    schema1:datePublished "2023-09-14" ;
-    schema1:genre "Foreign Language Study" ;
-    schema1:name "Aprender chino leyendo historias cortas - Lecturas Graduadas - Nivel Inicial, HSK 1, HSK 2" .
+    schema1:author ex:author90 ;
+    schema1:authorName "Daniele Conversi" ;
+    schema1:datePublished "2000" ;
+    schema1:genre "Basques" ;
+    schema1:isbn "9780874173628" ;
+    schema1:name "The Basques, the Catalans, and Spain" .
 
 ex:book144 a schema1:Book ;
-    schema1:datePublished "2020" ;
-    schema1:genre "Filósofos" ;
-    schema1:isbn "9788494548871" ;
-    schema1:name "Filósofas" .
+    schema1:author ex:author91 ;
+    schema1:authorName "Juan Perucho" ;
+    schema1:datePublished "1988" ;
+    schema1:genre "Fiction" ;
+    schema1:name "Natural History" .
 
 ex:book145 a schema1:Book ;
-    schema1:author ex:author117 ;
-    schema1:authorName "One Sketch a Day Pencils and Pens" ;
-    schema1:datePublished "2019-11-22" ;
-    schema1:isbn "9781710443813" ;
-    schema1:name "Julie" .
+    schema1:author ex:author92 ;
+    schema1:authorName "Francisco J. Romero Salvadó" ;
+    schema1:datePublished "2013-03-14" ;
+    schema1:genre "History" ;
+    schema1:isbn "9798765185261" ;
+    schema1:name "Historical Dictionary of the Spanish Civil War" .
 
 ex:book146 a schema1:Book ;
-    schema1:author ex:author118 ;
-    schema1:authorName "Enrique García" ;
-    schema1:datePublished "1960" ;
-    schema1:name "Carta de Enrique García a José Luis L. Aranguren" .
+    schema1:author ex:author93 ;
+    schema1:authorName "Pierre Vilar" ;
+    schema1:datePublished "2018-09-25" ;
+    schema1:genre "History" ;
+    schema1:isbn "9788491990406" ;
+    schema1:name "Cataluña en la España moderna, vol. 1" .
 
 ex:book147 a schema1:Book ;
-    schema1:author ex:author119 ;
-    schema1:authorName "International Business Machines Corporation" ;
-    schema1:datePublished "1972" ;
-    schema1:isbn "9788436080568" ;
-    schema1:name "IBM Sistema/3" .
+    schema1:author ex:author64 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2025-07-07" ;
+    schema1:genre "Fiction" ;
+    schema1:isbn "9789371827287" ;
+    schema1:name "Hommage à la Catalogne French Translation of Homage to Catalonia" .
 
 ex:book148 a schema1:Book ;
-    schema1:author ex:author120 ;
-    schema1:authorName "Mauricio Velasquez" ;
-    schema1:datePublished "2024-12-06" ;
-    schema1:genre "Business & Economics" ;
-    schema1:isbn "9798889262343" ;
-    schema1:name "Tackling Toxicity" .
+    schema1:author ex:author64 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2021-12-07" ;
+    schema1:genre "History" ;
+    schema1:isbn "9788499890876" ;
+    schema1:name "Homenaje a Cataluña (edición definitiva avalada por The Orwell Estate) / Homage to Catalonia. (Definitive text endorsed by The Orwell Foundation)" .
 
 ex:book149 a schema1:Book ;
-    schema1:author ex:author121 ;
-    schema1:authorName "María del Carmen Rencoret Bustos" ;
-    schema1:datePublished "1998" ;
-    schema1:isbn "9789561315358" ;
-    schema1:name "Mateo te ayuda a aprender" .
+    schema1:author ex:author64 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2000" ;
+    schema1:isbn "9788434412002" ;
+    schema1:name "Homenatge a Catalunya" .
 
 ex:book15 a schema1:Book ;
-    schema1:author ex:author15 ;
-    schema1:authorName "George Grove" ;
-    schema1:datePublished "1879" ;
-    schema1:genre "Music" ;
-    schema1:name "A Dictionary of Music and Musicians" .
+    schema1:author ex:author13 ;
+    schema1:authorName "Simon Harris" ;
+    schema1:datePublished "2014-10-24" ;
+    schema1:genre "Catalans" ;
+    schema1:isbn "9781502512307" ;
+    schema1:name "Catalonia Is Not Spain" .
 
 ex:book150 a schema1:Book ;
-    schema1:author ex:author122 ;
-    schema1:authorName "Abdulmohsen A. Alothman" ;
-    schema1:datePublished "2011" ;
-    schema1:genre "Heat exchangers" ;
-    schema1:name "Comparison of Martin's Empirical Correlation with Measurements on a Compact Plate Heat Exchanger" .
+    schema1:author ex:author64 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "1970" ;
+    schema1:genre "Spain" ;
+    schema1:name "Homenaje a Cataluña" .
 
 ex:book151 a schema1:Book ;
-    schema1:author ex:author123 ;
-    schema1:authorName "A.E. Putun" ;
-    schema1:datePublished "1999" ;
-    schema1:name "Pyrolysis of Hazelnut Shells in a Fixed-bed Tubular Reactor" .
+    schema1:author ex:author64 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2013-01-15" ;
+    schema1:genre "Biography & Autobiography" ;
+    schema1:isbn "9780141393025" ;
+    schema1:name "Penguin Classics Homage To Catalonia" .
 
 ex:book152 a schema1:Book ;
-    schema1:author ex:author124 ;
-    schema1:authorName "Francisco Morán Samaniego" ;
-    schema1:datePublished "1939" ;
-    schema1:name "Generalización a todo fluido de dos fórmulas para gases perfectos, fundamentales en meteorología" .
+    schema1:author ex:author94 ;
+    schema1:authorName "Antoni Dalmau i Ribalta" ;
+    schema1:datePublished "2015-09-23" ;
+    schema1:genre "History" ;
+    schema1:isbn "9788466420112" ;
+    schema1:name "Pecats capitals de la història de Catalunya. Luxúria" .
 
 ex:book153 a schema1:Book ;
-    schema1:author ex:author112 ;
-    schema1:authorName "Amitrajeet A. Batabyal" ;
-    schema1:datePublished "2016" ;
-    schema1:name "A Game Model of Competition for Market Share Between a New Good Producer and a Remanufacturer" .
+    schema1:author ex:author94 ;
+    schema1:authorName "Antoni Dalmau i Ribalta" ;
+    schema1:datePublished "2015-11-11" ;
+    schema1:genre "History" ;
+    schema1:isbn "9788466420129" ;
+    schema1:name "Pecats capitals de la història de Catalunya. Avarícia" .
 
 ex:book154 a schema1:Book ;
-    schema1:datePublished "1989" ;
-    schema1:isbn "9788476655566" ;
-    schema1:name "Actas" .
+    schema1:author ex:author95 ;
+    schema1:authorName "J. Friend" ;
+    schema1:datePublished "2012-05-15" ;
+    schema1:genre "Political Science" ;
+    schema1:isbn "9781137008206" ;
+    schema1:name "Stateless Nations" .
 
 ex:book155 a schema1:Book ;
-    schema1:author ex:author125 ;
-    schema1:authorName "Francisco Xavier Llampillas" ;
-    schema1:datePublished "1786" ;
-    schema1:genre "Literatura espanyola" ;
-    schema1:name "Respuesta del Señor abate Don Xavier Lampillas a los cargos recopilados por el Señor abate Tiraboschi en su carta al Señor abate N.N. sobre el Ensayo historico-apologetico de la literatura española ..." .
+    schema1:author ex:author64 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2021-12-04" ;
+    schema1:isbn "9798778727489" ;
+    schema1:name "Homage to Catalonia (1938) (Annotated)" .
 
 ex:book156 a schema1:Book ;
-    schema1:author ex:author126 ;
-    schema1:authorName "Robert Satet" ;
-    schema1:datePublished "1982" ;
-    schema1:name "La Dirección a Distancia" .
+    schema1:author ex:author64 ;
+    schema1:authorName "George Orwell" ;
+    schema1:datePublished "2020-11-24" ;
+    schema1:genre "Literary Collections" ;
+    schema1:isbn "9780241418017" ;
+    schema1:name "Orwell in Spain" .
 
 ex:book157 a schema1:Book ;
-    schema1:author ex:author127 ;
-    schema1:authorName "Richard A. Brown" ;
-    schema1:datePublished "2014" ;
-    schema1:name "Interaction of Mammalian Cells with ZnO Nanowire Arrays" .
+    schema1:author ex:author96 ;
+    schema1:authorName "Emmanuel Dalle Mulle" ;
+    schema1:datePublished "2018" ;
+    schema1:genre "Catalonia (Spain)" ;
+    schema1:isbn "9781138066885" ;
+    schema1:name "The Nationalism of the Rich" .
 
 ex:book158 a schema1:Book ;
-    schema1:author ex:author128 ;
-    schema1:authorName "Félix Cifuentes" ;
-    schema1:datePublished "1961" ;
-    schema1:name "Carta de Félix Cifuentes a José Luis L. Aranguren" .
+    schema1:author ex:author97 ;
+    schema1:authorName "Enric Bou" ;
+    schema1:datePublished "2017-07-24" ;
+    schema1:genre "Literary Criticism" ;
+    schema1:isbn "9781786945990" ;
+    schema1:name "The Barcelona Reader" .
 
 ex:book159 a schema1:Book ;
-    schema1:author ex:author129 ;
-    schema1:authorName "Martin A. Recio" ;
-    schema1:datePublished "2001-10" ;
-    schema1:genre "Religion" ;
-    schema1:isbn "9781403302243" ;
-    schema1:name "The Manger and the Throne" .
+    schema1:author ex:author98 ;
+    schema1:authorName "Silvia Bermúdez" ;
+    schema1:datePublished "2018-01-01" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781487520083" ;
+    schema1:name "A New History of Iberian Feminisms" .
 
 ex:book16 a schema1:Book ;
-    schema1:author ex:author16 ;
-    schema1:authorName "K. L. Powlesland" ;
-    schema1:datePublished "1954" ;
-    schema1:genre "Engineering" ;
-    schema1:name "A Constant Volume Radiochemical Hood" .
+    schema1:author ex:author14 ;
+    schema1:authorName "Robin Maria DeLugan" ;
+    schema1:datePublished "2020-11-29" ;
+    schema1:genre "Education" ;
+    schema1:isbn "9781000291988" ;
+    schema1:name "Remembering Violence" .
 
 ex:book160 a schema1:Book ;
-    schema1:author ex:author130 ;
-    schema1:authorName "El desván de la mente" ;
-    schema1:datePublished "2021" ;
-    schema1:isbn "9788418394737" ;
-    schema1:name "Viaje a la ciudad de las maravillas" .
+    schema1:author ex:author99 ;
+    schema1:authorName "Peter Seidler" ;
+    schema1:datePublished "2013" ;
+    schema1:genre "Business & Economics" ;
+    schema1:isbn "9783848274420" ;
+    schema1:name "How Business Started" .
 
 ex:book17 a schema1:Book ;
-    schema1:datePublished "1872" ;
-    schema1:name "A Devout Exercise in Honour of the Ever Blessed Virgin Mother of God, Mary ... From the Writings of Saint Bonaventure. In Latin and English" .
+    schema1:author ex:author15 ;
+    schema1:authorName "Àngel Casals" ;
+    schema1:datePublished "2019-12-05" ;
+    schema1:genre "Catalonia (Spain)" ;
+    schema1:isbn "9783034338110" ;
+    schema1:name "The Catalan Nation and Identity Throughout History" .
 
 ex:book18 a schema1:Book ;
-    schema1:author ex:author17 ;
-    schema1:authorName "Francis Reginald Statham" ;
-    schema1:datePublished "1872" ;
-    schema1:name "Rational Theology. A lecture, etc" .
+    schema1:author ex:author16 ;
+    schema1:authorName "William Francis Patrick Napier" ;
+    schema1:datePublished "1878" ;
+    schema1:genre "Peninsular War, 1807-1814" ;
+    schema1:name "History of the War in the Peninsula and in the South of France, from the Year 1807 to the Year 1814: 1812-1814" .
 
 ex:book19 a schema1:Book ;
-    schema1:datePublished "1972" ;
-    schema1:genre "Water" ;
-    schema1:name "Report to the Government of the Philippines on a Brief Survey of Inland Water Pollution in the Philippines" .
+    schema1:author ex:author17 ;
+    schema1:authorName "Richard Ford" ;
+    schema1:datePublished "1878" ;
+    schema1:genre "Spain" ;
+    schema1:name "A Handbook for Travellers in Spain" .
 
 ex:book2 a schema1:Book ;
+    schema1:aggregateRating ex:rating1 ;
     schema1:author ex:author2 ;
-    schema1:authorName "Varios autores" ;
-    schema1:datePublished "2017-02-24" ;
-    schema1:genre "Education" ;
-    schema1:isbn "9781524305444" ;
-    schema1:name "Enfermero/a. Servicio de Salud de Castilla y León (SACYL). Test del Temario" .
+    schema1:authorName "Gabriel Tortella" ;
+    schema1:datePublished "2017-08-22" ;
+    schema1:genre "Business & Economics" ;
+    schema1:isbn "9783319549514" ;
+    schema1:name "Catalonia in Spain" .
 
 ex:book20 a schema1:Book ;
     schema1:author ex:author18 ;
-    schema1:authorName "James Roberts" ;
-    schema1:datePublished "1886" ;
-    schema1:genre "Clergy" ;
-    schema1:name "A Memorial of the Rev. James W. Dale, D.D." .
+    schema1:authorName "F. X. Hernández" ;
+    schema1:datePublished "2014-10" ;
+    schema1:genre "History" ;
+    schema1:isbn "9788423207992" ;
+    schema1:name "The history of Catalonia" .
 
 ex:book21 a schema1:Book ;
-    schema1:datePublished "1928" ;
-    schema1:genre "Copyright" ;
-    schema1:name "The Canadian Patent Office Record and Register of Copyrights and Trade Marks" .
+    schema1:author ex:author19 ;
+    schema1:authorName "Michael A. Vargas" ;
+    schema1:datePublished "2018-04-23" ;
+    schema1:genre "History" ;
+    schema1:isbn "9783319767444" ;
+    schema1:name "Constructing Catalan Identity" .
 
 ex:book22 a schema1:Book ;
-    schema1:author ex:author19 ;
-    schema1:authorName "Oregon" ;
-    schema1:datePublished "2005" ;
-    schema1:genre "Law" ;
-    schema1:name "Oregon Revised Statutes" .
+    schema1:author ex:author20 ;
+    schema1:authorName "Club separista Català, New York" ;
+    schema1:datePublished "1927" ;
+    schema1:genre "Catalan problem" ;
+    schema1:name "Catalan Separatism" .
 
 ex:book23 a schema1:Book ;
-    schema1:author ex:author20 ;
-    schema1:authorName "Western Australia. Department of Agriculture" ;
-    schema1:datePublished "1963" ;
-    schema1:genre "Agriculture" ;
-    schema1:name "Journal of the Department of Agriculture, Western Australia" .
+    schema1:datePublished "1991" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The New Encyclopædia Britannica: Macropædia" .
 
 ex:book24 a schema1:Book ;
     schema1:author ex:author21 ;
-    schema1:authorName "New York (State). Governor" ;
-    schema1:datePublished "1948" ;
-    schema1:name "Public Papers ..." .
+    schema1:authorName "Sir William Francis Patrick Napier" ;
+    schema1:datePublished "1882" ;
+    schema1:genre "Peninsular War, 1807-1814" ;
+    schema1:name "1810-1812" .
 
 ex:book25 a schema1:Book ;
-    schema1:datePublished "1980" ;
-    schema1:genre "Criminal justice, Administration of" ;
-    schema1:name "Criminal Justice Profile" .
+    schema1:author ex:author22 ;
+    schema1:authorName "James L. Whitney" ;
+    schema1:datePublished "1879" ;
+    schema1:name "Catalogue of the Spanish library and of the Portuguese books bequeathed by George Tiknor to the Boston Public Library" .
 
 ex:book26 a schema1:Book ;
-    schema1:datePublished "1879" ;
-    schema1:genre "English wit and humor" ;
-    schema1:name "Punch" .
+    schema1:datePublished "1911" ;
+    schema1:genre "America" ;
+    schema1:name "Writings on American History" .
 
 ex:book27 a schema1:Book ;
-    schema1:author ex:author22 ;
-    schema1:authorName "Florida State College for Women" ;
-    schema1:datePublished "1926" ;
-    schema1:genre "College publications" ;
-    schema1:name "Catalogue" .
+    schema1:datePublished "1987" ;
+    schema1:genre "Catalonia (Spain)" ;
+    schema1:name "Catalònia Culture" .
 
 ex:book28 a schema1:Book ;
     schema1:author ex:author23 ;
-    schema1:authorName "Francis C. Turner" ;
-    schema1:datePublished "1977" ;
-    schema1:name "A Comparative Analysis of Urban Transportation Requirements, Volume I. Final Report" .
+    schema1:authorName "University of California (System). Institute of Library Research" ;
+    schema1:datePublished "1972" ;
+    schema1:genre "Library catalogs" ;
+    schema1:name "University of California Union Catalog of Monographs Cataloged by the Nine Campuses from 1963 Through 1967: Subjects" .
 
 ex:book29 a schema1:Book ;
-    schema1:author ex:author24 ;
-    schema1:authorName "Kent B. Joscelyn" ;
-    schema1:datePublished "1971" ;
-    schema1:name "A Systems Approach to the Analysis of the Drinking Driver Control System. Volume II - the Drinking Driver and Highway Safety, a Review of the Literature. Final Report" .
+    schema1:datePublished "2006" ;
+    schema1:genre "Catalans" ;
+    schema1:name "Catalan Review" .
 
 ex:book3 a schema1:Book ;
     schema1:author ex:author3 ;
-    schema1:authorName "MARTINEZ RODRIGUEZ, JORGE LUIS" ;
-    schema1:datePublished "2016-10-06" ;
-    schema1:genre "Mathematics" ;
-    schema1:isbn "9788428396585" ;
-    schema1:name "Control aplicado con variables de estado (2.ª edición)" .
+    schema1:authorName "Henry John Chaytor" ;
+    schema1:datePublished "1969" ;
+    schema1:genre "History" ;
+    schema1:name "A History of Aragon and Catalonia" .
 
 ex:book30 a schema1:Book ;
-    schema1:datePublished "1889" ;
-    schema1:genre "American literature" ;
-    schema1:name "Trade Circular and Publishers' Bulletin" .
+    schema1:datePublished "1923" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Americana" .
 
 ex:book31 a schema1:Book ;
-    schema1:author ex:author25 ;
-    schema1:authorName "British Columbia. Department of Agriculture" ;
-    schema1:datePublished "1929" ;
-    schema1:genre "Agriculture" ;
-    schema1:name "Report of the British Columbia Department of Agriculture" .
+    schema1:datePublished "1901" ;
+    schema1:genre "English literature" ;
+    schema1:name "Literature" .
 
 ex:book32 a schema1:Book ;
-    schema1:author ex:author26 ;
-    schema1:authorName "New York (State). Office of Rent Administration" ;
-    schema1:datePublished "1993-10-04" ;
-    schema1:genre "Rent control" ;
-    schema1:name "Policy Statement" .
+    schema1:author ex:author24 ;
+    schema1:authorName "Kenneth McRoberts" ;
+    schema1:datePublished "2001" ;
+    schema1:genre "History" ;
+    schema1:name "Catalonia" .
 
 ex:book33 a schema1:Book ;
-    schema1:datePublished "unknown" ;
-    schema1:name "State of New York Supreme Court" .
+    schema1:author ex:author25 ;
+    schema1:authorName "Víctor Alba" ;
+    schema1:datePublished "1975" ;
+    schema1:genre "History" ;
+    schema1:name "Catalonia" .
 
 ex:book34 a schema1:Book ;
-    schema1:datePublished "1977" ;
-    schema1:genre "Market surveys" ;
-    schema1:name "Survey Research" .
+    schema1:datePublished "1911" ;
+    schema1:genre "History, Modern" ;
+    schema1:name "The Cambridge Modern History" .
 
 ex:book35 a schema1:Book ;
-    schema1:author ex:author27 ;
-    schema1:authorName "Illinois Information Service" ;
-    schema1:datePublished "2002-02-15" ;
-    schema1:genre "Illinois" ;
-    schema1:name "Press Summary - Illinois Information Service" .
+    schema1:author ex:author26 ;
+    schema1:authorName "Josep Maria Puigjaner" ;
+    schema1:datePublished "1989" ;
+    schema1:genre "History" ;
+    schema1:name "Catalonia" .
 
 ex:book36 a schema1:Book ;
-    schema1:author ex:author28 ;
-    schema1:authorName "India. Archæological Department. Southern Circle, Madras" ;
-    schema1:datePublished "1921" ;
-    schema1:genre "Chennai (India)" ;
-    schema1:name "Report" .
+    schema1:author ex:author27 ;
+    schema1:authorName "Library of Congress" ;
+    schema1:datePublished "1977" ;
+    schema1:genre "Library catalogs" ;
+    schema1:name "Subject Catalog, 1977" .
 
 ex:book37 a schema1:Book ;
-    schema1:author ex:author29 ;
-    schema1:authorName "R. C. Pfefer" ;
-    schema1:datePublished "1989" ;
-    schema1:name "The Safety Impact of the 65 Mph Speed Limit - a Time Series Analysis. Final Grant Report" .
+    schema1:datePublished "1931" ;
+    schema1:genre "Periodicals" ;
+    schema1:name "A London Bibliography of the Social Sciences" .
 
 ex:book38 a schema1:Book ;
-    schema1:author ex:author30 ;
-    schema1:authorName "Mark W. Parrino" ;
-    schema1:datePublished "1993" ;
-    schema1:genre "Drug abuse" ;
-    schema1:name "State Methadone Treatment Guidelines" .
+    schema1:author ex:author28 ;
+    schema1:authorName "Kenneth Medhurst" ;
+    schema1:datePublished "1977" ;
+    schema1:genre "Basques" ;
+    schema1:name "The Basques and Catalans" .
 
 ex:book39 a schema1:Book ;
-    schema1:author ex:author31 ;
-    schema1:authorName "Louis Du Pont Syle" ;
-    schema1:datePublished "1896" ;
-    schema1:genre "English poetry" ;
-    schema1:name "From Milton to Tennyson" .
+    schema1:author ex:author29 ;
+    schema1:authorName "Mauricio Wiesenthal" ;
+    schema1:datePublished "1979" ;
+    schema1:genre "Spain" ;
+    schema1:isbn "9780517300336" ;
+    schema1:name "Spain Today" .
 
 ex:book4 a schema1:Book ;
     schema1:author ex:author4 ;
-    schema1:authorName "Diego Mariño Sánchez" ;
-    schema1:datePublished "2014-01-31" ;
+    schema1:authorName "Cortijo Ocaña, Antonio" ;
+    schema1:datePublished "2020-10-16" ;
     schema1:genre "History" ;
-    schema1:isbn "9788432316920" ;
-    schema1:name "Injertando a Dioniso" .
+    schema1:isbn "9781799866169" ;
+    schema1:name "History of Catalonia and Its Implications for Contemporary Nationalism and Cultural Conflict" .
 
 ex:book40 a schema1:Book ;
-    schema1:datePublished "1919" ;
-    schema1:name "The Outlook" .
+    schema1:author ex:author30 ;
+    schema1:authorName "H. J. Chaytor" ;
+    schema1:datePublished "1987" ;
+    schema1:name "A History of Aragon and Catalonia" .
 
 ex:book41 a schema1:Book ;
-    schema1:datePublished "1960" ;
-    schema1:genre "Gas cooled reactors" ;
-    schema1:name "A Preliminary Study of a 1000 KW(e) Mobile Nuclear Power System" .
+    schema1:datePublished "1952" ;
+    schema1:genre "Catalans" ;
+    schema1:name "Memorandum on the Anti-Catalan Policy of General Franco's Government" .
 
 ex:book42 a schema1:Book ;
-    schema1:author ex:author32 ;
-    schema1:authorName "Walter Yust" ;
-    schema1:datePublished "1960" ;
-    schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "Encyclopædia Britannica" .
+    schema1:author ex:author31 ;
+    schema1:authorName "Chandler Rathfon Post" ;
+    schema1:datePublished "1930" ;
+    schema1:genre "Painting, Spanish" ;
+    schema1:name "A History of Spanish Painting: pt.1. [Pre-Romanesque style] pt.2. The Romanesque style" .
 
 ex:book43 a schema1:Book ;
-    schema1:author ex:author33 ;
-    schema1:authorName "University of Georgia. Graduate School" ;
-    schema1:datePublished "1966" ;
-    schema1:name "Graduate Bulletin" .
+    schema1:author ex:author32 ;
+    schema1:authorName "Mandell Creighton" ;
+    schema1:datePublished "1928" ;
+    schema1:genre "Electronic journals" ;
+    schema1:name "The English Historical Review" .
 
 ex:book44 a schema1:Book ;
-    schema1:author ex:author32 ;
-    schema1:authorName "Walter Yust" ;
-    schema1:datePublished "1947" ;
-    schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "Encyclopædia Britannica: Edwa to Extract" .
+    schema1:datePublished "2006" ;
+    schema1:genre "Information science" ;
+    schema1:name "Library & Information Science Abstracts" .
 
 ex:book45 a schema1:Book ;
-    schema1:datePublished "1921" ;
-    schema1:genre "Gardening" ;
-    schema1:name "Garden Magazine and Home Builder" .
+    schema1:datePublished "1963" ;
+    schema1:name "The Oxford Magazine" .
 
 ex:book46 a schema1:Book ;
-    schema1:datePublished "1925" ;
-    schema1:genre "Bibliography" ;
-    schema1:name "Reading with a Purpose" .
+    schema1:author ex:author33 ;
+    schema1:authorName "Arthur James Wells" ;
+    schema1:datePublished "1994" ;
+    schema1:genre "Bibliography, National" ;
+    schema1:name "The British National Bibliography" .
 
 ex:book47 a schema1:Book ;
-    schema1:datePublished "1909" ;
-    schema1:genre "Carpentry" ;
-    schema1:name "Woodworkers Review" .
+    schema1:author ex:author34 ;
+    schema1:authorName "Unesco" ;
+    schema1:datePublished "1986" ;
+    schema1:genre "International Youth Year, 1985" ;
+    schema1:name "World Congress on Youth, Barcelona, Spain, 8-15 July 1985" .
 
 ex:book48 a schema1:Book ;
-    schema1:author ex:author34 ;
-    schema1:authorName "Theodore Taylor" ;
-    schema1:datePublished "1980" ;
-    schema1:name "Augmentation of Research and Analysis Capabilities for Timely Support of Automotive Fuel Economy Activities. Volume II: Appendices A Through C. Final Report" .
+    schema1:author ex:author35 ;
+    schema1:authorName "Salvador de Madariaga" ;
+    schema1:datePublished "1942" ;
+    schema1:genre "Spain" ;
+    schema1:name "Spain" .
 
 ex:book49 a schema1:Book ;
-    schema1:datePublished "1913" ;
-    schema1:genre "Engineering" ;
-    schema1:name "Chemical Engineer" .
+    schema1:author ex:author35 ;
+    schema1:authorName "Salvador de Madariaga" ;
+    schema1:datePublished "1930" ;
+    schema1:genre "Spain" ;
+    schema1:name "Spain by S. de Madariaga" .
 
 ex:book5 a schema1:Book ;
     schema1:author ex:author5 ;
-    schema1:authorName "Richard W. Pelham" ;
-    schema1:datePublished "1874" ;
-    schema1:genre "Celibacy" ;
-    schema1:name "A Shaker's Answer to the Oft-repeated Question, \"What Would Become of the World If All Should Become Shakers?\"" .
+    schema1:authorName "Jaume Sobrequés i Callicó" ;
+    schema1:datePublished "2007" ;
+    schema1:genre "History" ;
+    schema1:isbn "9788485031863" ;
+    schema1:name "History of Catalonia" .
 
 ex:book50 a schema1:Book ;
-    schema1:author ex:author35 ;
-    schema1:authorName "Great Britain. Department of Health and Social Security" ;
-    schema1:datePublished "1974" ;
-    schema1:genre "Political Science" ;
-    schema1:name "Providing a Comprehensive District Psychiatric Service for the Adult Mentally Ill" .
+    schema1:author ex:author27 ;
+    schema1:authorName "Library of Congress" ;
+    schema1:datePublished "1978" ;
+    schema1:genre "Library catalogs" ;
+    schema1:name "Subject Catalog, 1978" .
 
 ex:book51 a schema1:Book ;
     schema1:author ex:author36 ;
-    schema1:authorName "C. H. Olver" ;
-    schema1:datePublished "1966" ;
-    schema1:genre "Fishery resources" ;
-    schema1:name "Selection of a Mesh Size for the Commercial Gill-net Fishery of Walleye, Stizostedion Vitreum (Mitchill), in Sachigo Lake, Ontario" .
+    schema1:authorName "Graham J. Shields" ;
+    schema1:datePublished "1994" ;
+    schema1:genre "History" ;
+    schema1:name "Spain" .
 
 ex:book52 a schema1:Book ;
-    schema1:author ex:author37 ;
-    schema1:authorName "Robert F. Stone and Company" ;
-    schema1:datePublished "1955" ;
-    schema1:genre "Reporters and reporting" ;
-    schema1:name "A Handbook for Reporters" .
+    schema1:datePublished "1920" ;
+    schema1:genre "France" ;
+    schema1:name "France" .
 
 ex:book53 a schema1:Book ;
-    schema1:author ex:author38 ;
-    schema1:authorName "Virginia" ;
-    schema1:datePublished "1979" ;
-    schema1:genre "Session laws" ;
-    schema1:name "Acts Passed at a General Assembly of the Commonwealth of Virginia" .
+    schema1:author ex:author37 ;
+    schema1:authorName "Michelin Tyre Company, ltd. Tourist Service" ;
+    schema1:datePublished "1982" ;
+    schema1:genre "Spain" ;
+    schema1:name "Spain" .
 
 ex:book54 a schema1:Book ;
-    schema1:author ex:author39 ;
-    schema1:authorName "Roger John Williams" ;
-    schema1:datePublished "1946" ;
-    schema1:genre "Biochemistry" ;
-    schema1:name "A Textbook of Biochemistry" .
+    schema1:author ex:author38 ;
+    schema1:authorName "John Emerich Edward Dalberg Acton Baron Acton" ;
+    schema1:datePublished "1906" ;
+    schema1:genre "Asia" ;
+    schema1:name "The Cambridge Modern History" .
 
 ex:book55 a schema1:Book ;
-    schema1:author ex:author40 ;
-    schema1:authorName "Frederick Goodrich Henke" ;
-    schema1:datePublished "1910" ;
-    schema1:genre "Rites and ceremonies" ;
-    schema1:name "A Study in the Psychology of Ritualism" .
+    schema1:datePublished "1929" ;
+    schema1:genre "Art" ;
+    schema1:name "Parnassus" .
 
 ex:book56 a schema1:Book ;
-    schema1:datePublished "1922" ;
-    schema1:genre "Chicago (Ill.)" ;
-    schema1:name "Commerce" .
+    schema1:author ex:author39 ;
+    schema1:authorName "Charles George Herbermann" ;
+    schema1:datePublished "1913" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Catholic Encyclopedia" .
 
 ex:book57 a schema1:Book ;
-    schema1:datePublished "2007-08-28" ;
-    schema1:genre "Business enterprises" ;
-    schema1:name "Vietnam Economic News" .
+    schema1:author ex:author40 ;
+    schema1:authorName "Milton Mariano Azevedo" ;
+    schema1:datePublished "1991" ;
+    schema1:genre "History" ;
+    schema1:name "Contemporary Catalonia in Spain and Europe" .
 
 ex:book58 a schema1:Book ;
     schema1:author ex:author41 ;
-    schema1:authorName "Russell W. Zub" ;
-    schema1:datePublished "1981" ;
-    schema1:name "A Computer Program (VEHSIM) for Vehicle Fuel Economy and Performance Simulation (automobiles and Light Trucks). Volume I: Description and Analysis. Final Report" .
+    schema1:authorName "David J. George" ;
+    schema1:datePublished "1996" ;
+    schema1:genre "Literary Criticism" ;
+    schema1:name "Contemporary Catalan Theatre" .
 
 ex:book59 a schema1:Book ;
-    schema1:datePublished "1910" ;
-    schema1:genre "Arbitration (International law)" ;
-    schema1:name "The Advocate of Peace" .
+    schema1:datePublished "1967" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "Chamber's Encyclopaedia" .
 
 ex:book6 a schema1:Book ;
     schema1:author ex:author6 ;
-    schema1:authorName "William Percivall" ;
-    schema1:datePublished "1871" ;
-    schema1:genre "Horses" ;
-    schema1:name "Hippopathology: a Systematic Treatise on the Disorders and Lameness of the Horse" .
+    schema1:authorName "Michael Eaude" ;
+    schema1:datePublished "2011-10-12" ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9781908493255" ;
+    schema1:name "Catalonia - A Cultural History" .
 
 ex:book60 a schema1:Book ;
-    schema1:author ex:author42 ;
-    schema1:authorName "Ivy May Bolton" ;
-    schema1:datePublished "1933" ;
-    schema1:genre "Great Britain" ;
-    schema1:name "A Loyal Foe" .
+    schema1:datePublished "1973" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "Chambers's Encyclopaedia" .
 
 ex:book61 a schema1:Book ;
-    schema1:datePublished "1897" ;
-    schema1:genre "Periodicals" ;
-    schema1:name "Cosmopolitan" .
+    schema1:author ex:author42 ;
+    schema1:authorName "Henry Smith Williams" ;
+    schema1:datePublished "1926" ;
+    schema1:genre "World history" ;
+    schema1:name "The Historians' History of the World: These eventful years (part II)" .
 
 ex:book62 a schema1:Book ;
-    schema1:datePublished "1908" ;
-    schema1:genre "Engineering" ;
-    schema1:name "The Engineer" .
+    schema1:datePublished "1977" ;
+    schema1:genre "United States" ;
+    schema1:name "Inquiry" .
 
 ex:book63 a schema1:Book ;
     schema1:author ex:author43 ;
-    schema1:authorName "Marvin Powell and Robert E. Mangum" ;
-    schema1:datePublished "1971" ;
-    schema1:name "Introdction To Educational Psychology" .
+    schema1:authorName "James W. Cortada" ;
+    schema1:datePublished "1982-12-20" ;
+    schema1:genre "History" ;
+    schema1:name "Historical Dictionary of the Spanish Civil War, 1936-1939" .
 
 ex:book64 a schema1:Book ;
     schema1:author ex:author44 ;
-    schema1:authorName "Leavitt Leavitt" ;
-    schema1:datePublished "2018-10-12" ;
-    schema1:genre "Biography & Autobiography" ;
-    schema1:isbn "9781391877341" ;
-    schema1:name "Catalogue of a Private Library, Comprising an Unusually Fine Collection of Illustrated and Standard Works of the Best English and American Editions" .
+    schema1:authorName "A. Hoyt Hobbs" ;
+    schema1:datePublished "1996" ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9781569521274" ;
+    schema1:name "Fielding's Spain" .
 
 ex:book65 a schema1:Book ;
-    schema1:author ex:author45 ;
-    schema1:authorName "Patronato de Protección a la mujer" ;
-    schema1:datePublished "1965" ;
-    schema1:name "El Patronato de Protección a la Mujer" .
+    schema1:author ex:author44 ;
+    schema1:authorName "A. Hoyt Hobbs" ;
+    schema1:datePublished "1994-02-01" ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9781569520215" ;
+    schema1:name "Spain & Portugal, 1994" .
 
 ex:book66 a schema1:Book ;
-    schema1:author ex:author46 ;
-    schema1:authorName "Carlos A. Marelli" ;
-    schema1:datePublished "1936" ;
-    schema1:genre "Jardín Zoológico, La Plata" ;
-    schema1:name "Datos concretos de ciencias naturales" .
+    schema1:author ex:author45 ;
+    schema1:authorName "Sílvia Planas i Marcé" ;
+    schema1:datePublished "2009" ;
+    schema1:genre "History" ;
+    schema1:name "A History of Jewish Catalonia" .
 
 ex:book67 a schema1:Book ;
-    schema1:author ex:author47 ;
-    schema1:authorName "María Puig" ;
-    schema1:datePublished "2012-07" ;
-    schema1:isbn "9783659024900" ;
-    schema1:name "Los centros educativos ante la educación para la ciudadanía" .
+    schema1:datePublished "1967" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "Chambers's Encyclopedia" .
 
 ex:book68 a schema1:Book ;
-    schema1:author ex:author48 ;
-    schema1:authorName "A. Garrido Domínguez" ;
-    schema1:datePublished "2020-01-28" ;
-    schema1:genre "Fiction" ;
-    schema1:isbn "9788418203947" ;
-    schema1:name "Detestable, ruin guerra" .
+    schema1:datePublished "1992" ;
+    schema1:genre "Biography" ;
+    schema1:name "Who's who in Spain" .
 
 ex:book69 a schema1:Book ;
-    schema1:author ex:author49 ;
-    schema1:authorName "Innocencio Francisco da Silva" ;
-    schema1:datePublished "1867" ;
-    schema1:name "Diccionario bibliográphico portuguez" .
+    schema1:author ex:author46 ;
+    schema1:authorName "Amparo Tuson" ;
+    schema1:datePublished "1985" ;
+    schema1:name "Language, Community and School in Barcelona" .
 
 ex:book7 a schema1:Book ;
-    schema1:author ex:author7 ;
-    schema1:authorName "Joshilyn Jackson" ;
-    schema1:datePublished "2016-06-07" ;
-    schema1:genre "Fiction" ;
-    schema1:isbn "9788416502271" ;
-    schema1:name "Distinto a todos" .
+    schema1:author ex:author6 ;
+    schema1:authorName "Michael Eaude" ;
+    schema1:datePublished "2022-09-20" ;
+    schema1:genre "Political Science" ;
+    schema1:isbn "9781786808592" ;
+    schema1:name "A People's History of Catalonia" .
 
 ex:book70 a schema1:Book ;
-    schema1:author ex:author50 ;
-    schema1:authorName "Andrés A Mata" ;
-    schema1:datePublished "2023-07-18" ;
-    schema1:isbn "9781020887581" ;
-    schema1:name "Idilio Trágico" .
+    schema1:author ex:author47 ;
+    schema1:authorName "New York Public Library. Research Libraries" ;
+    schema1:datePublished "1979" ;
+    schema1:genre "Library catalogs" ;
+    schema1:name "Dictionary Catalog of the Research Libraries of the New York Public Library, 1911-1971" .
 
 ex:book71 a schema1:Book ;
-    schema1:author ex:author51 ;
-    schema1:authorName "Ernesto Garc a. Uranga" ;
-    schema1:datePublished "2012-08" ;
-    schema1:genre "Reference" ;
-    schema1:isbn "9781463331313" ;
-    schema1:name "DesmitificacióN de Dogmas y Devociones CatóLicos en Cien añOs de Soledad" .
+    schema1:author ex:author48 ;
+    schema1:authorName "Merton W. Stancliff" ;
+    schema1:datePublished "1980" ;
+    schema1:genre "Andorra" ;
+    schema1:name "Cultural and Ecological Aspects of Marriage, Succession, and Migration in a Peasant Community in the Catalan Pyrenees" .
 
 ex:book72 a schema1:Book ;
-    schema1:author ex:author52 ;
-    schema1:authorName "A. Paz y Melia" ;
-    schema1:datePublished "1890" ;
-    schema1:name "Sales espanolas Ã³ Agudezas del ingenio nacional" .
+    schema1:datePublished "1705" ;
+    schema1:genre "Barcelona (Spain)" ;
+    schema1:name "A Geographical and Historical Account of the Principality of Catalonia, and Earldom of Barcelona" .
 
 ex:book73 a schema1:Book ;
-    schema1:author ex:author53 ;
-    schema1:authorName "Gerard A. Gioia" ;
-    schema1:datePublished "2019" ;
-    schema1:isbn "9788416231737" ;
-    schema1:name "BRIEF-P" .
+    schema1:author ex:author35 ;
+    schema1:authorName "Salvador de Madariaga" ;
+    schema1:datePublished "1930" ;
+    schema1:genre "Spain" ;
+    schema1:name "Spain by S. de Madariaga" .
 
 ex:book74 a schema1:Book ;
-    schema1:author ex:author54 ;
-    schema1:authorName "Institut d'Estudis Catalans" ;
-    schema1:datePublished "2019-11-22" ;
-    schema1:genre "Education" ;
-    schema1:isbn "9788499655048" ;
-    schema1:name "Homenatge de les lletres catalanes a Pompeu Fabra (1928)" .
+    schema1:author ex:author49 ;
+    schema1:authorName "VÃ-Ctor 1824-1901 Balaguer" ;
+    schema1:datePublished "2025-05-22" ;
+    schema1:genre "History" ;
+    schema1:isbn "9781025174037" ;
+    schema1:name "Historia de Cataluña" .
 
 ex:book75 a schema1:Book ;
-    schema1:author ex:author55 ;
-    schema1:authorName "Carmen de Burgos" ;
-    schema1:datePublished "2023-12-18" ;
-    schema1:genre "Fiction" ;
-    schema1:name "La Rampa" .
+    schema1:datePublished "1908" ;
+    schema1:name "Catholic Encyclopedia" .
 
 ex:book76 a schema1:Book ;
-    schema1:author ex:author56 ;
-    schema1:authorName "Nuccio Ordine" ;
-    schema1:datePublished "2023-03-02" ;
-    schema1:genre "Literary Criticism" ;
-    schema1:isbn "9788477276715" ;
-    schema1:name "Els homes no són illes" .
+    schema1:author ex:author50 ;
+    schema1:authorName "Dana Facaros" ;
+    schema1:datePublished "2005" ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9781860111891" ;
+    schema1:name "Spain" .
 
 ex:book77 a schema1:Book ;
-    schema1:author ex:author57 ;
-    schema1:authorName "Mario A. Gragera Jariego" ;
-    schema1:datePublished "2015-11-01" ;
-    schema1:isbn "9781537455792" ;
-    schema1:name "La Historia Del Reino" .
+    schema1:author ex:author51 ;
+    schema1:authorName "Herbert Lionel Matthews" ;
+    schema1:datePublished "1961" ;
+    schema1:genre "Spain" ;
+    schema1:name "The yoke and the arrows" .
 
 ex:book78 a schema1:Book ;
-    schema1:author ex:author58 ;
-    schema1:authorName "Ángel Torres Quesada" ;
-    schema1:datePublished "1998" ;
-    schema1:genre "Science fiction, Spanish" ;
-    schema1:isbn "9788440681164" ;
-    schema1:name "El Orden estelar 4" .
+    schema1:datePublished "1980" ;
+    schema1:genre "Spain" ;
+    schema1:name "Spanish Economic News Service" .
 
 ex:book79 a schema1:Book ;
-    schema1:aggregateRating ex:rating1 ;
-    schema1:author ex:author59 ;
-    schema1:authorName "Olivia Gates" ;
-    schema1:datePublished "2012-01-26" ;
-    schema1:genre "Fiction" ;
-    schema1:isbn "9788490104774" ;
-    schema1:name "Domar a un jeque" .
+    schema1:datePublished "1990" ;
+    schema1:genre "Humanities" ;
+    schema1:name "Humanities Index" .
 
 ex:book8 a schema1:Book ;
-    schema1:author ex:author8 ;
-    schema1:authorName "John Lawson Stoddard" ;
-    schema1:datePublished "1897" ;
-    schema1:genre "Asia" ;
-    schema1:name "Lectures: Sicily. Genoa. A drive through the Engadine" .
+    schema1:author ex:author7 ;
+    schema1:authorName "Oriol Vergés" ;
+    schema1:datePublished "1991" ;
+    schema1:genre "History" ;
+    schema1:name "The Generalitat in the History of Catalonia" .
 
 ex:book80 a schema1:Book ;
-    schema1:author ex:author60 ;
-    schema1:authorName "Theresina del Rosal" ;
-    schema1:datePublished "2006" ;
-    schema1:genre "Authors, Spanish" ;
-    schema1:isbn "9788481684100" ;
-    schema1:name "Cartes a Xovellanos (1804-1811)" .
+    schema1:datePublished "2002" ;
+    schema1:genre "Language Arts & Disciplines" ;
+    schema1:name "The Best Books for Academic Libraries: World history" .
 
 ex:book81 a schema1:Book ;
-    schema1:author ex:author61 ;
-    schema1:authorName "Pau Romeu Torres" ;
-    schema1:datePublished "2013" ;
-    schema1:name "Aplicació del coaching a l'aula" .
+    schema1:author ex:author52 ;
+    schema1:authorName "Frank Moore Colby" ;
+    schema1:datePublished "1922" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The New International Encyclopædia" .
 
 ex:book82 a schema1:Book ;
-    schema1:author ex:author62 ;
-    schema1:authorName "Ana María Vázquez Hoys" ;
-    schema1:datePublished "1997" ;
-    schema1:isbn "9788436235623" ;
-    schema1:name "Historia antigua universal Próximo Oriente y Egipto (1er cuatrimestre)" .
+    schema1:author ex:author53 ;
+    schema1:authorName "Josephus Nelson Larned" ;
+    schema1:datePublished "1924" ;
+    schema1:genre "History" ;
+    schema1:name "The New Larned History for Ready Reference, Reading and Research" .
 
 ex:book83 a schema1:Book ;
-    schema1:author ex:author63 ;
-    schema1:authorName "José Miguel Morán Turina" ;
-    schema1:datePublished "1985" ;
-    schema1:genre "Travel" ;
-    schema1:name "El coleccionismo en España" .
+    schema1:author ex:author54 ;
+    schema1:authorName "Engineering Societies Library" ;
+    schema1:datePublished "1963" ;
+    schema1:genre "Catalogs, CLassified (Universal decimal)" ;
+    schema1:name "Classed Subject Catalog. Index" .
 
 ex:book84 a schema1:Book ;
-    schema1:author ex:author64 ;
-    schema1:authorName "A. Picaud" ;
-    schema1:datePublished "2004" ;
-    schema1:isbn "9788489339248" ;
-    schema1:name "Liber Sancti Jacobi" .
+    schema1:datePublished "1894" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopaedia Britannica" .
 
 ex:book85 a schema1:Book ;
-    schema1:author ex:author65 ;
-    schema1:authorName "José A. Muñoz Najar" ;
-    schema1:datePublished "2004" ;
-    schema1:name "Dirección integral de la innovación" .
+    schema1:datePublished "1995" ;
+    schema1:genre "Law" ;
+    schema1:name "Law Books Published" .
 
 ex:book86 a schema1:Book ;
-    schema1:datePublished "1981" ;
-    schema1:isbn "9788436213966" ;
-    schema1:name "Historia contemporánea universal" .
+    schema1:author ex:author55 ;
+    schema1:authorName "Charles Oman" ;
+    schema1:datePublished "1930" ;
+    schema1:genre "Peninsular War, 1807-1814" ;
+    schema1:name "A History of the Peninsular War: 1807-1809. From the Treaty of Fontainebleau to the battle of Corunna" .
 
 ex:book87 a schema1:Book ;
-    schema1:author ex:author66 ;
-    schema1:authorName "Débora Chomski" ;
-    schema1:datePublished "2012-06" ;
-    schema1:genre "Education" ;
-    schema1:isbn "9788497889940" ;
-    schema1:name "L'ús didàctic dels mitjans de comunicació i les TIC a l'educació infantil" .
+    schema1:datePublished "1952" ;
+    schema1:genre "Humanities" ;
+    schema1:name "International Index to Periodicals" .
 
 ex:book88 a schema1:Book ;
-    schema1:aggregateRating ex:rating2 ;
-    schema1:author ex:author67 ;
-    schema1:authorName "A. Mital" ;
-    schema1:datePublished "1997-06-12" ;
-    schema1:genre "Technology & Engineering" ;
-    schema1:isbn "9780748407286" ;
-    schema1:name "Guide to Manual Materials Handling" .
+    schema1:author ex:author56 ;
+    schema1:authorName "Hispanic Society of America. Library" ;
+    schema1:datePublished "1962" ;
+    schema1:genre "Civilization, Hispanic" ;
+    schema1:name "Catalogue of the Library" .
 
 ex:book89 a schema1:Book ;
-    schema1:datePublished "unknown" ;
-    schema1:name "הלכות הרי\"ף (בבא מציעא ט)" .
+    schema1:author ex:author57 ;
+    schema1:authorName "Daniel Coit Gilman" ;
+    schema1:datePublished "1911" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The New International Encyclopædia" .
 
 ex:book9 a schema1:Book ;
-    schema1:author ex:author9 ;
-    schema1:authorName "John Holland Rose" ;
-    schema1:datePublished "1900" ;
-    schema1:genre "Europe" ;
-    schema1:name "A Century of Continental History, 1780-1880" .
+    schema1:author ex:author8 ;
+    schema1:authorName "Agustí Alcoberro" ;
+    schema1:datePublished "2010" ;
+    schema1:isbn "9788441219656" ;
+    schema1:name "The History of Catalonia" .
 
 ex:book90 a schema1:Book ;
-    schema1:author ex:author68 ;
-    schema1:authorName "Augusto R. González A." ;
-    schema1:datePublished "1976" ;
-    schema1:name "Características químicas y físicas de dos suelos cultivados en la provincia de Sevilla" .
+    schema1:author ex:author58 ;
+    schema1:authorName "Thomas Spencer Baynes" ;
+    schema1:datePublished "1887" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopædia Britannica" .
 
 ex:book91 a schema1:Book ;
-    schema1:author ex:author69 ;
-    schema1:authorName "David A. Rives" ;
-    schema1:datePublished "1993" ;
-    schema1:genre "Fitness walking" ;
-    schema1:isbn "9789505246502" ;
-    schema1:name "Adelgazar caminando" .
+    schema1:datePublished "1892" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "Encyclopaedia Britannica" .
 
 ex:book92 a schema1:Book ;
-    schema1:author ex:author70 ;
-    schema1:authorName "Rosemary Rogers" ;
-    schema1:datePublished "2009-03-10" ;
-    schema1:genre "Fiction" ;
-    schema1:isbn "9788468716602" ;
-    schema1:name "Vuelve a mí" .
+    schema1:datePublished "1907" ;
+    schema1:genre "Art" ;
+    schema1:name "The Burlington Magazine for Connoisseurs" .
 
 ex:book93 a schema1:Book ;
-    schema1:author ex:author71 ;
-    schema1:authorName "Rosa Rubio Prado" ;
-    schema1:datePublished "2018" ;
-    schema1:isbn "9788414220658" ;
-    schema1:name "Orientación educativa" .
+    schema1:datePublished "1910" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopædia Britannica: Calhoun-Chatelaine" .
 
 ex:book94 a schema1:Book ;
-    schema1:author ex:author72 ;
-    schema1:authorName "Tatiana Inus Regalado Lugo" ;
-    schema1:datePublished "2021-07-13" ;
-    schema1:isbn "9798536722138" ;
-    schema1:name "Feng Shui" .
+    schema1:datePublished "1910" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopedia Britannica" .
 
 ex:book95 a schema1:Book ;
-    schema1:author ex:author73 ;
-    schema1:authorName "Laura García Fernández" ;
-    schema1:datePublished "2016" ;
-    schema1:name "Aplicació Android per a la Pedagogia Musical" .
+    schema1:datePublished "1984" ;
+    schema1:genre "Animals" ;
+    schema1:name "The Zoological Record" .
 
 ex:book96 a schema1:Book ;
-    schema1:author ex:author74 ;
-    schema1:authorName "Luis Felipe Cabezas A." ;
-    schema1:datePublished "1881" ;
-    schema1:name "Bocio Exoftalmico" .
+    schema1:author ex:author59 ;
+    schema1:authorName "Hugh Chrisholm" ;
+    schema1:datePublished "1911" ;
+    schema1:genre "Encyclopedias and dictionaries" ;
+    schema1:name "The Encyclopaedia Britannica" .
 
 ex:book97 a schema1:Book ;
-    schema1:author ex:author75 ;
-    schema1:authorName "A. Castro Sierra" ;
-    schema1:datePublished "1980" ;
-    schema1:name "Las úlceras por presión" .
+    schema1:author ex:author60 ;
+    schema1:authorName "Freedom Press" ;
+    schema1:datePublished "1990" ;
+    schema1:genre "History" ;
+    schema1:name "Spain, 1936-1939" .
 
 ex:book98 a schema1:Book ;
-    schema1:author ex:author76 ;
-    schema1:authorName "Lionel a. (Lionel Arthur) 1. Tollemache" ;
-    schema1:datePublished "2016-08-27" ;
-    schema1:genre "History" ;
-    schema1:isbn "9781371044688" ;
-    schema1:name "SAFE STUDIES BY MR & MRS LIONE" .
+    schema1:author ex:author61 ;
+    schema1:authorName "Langenscheidt Publishers" ;
+    schema1:datePublished "1999-12" ;
+    schema1:genre "Travel" ;
+    schema1:isbn "9780887294952" ;
+    schema1:name "Insight Compact Guide Costa Brava" .
 
 ex:book99 a schema1:Book ;
-    schema1:author ex:author77 ;
-    schema1:authorName "Antonio Contreras" ;
-    schema1:datePublished "2015-09-10" ;
-    schema1:genre "Literary Collections" ;
-    schema1:isbn "9788416306688" ;
-    schema1:name "Palabras sabias a oídos sordos" .
-
-ex:author1 a schema1:Person ;
-    schema1:name "CEADUC" .
-
-ex:author10 a schema1:Person ;
-    schema1:name "Henry Edward Manning" .
-
-ex:author100 a schema1:Person ;
-    schema1:name "Antonio de Leiva" .
-
-ex:author101 a schema1:Person ;
-    schema1:name "Roger Green" .
-
-ex:author102 a schema1:Person ;
-    schema1:name "María del Carmen Polo Abad" .
-
-ex:author103 a schema1:Person ;
-    schema1:name "Juan de Mena" .
-
-ex:author104 a schema1:Person ;
-    schema1:name "Presbyterian Church in the U S a (Old S" .
-
-ex:author105 a schema1:Person ;
-    schema1:name "A Mabel (Blackman) Mrs Fitch" .
-
-ex:author106 a schema1:Person ;
-    schema1:name "Universidad de Navarra. Instituto de Historia de la Iglesia" .
-
-ex:author107 a schema1:Person ;
-    schema1:name "Alfonso X (Rey de Castilla.)" .
-
-ex:author108 a schema1:Person ;
-    schema1:name "Benjamin A. Olken" .
-
-ex:author109 a schema1:Person ;
-    schema1:name "Joan Boadas Elvira" .
+    schema1:datePublished "1992" ;
+    schema1:genre "Periodicals" ;
+    schema1:name "British Humanities Index" .
 
 ex:author11 a schema1:Person ;
-    schema1:name "James Beal" .
-
-ex:author110 a schema1:Person ;
-    schema1:name "Universidad de Málaga Facultad de Derecho Biblioteca" .
-
-ex:author111 a schema1:Person ;
-    schema1:name "SHANA. GRANDERSON A. LADY" .
-
-ex:author113 a schema1:Person ;
-    schema1:name "María Fernández" .
-
-ex:author114 a schema1:Person ;
-    schema1:name "Manuel Dreke Liñero" .
-
-ex:author115 a schema1:Person ;
-    schema1:name "Sophie Labelle" .
-
-ex:author116 a schema1:Person ;
-    schema1:name "AL Language Cafe" .
-
-ex:author117 a schema1:Person ;
-    schema1:name "One Sketch a Day Pencils and Pens" .
-
-ex:author118 a schema1:Person ;
-    schema1:name "Enrique García" .
-
-ex:author119 a schema1:Person ;
-    schema1:name "International Business Machines Corporation" .
+    schema1:name "Chris Bambery" .
 
 ex:author12 a schema1:Person ;
-    schema1:name "CANTAB." .
-
-ex:author120 a schema1:Person ;
-    schema1:name "Mauricio Velasquez" .
-
-ex:author121 a schema1:Person ;
-    schema1:name "María del Carmen Rencoret Bustos" .
-
-ex:author122 a schema1:Person ;
-    schema1:name "Abdulmohsen A. Alothman" .
-
-ex:author123 a schema1:Person ;
-    schema1:name "A.E. Putun" .
-
-ex:author124 a schema1:Person ;
-    schema1:name "Francisco Morán Samaniego" .
-
-ex:author125 a schema1:Person ;
-    schema1:name "Francisco Xavier Llampillas" .
-
-ex:author126 a schema1:Person ;
-    schema1:name "Robert Satet" .
-
-ex:author127 a schema1:Person ;
-    schema1:name "Richard A. Brown" .
-
-ex:author128 a schema1:Person ;
-    schema1:name "Félix Cifuentes" .
-
-ex:author129 a schema1:Person ;
-    schema1:name "Martin A. Recio" .
+    schema1:name "Charles River Editors" .
 
 ex:author13 a schema1:Person ;
-    schema1:name "James Dickerson DAVIES" .
-
-ex:author130 a schema1:Person ;
-    schema1:name "El desván de la mente" .
+    schema1:name "Simon Harris" .
 
 ex:author14 a schema1:Person ;
-    schema1:name "Robert ROBERTS (Christadelphian.)" .
+    schema1:name "Robin Maria DeLugan" .
 
 ex:author15 a schema1:Person ;
-    schema1:name "George Grove" .
+    schema1:name "Àngel Casals" .
 
 ex:author16 a schema1:Person ;
-    schema1:name "K. L. Powlesland" .
+    schema1:name "William Francis Patrick Napier" .
 
 ex:author17 a schema1:Person ;
-    schema1:name "Francis Reginald Statham" .
+    schema1:name "Richard Ford" .
 
 ex:author18 a schema1:Person ;
-    schema1:name "James Roberts" .
+    schema1:name "F. X. Hernández" .
 
 ex:author19 a schema1:Person ;
-    schema1:name "Oregon" .
+    schema1:name "Michael A. Vargas" .
 
 ex:author2 a schema1:Person ;
-    schema1:name "Varios autores" .
+    schema1:name "Gabriel Tortella" .
 
 ex:author20 a schema1:Person ;
-    schema1:name "Western Australia. Department of Agriculture" .
+    schema1:name "Club separista Català, New York" .
 
 ex:author21 a schema1:Person ;
-    schema1:name "New York (State). Governor" .
+    schema1:name "Sir William Francis Patrick Napier" .
 
 ex:author22 a schema1:Person ;
-    schema1:name "Florida State College for Women" .
+    schema1:name "James L. Whitney" .
 
 ex:author23 a schema1:Person ;
-    schema1:name "Francis C. Turner" .
+    schema1:name "University of California (System). Institute of Library Research" .
 
 ex:author24 a schema1:Person ;
-    schema1:name "Kent B. Joscelyn" .
+    schema1:name "Kenneth McRoberts" .
 
 ex:author25 a schema1:Person ;
-    schema1:name "British Columbia. Department of Agriculture" .
+    schema1:name "Víctor Alba" .
 
 ex:author26 a schema1:Person ;
-    schema1:name "New York (State). Office of Rent Administration" .
-
-ex:author27 a schema1:Person ;
-    schema1:name "Illinois Information Service" .
+    schema1:name "Josep Maria Puigjaner" .
 
 ex:author28 a schema1:Person ;
-    schema1:name "India. Archæological Department. Southern Circle, Madras" .
+    schema1:name "Kenneth Medhurst" .
 
 ex:author29 a schema1:Person ;
-    schema1:name "R. C. Pfefer" .
+    schema1:name "Mauricio Wiesenthal" .
 
 ex:author3 a schema1:Person ;
-    schema1:name "MARTINEZ RODRIGUEZ, JORGE LUIS" .
+    schema1:name "Henry John Chaytor" .
 
 ex:author30 a schema1:Person ;
-    schema1:name "Mark W. Parrino" .
+    schema1:name "H. J. Chaytor" .
 
 ex:author31 a schema1:Person ;
-    schema1:name "Louis Du Pont Syle" .
+    schema1:name "Chandler Rathfon Post" .
+
+ex:author32 a schema1:Person ;
+    schema1:name "Mandell Creighton" .
 
 ex:author33 a schema1:Person ;
-    schema1:name "University of Georgia. Graduate School" .
+    schema1:name "Arthur James Wells" .
 
 ex:author34 a schema1:Person ;
-    schema1:name "Theodore Taylor" .
-
-ex:author35 a schema1:Person ;
-    schema1:name "Great Britain. Department of Health and Social Security" .
+    schema1:name "Unesco" .
 
 ex:author36 a schema1:Person ;
-    schema1:name "C. H. Olver" .
+    schema1:name "Graham J. Shields" .
 
 ex:author37 a schema1:Person ;
-    schema1:name "Robert F. Stone and Company" .
+    schema1:name "Michelin Tyre Company, ltd. Tourist Service" .
 
 ex:author38 a schema1:Person ;
-    schema1:name "Virginia" .
+    schema1:name "John Emerich Edward Dalberg Acton Baron Acton" .
 
 ex:author39 a schema1:Person ;
-    schema1:name "Roger John Williams" .
+    schema1:name "Charles George Herbermann" .
 
 ex:author4 a schema1:Person ;
-    schema1:name "Diego Mariño Sánchez" .
+    schema1:name "Cortijo Ocaña, Antonio" .
 
 ex:author40 a schema1:Person ;
-    schema1:name "Frederick Goodrich Henke" .
+    schema1:name "Milton Mariano Azevedo" .
 
 ex:author41 a schema1:Person ;
-    schema1:name "Russell W. Zub" .
+    schema1:name "David J. George" .
 
 ex:author42 a schema1:Person ;
-    schema1:name "Ivy May Bolton" .
+    schema1:name "Henry Smith Williams" .
 
 ex:author43 a schema1:Person ;
-    schema1:name "Marvin Powell and Robert E. Mangum" .
-
-ex:author44 a schema1:Person ;
-    schema1:name "Leavitt Leavitt" .
+    schema1:name "James W. Cortada" .
 
 ex:author45 a schema1:Person ;
-    schema1:name "Patronato de Protección a la mujer" .
+    schema1:name "Sílvia Planas i Marcé" .
 
 ex:author46 a schema1:Person ;
-    schema1:name "Carlos A. Marelli" .
+    schema1:name "Amparo Tuson" .
 
 ex:author47 a schema1:Person ;
-    schema1:name "María Puig" .
+    schema1:name "New York Public Library. Research Libraries" .
 
 ex:author48 a schema1:Person ;
-    schema1:name "A. Garrido Domínguez" .
+    schema1:name "Merton W. Stancliff" .
 
 ex:author49 a schema1:Person ;
-    schema1:name "Innocencio Francisco da Silva" .
+    schema1:name "VÃ-Ctor 1824-1901 Balaguer" .
 
 ex:author5 a schema1:Person ;
-    schema1:name "Richard W. Pelham" .
+    schema1:name "Jaume Sobrequés i Callicó" .
 
 ex:author50 a schema1:Person ;
-    schema1:name "Andrés A Mata" .
+    schema1:name "Dana Facaros" .
 
 ex:author51 a schema1:Person ;
-    schema1:name "Ernesto Garc a. Uranga" .
+    schema1:name "Herbert Lionel Matthews" .
 
 ex:author52 a schema1:Person ;
-    schema1:name "A. Paz y Melia" .
+    schema1:name "Frank Moore Colby" .
 
 ex:author53 a schema1:Person ;
-    schema1:name "Gerard A. Gioia" .
+    schema1:name "Josephus Nelson Larned" .
 
 ex:author54 a schema1:Person ;
-    schema1:name "Institut d'Estudis Catalans" .
+    schema1:name "Engineering Societies Library" .
 
 ex:author55 a schema1:Person ;
-    schema1:name "Carmen de Burgos" .
+    schema1:name "Charles Oman" .
 
 ex:author56 a schema1:Person ;
-    schema1:name "Nuccio Ordine" .
+    schema1:name "Hispanic Society of America. Library" .
 
 ex:author57 a schema1:Person ;
-    schema1:name "Mario A. Gragera Jariego" .
+    schema1:name "Daniel Coit Gilman" .
 
 ex:author58 a schema1:Person ;
-    schema1:name "Ángel Torres Quesada" .
+    schema1:name "Thomas Spencer Baynes" .
 
 ex:author59 a schema1:Person ;
-    schema1:name "Olivia Gates" .
-
-ex:author6 a schema1:Person ;
-    schema1:name "William Percivall" .
+    schema1:name "Hugh Chrisholm" .
 
 ex:author60 a schema1:Person ;
-    schema1:name "Theresina del Rosal" .
+    schema1:name "Freedom Press" .
 
 ex:author61 a schema1:Person ;
-    schema1:name "Pau Romeu Torres" .
+    schema1:name "Langenscheidt Publishers" .
 
 ex:author62 a schema1:Person ;
-    schema1:name "Ana María Vázquez Hoys" .
-
-ex:author63 a schema1:Person ;
-    schema1:name "José Miguel Morán Turina" .
-
-ex:author64 a schema1:Person ;
-    schema1:name "A. Picaud" .
+    schema1:name "Sir Norman Lockyer" .
 
 ex:author65 a schema1:Person ;
-    schema1:name "José A. Muñoz Najar" .
+    schema1:name "G. Maranon" .
 
 ex:author66 a schema1:Person ;
-    schema1:name "Débora Chomski" .
+    schema1:name "Edmund Dene Morel" .
 
 ex:author67 a schema1:Person ;
-    schema1:name "A. Mital" .
+    schema1:name "James Louis Garvin" .
 
 ex:author68 a schema1:Person ;
-    schema1:name "Augusto R. González A." .
+    schema1:name "Robert Edward Dell" .
 
 ex:author69 a schema1:Person ;
-    schema1:name "David A. Rives" .
+    schema1:name "H. Rosi Song" .
 
 ex:author7 a schema1:Person ;
-    schema1:name "Joshilyn Jackson" .
+    schema1:name "Oriol Vergés" .
 
 ex:author70 a schema1:Person ;
-    schema1:name "Rosemary Rogers" .
+    schema1:name "J. H. Elliott" .
 
 ex:author71 a schema1:Person ;
-    schema1:name "Rosa Rubio Prado" .
+    schema1:name "Flocel Sabat" .
 
 ex:author72 a schema1:Person ;
-    schema1:name "Tatiana Inus Regalado Lugo" .
+    schema1:name "College Art Association of America. Committee on Books for the College Art Library" .
 
 ex:author73 a schema1:Person ;
-    schema1:name "Laura García Fernández" .
+    schema1:name "Arthur Terry" .
 
 ex:author74 a schema1:Person ;
-    schema1:name "Luis Felipe Cabezas A." .
+    schema1:name "Josep R. Llobera" .
 
 ex:author75 a schema1:Person ;
-    schema1:name "A. Castro Sierra" .
+    schema1:name "Stephen Jacobson" .
 
 ex:author76 a schema1:Person ;
-    schema1:name "Lionel a. (Lionel Arthur) 1. Tollemache" .
-
-ex:author77 a schema1:Person ;
-    schema1:name "Antonio Contreras" .
+    schema1:name "Catalunya. Parlament" .
 
 ex:author78 a schema1:Person ;
-    schema1:name "Rocío Patricia Rojo Gutiérrez" .
+    schema1:name "Rhiannon McGlade" .
 
 ex:author79 a schema1:Person ;
-    schema1:name "Guillermo Guastavino Gallent" .
+    schema1:name "Arnau Gonzàlez i Vilalta" .
 
 ex:author8 a schema1:Person ;
-    schema1:name "John Lawson Stoddard" .
+    schema1:name "Agustí Alcoberro" .
 
 ex:author80 a schema1:Person ;
-    schema1:name "Agustín Breu Rodríguez" .
+    schema1:name "DK Travel" .
 
 ex:author81 a schema1:Person ;
-    schema1:name "Antonio Caballero Martínez" .
+    schema1:name "Juan Díez Medrano" .
 
 ex:author82 a schema1:Person ;
-    schema1:name "Wenceslao Fernández Flórez" .
+    schema1:name "Emily Jenkins" .
 
 ex:author83 a schema1:Person ;
-    schema1:name "Ramon Sarrià" .
+    schema1:name "T.N. Bisson" .
 
 ex:author84 a schema1:Person ;
-    schema1:name "A. Gilbert" .
+    schema1:name "Eric Arthur Blair" .
 
 ex:author85 a schema1:Person ;
-    schema1:name "Joaquín Portillo" .
+    schema1:name "Angel Smith" .
 
 ex:author86 a schema1:Person ;
-    schema1:name "Ludwig von Mises" .
+    schema1:name "Mandie Iveson" .
 
 ex:author87 a schema1:Person ;
-    schema1:name "Luis A. Urgellés Lorié" .
+    schema1:name "Flocel Sabaté" .
+
+ex:author88 a schema1:Person ;
+    schema1:name "Archibald Ross Lewis" .
 
 ex:author89 a schema1:Person ;
-    schema1:name "Pedro Garcia Rosado" .
+    schema1:name "Yairen Jerez Columbié" .
 
 ex:author9 a schema1:Person ;
-    schema1:name "John Holland Rose" .
+    schema1:name "John Payne" .
 
 ex:author90 a schema1:Person ;
-    schema1:name "Ricardo Puente y Brañas" .
+    schema1:name "Daniele Conversi" .
 
 ex:author91 a schema1:Person ;
-    schema1:name "Fita-Rada y Delgado" .
+    schema1:name "Juan Perucho" .
 
 ex:author92 a schema1:Person ;
-    schema1:name "Rosa Navarro Durán" .
+    schema1:name "Francisco J. Romero Salvadó" .
 
 ex:author93 a schema1:Person ;
-    schema1:name "Carlos Luna" .
-
-ex:author94 a schema1:Person ;
-    schema1:name "Biblioteca del Poder Legislativo (Uruguay)" .
+    schema1:name "Pierre Vilar" .
 
 ex:author95 a schema1:Person ;
-    schema1:name "Gerard Casademont Filella" .
+    schema1:name "J. Friend" .
 
 ex:author96 a schema1:Person ;
-    schema1:name "Universitat d'Alacant" .
+    schema1:name "Emmanuel Dalle Mulle" .
 
 ex:author97 a schema1:Person ;
-    schema1:name "Marina A. Zenkova" .
+    schema1:name "Enric Bou" .
 
 ex:author98 a schema1:Person ;
-    schema1:name "Mar Cruz Piñol" .
+    schema1:name "Silvia Bermúdez" .
 
 ex:author99 a schema1:Person ;
-    schema1:name "Cesar Aller" .
+    schema1:name "Peter Seidler" .
 
 ex:rating1 a schema1:AggregateRating ;
-    schema1:ratingValue 5 .
+    schema1:ratingValue 1 .
 
 ex:rating2 a schema1:AggregateRating ;
     schema1:ratingValue 5 .
 
-ex:author112 a schema1:Person ;
-    schema1:name "Amitrajeet A. Batabyal" .
+ex:rating3 a schema1:AggregateRating ;
+    schema1:ratingValue 4 .
 
-ex:author32 a schema1:Person ;
-    schema1:name "Walter Yust" .
+ex:author1 a schema1:Person ;
+    schema1:name "Andrew Dowling" .
 
-ex:author88 a schema1:Person ;
-    schema1:name "Asociación de la Prensa de Zaragoza" .
+ex:author10 a schema1:Person ;
+    schema1:name "A. Smith" .
+
+ex:author27 a schema1:Person ;
+    schema1:name "Library of Congress" .
+
+ex:author44 a schema1:Person ;
+    schema1:name "A. Hoyt Hobbs" .
+
+ex:author6 a schema1:Person ;
+    schema1:name "Michael Eaude" .
+
+ex:author63 a schema1:Person ;
+    schema1:name "Philadelphia Museum of Art" .
+
+ex:author77 a schema1:Person ;
+    schema1:name "Thomas N. Bisson" .
+
+ex:author94 a schema1:Person ;
+    schema1:name "Antoni Dalmau i Ribalta" .
+
+ex:author35 a schema1:Person ;
+    schema1:name "Salvador de Madariaga" .
+
+ex:author64 a schema1:Person ;
+    schema1:name "George Orwell" .
 
