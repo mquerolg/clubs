@@ -13,6 +13,9 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix cl: <http://example.org/clubs#> .
 @prefix schema: <http://schema.org/> .
+@prefix schema: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 
 #############################
@@ -20251,9 +20254,6 @@ ex:author94 a schema1:Person ;
 
 ex:author66 a schema1:Person ;
     schema1:name "George Orwell" .
-	
-	
-cl:Llibre rdfs:subClassOf schema:Book .
 
 #############################
 # MÉS INSTÀNCIES REALISTES
@@ -20310,7 +20310,7 @@ schema:Person_1 cl:participaA cl:ClubLecturaMisteri .
 schema:Person_2 cl:participaA cl:ClubLecturaClassics .
 
 #############################
-# TRAMESA 
+# TRAMESA (LOGÍSTICA - MOLT IMPORTANT)
 #############################
 
 cl:Tramesa1 a cl:Tramesa ;
@@ -20319,7 +20319,7 @@ cl:Tramesa1 a cl:Tramesa ;
     cl:transporta cl:LotMisteri .
 
 #############################
-# PROPIETATS ADDICIONALS 
+# PROPIETATS ADDICIONALS (SI NO LES HAS DEFINIT ABANS)
 #############################
 
 cl:origen a owl:ObjectProperty ;
@@ -20333,16 +20333,9 @@ cl:desti a owl:ObjectProperty ;
 cl:transporta a owl:ObjectProperty ;
     rdfs:domain cl:Tramesa ;
     rdfs:range cl:Lot .
-##################################################
-# EXTENSIÓ DEL MODEL ONTOLÒGIC
 
-##################################################
- .
-@prefix schema: <https://schema.org/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-##################################################
+################################################
 # CLASSES 
 ##################################################
 
@@ -20357,6 +20350,8 @@ cl:BibliotecaPublica a owl:Class ;
 
 cl:LlibreRecomanat a owl:Class ;
     rdfs:subClassOf schema:Book .
+	
+	
 
 ##################################################
 # RELACIONS (segures)
@@ -20377,6 +20372,7 @@ cl:ubicatA a owl:ObjectProperty ;
 cl:gestionaTramesa a owl:ObjectProperty ;
     rdfs:domain cl:Biblioteca ;
     rdfs:range cl:Tramesa .
+	
 
 ##################################################
 # RESTRICCIONS (no afecten dades existents)
@@ -20393,6 +20389,8 @@ cl:Exemplar rdfs:subClassOf [
     owl:onProperty cl:ubicatA ;
     owl:allValuesFrom cl:Biblioteca
 ] .
+
+
 
 ##################################################
 # EXTENSIÓ ONTOLÒGICA (INTEGRACIÓ FINAL)
@@ -20451,3 +20449,5 @@ cl:LlibreRecomanat a owl:Class ;
     owl:onProperty schema:aggregateRating ;
     owl:minCardinality "1"^^xsd:nonNegativeInteger
 ] .
+
+cl:Llibre rdfs:subClassOf schema:Book .
