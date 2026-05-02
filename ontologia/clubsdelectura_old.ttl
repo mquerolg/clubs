@@ -20251,9 +20251,6 @@ ex:author94 a schema1:Person ;
 
 ex:author66 a schema1:Person ;
     schema1:name "George Orwell" .
-	
-	
-cl:Llibre rdfs:subClassOf schema:Book .
 
 #############################
 # MÉS INSTÀNCIES REALISTES
@@ -20310,7 +20307,7 @@ schema:Person_1 cl:participaA cl:ClubLecturaMisteri .
 schema:Person_2 cl:participaA cl:ClubLecturaClassics .
 
 #############################
-# TRAMESA 
+# TRAMESA (LOGÍSTICA - MOLT IMPORTANT)
 #############################
 
 cl:Tramesa1 a cl:Tramesa ;
@@ -20319,7 +20316,7 @@ cl:Tramesa1 a cl:Tramesa ;
     cl:transporta cl:LotMisteri .
 
 #############################
-# PROPIETATS ADDICIONALS 
+# PROPIETATS ADDICIONALS (SI NO LES HAS DEFINIT ABANS)
 #############################
 
 cl:origen a owl:ObjectProperty ;
@@ -20333,121 +20330,3 @@ cl:desti a owl:ObjectProperty ;
 cl:transporta a owl:ObjectProperty ;
     rdfs:domain cl:Tramesa ;
     rdfs:range cl:Lot .
-##################################################
-# EXTENSIÓ DEL MODEL ONTOLÒGIC
-
-##################################################
- .
-@prefix schema: <https://schema.org/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-##################################################
-# CLASSES 
-##################################################
-
-cl:Lot a owl:Class .
-cl:ClubDeLectura a owl:Class .
-cl:Exemplar a owl:Class .
-cl:Biblioteca a owl:Class .
-cl:Tramesa a owl:Class .
-
-cl:BibliotecaPublica a owl:Class ;
-    rdfs:subClassOf cl:Biblioteca .
-
-cl:LlibreRecomanat a owl:Class ;
-    rdfs:subClassOf schema:Book .
-
-##################################################
-# RELACIONS (segures)
-##################################################
-
-cl:teLot a owl:ObjectProperty ;
-    rdfs:domain cl:ClubDeLectura ;
-    rdfs:range cl:Lot .
-
-cl:conteExemplar a owl:ObjectProperty ;
-    rdfs:domain cl:Lot ;
-    rdfs:range cl:Exemplar .
-
-cl:ubicatA a owl:ObjectProperty ;
-    rdfs:domain cl:Exemplar ;
-    rdfs:range cl:Biblioteca .
-
-cl:gestionaTramesa a owl:ObjectProperty ;
-    rdfs:domain cl:Biblioteca ;
-    rdfs:range cl:Tramesa .
-
-##################################################
-# RESTRICCIONS (no afecten dades existents)
-##################################################
-
-cl:Lot rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty cl:conteExemplar ;
-    owl:minCardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>
-] .
-
-cl:Exemplar rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty cl:ubicatA ;
-    owl:allValuesFrom cl:Biblioteca
-] .
-
-##################################################
-# EXTENSIÓ ONTOLÒGICA (INTEGRACIÓ FINAL)
-##################################################
-
-
-cl:ClubDeLectura a owl:Class .
-cl:Lot a owl:Class .
-cl:Exemplar a owl:Class .
-cl:Biblioteca a owl:Class .
-cl:Tramesa a owl:Class .
-
-
-cl:Exemplar rdfs:subClassOf schema:Book .
-cl:Biblioteca rdfs:subClassOf schema:Organization .
-
-# Relacions del domini
-cl:teLot a owl:ObjectProperty ;
-    rdfs:domain cl:ClubDeLectura ;
-    rdfs:range cl:Lot .
-
-cl:conteExemplar a owl:ObjectProperty ;
-    rdfs:domain cl:Lot ;
-    rdfs:range cl:Exemplar .
-
-cl:ubicatA a owl:ObjectProperty ;
-    rdfs:domain cl:Exemplar ;
-    rdfs:range cl:Biblioteca .
-
-# Restriccions OWL 
-cl:Lot rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty cl:conteExemplar ;
-    owl:minCardinality "1"^^xsd:nonNegativeInteger
-] .
-
-cl:Exemplar rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty cl:ubicatA ;
-    owl:allValuesFrom cl:Biblioteca
-] .
-
-cl:ClubDeLectura rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty cl:teLot ;
-    owl:minCardinality "1"^^xsd:nonNegativeInteger
-] .
-
-# Classe conceptual (per cobrir memòria)
-cl:LlibreRecomanat a owl:Class ;
-    rdfs:subClassOf schema:Book .
-	
-	
-	cl:LlibreRecomanat rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty schema:aggregateRating ;
-    owl:minCardinality "1"^^xsd:nonNegativeInteger
-] .
