@@ -20439,15 +20439,61 @@ cl:ClubDeLectura rdfs:subClassOf [
     owl:minCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
-# Classe conceptual (per cobrir memòria)
-cl:LlibreRecomanat a owl:Class ;
-    rdfs:subClassOf schema:Book .
-	
-	
-	cl:LlibreRecomanat rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty schema:aggregateRating ;
-    owl:minCardinality "1"^^xsd:nonNegativeInteger
-] .
+
 
 cl:Llibre rdfs:subClassOf schema:Book .
+
+@prefix cl: <http://www.semanticweb.org/clubslectura#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+cl:ClubBarcelona
+    rdf:type cl:ClubDeLectura ;
+    cl:teLot cl:LotNovelLaNegra .
+
+cl:LotNovelLaNegra
+    rdf:type cl:Lot ;
+    cl:conteExemplar cl:Exemplar001 ;
+    cl:conteExemplar cl:Exemplar002 .
+
+cl:Exemplar001
+    rdf:type cl:Exemplar .
+
+cl:Exemplar002
+    rdf:type cl:Exemplar .
+	
+
+
+cl:LotNovelLaNegra
+    rdf:type cl:Lot ;
+    cl:conteExemplar cl:Exemplar001 ;
+    cl:conteExemplar cl:Exemplar002 ;
+    cl:conteExemplar cl:Exemplar003 .
+
+cl:LotCienciaFiccio
+    rdf:type cl:Lot ;
+    cl:conteExemplar cl:Exemplar004 ;
+    cl:conteExemplar cl:Exemplar005 .
+
+cl:Exemplar001 rdf:type cl:Exemplar .
+cl:Exemplar002 rdf:type cl:Exemplar .
+cl:Exemplar003 rdf:type cl:Exemplar .
+cl:Exemplar004 rdf:type cl:Exemplar .
+cl:Exemplar005 rdf:type cl:Exemplar .
+
+cl:BibliotecaCentral
+    rdf:type cl:Biblioteca .
+
+cl:BibliotecaGracia
+    rdf:type cl:Biblioteca .
+
+cl:Exemplar001
+    rdf:type cl:Exemplar ;
+    cl:ubicatA cl:BibliotecaCentral .
+
+cl:Exemplar002
+    rdf:type cl:Exemplar ;
+    cl:ubicatA cl:BibliotecaCentral .
+
+cl:Exemplar003
+    rdf:type cl:Exemplar ;
+    cl:ubicatA cl:BibliotecaGracia .

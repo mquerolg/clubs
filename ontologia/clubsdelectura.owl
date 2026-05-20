@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:cl="http://example.org/clubs#"
+     xmlns:cl="http://www.semanticweb.org/clubslectura#"
      xmlns:ex="http://example.org/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:eli="http://data.europa.eu/eli/ontology#"
@@ -15,6 +15,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:clubs="http://example.org/clubs#"
      xmlns:dctype="http://purl.org/dc/dcmitype/"
      xmlns:schema="https://schema.org/"
      xmlns:snomed="http://purl.bioontology.org/ontology/SNOMEDCT/"
@@ -88,15 +89,21 @@
     
 
 
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+    <!-- http://www.semanticweb.org/clubslectura#conteExemplar -->
 
-    <AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <AnnotationProperty rdf:about="http://www.semanticweb.org/clubslectura#conteExemplar"/>
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
+    <!-- http://www.semanticweb.org/clubslectura#teLot -->
 
-    <AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
+    <AnnotationProperty rdf:about="http://www.semanticweb.org/clubslectura#teLot"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
     
 
 
@@ -2848,7 +2855,6 @@ This property can be used alongside the license property which indicates license
     <!-- http://example.org/clubs#LlibreRecomanat -->
 
     <Class rdf:about="http://example.org/clubs#LlibreRecomanat">
-        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
         <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
     </Class>
     
@@ -2870,12 +2876,6 @@ This property can be used alongside the license property which indicates license
     <!-- http://example.org/clubs#Tramesa -->
 
     <Class rdf:about="http://example.org/clubs#Tramesa"/>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error1 -->
-
-    <Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
     
 
 
@@ -3006,6 +3006,24 @@ This property can be used alongside the license property which indicates license
     <!-- http://schema.org/Person -->
 
     <Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#ClubDeLectura -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Exemplar -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#Exemplar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Lot -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#Lot"/>
     
 
 
@@ -16031,7 +16049,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://example.org/clubs#ClubLectura1">
         <rdf:type rdf:resource="http://example.org/clubs#ClubDeLectura"/>
-        <cl:teLot rdf:resource="http://example.org/clubs#Lot1"/>
+        <clubs:teLot rdf:resource="http://example.org/clubs#Lot1"/>
         <schema:name>Club de Lectura Barcelona</schema:name>
     </NamedIndividual>
     
@@ -16041,7 +16059,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://example.org/clubs#ClubLecturaClassics">
         <rdf:type rdf:resource="http://example.org/clubs#ClubDeLectura"/>
-        <cl:teLot rdf:resource="http://example.org/clubs#LotClassics"/>
+        <clubs:teLot rdf:resource="http://example.org/clubs#LotClassics"/>
         <schema:name>Club de Cl�ssics</schema:name>
     </NamedIndividual>
     
@@ -16051,7 +16069,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://example.org/clubs#ClubLecturaMisteri">
         <rdf:type rdf:resource="http://example.org/clubs#ClubDeLectura"/>
-        <cl:teLot rdf:resource="http://example.org/clubs#LotMisteri"/>
+        <clubs:teLot rdf:resource="http://example.org/clubs#LotMisteri"/>
         <schema:name>Club de Lectura de Misteri</schema:name>
     </NamedIndividual>
     
@@ -16062,7 +16080,7 @@ case of a single file published after Zip compression, the convention of appendi
     <NamedIndividual rdf:about="http://example.org/clubs#Exemplar1">
         <rdf:type rdf:resource="http://example.org/clubs#Exemplar"/>
         <sameAs rdf:resource="https://schema.org/Book_1"/>
-        <cl:ubicatA rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
+        <clubs:ubicatA rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
     </NamedIndividual>
     
 
@@ -16078,7 +16096,7 @@ case of a single file published after Zip compression, the convention of appendi
     <NamedIndividual rdf:about="http://example.org/clubs#ExemplarC1">
         <rdf:type rdf:resource="http://example.org/clubs#Exemplar"/>
         <sameAs rdf:resource="https://schema.org/Book_3"/>
-        <cl:ubicatA rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
+        <clubs:ubicatA rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
     </NamedIndividual>
     
 
@@ -16094,7 +16112,7 @@ case of a single file published after Zip compression, the convention of appendi
     <NamedIndividual rdf:about="http://example.org/clubs#ExemplarM1">
         <rdf:type rdf:resource="http://example.org/clubs#Exemplar"/>
         <sameAs rdf:resource="https://schema.org/Book_10"/>
-        <cl:ubicatA rdf:resource="http://example.org/clubs#BibliotecaNord"/>
+        <clubs:ubicatA rdf:resource="http://example.org/clubs#BibliotecaNord"/>
     </NamedIndividual>
     
 
@@ -16110,7 +16128,7 @@ case of a single file published after Zip compression, the convention of appendi
     <NamedIndividual rdf:about="http://example.org/clubs#ExemplarM2">
         <rdf:type rdf:resource="http://example.org/clubs#Exemplar"/>
         <sameAs rdf:resource="https://schema.org/Book_25"/>
-        <cl:ubicatA rdf:resource="http://example.org/clubs#BibliotecaSud"/>
+        <clubs:ubicatA rdf:resource="http://example.org/clubs#BibliotecaSud"/>
     </NamedIndividual>
     
 
@@ -16125,7 +16143,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://example.org/clubs#Lot1">
         <rdf:type rdf:resource="http://example.org/clubs#Lot"/>
-        <cl:conteExemplar rdf:resource="http://example.org/clubs#Exemplar1"/>
+        <clubs:conteExemplar rdf:resource="http://example.org/clubs#Exemplar1"/>
     </NamedIndividual>
     
 
@@ -16134,7 +16152,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://example.org/clubs#LotClassics">
         <rdf:type rdf:resource="http://example.org/clubs#Lot"/>
-        <cl:conteExemplar rdf:resource="http://example.org/clubs#ExemplarC1"/>
+        <clubs:conteExemplar rdf:resource="http://example.org/clubs#ExemplarC1"/>
     </NamedIndividual>
     
 
@@ -16143,8 +16161,8 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://example.org/clubs#LotMisteri">
         <rdf:type rdf:resource="http://example.org/clubs#Lot"/>
-        <cl:conteExemplar rdf:resource="http://example.org/clubs#ExemplarM1"/>
-        <cl:conteExemplar rdf:resource="http://example.org/clubs#ExemplarM2"/>
+        <clubs:conteExemplar rdf:resource="http://example.org/clubs#ExemplarM1"/>
+        <clubs:conteExemplar rdf:resource="http://example.org/clubs#ExemplarM2"/>
     </NamedIndividual>
     
 
@@ -16153,9 +16171,79 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://example.org/clubs#Tramesa1">
         <rdf:type rdf:resource="http://example.org/clubs#Tramesa"/>
-        <cl:desti rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
-        <cl:origen rdf:resource="http://example.org/clubs#BibliotecaNord"/>
-        <cl:transporta rdf:resource="http://example.org/clubs#LotMisteri"/>
+        <clubs:desti rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
+        <clubs:origen rdf:resource="http://example.org/clubs#BibliotecaNord"/>
+        <clubs:transporta rdf:resource="http://example.org/clubs#LotMisteri"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#ClubBarcelona -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ClubBarcelona">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
+        <cl:teLot rdf:resource="http://www.semanticweb.org/clubslectura#LotNovelLaNegra"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Exemplar001 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Exemplar002 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Exemplar003 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Exemplar004 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Exemplar005 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#LotCienciaFiccio -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#LotCienciaFiccio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar004"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar005"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#LotNovelLaNegra -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#LotNovelLaNegra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar001"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar002"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar003"/>
     </NamedIndividual>
     
 
@@ -16284,7 +16372,7 @@ case of a single file published after Zip compression, the convention of appendi
     <!-- https://schema.org/Author_1 -->
 
     <NamedIndividual rdf:about="https://schema.org/Author_1">
-        <cl:participaA rdf:resource="http://example.org/clubs#ClubLectura1"/>
+        <clubs:participaA rdf:resource="http://example.org/clubs#ClubLectura1"/>
     </NamedIndividual>
     
 
@@ -18930,7 +19018,7 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
     <!-- https://schema.org/Person_1 -->
 
     <NamedIndividual rdf:about="https://schema.org/Person_1">
-        <cl:participaA rdf:resource="http://example.org/clubs#ClubLecturaMisteri"/>
+        <clubs:participaA rdf:resource="http://example.org/clubs#ClubLecturaMisteri"/>
     </NamedIndividual>
     
 
@@ -18938,7 +19026,7 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
     <!-- https://schema.org/Person_2 -->
 
     <NamedIndividual rdf:about="https://schema.org/Person_2">
-        <cl:participaA rdf:resource="http://example.org/clubs#ClubLecturaClassics"/>
+        <clubs:participaA rdf:resource="http://example.org/clubs#ClubLecturaClassics"/>
     </NamedIndividual>
     
 
@@ -20155,9 +20243,6 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
         <rdfs:comment>The airline boards by zones of the plane.</rdfs:comment>
         <rdfs:label>ZoneBoardingPolicy</rdfs:label>
     </NamedIndividual>
-    <rdf:Description>
-        <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
-    </rdf:Description>
     
 
 
