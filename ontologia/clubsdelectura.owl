@@ -101,6 +101,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/clubslectura#ubicatA -->
+
+    <AnnotationProperty rdf:about="http://www.semanticweb.org/clubslectura#ubicatA"/>
+    
+
+
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
 
     <AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
@@ -3006,6 +3012,20 @@ This property can be used alongside the license property which indicates license
     <!-- http://schema.org/Person -->
 
     <Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Biblioteca -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#BibliotecaPublica -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#BibliotecaPublica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+    </Class>
     
 
 
@@ -16178,6 +16198,23 @@ case of a single file published after Zip compression, the convention of appendi
     
 
 
+    <!-- http://www.semanticweb.org/clubslectura#BibliotecaCentral -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#BibliotecaCentral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#BibliotecaGracia -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#BibliotecaGracia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaPublica"/>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/clubslectura#ClubBarcelona -->
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ClubBarcelona">
@@ -16191,6 +16228,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar001">
         <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+        <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaCentral"/>
     </NamedIndividual>
     
 
@@ -16199,6 +16237,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar002">
         <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+        <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaCentral"/>
     </NamedIndividual>
     
 
@@ -16207,6 +16246,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar003">
         <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+        <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaGracia"/>
     </NamedIndividual>
     
 

@@ -20497,3 +20497,7 @@ cl:Exemplar002
 cl:Exemplar003
     rdf:type cl:Exemplar ;
     cl:ubicatA cl:BibliotecaGracia .
+	
+cl:BibliotecaPublica rdfs:subClassOf cl:Biblioteca .
+
+cl:BibliotecaGracia rdf:type cl:BibliotecaPublica .
