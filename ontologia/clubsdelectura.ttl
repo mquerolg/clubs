@@ -11,7 +11,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix snomed: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix cl: <http://example.org/clubs#> .
+@prefix cl: <http://www.semanticweb.org/clubslectura#> .
 @prefix schema: <http://schema.org/> .
 @prefix schema: <https://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20357,13 +20357,6 @@ cl:LlibreRecomanat a owl:Class ;
 # RELACIONS (segures)
 ##################################################
 
-cl:teLot a owl:ObjectProperty ;
-    rdfs:domain cl:ClubDeLectura ;
-    rdfs:range cl:Lot .
-
-cl:conteExemplar a owl:ObjectProperty ;
-    rdfs:domain cl:Lot ;
-    rdfs:range cl:Exemplar .
 
 cl:ubicatA a owl:ObjectProperty ;
     rdfs:domain cl:Exemplar ;
@@ -20408,13 +20401,7 @@ cl:Exemplar rdfs:subClassOf schema:Book .
 cl:Biblioteca rdfs:subClassOf schema:Organization .
 
 # Relacions del domini
-cl:teLot a owl:ObjectProperty ;
-    rdfs:domain cl:ClubDeLectura ;
-    rdfs:range cl:Lot .
 
-cl:conteExemplar a owl:ObjectProperty ;
-    rdfs:domain cl:Lot ;
-    rdfs:range cl:Exemplar .
 
 cl:ubicatA a owl:ObjectProperty ;
     rdfs:domain cl:Exemplar ;
@@ -20501,3 +20488,35 @@ cl:Exemplar003
 cl:BibliotecaPublica rdfs:subClassOf cl:Biblioteca .
 
 cl:BibliotecaGracia rdf:type cl:BibliotecaPublica .
+
+cl:Exemplar rdfs:subClassOf [
+a owl:Restriction ;
+owl:onProperty schema:author ;
+owl:allValuesFrom schema:Person
+] .
+
+cl:Exemplar rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty schema:author ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+
+cl:Exemplar rdfs:subClassOf [
+a owl:Restriction ;
+owl:onProperty schema:isbn ;
+owl:cardinality "1"^^xsd:nonNegativeInteger
+] .
+
+
+cl:LotActiu
+    a owl:Class ;
+    rdfs:subClassOf cl:Lot ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cl:conteExemplar ;
+        owl:minCardinality "1"^^xsd:nonNegativeInteger
+    ] .
+	
+	
+	
