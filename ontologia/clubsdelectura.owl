@@ -15,7 +15,6 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:void="http://rdfs.org/ns/void#"
-     xmlns:clubs="http://example.org/clubs#"
      xmlns:dctype="http://purl.org/dc/dcmitype/"
      xmlns:schema="https://schema.org/"
      xmlns:snomed="http://purl.bioontology.org/ontology/SNOMEDCT/"
@@ -89,21 +88,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/clubslectura#conteExemplar -->
+    <!-- http://www.semanticweb.org/clubslectura#repTramesa -->
 
-    <AnnotationProperty rdf:about="http://www.semanticweb.org/clubslectura#conteExemplar"/>
+    <AnnotationProperty rdf:about="http://www.semanticweb.org/clubslectura#repTramesa"/>
     
 
 
-    <!-- http://www.semanticweb.org/clubslectura#teLot -->
+    <!-- http://www.semanticweb.org/clubslectura#transportaLot -->
 
-    <AnnotationProperty rdf:about="http://www.semanticweb.org/clubslectura#teLot"/>
-    
-
-
-    <!-- http://www.semanticweb.org/clubslectura#ubicatA -->
-
-    <AnnotationProperty rdf:about="http://www.semanticweb.org/clubslectura#ubicatA"/>
+    <AnnotationProperty rdf:about="http://www.semanticweb.org/clubslectura#transportaLot"/>
     
 
 
@@ -2646,74 +2639,74 @@ This property can be used alongside the license property which indicates license
     
 
 
-    <!-- http://example.org/clubs#conteExemplar -->
+    <!-- http://www.semanticweb.org/clubslectura#conteExemplar -->
 
-    <ObjectProperty rdf:about="http://example.org/clubs#conteExemplar">
-        <rdfs:domain rdf:resource="http://example.org/clubs#Lot"/>
-        <rdfs:range rdf:resource="http://example.org/clubs#Exemplar"/>
+    <ObjectProperty rdf:about="http://www.semanticweb.org/clubslectura#conteExemplar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
     </ObjectProperty>
     
 
 
-    <!-- http://example.org/clubs#desti -->
+    <!-- http://www.semanticweb.org/clubslectura#desti -->
 
-    <ObjectProperty rdf:about="http://example.org/clubs#desti">
-        <rdfs:domain rdf:resource="http://example.org/clubs#Tramesa"/>
-        <rdfs:range rdf:resource="http://example.org/clubs#Biblioteca"/>
+    <ObjectProperty rdf:about="http://www.semanticweb.org/clubslectura#desti">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clubslectura#Tramesa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
     </ObjectProperty>
     
 
 
-    <!-- http://example.org/clubs#gestionaTramesa -->
+    <!-- http://www.semanticweb.org/clubslectura#gestionaTramesa -->
 
-    <ObjectProperty rdf:about="http://example.org/clubs#gestionaTramesa">
-        <rdfs:domain rdf:resource="http://example.org/clubs#Biblioteca"/>
-        <rdfs:range rdf:resource="http://example.org/clubs#Tramesa"/>
+    <ObjectProperty rdf:about="http://www.semanticweb.org/clubslectura#gestionaTramesa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clubslectura#Tramesa"/>
     </ObjectProperty>
     
 
 
-    <!-- http://example.org/clubs#origen -->
+    <!-- http://www.semanticweb.org/clubslectura#origen -->
 
-    <ObjectProperty rdf:about="http://example.org/clubs#origen">
-        <rdfs:domain rdf:resource="http://example.org/clubs#Tramesa"/>
-        <rdfs:range rdf:resource="http://example.org/clubs#Biblioteca"/>
+    <ObjectProperty rdf:about="http://www.semanticweb.org/clubslectura#origen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clubslectura#Tramesa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
     </ObjectProperty>
     
 
 
-    <!-- http://example.org/clubs#participaA -->
+    <!-- http://www.semanticweb.org/clubslectura#participaA -->
 
-    <ObjectProperty rdf:about="http://example.org/clubs#participaA">
+    <ObjectProperty rdf:about="http://www.semanticweb.org/clubslectura#participaA">
         <rdfs:domain rdf:resource="https://schema.org/Person"/>
-        <rdfs:range rdf:resource="http://example.org/clubs#ClubDeLectura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
     </ObjectProperty>
     
 
 
-    <!-- http://example.org/clubs#teLot -->
+    <!-- http://www.semanticweb.org/clubslectura#teLot -->
 
-    <ObjectProperty rdf:about="http://example.org/clubs#teLot">
-        <rdfs:domain rdf:resource="http://example.org/clubs#ClubDeLectura"/>
-        <rdfs:range rdf:resource="http://example.org/clubs#Lot"/>
+    <ObjectProperty rdf:about="http://www.semanticweb.org/clubslectura#teLot">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
     </ObjectProperty>
     
 
 
-    <!-- http://example.org/clubs#transporta -->
+    <!-- http://www.semanticweb.org/clubslectura#transporta -->
 
-    <ObjectProperty rdf:about="http://example.org/clubs#transporta">
-        <rdfs:domain rdf:resource="http://example.org/clubs#Tramesa"/>
-        <rdfs:range rdf:resource="http://example.org/clubs#Lot"/>
+    <ObjectProperty rdf:about="http://www.semanticweb.org/clubslectura#transporta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clubslectura#Tramesa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
     </ObjectProperty>
     
 
 
-    <!-- http://example.org/clubs#ubicatA -->
+    <!-- http://www.semanticweb.org/clubslectura#ubicatA -->
 
-    <ObjectProperty rdf:about="http://example.org/clubs#ubicatA">
-        <rdfs:domain rdf:resource="http://example.org/clubs#Exemplar"/>
-        <rdfs:range rdf:resource="http://example.org/clubs#Biblioteca"/>
+    <ObjectProperty rdf:about="http://www.semanticweb.org/clubslectura#ubicatA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
     </ObjectProperty>
     
 
@@ -2804,84 +2797,6 @@ This property can be used alongside the license property which indicates license
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://example.org/clubs#Biblioteca -->
-
-    <Class rdf:about="http://example.org/clubs#Biblioteca">
-        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
-    </Class>
-    
-
-
-    <!-- http://example.org/clubs#BibliotecaPublica -->
-
-    <Class rdf:about="http://example.org/clubs#BibliotecaPublica">
-        <rdfs:subClassOf rdf:resource="http://example.org/clubs#Biblioteca"/>
-    </Class>
-    
-
-
-    <!-- http://example.org/clubs#ClubDeLectura -->
-
-    <Class rdf:about="http://example.org/clubs#ClubDeLectura">
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://example.org/clubs#teLot"/>
-                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
-            </Restriction>
-        </rdfs:subClassOf>
-    </Class>
-    
-
-
-    <!-- http://example.org/clubs#Exemplar -->
-
-    <Class rdf:about="http://example.org/clubs#Exemplar">
-        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://example.org/clubs#ubicatA"/>
-                <allValuesFrom rdf:resource="http://example.org/clubs#Biblioteca"/>
-            </Restriction>
-        </rdfs:subClassOf>
-    </Class>
-    
-
-
-    <!-- http://example.org/clubs#Llibre -->
-
-    <Class rdf:about="http://example.org/clubs#Llibre">
-        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
-    </Class>
-    
-
-
-    <!-- http://example.org/clubs#LlibreRecomanat -->
-
-    <Class rdf:about="http://example.org/clubs#LlibreRecomanat">
-        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
-    </Class>
-    
-
-
-    <!-- http://example.org/clubs#Lot -->
-
-    <Class rdf:about="http://example.org/clubs#Lot">
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://example.org/clubs#conteExemplar"/>
-                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
-            </Restriction>
-        </rdfs:subClassOf>
-    </Class>
-    
-
-
-    <!-- http://example.org/clubs#Tramesa -->
-
-    <Class rdf:about="http://example.org/clubs#Tramesa"/>
     
 
 
@@ -3017,7 +2932,9 @@ This property can be used alongside the license property which indicates license
 
     <!-- http://www.semanticweb.org/clubslectura#Biblioteca -->
 
-    <Class rdf:about="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#Biblioteca">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+    </Class>
     
 
 
@@ -3031,19 +2948,95 @@ This property can be used alongside the license property which indicates license
 
     <!-- http://www.semanticweb.org/clubslectura#ClubDeLectura -->
 
-    <Class rdf:about="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#ClubDeLectura">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/clubslectura#teLot"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
     
 
 
     <!-- http://www.semanticweb.org/clubslectura#Exemplar -->
 
-    <Class rdf:about="http://www.semanticweb.org/clubslectura#Exemplar"/>
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#Exemplar">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/clubslectura#ubicatA"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://schema.org/author"/>
+                <allValuesFrom rdf:resource="https://schema.org/Person"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://schema.org/author"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://schema.org/isbn"/>
+                <cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</cardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Llibre -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#Llibre">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#LlibreRecomanat -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#LlibreRecomanat">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
+    </Class>
     
 
 
     <!-- http://www.semanticweb.org/clubslectura#Lot -->
 
-    <Class rdf:about="http://www.semanticweb.org/clubslectura#Lot"/>
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#Lot">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/clubslectura#conteExemplar"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#LotActiu -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#LotActiu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/clubslectura#conteExemplar"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Tramesa -->
+
+    <Class rdf:about="http://www.semanticweb.org/clubslectura#Tramesa"/>
     
 
 
@@ -4004,24 +3997,6 @@ Note: This type is for information about actual reservations, e.g. in confirmati
 
     <Class rdf:about="https://schema.org/Book">
         <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="https://schema.org/author"/>
-                <allValuesFrom rdf:resource="https://schema.org/Person"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="https://schema.org/author"/>
-                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="https://schema.org/isbn"/>
-                <cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</cardinality>
-            </Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>A book.</rdfs:comment>
         <rdfs:label>Book</rdfs:label>
     </Class>
@@ -11044,12 +11019,6 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
 
     <Class rdf:about="https://schema.org/Review">
         <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="https://schema.org/itemReviewed"/>
-                <allValuesFrom rdf:resource="https://schema.org/Book"/>
-            </Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>A review of an item - for example, of a restaurant, movie, or store.</rdfs:comment>
         <rdfs:label>Review</rdfs:label>
     </Class>
@@ -16038,170 +16007,11 @@ case of a single file published after Zip compression, the convention of appendi
     
 
 
-    <!-- http://example.org/clubs#BibliotecaCentral -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#BibliotecaCentral">
-        <rdf:type rdf:resource="http://example.org/clubs#Biblioteca"/>
-        <schema:name>Biblioteca Central</schema:name>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#BibliotecaNord -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#BibliotecaNord">
-        <rdf:type rdf:resource="http://example.org/clubs#Biblioteca"/>
-        <schema:name>Biblioteca Nord</schema:name>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#BibliotecaSud -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#BibliotecaSud">
-        <rdf:type rdf:resource="http://example.org/clubs#Biblioteca"/>
-        <schema:name>Biblioteca Sud</schema:name>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#ClubLectura1 -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#ClubLectura1">
-        <rdf:type rdf:resource="http://example.org/clubs#ClubDeLectura"/>
-        <clubs:teLot rdf:resource="http://example.org/clubs#Lot1"/>
-        <schema:name>Club de Lectura Barcelona</schema:name>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#ClubLecturaClassics -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#ClubLecturaClassics">
-        <rdf:type rdf:resource="http://example.org/clubs#ClubDeLectura"/>
-        <clubs:teLot rdf:resource="http://example.org/clubs#LotClassics"/>
-        <schema:name>Club de Cl�ssics</schema:name>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#ClubLecturaMisteri -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#ClubLecturaMisteri">
-        <rdf:type rdf:resource="http://example.org/clubs#ClubDeLectura"/>
-        <clubs:teLot rdf:resource="http://example.org/clubs#LotMisteri"/>
-        <schema:name>Club de Lectura de Misteri</schema:name>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#Exemplar1 -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#Exemplar1">
-        <rdf:type rdf:resource="http://example.org/clubs#Exemplar"/>
-        <sameAs rdf:resource="https://schema.org/Book_1"/>
-        <clubs:ubicatA rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
-    </NamedIndividual>
-    
-
-
-    <!-- https://schema.org/Book_1 -->
-
-    <NamedIndividual rdf:about="https://schema.org/Book_1"/>
-    
-
-
-    <!-- http://example.org/clubs#ExemplarC1 -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#ExemplarC1">
-        <rdf:type rdf:resource="http://example.org/clubs#Exemplar"/>
-        <sameAs rdf:resource="https://schema.org/Book_3"/>
-        <clubs:ubicatA rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
-    </NamedIndividual>
-    
-
-
-    <!-- https://schema.org/Book_3 -->
-
-    <NamedIndividual rdf:about="https://schema.org/Book_3"/>
-    
-
-
-    <!-- http://example.org/clubs#ExemplarM1 -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#ExemplarM1">
-        <rdf:type rdf:resource="http://example.org/clubs#Exemplar"/>
-        <sameAs rdf:resource="https://schema.org/Book_10"/>
-        <clubs:ubicatA rdf:resource="http://example.org/clubs#BibliotecaNord"/>
-    </NamedIndividual>
-    
-
-
-    <!-- https://schema.org/Book_10 -->
-
-    <NamedIndividual rdf:about="https://schema.org/Book_10"/>
-    
-
-
-    <!-- http://example.org/clubs#ExemplarM2 -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#ExemplarM2">
-        <rdf:type rdf:resource="http://example.org/clubs#Exemplar"/>
-        <sameAs rdf:resource="https://schema.org/Book_25"/>
-        <clubs:ubicatA rdf:resource="http://example.org/clubs#BibliotecaSud"/>
-    </NamedIndividual>
-    
-
-
-    <!-- https://schema.org/Book_25 -->
-
-    <NamedIndividual rdf:about="https://schema.org/Book_25"/>
-    
-
-
-    <!-- http://example.org/clubs#Lot1 -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#Lot1">
-        <rdf:type rdf:resource="http://example.org/clubs#Lot"/>
-        <clubs:conteExemplar rdf:resource="http://example.org/clubs#Exemplar1"/>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#LotClassics -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#LotClassics">
-        <rdf:type rdf:resource="http://example.org/clubs#Lot"/>
-        <clubs:conteExemplar rdf:resource="http://example.org/clubs#ExemplarC1"/>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#LotMisteri -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#LotMisteri">
-        <rdf:type rdf:resource="http://example.org/clubs#Lot"/>
-        <clubs:conteExemplar rdf:resource="http://example.org/clubs#ExemplarM1"/>
-        <clubs:conteExemplar rdf:resource="http://example.org/clubs#ExemplarM2"/>
-    </NamedIndividual>
-    
-
-
-    <!-- http://example.org/clubs#Tramesa1 -->
-
-    <NamedIndividual rdf:about="http://example.org/clubs#Tramesa1">
-        <rdf:type rdf:resource="http://example.org/clubs#Tramesa"/>
-        <clubs:desti rdf:resource="http://example.org/clubs#BibliotecaCentral"/>
-        <clubs:origen rdf:resource="http://example.org/clubs#BibliotecaNord"/>
-        <clubs:transporta rdf:resource="http://example.org/clubs#LotMisteri"/>
-    </NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/clubslectura#BibliotecaCentral -->
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#BibliotecaCentral">
         <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+        <schema:name>Biblioteca Central</schema:name>
     </NamedIndividual>
     
 
@@ -16215,11 +16025,60 @@ case of a single file published after Zip compression, the convention of appendi
     
 
 
+    <!-- http://www.semanticweb.org/clubslectura#BibliotecaNord -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#BibliotecaNord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+        <schema:name>Biblioteca Nord</schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#BibliotecaSud -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#BibliotecaSud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Biblioteca"/>
+        <schema:name>Biblioteca Sud</schema:name>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/clubslectura#ClubBarcelona -->
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ClubBarcelona">
         <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
         <cl:teLot rdf:resource="http://www.semanticweb.org/clubslectura#LotNovelLaNegra"/>
+        <cl:repTramesa rdf:resource="http://www.semanticweb.org/clubslectura#Tramesa001"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#ClubLectura1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ClubLectura1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
+        <cl:teLot rdf:resource="http://www.semanticweb.org/clubslectura#Lot1"/>
+        <schema:name>Club de Lectura Barcelona</schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#ClubLecturaClassics -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ClubLecturaClassics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
+        <cl:teLot rdf:resource="http://www.semanticweb.org/clubslectura#LotClassics"/>
+        <schema:name>Club de Cl�ssics</schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#ClubLecturaMisteri -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ClubLecturaMisteri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#ClubDeLectura"/>
+        <cl:teLot rdf:resource="http://www.semanticweb.org/clubslectura#LotMisteri"/>
+        <schema:name>Club de Lectura de Misteri</schema:name>
     </NamedIndividual>
     
 
@@ -16229,6 +16088,7 @@ case of a single file published after Zip compression, the convention of appendi
     <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar001">
         <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
         <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaCentral"/>
+        <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaGracia"/>
     </NamedIndividual>
     
 
@@ -16267,12 +16127,113 @@ case of a single file published after Zip compression, the convention of appendi
     
 
 
+    <!-- http://www.semanticweb.org/clubslectura#Exemplar1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Exemplar1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+        <sameAs rdf:resource="https://schema.org/Book_1"/>
+        <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaCentral"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://schema.org/Book_1 -->
+
+    <NamedIndividual rdf:about="https://schema.org/Book_1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#ExemplarC1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ExemplarC1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+        <sameAs rdf:resource="https://schema.org/Book_3"/>
+        <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaCentral"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://schema.org/Book_3 -->
+
+    <NamedIndividual rdf:about="https://schema.org/Book_3"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#ExemplarM1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ExemplarM1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+        <sameAs rdf:resource="https://schema.org/Book_10"/>
+        <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaNord"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://schema.org/Book_10 -->
+
+    <NamedIndividual rdf:about="https://schema.org/Book_10"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#ExemplarM2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#ExemplarM2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar"/>
+        <sameAs rdf:resource="https://schema.org/Book_25"/>
+        <cl:ubicatA rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaSud"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://schema.org/Book_25 -->
+
+    <NamedIndividual rdf:about="https://schema.org/Book_25"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Lot001 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Lot001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#LotActiu"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar001"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Lot1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Lot1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar1"/>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/clubslectura#LotCienciaFiccio -->
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#LotCienciaFiccio">
         <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
         <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar004"/>
         <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar005"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#LotClassics -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#LotClassics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#ExemplarC1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#LotMisteri -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#LotMisteri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Lot"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#ExemplarM1"/>
+        <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#ExemplarM2"/>
     </NamedIndividual>
     
 
@@ -16284,6 +16245,26 @@ case of a single file published after Zip compression, the convention of appendi
         <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar001"/>
         <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar002"/>
         <cl:conteExemplar rdf:resource="http://www.semanticweb.org/clubslectura#Exemplar003"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Tramesa001 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Tramesa001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Tramesa"/>
+        <cl:transportaLot rdf:resource="http://www.semanticweb.org/clubslectura#Lot001"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clubslectura#Tramesa1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/clubslectura#Tramesa1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clubslectura#Tramesa"/>
+        <cl:desti rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaCentral"/>
+        <cl:origen rdf:resource="http://www.semanticweb.org/clubslectura#BibliotecaNord"/>
+        <cl:transporta rdf:resource="http://www.semanticweb.org/clubslectura#LotMisteri"/>
     </NamedIndividual>
     
 
@@ -16412,7 +16393,7 @@ case of a single file published after Zip compression, the convention of appendi
     <!-- https://schema.org/Author_1 -->
 
     <NamedIndividual rdf:about="https://schema.org/Author_1">
-        <clubs:participaA rdf:resource="http://example.org/clubs#ClubLectura1"/>
+        <cl:participaA rdf:resource="http://www.semanticweb.org/clubslectura#ClubLectura1"/>
     </NamedIndividual>
     
 
@@ -19058,7 +19039,7 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
     <!-- https://schema.org/Person_1 -->
 
     <NamedIndividual rdf:about="https://schema.org/Person_1">
-        <clubs:participaA rdf:resource="http://example.org/clubs#ClubLecturaMisteri"/>
+        <cl:participaA rdf:resource="http://www.semanticweb.org/clubslectura#ClubLecturaMisteri"/>
     </NamedIndividual>
     
 
@@ -19066,7 +19047,7 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
     <!-- https://schema.org/Person_2 -->
 
     <NamedIndividual rdf:about="https://schema.org/Person_2">
-        <clubs:participaA rdf:resource="http://example.org/clubs#ClubLecturaClassics"/>
+        <cl:participaA rdf:resource="http://www.semanticweb.org/clubslectura#ClubLecturaClassics"/>
     </NamedIndividual>
     
 

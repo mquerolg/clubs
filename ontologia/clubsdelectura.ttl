@@ -18749,42 +18749,6 @@ schema:name a owl:DatatypeProperty .
 schema:isbn a owl:DatatypeProperty .
 schema:datePublished a owl:DatatypeProperty .
 
-schema:Book rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty schema:author ;
-    owl:minCardinality "1"^^xsd:nonNegativeInteger
-] .
-schema:Book rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty schema:author ;
-    owl:allValuesFrom schema:Person
-] .
-
-schema:Book rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty schema:isbn ;
-    owl:cardinality "1"^^xsd:nonNegativeInteger
-] .
-
-schema:Book rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty schema:author ;
-    owl:minCardinality "1"^^xsd:nonNegativeInteger
-] .
-
-schema:Book rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty schema:author ;
-    owl:allValuesFrom schema:Person
-] .
-
-
-
-schema:Review rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty schema:itemReviewed ;
-    owl:allValuesFrom schema:Book
-] .
 
 
 @prefix ex: <http://example.org/> .
@@ -20517,6 +20481,22 @@ cl:LotActiu
         owl:onProperty cl:conteExemplar ;
         owl:minCardinality "1"^^xsd:nonNegativeInteger
     ] .
-	
-	
-	
+
+
+# Clubs de lectura
+cl:ClubBarcelona a cl:ClubDeLectura .
+
+# Trameses
+cl:Tramesa001 a cl:Tramesa ;
+    cl:transportaLot cl:Lot001 .
+
+# Relació club - tramesa
+cl:ClubBarcelona cl:repTramesa cl:Tramesa001 .
+
+# Lot
+cl:Lot001 a cl:LotActiu ;
+    cl:conteExemplar cl:Exemplar001 .
+
+# Exemplar
+cl:Exemplar001 a cl:Exemplar ;
+    cl:ubicatA cl:BibliotecaGracia .
