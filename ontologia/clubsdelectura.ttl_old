@@ -12,9 +12,11 @@
 @prefix snomed: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix cl: <http://www.semanticweb.org/clubslectura#> .
-@prefix ex: <http://example.org/> .
-@prefix schema1: <http://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schema: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
 
 #############################
 # ONTOLOGIA (NOVA CAPA)
@@ -27,7 +29,7 @@ cl:Exemplar a owl:Class .
 cl:Biblioteca a owl:Class .
 cl:Tramesa a owl:Class .
 
-# Integració amb Schema.org
+# Integraci� amb Schema.org
 cl:Exemplar rdfs:subClassOf schema:Book .
 cl:Biblioteca rdfs:subClassOf schema:Organization .
 
@@ -49,7 +51,7 @@ cl:participaA a owl:ObjectProperty ;
     rdfs:range cl:ClubDeLectura .
 
 #############################
-# RESTRICCIÓ BÀSICA (OWL)
+# RESTRICCI� B�SICA (OWL)
 #############################
 
 cl:Lot rdfs:subClassOf [
@@ -59,7 +61,7 @@ cl:Lot rdfs:subClassOf [
 ] .
 
 #############################
-# INSTÀNCIES DE DOMINI (DEMO)
+# INST�NCIES DE DOMINI (DEMO)
 #############################
 
 cl:BibliotecaCentral a cl:Biblioteca ;
@@ -73,11 +75,11 @@ cl:Lot1 a cl:Lot ;
     cl:conteExemplar cl:Exemplar1 .
 
 #############################
-# ENLLAÇ AMB LES TEVES DADES
+# ENLLA� AMB LES TEVES DADES
 #############################
 
 # IMPORTANT:
-# Aquí connectem amb un llibre real del teu dataset.
+# Aqu� connectem amb un llibre real del teu dataset.
 # SUBSTITUEIX schema:Book_1 per un ID real del teu TTL si cal
 
 cl:Exemplar1 a cl:Exemplar ;
@@ -85,13 +87,14 @@ cl:Exemplar1 a cl:Exemplar ;
     owl:sameAs schema:Book_1 .
 
 #############################
-# EXEMPLE PARTICIPACIÓ
+# EXEMPLE PARTICIPACI�
 #############################
 
 # Si tens autors/persones al teu dataset:
-# (opcional, però suma punts)
+# (opcional, per� suma punts)
 
 schema:Author_1 cl:participaA cl:ClubLectura1 .
+
 
 schema:3DModel a rdfs:Class ;
     rdfs:label "3DModel" ;
@@ -1828,7 +1831,7 @@ schema:EntryPoint a rdfs:Class ;
 
 schema:Enumeration a rdfs:Class ;
     rdfs:label "Enumeration" ;
-    rdfs:comment "Lists or enumerationsâfor example, a list of cuisines or music genres, etc." ;
+    rdfs:comment "Lists or enumerations—for example, a list of cuisines or music genres, etc." ;
     rdfs:subClassOf schema:Intangible .
 
 schema:Episode a rdfs:Class ;
@@ -3207,7 +3210,7 @@ schema:MobilePhoneStore a rdfs:Class ;
 schema:MonetaryAmount a rdfs:Class ;
     rdfs:label "MonetaryAmount" ;
     schema:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO> ;
-    rdfs:comment "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between Â£1,000 and Â£1,000,000 GBP, or the value of a salary, etc. It is recommended to use <a class=\"localLink\" href=\"http://schema.org/PriceSpecification\">PriceSpecification</a> Types to describe the price of an Offer, Invoice, etc." ;
+    rdfs:comment "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use <a class=\"localLink\" href=\"http://schema.org/PriceSpecification\">PriceSpecification</a> Types to describe the price of an Offer, Invoice, etc." ;
     rdfs:subClassOf schema:StructuredValue .
 
 schema:MonetaryAmountDistribution a rdfs:Class ;
@@ -3528,7 +3531,7 @@ schema:OceanBodyOfWater a rdfs:Class ;
 schema:Offer a rdfs:Class ;
     rdfs:label "Offer" ;
     schema:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
-    rdfs:comment """An offer to transfer some rights to an item or to provide a service â for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.<br/><br/>
+    rdfs:comment """An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.<br/><br/>
 
 Note: As the <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a> property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.<br/><br/>
 
@@ -6346,7 +6349,7 @@ schema:Nonprofit501a a schema:USNonprofitType ;
     schema:category "issue-2543" ;
     schema:isPartOf <http://pending.schema.org> ;
     schema:source <https://github.com/schemaorg/schemaorg/issues/2543> ;
-    rdfs:comment "Nonprofit501a: Non-profit type referring to Farmersâ Cooperative Associations." .
+    rdfs:comment "Nonprofit501a: Non-profit type referring to Farmers’ Cooperative Associations." .
 
 schema:Nonprofit501c1 a schema:USNonprofitType ;
     rdfs:label "Nonprofit501c1" ;
@@ -7685,7 +7688,7 @@ schema:actionableFeedbackPolicy a rdf:Property ;
         schema:URL ;
     schema:source <https://github.com/schemaorg/schemaorg/issues/1525>,
         <https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP> ;
-    rdfs:comment "For a <a class=\"localLink\" href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a> or other news-related <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a>, a statement about public engagement activities (for news media, the newsroomâs), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication." ;
+    rdfs:comment "For a <a class=\"localLink\" href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a> or other news-related <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a>, a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication." ;
     rdfs:subPropertyOf schema:publishingPrinciples .
 
 schema:activeIngredient a rdf:Property ;
@@ -8506,7 +8509,7 @@ schema:beneficiaryBank a rdf:Property ;
         schema:Text ;
     schema:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO>,
         <https://github.com/schemaorg/schemaorg/issues/1253> ;
-    rdfs:comment "A bank or bankâs branch, financial institution or international financial institution operating the beneficiaryâs bank account or releasing funds for the beneficiary" .
+    rdfs:comment "A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary" .
 
 schema:benefits a rdf:Property ;
     rdfs:label "benefits" ;
@@ -9397,7 +9400,7 @@ schema:correctionsPolicy a rdf:Property ;
         schema:URL ;
     schema:source <https://github.com/schemaorg/schemaorg/issues/1525>,
         <https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP> ;
-    rdfs:comment "For an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a>), a statement describing (in news media, the newsroomâs) disclosure and correction policy for errors." ;
+    rdfs:comment "For an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a>), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors." ;
     rdfs:subPropertyOf schema:publishingPrinciples .
 
 schema:costCategory a rdf:Property ;
@@ -9520,7 +9523,7 @@ schema:credentialCategory a rdf:Property ;
         schema:Text,
         schema:URL ;
     schema:source <https://github.com/schemaorg/schemaorg/issues/1779> ;
-    rdfs:comment "The category or type of credential being described, for example \"degreeâ, âcertificateâ, âbadgeâ, or more specific term." .
+    rdfs:comment "The category or type of credential being described, for example \"degree”, “certificate”, “badge”, or more specific term." .
 
 schema:creditedTo a rdf:Property ;
     rdfs:label "creditedTo" ;
@@ -10127,7 +10130,7 @@ schema:diversityPolicy a rdf:Property ;
         schema:URL ;
     schema:source <https://github.com/schemaorg/schemaorg/issues/1525>,
         <https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP> ;
-    rdfs:comment "Statement on diversity policy by an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> e.g. a <a class=\"localLink\" href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a>. For a <a class=\"localLink\" href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a>, a statement describing the newsroomâs diversity policy on both staffing and sources, typically providing staffing data." .
+    rdfs:comment "Statement on diversity policy by an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> e.g. a <a class=\"localLink\" href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a>. For a <a class=\"localLink\" href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a>, a statement describing the newsroom’s diversity policy on both staffing and sources, typically providing staffing data." .
 
 schema:diversityStaffingReport a rdf:Property ;
     rdfs:label "diversityStaffingReport" ;
@@ -12318,7 +12321,7 @@ schema:item a rdf:Property ;
     schema:domainIncludes schema:DataFeedItem,
         schema:ListItem ;
     schema:rangeIncludes schema:Thing ;
-    rdfs:comment "An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')â." .
+    rdfs:comment "An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')’." .
 
 schema:itemCondition a rdf:Property ;
     rdfs:label "itemCondition" ;
@@ -12694,7 +12697,7 @@ schema:legislationType a rdf:Property ;
         schema:Text ;
     schema:source <http://publications.europa.eu/mdr/eli/index.html>,
         <https://github.com/schemaorg/schemaorg/issues/1156> ;
-    rdfs:comment "The type of the legislation. Examples of values are \"law\", \"act\", \"directive\", \"decree\", \"regulation\", \"statutory instrument\", \"loi organique\", \"rÃ¨glement grand-ducal\", etc., depending on the country." ;
+    rdfs:comment "The type of the legislation. Examples of values are \"law\", \"act\", \"directive\", \"decree\", \"regulation\", \"statutory instrument\", \"loi organique\", \"règlement grand-ducal\", etc., depending on the country." ;
     rdfs:subPropertyOf schema:genre ;
     owl:equivalentProperty eli:type_document ;
     skos:exactMatch eli:type_document .
@@ -13635,7 +13638,7 @@ schema:numberOfFullBathrooms a rdf:Property ;
     schema:isPartOf <http://pending.schema.org> ;
     schema:rangeIncludes schema:Number ;
     schema:source <https://github.com/schemaorg/schemaorg/issues/2373> ;
-    rdfs:comment "Number of full bathrooms - The total number of full and Â¾ bathrooms in an <a class=\"localLink\" href=\"http://schema.org/Accommodation\">Accommodation</a>. This corresponds to the <a href=\"https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field\">BathroomsFull field in RESO</a>." .
+    rdfs:comment "Number of full bathrooms - The total number of full and ¾ bathrooms in an <a class=\"localLink\" href=\"http://schema.org/Accommodation\">Accommodation</a>. This corresponds to the <a href=\"https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field\">BathroomsFull field in RESO</a>." .
 
 schema:numberOfItems a rdf:Property ;
     rdfs:label "numberOfItems" ;
@@ -13667,7 +13670,7 @@ schema:numberOfPartialBathrooms a rdf:Property ;
     schema:isPartOf <http://pending.schema.org> ;
     schema:rangeIncludes schema:Number ;
     schema:source <https://github.com/schemaorg/schemaorg/issues/2373> ;
-    rdfs:comment "Number of partial bathrooms - The total number of half and Â¼ bathrooms in an <a class=\"localLink\" href=\"http://schema.org/Accommodation\">Accommodation</a>. This corresponds to the <a href=\"https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field\">BathroomsPartial field in RESO</a>." .
+    rdfs:comment "Number of partial bathrooms - The total number of half and ¼ bathrooms in an <a class=\"localLink\" href=\"http://schema.org/Accommodation\">Accommodation</a>. This corresponds to the <a href=\"https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field\">BathroomsPartial field in RESO</a>." .
 
 schema:numberOfPlayers a rdf:Property ;
     rdfs:label "numberOfPlayers" ;
@@ -14273,7 +14276,7 @@ schema:phoneticText a rdf:Property ;
     schema:isPartOf <http://pending.schema.org> ;
     schema:rangeIncludes schema:Text ;
     schema:source <https://github.com/schemaorg/schemaorg/issues/2108> ;
-    rdfs:comment "Representation of a text <a class=\"localLink\" href=\"http://schema.org/textValue\">textValue</a> using the specified <a class=\"localLink\" href=\"http://schema.org/speechToTextMarkup\">speechToTextMarkup</a>. For example the city name of Houston in IPA: /ËhjuËstÉn/." .
+    rdfs:comment "Representation of a text <a class=\"localLink\" href=\"http://schema.org/textValue\">textValue</a> using the specified <a class=\"localLink\" href=\"http://schema.org/speechToTextMarkup\">speechToTextMarkup</a>. For example the city name of Houston in IPA: /ˈhjuːstən/." .
 
 schema:photos a rdf:Property ;
     rdfs:label "photos" ;
@@ -14975,7 +14978,7 @@ schema:recipeCategory a rdf:Property ;
     rdfs:label "recipeCategory" ;
     schema:domainIncludes schema:Recipe ;
     schema:rangeIncludes schema:Text ;
-    rdfs:comment "The category of the recipeâfor example, appetizer, entree, etc." .
+    rdfs:comment "The category of the recipe—for example, appetizer, entree, etc." .
 
 schema:recipeCuisine a rdf:Property ;
     rdfs:label "recipeCuisine" ;
@@ -18411,7 +18414,7 @@ schema:translationOfWork a rdf:Property ;
     schema:inverseOf schema:workTranslation ;
     schema:isPartOf <http://bib.schema.org> ;
     schema:rangeIncludes schema:CreativeWork ;
-    rdfs:comment "The work that this work has been translated from. e.g. ç©ç§èµ·æº is a translationOf âOn the Origin of Speciesâ" .
+    rdfs:comment "The work that this work has been translated from. e.g. 物种起源 is a translationOf “On the Origin of Species”" .
 
 schema:usageInfo a rdf:Property ;
     rdfs:label "usageInfo" ;
@@ -18439,7 +18442,7 @@ schema:workTranslation a rdf:Property ;
     schema:inverseOf schema:translationOfWork ;
     schema:isPartOf <http://bib.schema.org> ;
     schema:rangeIncludes schema:CreativeWork ;
-    rdfs:comment "A work that is a translation of the content of this work. e.g. è¥¿éè¨ has an English workTranslation âJourney to the Westâ,a German workTranslation âMonkeys Pilgerfahrtâ and a Vietnamese  translation TÃ¢y du kÃ½ bÃ¬nh kháº£o." .
+    rdfs:comment "A work that is a translation of the content of this work. e.g. 西遊記 has an English workTranslation “Journey to the West”,a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình khảo." .
 
 schema:yield a rdf:Property ;
     rdfs:label "yield" ;
@@ -18737,6 +18740,7 @@ schema:identifier a rdf:Property ;
     rdfs:comment "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." ;
     owl:equivalentProperty dct:identifier .
 
+
 schema:author a owl:ObjectProperty .
 schema:review a owl:ObjectProperty .
 schema:itemReviewed a owl:ObjectProperty .
@@ -18744,6 +18748,12 @@ schema:itemReviewed a owl:ObjectProperty .
 schema:name a owl:DatatypeProperty .
 schema:isbn a owl:DatatypeProperty .
 schema:datePublished a owl:DatatypeProperty .
+
+
+
+@prefix ex: <http://example.org/> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:book1 a schema1:Book ;
     schema1:author ex:author1 ;
@@ -18803,13 +18813,13 @@ ex:book105 a schema1:Book ;
 ex:book106 a schema1:Book ;
     schema1:datePublished "1911" ;
     schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The EncyclopÃ¦dia Britannica" .
+    schema1:name "The Encyclopædia Britannica" .
 
 ex:book107 a schema1:Book ;
     schema1:author ex:author66 ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "2024-10-24" ;
-    schema1:description "Step into the heart of revolutionary Spain with George Orwell's powerful account, Homage to Catalonia. In this poignant narrative, Orwell recounts his firsthand experiences fighting in the Spanish Civil War, offering a vivid and deeply personal perspective on the political and social upheaval of the time. Orwellâs writing brings to life the intense struggles, challenges, and betrayals he witnessed as he joined the militia in Catalonia. With sharp clarity, he paints a stark picture of the ideological divides that tore the country apart, and the complexities of war that blurred the lines between friend and foe.But here's the twist that will captivate you: What does Orwellâs experience reveal about the nature of truth, power, and the human spirit during times of war? Can we learn from the past to avoid repeating its mistakes? This extraordinary memoir offers a rare look into the realities of war, filled with unflinching honesty and a deep sense of humanism. Through Orwellâs eyes, the reader gains an intimate understanding of the personal costs of conflict and the difficult choices soldiers had to make. Are you ready to witness the raw, unfiltered truths of war as seen through the eyes of one of history's most influential writers?Dare to immerse yourself in the brutal honesty of Homage to Catalonia and experience a unique chapter of history that continues to resonate today. Purchase it now, and begin your journey through Orwellâs compelling narrative of war, ideology, and survival." ;
+    schema1:description "Step into the heart of revolutionary Spain with George Orwell's powerful account, Homage to Catalonia. In this poignant narrative, Orwell recounts his firsthand experiences fighting in the Spanish Civil War, offering a vivid and deeply personal perspective on the political and social upheaval of the time. Orwell’s writing brings to life the intense struggles, challenges, and betrayals he witnessed as he joined the militia in Catalonia. With sharp clarity, he paints a stark picture of the ideological divides that tore the country apart, and the complexities of war that blurred the lines between friend and foe.But here's the twist that will captivate you: What does Orwell’s experience reveal about the nature of truth, power, and the human spirit during times of war? Can we learn from the past to avoid repeating its mistakes? This extraordinary memoir offers a rare look into the realities of war, filled with unflinching honesty and a deep sense of humanism. Through Orwell’s eyes, the reader gains an intimate understanding of the personal costs of conflict and the difficult choices soldiers had to make. Are you ready to witness the raw, unfiltered truths of war as seen through the eyes of one of history's most influential writers?Dare to immerse yourself in the brutal honesty of Homage to Catalonia and experience a unique chapter of history that continues to resonate today. Purchase it now, and begin your journey through Orwell’s compelling narrative of war, ideology, and survival." ;
     schema1:genre "Biography & Autobiography" ;
     schema1:name "Homage to Catalonia" .
 
@@ -18830,7 +18840,7 @@ ex:book11 a schema1:Book ;
     schema1:author ex:author10 ;
     schema1:authorName "Chris Bambery" ;
     schema1:datePublished "2020-04-24" ;
-    schema1:description "2017 saw Catalonia come under the world's spotlight as it again fought for independence and the preservation and protection of its unique Catalan culture. Answering the questions and complications behind the fight for Catalonian Independence, Catalonia Reborn is a detailed guide to the region's political, historical and cultural issues. For the layman as well as the expert, it takes the reader through the rich history of Catalonia â its language, culture and political background â to the present day, covering defining eras of the region from Franco's dictatorship to the 2017 independence referendum and elections." ;
+    schema1:description "2017 saw Catalonia come under the world's spotlight as it again fought for independence and the preservation and protection of its unique Catalan culture. Answering the questions and complications behind the fight for Catalonian Independence, Catalonia Reborn is a detailed guide to the region's political, historical and cultural issues. For the layman as well as the expert, it takes the reader through the rich history of Catalonia – its language, culture and political background – to the present day, covering defining eras of the region from Franco's dictatorship to the 2017 independence referendum and elections." ;
     schema1:genre "History" ;
     schema1:isbn "9781912387410" ;
     schema1:name "Catalonia Reborn" .
@@ -18857,7 +18867,7 @@ ex:book113 a schema1:Book ;
     schema1:author ex:author71 ;
     schema1:authorName "H. Rosi Song" ;
     schema1:datePublished "2019-07-24" ;
-    schema1:description "Widely associated with avant-garde gastronomy and lavish food markets, Barcelona has become a top destination for gourmands and chefs around the world, especially after the spectacular rise of chef Ferran AdriÃ  of the famed elBulli, soon to be reborn as elBulli1846. Barcelona is a city that attracts millions of visitors in search of art and culinary experiences while cookery apprentices from around the world arrive looking to perfect their skills and expand their gastronomic horizon. The city offers an unequaled combination of restaurants, chefs, restauranteurs, media and local government initiatives to help those who arrive seeking an extraordinary culinary experience. But how has the city established itself as a global culinary referent while becoming synonymous with cutting-edge cuisine? This book narrates Barcelonaâs urban and culinary development from the Middle Ages to the present, tracing the origins and the growth of the culinary prestige of this part of Catalonia. Barcelona has been a cosmopolitan center since the 1700s because of its location and busy port. The city has always been well supplied with food, and its residents built a strong culinary tradition enlivened by its contact with other cuisines and novel products afforded by its geographic location and the people who migrated to the area. With literature, painting, music and architecture, cooking has been a crucial activity in creating and maintaining a Catalan identity. Past, present and future visitors of the city will find a fascinating history of the unforgettable culinary importance of one of the most popular cities of Spain." ;
+    schema1:description "Widely associated with avant-garde gastronomy and lavish food markets, Barcelona has become a top destination for gourmands and chefs around the world, especially after the spectacular rise of chef Ferran Adrià of the famed elBulli, soon to be reborn as elBulli1846. Barcelona is a city that attracts millions of visitors in search of art and culinary experiences while cookery apprentices from around the world arrive looking to perfect their skills and expand their gastronomic horizon. The city offers an unequaled combination of restaurants, chefs, restauranteurs, media and local government initiatives to help those who arrive seeking an extraordinary culinary experience. But how has the city established itself as a global culinary referent while becoming synonymous with cutting-edge cuisine? This book narrates Barcelona’s urban and culinary development from the Middle Ages to the present, tracing the origins and the growth of the culinary prestige of this part of Catalonia. Barcelona has been a cosmopolitan center since the 1700s because of its location and busy port. The city has always been well supplied with food, and its residents built a strong culinary tradition enlivened by its contact with other cuisines and novel products afforded by its geographic location and the people who migrated to the area. With literature, painting, music and architecture, cooking has been a crucial activity in creating and maintaining a Catalan identity. Past, present and future visitors of the city will find a fascinating history of the unforgettable culinary importance of one of the most popular cities of Spain." ;
     schema1:genre "Cooking" ;
     schema1:isbn "9781538107843" ;
     schema1:name "A Taste of Barcelona" .
@@ -18866,7 +18876,7 @@ ex:book114 a schema1:Book ;
     schema1:author ex:author72 ;
     schema1:authorName "J. H. Elliott" ;
     schema1:datePublished "2018-08-21" ;
-    schema1:description "A landmark account that reveals the long history behind the current Catalan and Scottish independence movements A distinguished historian of Spain and Europe provides an enlightening account of the development of nationalist and separatist movements in contemporary Catalonia and Scotland. This first sustained comparative study uncovers the similarities and the contrasts between the Scottish and Catalan experiences across a five-hundred-year period, beginning with the royal marriages that brought about union with their more powerful neighbors, England and Castile respectively, and following the story through the centuries from the end of the Middle Ages until todayâs dramatic events. J. H. Elliott examines the political, economic, social, cultural, and emotional factors that divide Scots and Catalans from the larger nations to which their fortunes were joined. He offers new insights into the highly topical subject of the character and development of European nationalism, the nature of separatism, and the sense of grievance underlying the secessionist aspirations that led to the Scottish referendum of 2014, the illegal Catalan referendum of October 2017, and the resulting proclamation of an independent Catalan republic." ;
+    schema1:description "A landmark account that reveals the long history behind the current Catalan and Scottish independence movements A distinguished historian of Spain and Europe provides an enlightening account of the development of nationalist and separatist movements in contemporary Catalonia and Scotland. This first sustained comparative study uncovers the similarities and the contrasts between the Scottish and Catalan experiences across a five-hundred-year period, beginning with the royal marriages that brought about union with their more powerful neighbors, England and Castile respectively, and following the story through the centuries from the end of the Middle Ages until today’s dramatic events. J. H. Elliott examines the political, economic, social, cultural, and emotional factors that divide Scots and Catalans from the larger nations to which their fortunes were joined. He offers new insights into the highly topical subject of the character and development of European nationalism, the nature of separatism, and the sense of grievance underlying the secessionist aspirations that led to the Scottish referendum of 2014, the illegal Catalan referendum of October 2017, and the resulting proclamation of an independent Catalan republic." ;
     schema1:genre "History" ;
     schema1:isbn "9780300240719" ;
     schema1:name "Scots and Catalans" .
@@ -18928,7 +18938,7 @@ ex:book120 a schema1:Book ;
 
 ex:book121 a schema1:Book ;
     schema1:datePublished "2017-09-25" ;
-    schema1:description "The Crown of Aragon. A Singular Mediterranean Empire recovers the history of an empire which was of great importance in the late medieval Mediterranean, but which has since been relegated almost to oblivion by the course of history. The Crown of Aragon was a Mediterranean crossroads: between west and east for the economy, and between north and south for culture and religion, drawing in many different peoples, covering Iberia to Greece. A new vision of the Crown of Aragon as a framework of overlapping identities facilitates its historiographical recovery, showcased in the chapters of this volume which analyse the economy, institutions, social evolution, political strategy and cultural expression in literature and art of the Crown of Aragon. Contributors are David Abulafia, Lola Badia, Xavier Barral-i-Altet, Pere Benito, Maria Bonet, JesÃºs Brufal, Alessandra Cioppi, Damien Coulon, Luciano Gallinari, Isabel Grifoll, Adam J. Kosto, Esther MartÃ­-SetaÃ±Ã©s, Sebastiana Nocco, Antoni Riera, Flocel SabatÃ© and Antoni Simon." ;
+    schema1:description "The Crown of Aragon. A Singular Mediterranean Empire recovers the history of an empire which was of great importance in the late medieval Mediterranean, but which has since been relegated almost to oblivion by the course of history. The Crown of Aragon was a Mediterranean crossroads: between west and east for the economy, and between north and south for culture and religion, drawing in many different peoples, covering Iberia to Greece. A new vision of the Crown of Aragon as a framework of overlapping identities facilitates its historiographical recovery, showcased in the chapters of this volume which analyse the economy, institutions, social evolution, political strategy and cultural expression in literature and art of the Crown of Aragon. Contributors are David Abulafia, Lola Badia, Xavier Barral-i-Altet, Pere Benito, Maria Bonet, Jesús Brufal, Alessandra Cioppi, Damien Coulon, Luciano Gallinari, Isabel Grifoll, Adam J. Kosto, Esther Martí-Setañés, Sebastiana Nocco, Antoni Riera, Flocel Sabaté and Antoni Simon." ;
     schema1:genre "History" ;
     schema1:isbn "9789004349612" ;
     schema1:name "The Crown of Aragon" .
@@ -18945,7 +18955,7 @@ ex:book123 a schema1:Book ;
 ex:book124 a schema1:Book ;
     schema1:datePublished "1911" ;
     schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The EncyclopÃ¦dia Britannica: Shuvalov-Subliminal Self" .
+    schema1:name "The Encyclopædia Britannica: Shuvalov-Subliminal Self" .
 
 ex:book125 a schema1:Book ;
     schema1:author ex:author78 ;
@@ -18993,7 +19003,7 @@ ex:book13 a schema1:Book ;
 
 ex:book130 a schema1:Book ;
     schema1:author ex:author81 ;
-    schema1:authorName "Arnau GonzÃ lez i Vilalta" ;
+    schema1:authorName "Arnau Gonzàlez i Vilalta" ;
     schema1:datePublished "2020" ;
     schema1:description "But Catalan politics blew in quite another way, later reacting to Soviet dis-interest and British indecisiveness, amongst a host of other pressures. Placing Catalonia and the Catalan nationalist movement in the foreground of contemporary Spanish discourse reveals why present internal complexities require a historical dimension that takes into account early twentieth-century pan-European/ pan-international movements that supported or decried secession, albeit for widely differing nationalist motives. Not least were the perceived and feared reactions of minority populations, and the potential strategic geographic/diplomatic consequences for European leaders. In a way, the unfolding of antagonisms on the international and European scene led to the internal Spanish conflict. ." ;
     schema1:genre "Catalonia (Spain)" ;
@@ -19004,14 +19014,14 @@ ex:book131 a schema1:Book ;
     schema1:author ex:author82 ;
     schema1:authorName "DK Travel" ;
     schema1:datePublished "2026-02-05" ;
-    schema1:description "Make your trip to Barcelona and Catalonia extraordinary Sunbathing on the beaches of the Costa Brava. Soaking up world-class art at the Museu Nacional d'Art de Catalunya. A road trip through picturesque Catalan villages. There are so many reasons to visit Barcelona and Catalonia. Whatever your dream trip involves, this DK travel guide is the perfect companion. Our updated guide brings Barcelona and Catalonia to life, transporting you there like no other travel guide does with expert-led insights, trusted travel advice, detailed breakdowns of all the must-see sights, photographs on practically every page, and our hand-drawn illustrations, which take you inside the regionâs buildings and neighbourhoods. You'll discover: - our pick of Barcelona and Cataloniaâs must-sees and top experiences - beautiful photography and detailed illustrations, taking you to the heart of Barcelona and Catalonia - the best spots to eat, drink, shop and stay - detailed maps and walks which make navigating the region easy - easy-to-follow itineraries - expert advice: get ready, get around and stay safe - colour-coded chapters to each part of Barcelona and Catalonia - a lightweight format, so you can take it with you wherever you go Want the best of Barcelona and Catalonia in your pocket? Try Top 10 Barcelona." ;
+    schema1:description "Make your trip to Barcelona and Catalonia extraordinary Sunbathing on the beaches of the Costa Brava. Soaking up world-class art at the Museu Nacional d'Art de Catalunya. A road trip through picturesque Catalan villages. There are so many reasons to visit Barcelona and Catalonia. Whatever your dream trip involves, this DK travel guide is the perfect companion. Our updated guide brings Barcelona and Catalonia to life, transporting you there like no other travel guide does with expert-led insights, trusted travel advice, detailed breakdowns of all the must-see sights, photographs on practically every page, and our hand-drawn illustrations, which take you inside the region’s buildings and neighbourhoods. You'll discover: - our pick of Barcelona and Catalonia’s must-sees and top experiences - beautiful photography and detailed illustrations, taking you to the heart of Barcelona and Catalonia - the best spots to eat, drink, shop and stay - detailed maps and walks which make navigating the region easy - easy-to-follow itineraries - expert advice: get ready, get around and stay safe - colour-coded chapters to each part of Barcelona and Catalonia - a lightweight format, so you can take it with you wherever you go Want the best of Barcelona and Catalonia in your pocket? Try Top 10 Barcelona." ;
     schema1:genre "Travel" ;
     schema1:isbn "9780241811856" ;
     schema1:name "DK Barcelona and Catalonia" .
 
 ex:book132 a schema1:Book ;
     schema1:author ex:author83 ;
-    schema1:authorName "Juan DÃ­ez Medrano" ;
+    schema1:authorName "Juan Díez Medrano" ;
     schema1:datePublished "1995" ;
     schema1:description "Nationalist movements in both the Basque Country and Catalonia are embedded in the context of Spanish rule, but they differ profoundly in their goals, strategies, constituencies, and success in marshaling public support. In a pathbreaking work of historical sociology, Juan Diez Medrano examines these differences for the first time. He provides not only a rich political history of the two cases but also a new explanation for why some nationalist movements adopt separatism or violence. Diez Medrano compares the formation of cultural identity in Catalonia and the Basque Country in an investigation that starts in the seventeenth century. For each region, he looks at patterns of industrialization, the establishment of nationalist parties before the Civil War, levels of nationalist activity under Franco, and conditions in democratic Spain today. The author considers conflicts within the populations that Basque and Catalan nationalist movements have claimed to represent, as well as conflicts between the state and nationalist organizations. The \"nations\" for whom these movements aim to speak, he shows, are in fact deeply divided. He attributes the divergent developments of Basque and Catalan nationalisms to the different relationships between the Madrid government and the leading social group in each region." ;
     schema1:genre "History" ;
@@ -19021,7 +19031,7 @@ ex:book133 a schema1:Book ;
     schema1:author ex:author84 ;
     schema1:authorName "Emily Jenkins" ;
     schema1:datePublished "2024-07-29" ;
-    schema1:description "On 23 March 1981, Jordi Pujol, President of the Catalan regional government, gave a speech about an art exhibition, Catalunya Avui. Embracing the artistic wealth of Catalonia, Pujol reminded the audience that when they hear of TÃ pies, MirÃ³, DalÃ­, and even Picasso they ought to remember their Catalan heritage. Pujol's inclusion of Antoni TÃ pies (1923-2012) in this company shows the mark TÃ pies had already made as a celebrated artist. In a very different Presidential address, as Artur Mas spoke to the press about the 2014 independence referendum, TÃ pies's enormous painting Les quatre crÃ²niques (1990) loomed in the background - an image that took on new meanings under very different sociopolitical circumstances. In this fascinating and thought-provoking investigation, Emily Jenkins explores both TÃ pies's extraordinary style and his journey through Catalonia's turbulent modern history. Despite his complex relationship with the Spanish state, and having shown bold acts of political protest through his art, TÃ pies has been fÃªted as one of Spain's most successful modern artists. With support from both local and regional governments, the artist opened a museum dedicated to his work in Barcelona in 1990, helping to establish TÃ pies as a major visual artist in a resurgent Catalonia. Emily Jenkins studied art history at Rhodes College and history at Universidad de Santiago de Compostela. She is now an independent scholar in Cantabria." ;
+    schema1:description "On 23 March 1981, Jordi Pujol, President of the Catalan regional government, gave a speech about an art exhibition, Catalunya Avui. Embracing the artistic wealth of Catalonia, Pujol reminded the audience that when they hear of Tàpies, Miró, Dalí, and even Picasso they ought to remember their Catalan heritage. Pujol's inclusion of Antoni Tàpies (1923-2012) in this company shows the mark Tàpies had already made as a celebrated artist. In a very different Presidential address, as Artur Mas spoke to the press about the 2014 independence referendum, Tàpies's enormous painting Les quatre cròniques (1990) loomed in the background - an image that took on new meanings under very different sociopolitical circumstances. In this fascinating and thought-provoking investigation, Emily Jenkins explores both Tàpies's extraordinary style and his journey through Catalonia's turbulent modern history. Despite his complex relationship with the Spanish state, and having shown bold acts of political protest through his art, Tàpies has been fêted as one of Spain's most successful modern artists. With support from both local and regional governments, the artist opened a museum dedicated to his work in Barcelona in 1990, helping to establish Tàpies as a major visual artist in a resurgent Catalonia. Emily Jenkins studied art history at Rhodes College and history at Universidad de Santiago de Compostela. She is now an independent scholar in Cantabria." ;
     schema1:genre "Art" ;
     schema1:isbn "9781781884225" ;
     schema1:name "The Visualization of a Nation" .
@@ -19047,7 +19057,7 @@ ex:book136 a schema1:Book ;
     schema1:author ex:author86 ;
     schema1:authorName "Eric Arthur Blair" ;
     schema1:datePublished "2022-08-16" ;
-    schema1:description "In \"Homage to Catalonia,\" Eric Arthur Blair, better known by his pen name George Orwell, presents a compelling firsthand account of his experiences during the Spanish Civil War. Through a blend of personal narrative and political commentary, Orwell expertly captures the tumultuous atmosphere of the time, delving into the complexities of class struggle and the clash of ideologies, particularly in Catalonia. His prose is marked by both clarity and emotional weight, reflective of the author's commitment to truth and a rejection of totalitarianism. The book stands as a poignant testament not only to the horrors of war but also to the disillusionment with revolutionary movements that Orwell would continue to explore in later works. Orwell's own experiences as a combatant in the Spanish Civil War significantly influenced his perspective and writings. Born into a middle-class family in India and having served as a colonial police officer in Burma, his grasp of imperialism and oppression shaped his political sensibilities. The ideological confusion he witnessed in Spain, particularly the betrayal of socialist principles, ignited his fervent advocacy for democratic socialism and his critique of totalitarian regimes. \"Homage to Catalonia\" is essential reading for anyone interested in the intersection of history and literature, as well as the ideological battles that characterize the 20th century. Orwell's insights resonate with contemporary political discourse, making this book a vital exploration of idealism versus reality, thus inviting readers to reflect on the enduring relevance of his observations. In this enriched edition, we have carefully created added value for your reading experience: - A succinct Introduction situates the work's timeless appeal and themes. - The Synopsis outlines the central plot, highlighting key developments without spoiling critical twists. - A detailed Historical Context immerses you in the era's events and influences that shaped the writing. - An Author Biography reveals milestones in the author's life, illuminating the personal insights behind the text. - A thorough Analysis dissects symbols, motifs, and character arcs to unearth underlying meanings. - Reflection questions prompt you to engage personally with the work's messages, connecting them to modern life. - Handâpicked Memorable Quotes shine a spotlight on moments of literary brilliance. - Interactive footnotes clarify unusual references, historical allusions, and archaic phrases for an effortless, more informed read." ;
+    schema1:description "In \"Homage to Catalonia,\" Eric Arthur Blair, better known by his pen name George Orwell, presents a compelling firsthand account of his experiences during the Spanish Civil War. Through a blend of personal narrative and political commentary, Orwell expertly captures the tumultuous atmosphere of the time, delving into the complexities of class struggle and the clash of ideologies, particularly in Catalonia. His prose is marked by both clarity and emotional weight, reflective of the author's commitment to truth and a rejection of totalitarianism. The book stands as a poignant testament not only to the horrors of war but also to the disillusionment with revolutionary movements that Orwell would continue to explore in later works. Orwell's own experiences as a combatant in the Spanish Civil War significantly influenced his perspective and writings. Born into a middle-class family in India and having served as a colonial police officer in Burma, his grasp of imperialism and oppression shaped his political sensibilities. The ideological confusion he witnessed in Spain, particularly the betrayal of socialist principles, ignited his fervent advocacy for democratic socialism and his critique of totalitarian regimes. \"Homage to Catalonia\" is essential reading for anyone interested in the intersection of history and literature, as well as the ideological battles that characterize the 20th century. Orwell's insights resonate with contemporary political discourse, making this book a vital exploration of idealism versus reality, thus inviting readers to reflect on the enduring relevance of his observations. In this enriched edition, we have carefully created added value for your reading experience: - A succinct Introduction situates the work's timeless appeal and themes. - The Synopsis outlines the central plot, highlighting key developments without spoiling critical twists. - A detailed Historical Context immerses you in the era's events and influences that shaped the writing. - An Author Biography reveals milestones in the author's life, illuminating the personal insights behind the text. - A thorough Analysis dissects symbols, motifs, and character arcs to unearth underlying meanings. - Reflection questions prompt you to engage personally with the work's messages, connecting them to modern life. - Hand‐picked Memorable Quotes shine a spotlight on moments of literary brilliance. - Interactive footnotes clarify unusual references, historical allusions, and archaic phrases for an effortless, more informed read." ;
     schema1:genre "Political Science" ;
     schema1:name "Homage to Catalonia" .
 
@@ -19097,7 +19107,7 @@ ex:book140 a schema1:Book ;
 
 ex:book141 a schema1:Book ;
     schema1:author ex:author89 ;
-    schema1:authorName "Yairen Jerez ColumbiÃ©" ;
+    schema1:authorName "Yairen Jerez Columbié" ;
     schema1:datePublished "2021-04-26" ;
     schema1:description "This book examines the cultural production of Catalan intellectuals in Cuba through a reading of texts and journeys that show the contrapuntal relationship between transcultural identities and narratives of nationhood. Both the concept of transculturation and its instrumentalization to tame conflict within nationalist projects are problematic. By uncovering and examining the contradictions between the fluid character of identities in the Cuban context of the first half of the twentieth century and nationalist discourses, within both the Catalanist community of Havana and Cuban society, this book joins wider debates about identities." ;
     schema1:genre "History" ;
@@ -19122,9 +19132,9 @@ ex:book143 a schema1:Book ;
 
 ex:book144 a schema1:Book ;
     schema1:author ex:author92 ;
-    schema1:authorName "Francisco J. Romero SalvadÃ³" ;
+    schema1:authorName "Francisco J. Romero Salvadó" ;
     schema1:datePublished "2013-03-14" ;
-    schema1:description "The tragedy that devastated Spain for 33 months from July 1936 to April 1939, was, first and foremost, a brutal fratricidal conflict, the product of the fatal clash between diametrically opposed views of Spain and an attempt to settle crucial issues which had divided Spaniards for generations: agrarian reform, recognition of the identity of the historical regions (Catalonia, the Basque Country), and the roles of the Catholic Church and the armed forces in a modern state. Being a war between Spaniards, it was particularly brutal, but it was also part of the broader move toward war in Europe and thus sucked in many âvolunteersâ from abroad. And it left a deep imprint since General Francisco Franco remained at the helm of the country until his death in 1975. The Historical Dictionary of the Spanish Civil war covers the history of the war, first through a long chronology, which highlights the major steps from the incubation to the conclusion. The overall situation is summed up in the introduction. Then the dictionary section fleshes it out, with over 600 entries on persons, places, events, institutions, battles, and campaigns. More reading can be found in an extensive bibliography. This book is an excellent access point for students, researchers, and anyone wanting to know more about the Spanish Civil War." ;
+    schema1:description "The tragedy that devastated Spain for 33 months from July 1936 to April 1939, was, first and foremost, a brutal fratricidal conflict, the product of the fatal clash between diametrically opposed views of Spain and an attempt to settle crucial issues which had divided Spaniards for generations: agrarian reform, recognition of the identity of the historical regions (Catalonia, the Basque Country), and the roles of the Catholic Church and the armed forces in a modern state. Being a war between Spaniards, it was particularly brutal, but it was also part of the broader move toward war in Europe and thus sucked in many “volunteers” from abroad. And it left a deep imprint since General Francisco Franco remained at the helm of the country until his death in 1975. The Historical Dictionary of the Spanish Civil war covers the history of the war, first through a long chronology, which highlights the major steps from the incubation to the conclusion. The overall situation is summed up in the introduction. Then the dictionary section fleshes it out, with over 600 entries on persons, places, events, institutions, battles, and campaigns. More reading can be found in an extensive bibliography. This book is an excellent access point for students, researchers, and anyone wanting to know more about the Spanish Civil War." ;
     schema1:genre "History" ;
     schema1:isbn "9798765185261" ;
     schema1:name "Historical Dictionary of the Spanish Civil War" .
@@ -19133,28 +19143,28 @@ ex:book145 a schema1:Book ;
     schema1:author ex:author93 ;
     schema1:authorName "Pierre Vilar" ;
     schema1:datePublished "2018-09-25" ;
-    schema1:description "En esta obra histÃ³rica monumental el profesor Pierre Vilar sitÃºa en una nueva perspectiva el pasado de CataluÃ±a en relaciÃ³n con el de los restantes pueblos peninsulares, y nos explica el complejo proceso que hizo surgir el Â«hecho diferencialÂ» y, con Ã©l, el Â«problema catalÃ¡nÂ» en la EspaÃ±a contemporÃ¡nea. Este primer volumen parte de un exhaustivo anÃ¡lisis histÃ³rico comparado que nos conduce hasta los resultados de la guerra de SucesiÃ³n, pasando por la expansiÃ³n catalana del siglo XVIII y los efectos de las transformaciones internas âcrecimiento demogrÃ¡fico, aumento de la producciÃ³n agrÃ­cola y los intercambios, ascenso de los ingresos procedente de la tierra âque dicha expansiÃ³n trajo consigo; cuestiones que enlazan ambos volÃºmenes de la obra." ;
+    schema1:description "En esta obra histórica monumental el profesor Pierre Vilar sitúa en una nueva perspectiva el pasado de Cataluña en relación con el de los restantes pueblos peninsulares, y nos explica el complejo proceso que hizo surgir el «hecho diferencial» y, con él, el «problema catalán» en la España contemporánea. Este primer volumen parte de un exhaustivo análisis histórico comparado que nos conduce hasta los resultados de la guerra de Sucesión, pasando por la expansión catalana del siglo XVIII y los efectos de las transformaciones internas —crecimiento demográfico, aumento de la producción agrícola y los intercambios, ascenso de los ingresos procedente de la tierra —que dicha expansión trajo consigo; cuestiones que enlazan ambos volúmenes de la obra." ;
     schema1:genre "History" ;
     schema1:isbn "9788491990406" ;
-    schema1:name "CataluÃ±a en la EspaÃ±a moderna, vol. 1" .
+    schema1:name "Cataluña en la España moderna, vol. 1" .
 
 ex:book146 a schema1:Book ;
     schema1:author ex:author66 ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "2025-07-07" ;
-    schema1:description "Hommage Ã  la Catalogne de George Orwell est un rÃ©cit captivant et personnel de son expÃ©rience dans la guerre civile espagnole - une exploration profonde de la guerre, de l'idÃ©alisme et de la dÃ©sillusion. En 1936, Orwell se rend en Espagne pour rejoindre la lutte contre les forces fascistes de Franco. Ce qu'il dÃ©couvre est Ã  la fois inspirant et chaotique: une rÃ©sistance passionnÃ©e, une guerre de tranchÃ©es brutale, et une gauche divisÃ©e par des querelles politiques internes. Avec une honnÃªtetÃ© sans concession et un sens aigu du dÃ©tail, Orwell relate le courage des soldats ordinaires, la confusion des allÃ©geances changeantes et la trahison des idÃ©aux rÃ©volutionnaires. Ã la fois mÃ©moire personnelle et critique politique, Hommage Ã  la Catalogne est un tÃ©moignage puissant de l'engagement d'Orwell pour la vÃ©ritÃ© et la justice. Il reste l'un des rÃ©cits les plus saisissants et lucides jamais Ã©crits sur la guerre moderne et les idÃ©ologies politiques." ;
+    schema1:description "Hommage à la Catalogne de George Orwell est un récit captivant et personnel de son expérience dans la guerre civile espagnole - une exploration profonde de la guerre, de l'idéalisme et de la désillusion. En 1936, Orwell se rend en Espagne pour rejoindre la lutte contre les forces fascistes de Franco. Ce qu'il découvre est à la fois inspirant et chaotique: une résistance passionnée, une guerre de tranchées brutale, et une gauche divisée par des querelles politiques internes. Avec une honnêteté sans concession et un sens aigu du détail, Orwell relate le courage des soldats ordinaires, la confusion des allégeances changeantes et la trahison des idéaux révolutionnaires. À la fois mémoire personnelle et critique politique, Hommage à la Catalogne est un témoignage puissant de l'engagement d'Orwell pour la vérité et la justice. Il reste l'un des récits les plus saisissants et lucides jamais écrits sur la guerre moderne et les idéologies politiques." ;
     schema1:genre "Fiction" ;
     schema1:isbn "9789371827287" ;
-    schema1:name "Hommage Ã  la Catalogne French Translation of Homage to Catalonia" .
+    schema1:name "Hommage à la Catalogne French Translation of Homage to Catalonia" .
 
 ex:book147 a schema1:Book ;
     schema1:author ex:author66 ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "2021-12-07" ;
-    schema1:description "EdiciÃ³n definitiva avalada por The Orwell Estate. Sin duda uno de los libros mÃ¡s importantes del siglo XX. Una obra clave sobre la guerra civil espaÃ±ola por uno de los principales escritores de la Ã©poca y testigo del episodio. Admirado por autores de toda Ã©poca y condiciÃ³n, desde Connolly o Trilling hasta Javier Cercas, Antony Beevor o Mario Vargas Llosa, Homenaje a CataluÃ±a es un poderoso manifiesto del hombre contra las abstracciones que acaban conduciendo inevitablemente al terror. Es tambiÃ©n un texto clave sobre la guerra de EspaÃ±a, un testimonio sin par que recoge la experiencia personal de George Orwell. El autor britÃ¡nico llegÃ³ en diciembre de 1936 a una Barcelona en plena efervescencia revolucionaria, pero en menos de un aÃ±o tuvo que huir de la implacable maquinaria soviÃ©tica por haber formado parte de las milicias del POUM. La honestidad y el coraje con el que Orwell narra lo que viviÃ³ le convierten en el escritor moral por excelencia. La presente ediciÃ³n, avalada por The Orwell Foundation, sigue fielmente el texto definitivo de las obras completas del autor, fijado por el profesor Peter Davison. Incluye, ademÃ¡s, un prÃ³logo del profesor y ensayista Miquel Berga, que reconstruye con maestrÃ­a la historia editorial del libro. Miguel Temprano GarcÃ­a firma la estupenda traducciÃ³n, publicada por primera vez en 2011. ENGLISH DESCRIPTION This edition follows the definitive text endorsed by The Orwell Foundation. Without a doubt one of the most important books of the 20th century. Homage to Catalonia is a fundamental work and one of the most famous accounts of the Spanish Civil War by one of the leading writers of the time, and witness to the events. Admired by authors of every age and background, from Connolly and Trilling, to Javier Cercas, Antony Beevor, and Mario Vargas Llosa, Homage to Catalonia is a powerful manifesto from man against ideas and notions that inevitably lead to terror. It is also an important text about the Spanish Civil War, an unparalleled testimony that collects George Orwellâs personal experiences fighting for the POUM militia of the Republican army. The British author arrived in Barcelona at its full revolutionary effervescence in December 1936, but in less than a year he had to leave the POUM militia. The honesty and courage with which Orwell narrates what he experienced make him the epitome of moral writers by excellence. This edition, endorsed by The Orwell Foundation, faithfully follows the definitive text of the authorâs complete works, put together by Professor Peter Davison. It also includes a prologue by professor and essayist Miquel Berga, who masterfully reconstructs the bookâs editorial history. Miguel Temprano GarcÃ­a authored the wonderful Spanish translation, first published in 2011." ;
+    schema1:description "Edición definitiva avalada por The Orwell Estate. Sin duda uno de los libros más importantes del siglo XX. Una obra clave sobre la guerra civil española por uno de los principales escritores de la época y testigo del episodio. Admirado por autores de toda época y condición, desde Connolly o Trilling hasta Javier Cercas, Antony Beevor o Mario Vargas Llosa, Homenaje a Cataluña es un poderoso manifiesto del hombre contra las abstracciones que acaban conduciendo inevitablemente al terror. Es también un texto clave sobre la guerra de España, un testimonio sin par que recoge la experiencia personal de George Orwell. El autor británico llegó en diciembre de 1936 a una Barcelona en plena efervescencia revolucionaria, pero en menos de un año tuvo que huir de la implacable maquinaria soviética por haber formado parte de las milicias del POUM. La honestidad y el coraje con el que Orwell narra lo que vivió le convierten en el escritor moral por excelencia. La presente edición, avalada por The Orwell Foundation, sigue fielmente el texto definitivo de las obras completas del autor, fijado por el profesor Peter Davison. Incluye, además, un prólogo del profesor y ensayista Miquel Berga, que reconstruye con maestría la historia editorial del libro. Miguel Temprano García firma la estupenda traducción, publicada por primera vez en 2011. ENGLISH DESCRIPTION This edition follows the definitive text endorsed by The Orwell Foundation. Without a doubt one of the most important books of the 20th century. Homage to Catalonia is a fundamental work and one of the most famous accounts of the Spanish Civil War by one of the leading writers of the time, and witness to the events. Admired by authors of every age and background, from Connolly and Trilling, to Javier Cercas, Antony Beevor, and Mario Vargas Llosa, Homage to Catalonia is a powerful manifesto from man against ideas and notions that inevitably lead to terror. It is also an important text about the Spanish Civil War, an unparalleled testimony that collects George Orwell’s personal experiences fighting for the POUM militia of the Republican army. The British author arrived in Barcelona at its full revolutionary effervescence in December 1936, but in less than a year he had to leave the POUM militia. The honesty and courage with which Orwell narrates what he experienced make him the epitome of moral writers by excellence. This edition, endorsed by The Orwell Foundation, faithfully follows the definitive text of the author’s complete works, put together by Professor Peter Davison. It also includes a prologue by professor and essayist Miquel Berga, who masterfully reconstructs the book’s editorial history. Miguel Temprano García authored the wonderful Spanish translation, first published in 2011." ;
     schema1:genre "History" ;
     schema1:isbn "9788499890876" ;
-    schema1:name "Homenaje a CataluÃ±a (ediciÃ³n definitiva avalada por The Orwell Estate) / Homage to Catalonia. (Definitive text endorsed by The Orwell Foundation)" .
+    schema1:name "Homenaje a Cataluña (edición definitiva avalada por The Orwell Estate) / Homage to Catalonia. (Definitive text endorsed by The Orwell Foundation)" .
 
 ex:book148 a schema1:Book ;
     schema1:author ex:author66 ;
@@ -19168,11 +19178,11 @@ ex:book149 a schema1:Book ;
     schema1:authorName "George Orwell" ;
     schema1:datePublished "1970" ;
     schema1:genre "Spain" ;
-    schema1:name "Homenaje a CataluÃ±a" .
+    schema1:name "Homenaje a Cataluña" .
 
 ex:book15 a schema1:Book ;
     schema1:author ex:author13 ;
-    schema1:authorName "Ãngel Casals" ;
+    schema1:authorName "Àngel Casals" ;
     schema1:datePublished "2019-12-05" ;
     schema1:description "The present book is a complex approach to the elements that built the history of Catalonia. This collective book analyze differents aspects, such as: cultural history, the History of Law, the Political history or the History of the State, from the Midlle Ages to the Modern and Contemporary history." ;
     schema1:genre "Catalonia (Spain)" ;
@@ -19192,19 +19202,19 @@ ex:book151 a schema1:Book ;
     schema1:author ex:author94 ;
     schema1:authorName "Antoni Dalmau i Ribalta" ;
     schema1:datePublished "2015-09-23" ;
-    schema1:description "La HistÃ²ria de Catalunya a travÃ©s dels seus pecats capitals Pecats capitals de la HistÃ²ria de Catalunya Ã©s una colÂ·lecciÃ³ dedicada a narrar episodis de la histÃ²ria recent del nostre paÃ­s a partir de les set faltes considerades tradicionalment com les mÃ©s greus per l'EsglÃ©sia catÃ²lica: luxÃºria, gola, avarÃ­cia, peresa, ira, enveja i supÃ¨rbia. En aquest primer volum, Antoni Dalmau recorre a fets histÃ²rics marcats pel pecat de la luxÃºria a travÃ©s de conductes Ã­ntimes de personatges rellevants de la nostra HistÃ²ria, l'explicaciÃ³ d'espais pÃºblics o publicacions escrites vinculades o les vies de repressiÃ³ oficials que han posat fre o han reprimit la prÃ ctica del sexe de maneres diverses." ;
+    schema1:description "La Història de Catalunya a través dels seus pecats capitals Pecats capitals de la Història de Catalunya és una col·lecció dedicada a narrar episodis de la història recent del nostre país a partir de les set faltes considerades tradicionalment com les més greus per l'Església catòlica: luxúria, gola, avarícia, peresa, ira, enveja i supèrbia. En aquest primer volum, Antoni Dalmau recorre a fets històrics marcats pel pecat de la luxúria a través de conductes íntimes de personatges rellevants de la nostra Història, l'explicació d'espais públics o publicacions escrites vinculades o les vies de repressió oficials que han posat fre o han reprimit la pràctica del sexe de maneres diverses." ;
     schema1:genre "History" ;
     schema1:isbn "9788466420112" ;
-    schema1:name "Pecats capitals de la histÃ²ria de Catalunya. LuxÃºria" .
+    schema1:name "Pecats capitals de la història de Catalunya. Luxúria" .
 
 ex:book152 a schema1:Book ;
     schema1:author ex:author94 ;
     schema1:authorName "Antoni Dalmau i Ribalta" ;
     schema1:datePublished "2015-11-11" ;
-    schema1:description "La HistÃ²ria de Catalunya a travÃ©s dels seus pecats capitals. Volum de la colÂ·lecciÃ³ PECATS CAPITALS DE LA HISTÃRIA DE CATALUNYA que, en el marc dels segles XIX i XX, recull anÃ¨cdotes i dades curioses de la HistÃ²ria de Catalunya al voltant del pecat de l'avarÃ­cia. Els fets histÃ²rics explicats giren al voltant de la possessiÃ³ de riqueses, robatoris, corrupciÃ³ i xantatge econÃ²mic, com les figures dels bandolers mÃ©s famosos del segle XIX, la compra de vots durant la RestauraciÃ³ o la fortuna dels germans MuÃ±oz a Barcelona. Dirigit a un pÃºblic generalista, escrit amb un to divulgatiu i amÃ¨, el llibre Ã©s obra d'Antoni Dalmau, escriptor i historiador amb una ferma trajectÃ²ria literÃ ria." ;
+    schema1:description "La Història de Catalunya a través dels seus pecats capitals. Volum de la col·lecció PECATS CAPITALS DE LA HISTÒRIA DE CATALUNYA que, en el marc dels segles XIX i XX, recull anècdotes i dades curioses de la Història de Catalunya al voltant del pecat de l'avarícia. Els fets històrics explicats giren al voltant de la possessió de riqueses, robatoris, corrupció i xantatge econòmic, com les figures dels bandolers més famosos del segle XIX, la compra de vots durant la Restauració o la fortuna dels germans Muñoz a Barcelona. Dirigit a un públic generalista, escrit amb un to divulgatiu i amè, el llibre és obra d'Antoni Dalmau, escriptor i historiador amb una ferma trajectòria literària." ;
     schema1:genre "History" ;
     schema1:isbn "9788466420129" ;
-    schema1:name "Pecats capitals de la histÃ²ria de Catalunya. AvarÃ­cia" .
+    schema1:name "Pecats capitals de la història de Catalunya. Avarícia" .
 
 ex:book153 a schema1:Book ;
     schema1:author ex:author95 ;
@@ -19252,9 +19262,9 @@ ex:book157 a schema1:Book ;
 
 ex:book158 a schema1:Book ;
     schema1:author ex:author98 ;
-    schema1:authorName "Silvia BermÃºdez" ;
+    schema1:authorName "Silvia Bermúdez" ;
     schema1:datePublished "2018-01-01" ;
-    schema1:description "A New History of Iberian Feminisms is both a chronological history and an analytical discussion of feminist thought in the Iberian Peninsula, including Portugal, and the territories of Spain - the Basque Provinces, Catalonia, and Galicia - from the eighteenth century to the present day. The Iberian Peninsula encompasses a dynamic and fraught history of feminism that had to contend with entrenched tradition and a dominant Catholic Church. Editors Silvia BermÃºdez and Roberta Johnson and their contributors reveal the long and historical struggles of women living within various parts of the Iberian Peninsula to achieve full citizenship. A New History of Iberian Feminisms comprises a great deal of new scholarship, including nineteenth-century essays written by women on the topic of equality. By addressing these lost texts of feminist thought, BermÃºdez, Johnson, and their contributors reveal that female equality, considered a dormant topic in the early nineteenth century, was very much part of the political conversation, and helped to launch the new feminist wave in the second half of the century." ;
+    schema1:description "A New History of Iberian Feminisms is both a chronological history and an analytical discussion of feminist thought in the Iberian Peninsula, including Portugal, and the territories of Spain - the Basque Provinces, Catalonia, and Galicia - from the eighteenth century to the present day. The Iberian Peninsula encompasses a dynamic and fraught history of feminism that had to contend with entrenched tradition and a dominant Catholic Church. Editors Silvia Bermúdez and Roberta Johnson and their contributors reveal the long and historical struggles of women living within various parts of the Iberian Peninsula to achieve full citizenship. A New History of Iberian Feminisms comprises a great deal of new scholarship, including nineteenth-century essays written by women on the topic of equality. By addressing these lost texts of feminist thought, Bermúdez, Johnson, and their contributors reveal that female equality, considered a dormant topic in the early nineteenth century, was very much part of the political conversation, and helped to launch the new feminist wave in the second half of the century." ;
     schema1:genre "History" ;
     schema1:isbn "9781487520083" ;
     schema1:name "A New History of Iberian Feminisms" .
@@ -19270,7 +19280,7 @@ ex:book159 a schema1:Book ;
 
 ex:book16 a schema1:Book ;
     schema1:author ex:author14 ;
-    schema1:authorName "F. X. HernÃ¡ndez" ;
+    schema1:authorName "F. X. Hernández" ;
     schema1:datePublished "2014-10" ;
     schema1:genre "History" ;
     schema1:isbn "9788423207992" ;
@@ -19278,11 +19288,11 @@ ex:book16 a schema1:Book ;
 
 ex:book160 a schema1:Book ;
     schema1:author ex:author100 ;
-    schema1:authorName "Josep SarriÃ³n i Gualda" ;
+    schema1:authorName "Josep Sarrión i Gualda" ;
     schema1:datePublished "1991" ;
-    schema1:description "Aquest estudi tÃ© per finalitat posar en relleu una sÃ¨rie de documents que permet en reconstruir, en determinats aspectes, la histÃ²ria de Catalunya a travÃ©s de la seva DiputaciÃ³ Provincial durant la vigÃ¨ncia de la ConstituciÃ³ de Cadis. Examin a, per tant, el perÃ­ode anterior a la divisiÃ³ territorial en provÃ­ncies, en el q ual Catalunya era representada per una sola diputaciÃ³ provincial." ;
+    schema1:description "Aquest estudi té per finalitat posar en relleu una sèrie de documents que permet en reconstruir, en determinats aspectes, la història de Catalunya a través de la seva Diputació Provincial durant la vigència de la Constitució de Cadis. Examin a, per tant, el període anterior a la divisió territorial en províncies, en el q ual Catalunya era representada per una sola diputació provincial." ;
     schema1:genre "History" ;
-    schema1:name "La DiputaciÃ³ provincial de Catalunya sota la ConstituciÃ³ de Cadis" .
+    schema1:name "La Diputació provincial de Catalunya sota la Constitució de Cadis" .
 
 ex:book17 a schema1:Book ;
     schema1:author ex:author9 ;
@@ -19304,7 +19314,7 @@ ex:book18 a schema1:Book ;
 
 ex:book19 a schema1:Book ;
     schema1:author ex:author16 ;
-    schema1:authorName "Josep M. MuÃ±oz" ;
+    schema1:authorName "Josep M. Muñoz" ;
     schema1:datePublished "2006" ;
     schema1:isbn "9788439371427" ;
     schema1:name "Catalonia, a European History" .
@@ -19323,7 +19333,7 @@ ex:book20 a schema1:Book ;
     schema1:author ex:author17 ;
     schema1:authorName "Robin Maria DeLugan" ;
     schema1:datePublished "2020-11-29" ;
-    schema1:description "This volume examines the ways in which the violent legacies of the twentieth century continue to affect the concept of the nation. Through a study of three societiesâ commemoration of notorious episodes of 1930s state violence, the author considers the manner in which attention to the state violence authoritarianism, and exclusions of the last century have resulted in challenges to dominant conceptions of the nation. Based on extensive ethnographic research in El Salvador, Spain, and the Dominican Republic, Remembering Violence focuses on new public sites of memory, such as museum exhibitions, monuments, and commemorations â powerful loci for representing ideas about the nation â and explores the responses of various actors â civil society, government, and diasporic citizens â as well as those of UN and other international agencies invested in new nation-building goals. With attention to the ways in which memory practices explain ongoing national exclusions and contemporary efforts to contest them, this book will appeal to scholars across the social sciences and humanities with interests in public memory and commemoration." ;
+    schema1:description "This volume examines the ways in which the violent legacies of the twentieth century continue to affect the concept of the nation. Through a study of three societies’ commemoration of notorious episodes of 1930s state violence, the author considers the manner in which attention to the state violence authoritarianism, and exclusions of the last century have resulted in challenges to dominant conceptions of the nation. Based on extensive ethnographic research in El Salvador, Spain, and the Dominican Republic, Remembering Violence focuses on new public sites of memory, such as museum exhibitions, monuments, and commemorations – powerful loci for representing ideas about the nation – and explores the responses of various actors – civil society, government, and diasporic citizens – as well as those of UN and other international agencies invested in new nation-building goals. With attention to the ways in which memory practices explain ongoing national exclusions and contemporary efforts to contest them, this book will appeal to scholars across the social sciences and humanities with interests in public memory and commemoration." ;
     schema1:genre "Education" ;
     schema1:isbn "9781000291988" ;
     schema1:name "Remembering Violence" .
@@ -19332,14 +19342,14 @@ ex:book21 a schema1:Book ;
     schema1:author ex:author18 ;
     schema1:authorName "Michael A. Vargas" ;
     schema1:datePublished "2018-04-23" ;
-    schema1:description "This is a book about how Catalans use their past, real and imagined, in the construction of their present and future. Michael A. Vargas inventories the significant people, signal events, and familiar icons that constitute the Catalan collective memory, from Wilfred the Hairy and Sant Jordi to the mountain monastery of Montserrat, red peasant caps, and human towers in town squares. He then considers how that inventory is employed to posit a brilliant political heritage at the forefront of modern European democracyâand for some, to build a powerful independence movement. As the future of Catalonia remains fraught, this book offers a lively and engaging exploration of how we draw upon history to confront contemporary challenges." ;
+    schema1:description "This is a book about how Catalans use their past, real and imagined, in the construction of their present and future. Michael A. Vargas inventories the significant people, signal events, and familiar icons that constitute the Catalan collective memory, from Wilfred the Hairy and Sant Jordi to the mountain monastery of Montserrat, red peasant caps, and human towers in town squares. He then considers how that inventory is employed to posit a brilliant political heritage at the forefront of modern European democracy—and for some, to build a powerful independence movement. As the future of Catalonia remains fraught, this book offers a lively and engaging exploration of how we draw upon history to confront contemporary challenges." ;
     schema1:genre "History" ;
     schema1:isbn "9783319767444" ;
     schema1:name "Constructing Catalan Identity" .
 
 ex:book22 a schema1:Book ;
     schema1:author ex:author19 ;
-    schema1:authorName "Club separista CatalÃ , New York" ;
+    schema1:authorName "Club separista Català, New York" ;
     schema1:datePublished "1927" ;
     schema1:genre "Catalan problem" ;
     schema1:name "Catalan Separatism" .
@@ -19347,7 +19357,7 @@ ex:book22 a schema1:Book ;
 ex:book23 a schema1:Book ;
     schema1:datePublished "1991" ;
     schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The New EncyclopÃ¦dia Britannica: MacropÃ¦dia" .
+    schema1:name "The New Encyclopædia Britannica: Macropædia" .
 
 ex:book24 a schema1:Book ;
     schema1:author ex:author20 ;
@@ -19370,7 +19380,7 @@ ex:book26 a schema1:Book ;
 ex:book27 a schema1:Book ;
     schema1:datePublished "1987" ;
     schema1:genre "Catalonia (Spain)" ;
-    schema1:name "CatalÃ²nia Culture" .
+    schema1:name "Catalònia Culture" .
 
 ex:book28 a schema1:Book ;
     schema1:author ex:author22 ;
@@ -19417,7 +19427,7 @@ ex:book33 a schema1:Book ;
 
 ex:book34 a schema1:Book ;
     schema1:author ex:author25 ;
-    schema1:authorName "VÃ­ctor Alba" ;
+    schema1:authorName "Víctor Alba" ;
     schema1:datePublished "1975" ;
     schema1:genre "History" ;
     schema1:name "Catalonia" .
@@ -19431,7 +19441,7 @@ ex:book36 a schema1:Book ;
     schema1:author ex:author26 ;
     schema1:authorName "Josep Maria Puigjaner" ;
     schema1:datePublished "1989" ;
-    schema1:description "PresentaciÃ³n de una panorÃ¡mica global de CataluÃ±a en tres tiempos: pasado, prese nte y futuro. El pasado describe la identidaddel paÃ­s tomando como eje la lengua , la cultura, la ciencia y el catalanismo histÃ³rico. El presente examina institu ciones, el perfil econÃ³mico y las coordenadas culturales. El futuro sitÃºa el pun to de mira en el nuevo horizonte de la Europa comunitaria. Libro Ãºtil para tener una serie de datos esenciales en la identidad del paÃ­s." ;
+    schema1:description "Presentación de una panorámica global de Cataluña en tres tiempos: pasado, prese nte y futuro. El pasado describe la identidaddel país tomando como eje la lengua , la cultura, la ciencia y el catalanismo histórico. El presente examina institu ciones, el perfil económico y las coordenadas culturales. El futuro sitúa el pun to de mira en el nuevo horizonte de la Europa comunitaria. Libro útil para tener una serie de datos esenciales en la identidad del país." ;
     schema1:genre "History" ;
     schema1:name "Catalonia" .
 
@@ -19457,9 +19467,9 @@ ex:book39 a schema1:Book ;
 
 ex:book4 a schema1:Book ;
     schema1:author ex:author4 ;
-    schema1:authorName "Cortijo OcaÃ±a, Antonio" ;
+    schema1:authorName "Cortijo Ocaña, Antonio" ;
     schema1:datePublished "2020-10-16" ;
-    schema1:description "Recent political developments in Spain regarding Catalonia have prompted scholars from several disciplines to research the singularity of this region and of the territories of the old Crown of Aragon. Against the backdrop of the pro-independence movement, those in favor and against have insisted on the particularity or commonality of Catalonia and the PaÃ¯sos Catalans (Catalan-speaking areas) within the Spanish State. From the Catalan point of view, their singularity is not sufficiently recognized, and respect for their institutions and their autonomy is at stake to the point that many prefer to secede from Spain. Singularity or its absence play a relevant role in the construction of identity, which seems to be key in understanding many Catalans' attitudes towards the central government, a fluid concept that allows for a variety of interpretations. History of Catalonia and Its Implications for Contemporary Nationalism and Cultural Conflict is a critical reference book that centers around the topic of Catalan cultural and linguistic identity. With input from renowned scholars in several fields, the chapters explore the issue of Catalan identity from a variety of perspectives. While highlighting the legal and historical component to identity and also sociolinguistics and political linguistics, this book is ideally intended for scholars in the fields of Hispanic studies, history, linguistics, political science, and literary studies as well as practitioners, stakeholders, researchers, academicians, and students interested in contemporary politics and the political developments in Spain regarding Catalonia." ;
+    schema1:description "Recent political developments in Spain regarding Catalonia have prompted scholars from several disciplines to research the singularity of this region and of the territories of the old Crown of Aragon. Against the backdrop of the pro-independence movement, those in favor and against have insisted on the particularity or commonality of Catalonia and the Països Catalans (Catalan-speaking areas) within the Spanish State. From the Catalan point of view, their singularity is not sufficiently recognized, and respect for their institutions and their autonomy is at stake to the point that many prefer to secede from Spain. Singularity or its absence play a relevant role in the construction of identity, which seems to be key in understanding many Catalans' attitudes towards the central government, a fluid concept that allows for a variety of interpretations. History of Catalonia and Its Implications for Contemporary Nationalism and Cultural Conflict is a critical reference book that centers around the topic of Catalan cultural and linguistic identity. With input from renowned scholars in several fields, the chapters explore the issue of Catalan identity from a variety of perspectives. While highlighting the legal and historical component to identity and also sociolinguistics and political linguistics, this book is ideally intended for scholars in the fields of Hispanic studies, history, linguistics, political science, and literary studies as well as practitioners, stakeholders, researchers, academicians, and students interested in contemporary politics and the political developments in Spain regarding Catalonia." ;
     schema1:genre "History" ;
     schema1:isbn "9781799866169" ;
     schema1:name "History of Catalonia and Its Implications for Contemporary Nationalism and Cultural Conflict" .
@@ -19531,7 +19541,7 @@ ex:book49 a schema1:Book ;
 
 ex:book5 a schema1:Book ;
     schema1:author ex:author5 ;
-    schema1:authorName "Jaume SobrequÃ©s i CallicÃ³" ;
+    schema1:authorName "Jaume Sobrequés i Callicó" ;
     schema1:datePublished "2007" ;
     schema1:description "This is an ideal introduction to the whole history of Catalonia from the remotest times until the present. It is a rigorous and accessible vision aimed at everyone, which can be read quickly and easily. The book brings the Catalan past to all Catalans and to foreigners who, when they visit Catalonia, want a general understanding of what this country has been over its thousands of years of existence. This short history seeks to set out the formation of a nation with its own state, which played a key role in Europe for centuries. It also explains how this state was attacked for two centuries until its destruction on 11 September 1714 and the subsequent struggle by Catalans to be reborn from their ashes and recover their place in history." ;
     schema1:genre "History" ;
@@ -19602,7 +19612,7 @@ ex:book59 a schema1:Book ;
     schema1:author ex:author41 ;
     schema1:authorName "Milton Mariano Azevedo" ;
     schema1:datePublished "1991" ;
-    schema1:description "Papers presented at the Symposium held by the Gaspar de PortolÃ  Catalonian Studies Program of International and Area Studies at the University of California, Berkeley, on 24-25 February 1989." ;
+    schema1:description "Papers presented at the Symposium held by the Gaspar de Portolà Catalonian Studies Program of International and Area Studies at the University of California, Berkeley, on 24-25 February 1989." ;
     schema1:genre "History" ;
     schema1:name "Contemporary Catalonia in Spain and Europe" .
 
@@ -19680,7 +19690,7 @@ ex:book68 a schema1:Book ;
 
 ex:book69 a schema1:Book ;
     schema1:author ex:author47 ;
-    schema1:authorName "SÃ­lvia Planas i MarcÃ©" ;
+    schema1:authorName "Sílvia Planas i Marcé" ;
     schema1:datePublished "2009" ;
     schema1:genre "History" ;
     schema1:name "A History of Jewish Catalonia" .
@@ -19689,7 +19699,7 @@ ex:book7 a schema1:Book ;
     schema1:author ex:author6 ;
     schema1:authorName "Michael Eaude" ;
     schema1:datePublished "2022-09-20" ;
-    schema1:description "At every home game of FC Barcelona, at 17 minutes and 14 seconds of play, the 100,000-capacity Camp Nou stadium is filled by the roar of âIN-DE-PEN-DÃN-CI-A!â Time stops for a second. History lives in the present... Catalonia's national consciousness has deep roots. There are countries twice the size with histories half as interesting. A People's History of Catalonia tells that history, from below, in all its richness and complexity. The region's struggle for independence has, for centuries, been violently resisted, the Catalan language suppressed and its leaders jailed. But the fight of an oppressed nation for its sovereignty has often dovetailed with that of a militant working class for social justice. From the peasant revolts of the 15th century and the siege of Barcelona in 1714, to defeat in the Spanish Civil War, and the slow re-emergence of the workers' movement and anti-Francoist resistance in the years that followed, Michael Eaude tells a compelling story whose ending has yet to be written." ;
+    schema1:description "At every home game of FC Barcelona, at 17 minutes and 14 seconds of play, the 100,000-capacity Camp Nou stadium is filled by the roar of “IN-DE-PEN-DÈN-CI-A!” Time stops for a second. History lives in the present... Catalonia's national consciousness has deep roots. There are countries twice the size with histories half as interesting. A People's History of Catalonia tells that history, from below, in all its richness and complexity. The region's struggle for independence has, for centuries, been violently resisted, the Catalan language suppressed and its leaders jailed. But the fight of an oppressed nation for its sovereignty has often dovetailed with that of a militant working class for social justice. From the peasant revolts of the 15th century and the siege of Barcelona in 1714, to defeat in the Spanish Civil War, and the slow re-emergence of the workers' movement and anti-Francoist resistance in the years that followed, Michael Eaude tells a compelling story whose ending has yet to be written." ;
     schema1:genre "Political Science" ;
     schema1:isbn "9781786808592" ;
     schema1:name "A People's History of Catalonia" .
@@ -19701,12 +19711,12 @@ ex:book70 a schema1:Book ;
 
 ex:book71 a schema1:Book ;
     schema1:author ex:author48 ;
-    schema1:authorName "VÃ-Ctor 1824-1901 Balaguer" ;
+    schema1:authorName "VÃ-Ctor 1824-1901 Balaguer" ;
     schema1:datePublished "2025-05-22" ;
-    schema1:description "Historia de CataluÃ±a, Volumen 10 by VÃ-ctor Balaguer, presents a detailed historical narrative focused on the region of Catalonia in Spain. Written in Spanish and originally published in 1885, this volume contributes to a broader understanding of Catalonia's past. Balaguer's work provides insights into the historical, cultural, and political developments of this important region. It is an invaluable resource for historians and anyone interested in the rich history of Spain and Catalonia. This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant." ;
+    schema1:description "Historia de Cataluña, Volumen 10 by VÃ-ctor Balaguer, presents a detailed historical narrative focused on the region of Catalonia in Spain. Written in Spanish and originally published in 1885, this volume contributes to a broader understanding of Catalonia's past. Balaguer's work provides insights into the historical, cultural, and political developments of this important region. It is an invaluable resource for historians and anyone interested in the rich history of Spain and Catalonia. This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant." ;
     schema1:genre "History" ;
     schema1:isbn "9781025174037" ;
-    schema1:name "Historia de CataluÃ±a" .
+    schema1:name "Historia de Cataluña" .
 
 ex:book72 a schema1:Book ;
     schema1:datePublished "1992" ;
@@ -19760,7 +19770,7 @@ ex:book79 a schema1:Book ;
 
 ex:book8 a schema1:Book ;
     schema1:author ex:author7 ;
-    schema1:authorName "Oriol VergÃ©s" ;
+    schema1:authorName "Oriol Vergés" ;
     schema1:datePublished "1991" ;
     schema1:genre "History" ;
     schema1:name "The Generalitat in the History of Catalonia" .
@@ -19784,7 +19794,7 @@ ex:book82 a schema1:Book ;
     schema1:authorName "Frank Moore Colby" ;
     schema1:datePublished "1922" ;
     schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The New International EncyclopÃ¦dia" .
+    schema1:name "The New International Encyclopædia" .
 
 ex:book83 a schema1:Book ;
     schema1:author ex:author56 ;
@@ -19832,7 +19842,7 @@ ex:book89 a schema1:Book ;
 
 ex:book9 a schema1:Book ;
     schema1:author ex:author8 ;
-    schema1:authorName "AgustÃ­ Alcoberro" ;
+    schema1:authorName "Agustí Alcoberro" ;
     schema1:datePublished "2010" ;
     schema1:isbn "9788441219656" ;
     schema1:name "The History of Catalonia" .
@@ -19842,14 +19852,14 @@ ex:book90 a schema1:Book ;
     schema1:authorName "Daniel Coit Gilman" ;
     schema1:datePublished "1911" ;
     schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The New International EncyclopÃ¦dia" .
+    schema1:name "The New International Encyclopædia" .
 
 ex:book91 a schema1:Book ;
     schema1:author ex:author60 ;
     schema1:authorName "Thomas Spencer Baynes" ;
     schema1:datePublished "1887" ;
     schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The EncyclopÃ¦dia Britannica" .
+    schema1:name "The Encyclopædia Britannica" .
 
 ex:book92 a schema1:Book ;
     schema1:datePublished "1892" ;
@@ -19864,7 +19874,7 @@ ex:book93 a schema1:Book ;
 ex:book94 a schema1:Book ;
     schema1:datePublished "1910" ;
     schema1:genre "Encyclopedias and dictionaries" ;
-    schema1:name "The EncyclopÃ¦dia Britannica: Calhoun-Chatelaine" .
+    schema1:name "The Encyclopædia Britannica: Calhoun-Chatelaine" .
 
 ex:book95 a schema1:Book ;
     schema1:datePublished "1910" ;
@@ -19904,22 +19914,22 @@ ex:author10 a schema1:Person ;
     schema1:name "Chris Bambery" .
 
 ex:author100 a schema1:Person ;
-    schema1:name "Josep SarriÃ³n i Gualda" .
+    schema1:name "Josep Sarrión i Gualda" .
 
 ex:author11 a schema1:Person ;
     schema1:name "Charles River Editors" .
 
 ex:author13 a schema1:Person ;
-    schema1:name "Ãngel Casals" .
+    schema1:name "Àngel Casals" .
 
 ex:author14 a schema1:Person ;
-    schema1:name "F. X. HernÃ¡ndez" .
+    schema1:name "F. X. Hernández" .
 
 ex:author15 a schema1:Person ;
     schema1:name "Simon Harris" .
 
 ex:author16 a schema1:Person ;
-    schema1:name "Josep M. MuÃ±oz" .
+    schema1:name "Josep M. Muñoz" .
 
 ex:author17 a schema1:Person ;
     schema1:name "Robin Maria DeLugan" .
@@ -19928,7 +19938,7 @@ ex:author18 a schema1:Person ;
     schema1:name "Michael A. Vargas" .
 
 ex:author19 a schema1:Person ;
-    schema1:name "Club separista CatalÃ , New York" .
+    schema1:name "Club separista Català, New York" .
 
 ex:author2 a schema1:Person ;
     schema1:name "Gabriel Tortella" .
@@ -19949,7 +19959,7 @@ ex:author24 a schema1:Person ;
     schema1:name "Kenneth McRoberts" .
 
 ex:author25 a schema1:Person ;
-    schema1:name "VÃ­ctor Alba" .
+    schema1:name "Víctor Alba" .
 
 ex:author26 a schema1:Person ;
     schema1:name "Josep Maria Puigjaner" .
@@ -19988,7 +19998,7 @@ ex:author39 a schema1:Person ;
     schema1:name "John Emerich Edward Dalberg Acton Baron Acton" .
 
 ex:author4 a schema1:Person ;
-    schema1:name "Cortijo OcaÃ±a, Antonio" .
+    schema1:name "Cortijo Ocaña, Antonio" .
 
 ex:author40 a schema1:Person ;
     schema1:name "Charles George Herbermann" .
@@ -20006,16 +20016,16 @@ ex:author45 a schema1:Person ;
     schema1:name "James W. Cortada" .
 
 ex:author47 a schema1:Person ;
-    schema1:name "SÃ­lvia Planas i MarcÃ©" .
+    schema1:name "Sílvia Planas i Marcé" .
 
 ex:author48 a schema1:Person ;
-    schema1:name "VÃ-Ctor 1824-1901 Balaguer" .
+    schema1:name "VÃ-Ctor 1824-1901 Balaguer" .
 
 ex:author49 a schema1:Person ;
     schema1:name "Amparo Tuson" .
 
 ex:author5 a schema1:Person ;
-    schema1:name "Jaume SobrequÃ©s i CallicÃ³" .
+    schema1:name "Jaume Sobrequés i Callicó" .
 
 ex:author50 a schema1:Person ;
     schema1:name "New York Public Library. Research Libraries" .
@@ -20072,7 +20082,7 @@ ex:author69 a schema1:Person ;
     schema1:name "James Louis Garvin" .
 
 ex:author7 a schema1:Person ;
-    schema1:name "Oriol VergÃ©s" .
+    schema1:name "Oriol Vergés" .
 
 ex:author70 a schema1:Person ;
     schema1:name "Robert Edward Dell" .
@@ -20102,19 +20112,19 @@ ex:author78 a schema1:Person ;
     schema1:name "Catalunya. Parlament" .
 
 ex:author8 a schema1:Person ;
-    schema1:name "AgustÃ­ Alcoberro" .
+    schema1:name "Agustí Alcoberro" .
 
 ex:author80 a schema1:Person ;
     schema1:name "Rhiannon McGlade" .
 
 ex:author81 a schema1:Person ;
-    schema1:name "Arnau GonzÃ lez i Vilalta" .
+    schema1:name "Arnau Gonzàlez i Vilalta" .
 
 ex:author82 a schema1:Person ;
     schema1:name "DK Travel" .
 
 ex:author83 a schema1:Person ;
-    schema1:name "Juan DÃ­ez Medrano" .
+    schema1:name "Juan Díez Medrano" .
 
 ex:author84 a schema1:Person ;
     schema1:name "Emily Jenkins" .
@@ -20132,7 +20142,7 @@ ex:author88 a schema1:Person ;
     schema1:name "Mandie Iveson" .
 
 ex:author89 a schema1:Person ;
-    schema1:name "Yairen Jerez ColumbiÃ©" .
+    schema1:name "Yairen Jerez Columbié" .
 
 ex:author90 a schema1:Person ;
     schema1:name "Daniele Conversi" .
@@ -20141,7 +20151,7 @@ ex:author91 a schema1:Person ;
     schema1:name "Juan Perucho" .
 
 ex:author92 a schema1:Person ;
-    schema1:name "Francisco J. Romero SalvadÃ³" .
+    schema1:name "Francisco J. Romero Salvadó" .
 
 ex:author93 a schema1:Person ;
     schema1:name "Pierre Vilar" .
@@ -20156,7 +20166,7 @@ ex:author97 a schema1:Person ;
     schema1:name "Enric Bou" .
 
 ex:author98 a schema1:Person ;
-    schema1:name "Silvia BermÃºdez" .
+    schema1:name "Silvia Bermúdez" .
 
 ex:author99 a schema1:Person ;
     schema1:name "Peter Seidler" .
@@ -20210,7 +20220,7 @@ ex:author66 a schema1:Person ;
     schema1:name "George Orwell" .
 
 #############################
-# MÉS INSTÀNCIES REALISTES
+# M�S INST�NCIES REALISTES
 #############################
 
 # Biblioteques
@@ -20226,7 +20236,7 @@ cl:ClubLecturaMisteri a cl:ClubDeLectura ;
     cl:teLot cl:LotMisteri .
 
 cl:ClubLecturaClassics a cl:ClubDeLectura ;
-    schema:name "Club de Clàssics" ;
+    schema:name "Club de Cl�ssics" ;
     cl:teLot cl:LotClassics .
 
 # Lots
@@ -20256,7 +20266,7 @@ cl:ExemplarC1 a cl:Exemplar ;
     owl:sameAs schema:Book_3 .
 
 #############################
-# PERSONES I PARTICIPACIÓ
+# PERSONES I PARTICIPACI�
 #############################
 
 # Participants (si ja tens autors/persones)
@@ -20264,7 +20274,7 @@ schema:Person_1 cl:participaA cl:ClubLecturaMisteri .
 schema:Person_2 cl:participaA cl:ClubLecturaClassics .
 
 #############################
-# TRAMESA (LOGÍSTICA - MOLT IMPORTANT)
+# TRAMESA (LOG�STICA - MOLT IMPORTANT)
 #############################
 
 cl:Tramesa1 a cl:Tramesa ;
@@ -20273,7 +20283,7 @@ cl:Tramesa1 a cl:Tramesa ;
     cl:transporta cl:LotMisteri .
 
 #############################
-# PROPIETATS ADDICIONALS 
+# PROPIETATS ADDICIONALS (SI NO LES HAS DEFINIT ABANS)
 #############################
 
 cl:origen a owl:ObjectProperty ;
@@ -20288,17 +20298,24 @@ cl:transporta a owl:ObjectProperty ;
     rdfs:domain cl:Tramesa ;
     rdfs:range cl:Lot .
 
+
 ################################################
 # CLASSES 
 ##################################################
 
-
+cl:Lot a owl:Class .
+cl:ClubDeLectura a owl:Class .
+cl:Exemplar a owl:Class .
+cl:Biblioteca a owl:Class .
+cl:Tramesa a owl:Class .
 
 cl:BibliotecaPublica a owl:Class ;
     rdfs:subClassOf cl:Biblioteca .
 
 cl:LlibreRecomanat a owl:Class ;
     rdfs:subClassOf schema:Book .
+	
+	
 
 ##################################################
 # RELACIONS (segures)
@@ -20312,13 +20329,11 @@ cl:ubicatA a owl:ObjectProperty ;
 cl:gestionaTramesa a owl:ObjectProperty ;
     rdfs:domain cl:Biblioteca ;
     rdfs:range cl:Tramesa .
+	
 
 ##################################################
 # RESTRICCIONS (no afecten dades existents)
 ##################################################
-
-
-
 
 cl:Lot rdfs:subClassOf [
     a owl:Restriction ;
@@ -20332,57 +20347,42 @@ cl:Exemplar rdfs:subClassOf [
     owl:allValuesFrom cl:Biblioteca
 ] .
 
-cl:Exemplar rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty cl:teAutor ;
-    owl:minCardinality "1"^^xsd:nonNegativeInteger
-] .
-
-cl:Exemplar rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty cl:teAutor ;
-    owl:allValuesFrom cl:Persona
-] .
-
-cl:Exemplar rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty cl:teISBN ;
-    owl:cardinality "1"^^xsd:nonNegativeInteger
-] .
-
-
 
 
 ##################################################
-# EXTENSIÓ ONTOLÒGICA (INTEGRACIÓ FINAL)
+# EXTENSI� ONTOL�GICA (INTEGRACI� FINAL)
 ##################################################
 
 
+cl:ClubDeLectura a owl:Class .
+cl:Lot a owl:Class .
+cl:Exemplar a owl:Class .
+cl:Biblioteca a owl:Class .
+cl:Tramesa a owl:Class .
+
+
+cl:Exemplar rdfs:subClassOf schema:Book .
+cl:Biblioteca rdfs:subClassOf schema:Organization .
 
 # Relacions del domini
-
-
-
 
 
 cl:ubicatA a owl:ObjectProperty ;
     rdfs:domain cl:Exemplar ;
     rdfs:range cl:Biblioteca .
 
+# Restriccions OWL 
+cl:Lot rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty cl:conteExemplar ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
 
-cl:teAutor rdf:type owl:ObjectProperty ;
-    rdfs:domain cl:Exemplar ;
-    rdfs:range cl:Autor .
-	
-	
-cl:teAutor rdf:type owl:ObjectProperty ;
-    rdfs:domain cl:Exemplar ;
-    rdfs:range cl:Persona .
-	
-cl:teISBN rdf:type owl:DatatypeProperty ;
-    rdfs:domain cl:Exemplar ;
-    rdfs:range xsd:string .
-
+cl:Exemplar rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty cl:ubicatA ;
+    owl:allValuesFrom cl:Biblioteca
+] .
 
 cl:ClubDeLectura rdfs:subClassOf [
     a owl:Restriction ;
@@ -20390,7 +20390,12 @@ cl:ClubDeLectura rdfs:subClassOf [
     owl:minCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
+
+
 cl:Llibre rdfs:subClassOf schema:Book .
+
+@prefix cl: <http://www.semanticweb.org/clubslectura#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 cl:ClubBarcelona
     rdf:type cl:ClubDeLectura ;
@@ -20406,6 +20411,8 @@ cl:Exemplar001
 
 cl:Exemplar002
     rdf:type cl:Exemplar .
+	
+
 
 cl:LotNovelLaNegra
     rdf:type cl:Lot ;
@@ -20441,10 +20448,29 @@ cl:Exemplar002
 cl:Exemplar003
     rdf:type cl:Exemplar ;
     cl:ubicatA cl:BibliotecaGracia .
-
+	
 cl:BibliotecaPublica rdfs:subClassOf cl:Biblioteca .
 
 cl:BibliotecaGracia rdf:type cl:BibliotecaPublica .
+
+cl:Exemplar rdfs:subClassOf [
+a owl:Restriction ;
+owl:onProperty schema:author ;
+owl:allValuesFrom schema:Person
+] .
+
+cl:Exemplar rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty schema:author ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+
+cl:Exemplar rdfs:subClassOf [
+a owl:Restriction ;
+owl:onProperty schema:isbn ;
+owl:cardinality "1"^^xsd:nonNegativeInteger
+] .
 
 
 cl:LotActiu
@@ -20456,46 +20482,21 @@ cl:LotActiu
         owl:minCardinality "1"^^xsd:nonNegativeInteger
     ] .
 
+
 # Clubs de lectura
 cl:ClubBarcelona a cl:ClubDeLectura .
 
+# Trameses
+cl:Tramesa001 a cl:Tramesa ;
+    cl:transportaLot cl:Lot001 .
 
+# Relaci� club - tramesa
+cl:ClubBarcelona cl:repTramesa cl:Tramesa001 .
 
 # Lot
 cl:Lot001 a cl:LotActiu ;
     cl:conteExemplar cl:Exemplar001 .
-	
-	cl:LotActiu owl:equivalentClass [
-    rdf:type owl:Class ;
-    owl:intersectionOf (
-        cl:Lot
-        [
-            rdf:type owl:Restriction ;
-            owl:onProperty cl:conteExemplar ;
-            owl:someValuesFrom cl:Exemplar
-        ]
-    )
-] .
-
 
 # Exemplar
 cl:Exemplar001 a cl:Exemplar ;
     cl:ubicatA cl:BibliotecaGracia .
-	
-
-
-### Instàncies
-
-cl:Exemplar001 rdf:type cl:Exemplar ;
-cl:teISBN "9788423342715" .
-
-cl:Lot001 rdf:type cl:Lot ;
-cl:conteExemplar cl:Exemplar001 .
-
-cl:Tramesa001 rdf:type cl:Tramesa ;
-cl:conteLot cl:Lot001 .
-
-cl:ClubBarcelona rdf:type cl:ClubDeLectura ;
-cl:enviaTramesa cl:Tramesa001 .
-
-	
